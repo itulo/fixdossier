@@ -1,0 +1,2522 @@
+{
+  "schema": "fixledger/v1",
+  "repo": "axios/axios",
+  "generated_at": "2026-10-12T13:36:53.690Z",
+  "sources_checked": {
+    "releases": 125,
+    "tags": 147,
+    "closed_pulls": 200,
+    "advisories": 51,
+    "commits": 200
+  },
+  "gaps": [
+    "pull requests: stopped after 2 pages (raise max_pages for full history)",
+    "commits: stopped after 2 pages (raise max_pages for full history)"
+  ],
+  "releases": [
+    {
+      "tag": "v0.34.0",
+      "name": "v0.34.0",
+      "date": "2026-09-13T16:40:14Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.34.0",
+      "prerelease": false,
+      "sha": "ee1aa2654766c70215c5ef40991dc1079aa261da"
+    },
+    {
+      "tag": "v1.20.0",
+      "name": "v1.20.0",
+      "date": "2026-08-24T13:40:40Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.20.0",
+      "prerelease": false,
+      "sha": "84a9f3b9a4f3244b8c8e818f557d64c7b964fb25"
+    },
+    {
+      "tag": "v1.19.0",
+      "name": "v1.19.0",
+      "date": "2026-07-26T14:13:32Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.19.0",
+      "prerelease": false,
+      "sha": "311fcc5c8d989b7248f05d390bb83bfbfb009977"
+    },
+    {
+      "tag": "v1.18.1",
+      "name": "v1.18.1",
+      "date": "2026-06-21T17:25:10Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.18.1",
+      "prerelease": false,
+      "sha": "a209bfb1e5dcbce3cecbf4bd955339d006358887"
+    },
+    {
+      "tag": "v1.18.0",
+      "name": "v1.18.0",
+      "date": "2026-06-13T12:00:31Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.18.0",
+      "prerelease": false,
+      "sha": "2d06f96e8602c2db13b65a26340ee4a1bbc0b61f"
+    },
+    {
+      "tag": "v0.33.0",
+      "name": "v0.33.0",
+      "date": "2026-06-13T11:53:34Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.33.0",
+      "prerelease": false,
+      "sha": "d998cc9a1aa5cc45fbdfbdded6e9ecf8beb61aed"
+    },
+    {
+      "tag": "v1.17.0",
+      "name": "v1.17.0",
+      "date": "2026-06-03T06:14:01Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.17.0",
+      "prerelease": false,
+      "sha": "4306df21e84332fc576e98c2de549347c06bfb76"
+    },
+    {
+      "tag": "v1.16.1",
+      "name": "v1.16.1",
+      "date": "2026-05-13T16:19:58Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.16.1",
+      "prerelease": false,
+      "sha": "1337d6b537afb2d3f501074c8ac4ef4308221197"
+    },
+    {
+      "tag": "v0.32.0",
+      "name": "v0.32.0",
+      "date": "2026-05-04T17:15:03Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.32.0",
+      "prerelease": false,
+      "sha": "8db2d44896849a21ed9721185b1034df24e1ba7b"
+    },
+    {
+      "tag": "v1.16.0",
+      "name": "v1.16.0",
+      "date": "2026-05-02T12:31:06Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.16.0",
+      "prerelease": false,
+      "sha": "df53d7dd99b202fb194217abd127ae6a630e70dc"
+    },
+    {
+      "tag": "v1.15.2",
+      "name": "v1.15.2",
+      "date": "2026-04-21T17:51:16Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.15.2",
+      "prerelease": false,
+      "sha": "582934382e4e0e0bcb679c628071a4203e93cf57"
+    },
+    {
+      "tag": "v0.31.1",
+      "name": "v0.31.1",
+      "date": "2026-04-19T17:09:30Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.31.1",
+      "prerelease": false,
+      "sha": "a589dc525af12e0fabef7d6e5be028ad433eee31"
+    },
+    {
+      "tag": "v1.15.1",
+      "name": "v1.15.1",
+      "date": "2026-04-19T17:06:30Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.15.1",
+      "prerelease": false,
+      "sha": "ac42446be51300fe214ba3c6e40cc95f34fd6871"
+    },
+    {
+      "tag": "v0.31.0",
+      "name": "v0.31.0",
+      "date": "2026-04-12T09:58:49Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.31.0",
+      "prerelease": false,
+      "sha": "5073eca0edd37b13a0e39dcb48794d779b7dff8d"
+    },
+    {
+      "tag": "v1.15.0",
+      "name": "v1.15.0",
+      "date": "2026-04-07T16:09:08Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.15.0",
+      "prerelease": false,
+      "sha": "772a4e54ecc4cc2421e2b746daff0aca10f359d7"
+    },
+    {
+      "tag": "v1.14.0",
+      "name": "v1.14.0",
+      "date": "2026-03-27T19:01:13Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.14.0",
+      "prerelease": false,
+      "sha": "46bee3dea75ef53a8eae49f3b7487e6341de6074"
+    },
+    {
+      "tag": "v1.13.6",
+      "name": "v1.13.6",
+      "date": "2026-02-27T15:35:19Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.13.6",
+      "prerelease": false,
+      "sha": "7108c8877f9dc05f7aba8beb2b9e522537f9a9a7"
+    },
+    {
+      "tag": "v0.30.3",
+      "name": "Release notes - v0.30.3",
+      "date": "2026-02-18T17:20:54Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.30.3",
+      "prerelease": false,
+      "sha": "f53bcf6c3747652c9d3811dc0bbcd3674e21567a"
+    },
+    {
+      "tag": "v1.13.5",
+      "name": "v1.13.5",
+      "date": "2026-02-08T11:04:44Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.13.5",
+      "prerelease": false,
+      "sha": "29f75425f0c9f73021f5eedc869c176e30e05fe7"
+    },
+    {
+      "tag": "v1.13.4",
+      "name": "v1.13.4",
+      "date": "2026-01-27T18:18:01Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.13.4",
+      "prerelease": false,
+      "sha": "9336cf9a3393790ec8ca91fe3862e83fcdbe6b9d"
+    },
+    {
+      "tag": "v1.13.3",
+      "name": "Release v1.13.3",
+      "date": "2026-01-20T17:48:39Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.13.3",
+      "prerelease": false,
+      "sha": "ab06109b40e129e43096f9c75aaa21bc74ef9fc8"
+    },
+    {
+      "tag": "v1.13.2",
+      "name": "Release v1.13.2",
+      "date": "2025-11-04T20:01:14Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.13.2",
+      "prerelease": false,
+      "sha": "08b84b52d5835d0c7b81049c365c3d271ade8bff"
+    },
+    {
+      "tag": "v1.13.1",
+      "name": "Release v1.13.1",
+      "date": "2025-10-28T18:55:27Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.13.1",
+      "prerelease": false,
+      "sha": "1ef8e7218b085ac28b675b07349c6d7906a7b6ac"
+    },
+    {
+      "tag": "v1.13.0",
+      "name": "Release v1.13.0",
+      "date": "2025-10-27T16:08:09Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.13.0",
+      "prerelease": false,
+      "sha": "9ead04d8abbcd53718dbc31b1250ea74300921c8"
+    },
+    {
+      "tag": "v0.30.2",
+      "name": "v0.30.2",
+      "date": "2025-09-27T10:24:41Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.30.2",
+      "prerelease": false,
+      "sha": "2fcb4ec5a11710ac26f9f89cb7d46dd51a1cf013"
+    },
+    {
+      "tag": "v1.12.2",
+      "name": "Release v1.12.2",
+      "date": "2025-09-14T12:59:22Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.12.2",
+      "prerelease": false,
+      "sha": "e5a33366d75b65f88052b230b103731eb7dcb793"
+    },
+    {
+      "tag": "v1.12.1",
+      "name": "Release v1.12.1",
+      "date": "2025-09-12T14:19:28Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.12.1",
+      "prerelease": false,
+      "sha": "3cac78c2de2d1d1af0c1b4753feff16c075f01d1"
+    },
+    {
+      "tag": "v1.12.0",
+      "name": "Release v1.12.0",
+      "date": "2025-09-11T19:33:08Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.12.0",
+      "prerelease": false,
+      "sha": "0d8ad6e1de0f5339e02bc262d6f0df4936974120"
+    },
+    {
+      "tag": "v0.30.1",
+      "name": "Release v0.30.1",
+      "date": "2025-08-04T18:23:49Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.30.1",
+      "prerelease": false,
+      "sha": "b17c4dea1b95a873667e1c950e4749894a44682c"
+    },
+    {
+      "tag": "v1.11.0",
+      "name": "Release v1.11.0",
+      "date": "2025-07-23T06:05:12Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.11.0",
+      "prerelease": false,
+      "sha": "b76c4ac6f871141dd011a21f3b7ca4e66bfc33ae"
+    },
+    {
+      "tag": "v1.10.0",
+      "name": "Release v1.10.0",
+      "date": "2025-06-14T12:11:46Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.10.0",
+      "prerelease": false,
+      "sha": "73a836dae75f06055c24561d83cf4ca1c43e2854"
+    },
+    {
+      "tag": "v1.9.0",
+      "name": "Release v1.9.0",
+      "date": "2025-04-24T20:18:54Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.9.0",
+      "prerelease": false,
+      "sha": "cdcfd214c169a1acba8e267ab8e77ff4dfec3105"
+    },
+    {
+      "tag": "v0.30.0",
+      "name": "Release v0.30.0",
+      "date": "2025-03-26T17:51:16Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.30.0",
+      "prerelease": false,
+      "sha": "6e922e497616d8908616a9da0380f81d0244ef4b"
+    },
+    {
+      "tag": "v1.8.4",
+      "name": "Release v1.8.4",
+      "date": "2025-03-19T19:27:42Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.8.4",
+      "prerelease": false,
+      "sha": "9f6f97bcfb7c510103dfcb05641ae8e8f5c08bcc"
+    },
+    {
+      "tag": "v1.8.3",
+      "name": "Release v1.8.3",
+      "date": "2025-03-12T07:23:59Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.8.3",
+      "prerelease": false,
+      "sha": "39ec206483a89921732bdc8a5be67e350bfc23f0"
+    },
+    {
+      "tag": "v1.8.2",
+      "name": "Release v1.8.2",
+      "date": "2025-03-07T07:41:06Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.8.2",
+      "prerelease": false,
+      "sha": "a9f7689b0c4b6d68c7f587c3aa376860da509d94"
+    },
+    {
+      "tag": "v1.8.1",
+      "name": "Release v1.8.1",
+      "date": "2025-02-26T09:06:55Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.8.1",
+      "prerelease": false,
+      "sha": "2e64afdff5c41e38284a6fb8312f2745072513a1"
+    },
+    {
+      "tag": "v1.8.0",
+      "name": "Release v1.8.0",
+      "date": "2025-02-26T06:01:09Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.8.0",
+      "prerelease": false,
+      "sha": "cceb7b1e154fbf294135c93d3f91921643bbe49f"
+    },
+    {
+      "tag": "v1.7.9",
+      "name": "Release v1.7.9",
+      "date": "2024-12-04T07:38:11Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.9",
+      "prerelease": false,
+      "sha": "b2cb45d5a533a5465c99559b16987e4d5fc08cbc"
+    },
+    {
+      "tag": "v1.7.8",
+      "name": "Release v1.7.8",
+      "date": "2024-11-25T21:13:53Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.8",
+      "prerelease": false,
+      "sha": "415ca9440195586dcd2149aa6f1e99f0ff6957c2"
+    },
+    {
+      "tag": "v0.29.0",
+      "name": "v0.29.0",
+      "date": "2024-11-21T12:27:20Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.29.0",
+      "prerelease": false,
+      "sha": "7750b8c30b43a28737b496588e818d1f4e7b6abc"
+    },
+    {
+      "tag": "v1.7.7",
+      "name": "Release v1.7.7",
+      "date": "2024-08-31T22:02:04Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.7",
+      "prerelease": false,
+      "sha": "5b8a826771b77ab30081d033fdba9ef3b90e439a"
+    },
+    {
+      "tag": "v1.7.6",
+      "name": "Release v1.7.6",
+      "date": "2024-08-30T19:56:45Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.6",
+      "prerelease": false,
+      "sha": "d584fcfa62ba5217baf2be0748b7c5eda6da16ad"
+    },
+    {
+      "tag": "v1.7.5",
+      "name": "Release v1.7.5",
+      "date": "2024-08-23T13:32:32Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.5",
+      "prerelease": false,
+      "sha": "59cd6b0dece4050b190717a7c5cdf77906ce2104"
+    },
+    {
+      "tag": "v1.7.4",
+      "name": "Release v1.7.4",
+      "date": "2024-08-13T19:33:06Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.4",
+      "prerelease": false,
+      "sha": "abd24a7367726616e60dfc04cb394b4be37cf597"
+    },
+    {
+      "tag": "v1.7.3",
+      "name": "Release v1.7.3",
+      "date": "2024-08-01T16:16:09Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.3",
+      "prerelease": false,
+      "sha": "c6cce43cd94489f655f4488c5a50ecaf781c94f2"
+    },
+    {
+      "tag": "v1.7.2",
+      "name": "Release v1.7.2",
+      "date": "2024-05-21T16:57:59Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.2",
+      "prerelease": false,
+      "sha": "0e4f9fa29077ebee4499facea6be1492b42e8a26"
+    },
+    {
+      "tag": "v1.7.1",
+      "name": "Release v1.7.1",
+      "date": "2024-05-20T13:32:47Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.1",
+      "prerelease": false,
+      "sha": "67d1373131962d1f1f5b8d91f9a2f80ed3923bc8"
+    },
+    {
+      "tag": "v1.7.0",
+      "name": "Release v1.7.0",
+      "date": "2024-05-19T20:24:58Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.0",
+      "prerelease": false,
+      "sha": "3041c61adaaac6d2c43eba28c134e7f4d43ab012"
+    },
+    {
+      "tag": "v1.7.0-beta.2",
+      "name": "Release v1.7.0-beta.2",
+      "date": "2024-05-19T18:01:18Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.0-beta.2",
+      "prerelease": true,
+      "sha": "b49aa8e3d837c36e4728a9fa8a5e23a1162e96ec"
+    },
+    {
+      "tag": "v1.7.0-beta.1",
+      "name": "Release v1.7.0-beta.1",
+      "date": "2024-05-07T18:37:46Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.0-beta.1",
+      "prerelease": true,
+      "sha": "b9f4848f8c4c7d53dbe1a1ee06e9b3604c2e56ac"
+    },
+    {
+      "tag": "v1.7.0-beta.0",
+      "name": "Release v1.7.0-beta.0",
+      "date": "2024-04-28T19:50:49Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.7.0-beta.0",
+      "prerelease": true,
+      "sha": "8e4314bfd68773ef405a4c081cf30c3bce5447ee"
+    },
+    {
+      "tag": "v0.28.1",
+      "name": "Release v0.28.1",
+      "date": "2024-03-28T17:36:08Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.28.1",
+      "prerelease": false,
+      "sha": "3021e0ddbdeb5cd40e9e296851a8bd8ff45116d3"
+    },
+    {
+      "tag": "v1.6.8",
+      "name": "Release v1.6.8",
+      "date": "2024-03-15T16:32:43Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.6.8",
+      "prerelease": false,
+      "sha": "ab3f0f9a94853c821cb00f1112788ecdd3ae7ed1"
+    },
+    {
+      "tag": "v0.28.0",
+      "name": "Release v0.28.0",
+      "date": "2024-02-12T18:38:20Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.28.0",
+      "prerelease": false,
+      "sha": "3b7635aefc842c05da0ec8c90e8bd09cb54616b8"
+    },
+    {
+      "tag": "v1.6.7",
+      "name": "Release v1.6.7",
+      "date": "2024-01-25T19:58:46Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.6.7",
+      "prerelease": false,
+      "sha": "a52e4d9af51205959ef924f87bcf90c605e08a1e"
+    },
+    {
+      "tag": "v1.6.6",
+      "name": "Release v1.6.6",
+      "date": "2024-01-24T23:12:15Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.6.6",
+      "prerelease": false,
+      "sha": "104aa3f65dc30d70273798dff413fb44edd1c9e6"
+    },
+    {
+      "tag": "v1.6.5",
+      "name": "Release v1.6.5",
+      "date": "2024-01-05T19:52:10Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.6.5",
+      "prerelease": false,
+      "sha": "6d4c421ee157d93b47f3f9082a7044b1da221461"
+    },
+    {
+      "tag": "v1.6.4",
+      "name": "Release v1.6.4",
+      "date": "2024-01-03T22:10:51Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.6.4",
+      "prerelease": false,
+      "sha": "8790b8e7847c7f450544e7195c837ffc10fcb160"
+    },
+    {
+      "tag": "v1.6.3",
+      "name": "Release v1.6.3",
+      "date": "2023-12-26T23:16:13Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.6.3",
+      "prerelease": false,
+      "sha": "b15b918d179900e7d47a08f4e96efc89e16d8a7b"
+    },
+    {
+      "tag": "v1.6.2",
+      "name": "Release v1.6.2",
+      "date": "2023-11-14T20:36:05Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.6.2",
+      "prerelease": false,
+      "sha": "b3be36585884ba1e237fdd0eacf55f678aefc396"
+    },
+    {
+      "tag": "v1.6.1",
+      "name": "Release v1.6.1",
+      "date": "2023-11-08T15:09:22Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.6.1",
+      "prerelease": false,
+      "sha": "f6d2cf9763bfa124f15c2dc6a5d5d5d9d3e26169"
+    },
+    {
+      "tag": "v1.6.0",
+      "name": "Release v1.6.0",
+      "date": "2023-10-26T21:15:51Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.6.0",
+      "prerelease": false,
+      "sha": "f7adacdbaa569281253c8cfc623ad3f4dc909c60"
+    },
+    {
+      "tag": "v1.5.1",
+      "name": "Release v1.5.1",
+      "date": "2023-09-26T18:22:08Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.5.1",
+      "prerelease": false,
+      "sha": "88fb52b5fad7aabab0532e7ad086c5f1b0178905"
+    },
+    {
+      "tag": "v1.5.0",
+      "name": "Release v1.5.0",
+      "date": "2023-08-26T19:10:46Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.5.0",
+      "prerelease": false,
+      "sha": "6365751ba6725cc283f7364b9ee6ca9917e9737c"
+    },
+    {
+      "tag": "v1.4.0",
+      "name": "Release v1.4.0",
+      "date": "2023-04-27T23:05:49Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.4.0",
+      "prerelease": false,
+      "sha": "21a5ad34c4a5956d81d338059ac0dd34a19ed094"
+    },
+    {
+      "tag": "v1.3.6",
+      "name": "Release v1.3.6",
+      "date": "2023-04-19T19:38:52Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.3.6",
+      "prerelease": false,
+      "sha": "59eb99183546d822bc27e881f5dcd748daa04173"
+    },
+    {
+      "tag": "v1.3.5",
+      "name": "Release v1.3.5",
+      "date": "2023-04-05T18:02:59Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.3.5",
+      "prerelease": false,
+      "sha": "4af78a72eee06172c53383aaed74e2dcaf44d620"
+    },
+    {
+      "tag": "v1.3.4",
+      "name": "Release v1.3.4",
+      "date": "2023-02-22T21:06:16Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.3.4",
+      "prerelease": false,
+      "sha": "2e70cecda42993e1153248f0f96715c3c55f7f39"
+    },
+    {
+      "tag": "v1.3.3",
+      "name": "Release v1.3.3",
+      "date": "2023-02-13T18:47:13Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.3.3",
+      "prerelease": false,
+      "sha": "d9ebf8fb3ab2e6d277626d72bcf5580e2a6e795b"
+    },
+    {
+      "tag": "v1.3.2",
+      "name": "Release v1.3.2",
+      "date": "2023-02-03T18:10:44Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.3.2",
+      "prerelease": false,
+      "sha": "0b449293fc238f30f39ab9ed0fca86a23c8a6a79"
+    },
+    {
+      "tag": "v1.3.1",
+      "name": "Release v1.3.1",
+      "date": "2023-02-01T23:30:56Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.3.1",
+      "prerelease": false,
+      "sha": "54d3facb3b032665e6ae84e157073702b5c2e4d9"
+    },
+    {
+      "tag": "v1.3.0",
+      "name": "Release v1.3.0",
+      "date": "2023-01-31T16:55:44Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.3.0",
+      "prerelease": false,
+      "sha": "7fbfbbeff69904cd64e8ac62da8969a1e633ee23"
+    },
+    {
+      "tag": "v1.2.6",
+      "name": "Release v1.2.6",
+      "date": "2023-01-28T16:41:05Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.2.6",
+      "prerelease": false,
+      "sha": "5bde91cac787d92ae56c6cb293941244cc4c617d"
+    },
+    {
+      "tag": "v1.2.5",
+      "name": "Release v1.2.5",
+      "date": "2023-01-26T15:06:32Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.2.5",
+      "prerelease": false,
+      "sha": "366161e5e48f818fa42c906e91b71f7876aadabb"
+    },
+    {
+      "tag": "v1.2.4",
+      "name": "Release v1.2.4",
+      "date": "2023-01-24T17:21:54Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.2.4",
+      "prerelease": false,
+      "sha": "6600d51e6bbb7db984484ea09f62ec22f9044ed8"
+    },
+    {
+      "tag": "v1.2.3",
+      "name": "1.2.3",
+      "date": "2023-01-15T23:57:45Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.2.3",
+      "prerelease": false,
+      "sha": "557ed0a7489b1bf62296ea34568eeea8975ff4f9"
+    },
+    {
+      "tag": "1.2.2",
+      "name": "1.2.2",
+      "date": "2022-12-29T06:39:25Z",
+      "url": "https://github.com/axios/axios/releases/tag/1.2.2",
+      "prerelease": false,
+      "sha": "8ea432429b81c2f1aa8b03e43d0bdb498f21c4f4"
+    },
+    {
+      "tag": "v1.2.1",
+      "name": "v1.2.1",
+      "date": "2022-12-05T19:44:04Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.2.1",
+      "prerelease": false,
+      "sha": "981265dbf464de00e57c6e9eaaca051510fb6021"
+    },
+    {
+      "tag": "v1.2.0",
+      "name": "v1.2.0",
+      "date": "2022-11-22T19:03:37Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.2.0",
+      "prerelease": false,
+      "sha": "f92e167f768437ae17f361b2ea36c9b9d48aa814"
+    },
+    {
+      "tag": "1.2.0-alpha.1",
+      "name": "v1.2.0-alpha.1",
+      "date": "2022-11-10T19:08:56Z",
+      "url": "https://github.com/axios/axios/releases/tag/1.2.0-alpha.1",
+      "prerelease": true,
+      "sha": "3a7c363e540e388481346e0c0a3c80e8318dbf5d"
+    },
+    {
+      "tag": "v1.1.3",
+      "name": "v1.1.3",
+      "date": "2022-10-15T13:44:29Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.1.3",
+      "prerelease": false,
+      "sha": "9bd53214f6339c3064d4faee91c223b35846f2dd"
+    },
+    {
+      "tag": "v1.1.2",
+      "name": "v1.1.2",
+      "date": "2022-10-07T10:12:58Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.1.2",
+      "prerelease": false,
+      "sha": "1b29f4e98e5bb44a125230398f61aa5b0add91c2"
+    },
+    {
+      "tag": "v1.1.1",
+      "name": "v1.1.1",
+      "date": "2022-10-07T09:10:22Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.1.1",
+      "prerelease": false,
+      "sha": "1315e2282f9463bac77b0c0672f47d8d69804677"
+    },
+    {
+      "tag": "v1.1.0",
+      "name": "v1.1.0",
+      "date": "2022-10-06T19:21:09Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.1.0",
+      "prerelease": false,
+      "sha": "9c3dce366bd594558e5e474ce9135af22a0d9949"
+    },
+    {
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "date": "2022-10-04T19:21:51Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.0.0",
+      "prerelease": false,
+      "sha": "484aa4fe6addccbd32206a31eb3d2d000843066e"
+    },
+    {
+      "tag": "v1.0.0-alpha.1",
+      "name": "v1.0.0-alpha.1",
+      "date": "2022-05-31T19:29:33Z",
+      "url": "https://github.com/axios/axios/releases/tag/v1.0.0-alpha.1",
+      "prerelease": true,
+      "sha": "3cf6ad72033fd6eacf720a7d700f99dc96f586a3"
+    },
+    {
+      "tag": "v0.27.2",
+      "name": "v0.27.2",
+      "date": "2022-04-27T10:00:06Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.27.2",
+      "prerelease": false,
+      "sha": "bc733fec78326609e751187c9d453cee9bf1993a"
+    },
+    {
+      "tag": "v0.27.1",
+      "name": "v0.27.1",
+      "date": "2022-04-26T07:36:08Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.27.1",
+      "prerelease": false,
+      "sha": "838f53b4bb6616d8ec8efdae0612c9c74b8c3804"
+    },
+    {
+      "tag": "v0.27.0",
+      "name": "v0.27.0",
+      "date": "2022-04-25T16:42:44Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.27.0",
+      "prerelease": false,
+      "sha": "008dd9d466167e97727bdba13f4937bb9d7f3baa"
+    },
+    {
+      "tag": "v0.26.1",
+      "name": "v0.26.1",
+      "date": "2022-03-09T17:11:44Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.26.1",
+      "prerelease": false,
+      "sha": "8e67551177990ed067384e1641d6964dcab773f7"
+    },
+    {
+      "tag": "v0.26.0",
+      "name": "v0.26.0",
+      "date": "2022-02-13T14:23:41Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.26.0",
+      "prerelease": false,
+      "sha": "c9aca7525703ab600eacd9e95fd7f6ecc9942616"
+    },
+    {
+      "tag": "v0.25.0",
+      "name": "v0.25.0",
+      "date": "2022-01-18T07:28:27Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.25.0",
+      "prerelease": false,
+      "sha": "5c5cbdf4ba1e2b55b6bff35673bdd5206b4eddf8"
+    },
+    {
+      "tag": "v0.24.0",
+      "name": "v0.24.0",
+      "date": "2021-10-25T17:49:51Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.24.0",
+      "prerelease": false,
+      "sha": "53d6d37556a3443b00b3d9b4e7a934bf1d81aabe"
+    },
+    {
+      "tag": "v0.23.0",
+      "name": "v0.23.0",
+      "date": "2021-10-12T15:36:17Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.23.0",
+      "prerelease": false,
+      "sha": "1025d1231a7747503188459dd5a6d1effdcea928"
+    },
+    {
+      "tag": "v0.22.0",
+      "name": "v0.22.0",
+      "date": "2021-10-01T05:55:21Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.22.0",
+      "prerelease": false,
+      "sha": "72f14ceef7dae917057f1d5c221713610a65217b"
+    },
+    {
+      "tag": "v0.21.4",
+      "name": "v0.21.4",
+      "date": "2021-09-06T15:36:18Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.21.4",
+      "prerelease": false,
+      "sha": "66c46020bd01b39081259ae74edc2afc283818fa"
+    },
+    {
+      "tag": "0.21.3",
+      "name": "v0.21.3",
+      "date": "2021-09-04T19:02:09Z",
+      "url": "https://github.com/axios/axios/releases/tag/0.21.3",
+      "prerelease": false,
+      "sha": "e367be54dc0e8e3f5dfcba134c69d4a8f1e40324"
+    },
+    {
+      "tag": "v0.21.2",
+      "name": "v0.21.2",
+      "date": "2021-09-04T10:19:45Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.21.2",
+      "prerelease": false,
+      "sha": "c0c87610911e1edebc923d0e932fea28cdfddae3"
+    },
+    {
+      "tag": "v0.21.1",
+      "name": "v0.21.1",
+      "date": "2021-01-04T15:04:38Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.21.1",
+      "prerelease": false,
+      "sha": "a64050a6cfbcc708a55a7dc8030d85b1c78cdf38"
+    },
+    {
+      "tag": "v0.21.0",
+      "name": "v0.21.0",
+      "date": "2020-10-23T19:05:55Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.21.0",
+      "prerelease": false,
+      "sha": "94ca24b5b23f343769a15f325693246e07c177d2"
+    },
+    {
+      "tag": "v0.20.0",
+      "name": "v0.20.0",
+      "date": "2020-08-21T03:15:00Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.20.0",
+      "prerelease": false,
+      "sha": "0d8765562401910c1c509f6739a3bc558721e123"
+    },
+    {
+      "tag": "v0.20.0-0",
+      "name": "v0.20.0-0",
+      "date": "2020-07-15T16:13:23Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.20.0-0",
+      "prerelease": true,
+      "sha": "ffea03453f77a8176c51554d5f6c3c6829294649"
+    },
+    {
+      "tag": "v0.19.2",
+      "name": "v0.19.2",
+      "date": "2020-01-22T04:29:22Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.19.2",
+      "prerelease": false,
+      "sha": "2a0ff479f9fb7f09a219f5178ca85a6519562ff1"
+    },
+    {
+      "tag": "0.19.1",
+      "name": "v0.19.1",
+      "date": "2020-01-07T18:55:36Z",
+      "url": "https://github.com/axios/axios/releases/tag/0.19.1",
+      "prerelease": false,
+      "sha": "351cf290f0478d6e47e74c6da2f3ad8fe8f29887"
+    },
+    {
+      "tag": "v0.18.1",
+      "name": "v0.18.1",
+      "date": "2019-06-01T00:48:47Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.18.1",
+      "prerelease": false,
+      "sha": "face0165de613696d10b1fd2a0e2f7b3852fa018"
+    },
+    {
+      "tag": "v0.19.0",
+      "name": "v0.19.0",
+      "date": "2019-05-30T16:13:58Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.19.0",
+      "prerelease": false,
+      "sha": "8d0b92b2678d96770304dd767cd05a59d37f12cf"
+    },
+    {
+      "tag": "v0.19.0-beta.1",
+      "name": "v0.19.0-beta.1",
+      "date": "2018-08-09T19:06:12Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.19.0-beta.1",
+      "prerelease": true,
+      "sha": "527381198e8112dd298918b3d9d6c643763a59c3"
+    },
+    {
+      "tag": "v0.18.0",
+      "name": "v.0.18.0",
+      "date": "2018-08-09T19:05:33Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.18.0",
+      "prerelease": false,
+      "sha": "d59c70fdfd35106130e9f783d0dbdcddd145b58f"
+    },
+    {
+      "tag": "v0.17.1",
+      "name": "v0.17.1",
+      "date": "2017-11-11T23:25:11Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.17.1",
+      "prerelease": false,
+      "sha": "ad1195f0702381a77b4f2863aad6ddb1002ffd51"
+    },
+    {
+      "tag": "v0.17.0",
+      "name": "v0.17.0",
+      "date": "2017-10-21T18:02:33Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.17.0",
+      "prerelease": false,
+      "sha": "2c0e3183215d9a5fbc2ee8f35f459ac0e4d9f99c"
+    },
+    {
+      "tag": "v0.16.2",
+      "name": "v0.16.2",
+      "date": "2017-06-03T19:30:32Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.16.2",
+      "prerelease": false,
+      "sha": "46e275c407f81c44dd9aad419b6e861d8a936580"
+    },
+    {
+      "tag": "v0.16.1",
+      "name": "v0.16.1",
+      "date": "2017-04-08T18:52:40Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.16.1",
+      "prerelease": false,
+      "sha": "5c8095e48329dacaec1f8d43a9b84ed275fbd0ef"
+    },
+    {
+      "tag": "v0.16.0",
+      "name": "v0.16.0",
+      "date": "2017-04-01T02:32:38Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.16.0",
+      "prerelease": false,
+      "sha": "19b794848047e51f5d8689cf48820c986df49d25"
+    },
+    {
+      "tag": "v0.15.3",
+      "name": "v0.15.3",
+      "date": "2016-11-27T22:00:01Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.15.3",
+      "prerelease": false,
+      "sha": "4976816808c4e81acad2393c429832afeaf9664d"
+    },
+    {
+      "tag": "v0.15.2",
+      "name": "v0.15.2",
+      "date": "2016-10-18T01:33:46Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.15.2",
+      "prerelease": false,
+      "sha": "3af756049f102be2eebafdbb108f10173380a68d"
+    },
+    {
+      "tag": "v0.15.1",
+      "name": "v0.15.1",
+      "date": "2016-10-15T06:53:08Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.15.1",
+      "prerelease": false,
+      "sha": "3f8b128da4ab11e34f0b880381f9395b2ab0e22f"
+    },
+    {
+      "tag": "v0.15.0",
+      "name": "v0.15.0",
+      "date": "2016-10-11T04:42:04Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.15.0",
+      "prerelease": false,
+      "sha": "e8c5c49ea2f2cf4fd45eaf81270a6d23546e2c93"
+    },
+    {
+      "tag": "v0.13.1",
+      "name": "v0.13.1",
+      "date": "2016-08-27T18:35:21Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.13.1",
+      "prerelease": false,
+      "sha": "377efb89aed819ed1cd416b69f057632ad5664a5"
+    },
+    {
+      "tag": "v0.13.0",
+      "name": "v0.13.0",
+      "date": "2016-08-27T18:35:02Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.13.0",
+      "prerelease": false,
+      "sha": "ff919487e13430098d3da37a37cc04c3f24b59c4"
+    },
+    {
+      "tag": "v0.14.0",
+      "name": "v0.14.0",
+      "date": "2016-08-27T18:34:27Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.14.0",
+      "prerelease": false,
+      "sha": "c96348660dacddd32676924d4f1bde535c45fb77"
+    },
+    {
+      "tag": "v0.10.0",
+      "name": "v0.10.0",
+      "date": "2016-06-01T05:27:25Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.10.0",
+      "prerelease": false,
+      "sha": "2797f10ea5d2cd963a8e5c80da319848bad9f499"
+    },
+    {
+      "tag": "v0.11.1",
+      "name": "v0.11.1",
+      "date": "2016-06-01T05:27:09Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.11.1",
+      "prerelease": false,
+      "sha": "2e949495f0177bd4f4faab8ce031aa32bef50f47"
+    },
+    {
+      "tag": "v0.12.0",
+      "name": "v0.12.0",
+      "date": "2016-06-01T05:26:15Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.12.0",
+      "prerelease": false,
+      "sha": "4d1269cb4a9773db128f459046b6c4c2a0926859"
+    },
+    {
+      "tag": "v0.11.0",
+      "name": "v0.11.0",
+      "date": "2016-04-27T04:21:28Z",
+      "url": "https://github.com/axios/axios/releases/tag/v0.11.0",
+      "prerelease": false,
+      "sha": "82d34ac743022aaf0c4e68650b39d2f7edab73a4"
+    }
+  ],
+  "tags_without_release": [
+    "v1.2.2",
+    "v0.19.1",
+    "v0.9.1",
+    "v0.9.0",
+    "v0.8.1",
+    "v0.8.0",
+    "v0.7.0",
+    "v0.6.0",
+    "v0.5.4",
+    "v0.5.3",
+    "v0.5.2",
+    "v0.5.1",
+    "v0.5.0",
+    "v0.4.2",
+    "v0.4.1",
+    "v0.4.0",
+    "v0.3.1",
+    "v0.3.0",
+    "v0.2.2",
+    "v0.2.1",
+    "v0.2.0",
+    "v0.1.0"
+  ],
+  "security_fixes": [
+    {
+      "date": "2026-09-16T09:04:21Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-j8rh-479h-cp32",
+        "CVE-2026-101904"
+      ],
+      "title": "Header Injection via Inherited headers After Minimal Interceptor",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-j8rh-479h-cp32",
+      "patched_versions": [
+        "1.20.0"
+      ],
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T09:04:02Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-4hqw-qxg8-jxx2",
+        "CVE-2026-101900"
+      ],
+      "title": "Fetch Adapter Header Injection via Inherited FormData getHeaders",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-4hqw-qxg8-jxx2",
+      "patched_versions": [
+        "1.20.0"
+      ],
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T09:03:42Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-m8m8-qj5v-23w3",
+        "CVE-2026-101905"
+      ],
+      "title": "Node HTTP adapter prototype-pollution gadget allows request socket hijack via inherited createConnection",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-m8m8-qj5v-23w3",
+      "patched_versions": [
+        "1.20.0"
+      ],
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T09:03:23Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-44g4-m2mj-wpvx",
+        "CVE-2026-101899"
+      ],
+      "title": "CIDR-form NO_PROXY entries are ignored, causing proxy exclusion bypass for internal IP ranges",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-44g4-m2mj-wpvx",
+      "patched_versions": [
+        "1.20.0"
+      ],
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T09:02:57Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-r4gj-5m52-g5wh",
+        "CVE-2026-101907"
+      ],
+      "title": "maxRedirects: 0 is not enforced by the fetch adapter, allowing redirect-based SSRF",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-r4gj-5m52-g5wh",
+      "patched_versions": [
+        "1.20.0"
+      ],
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T09:02:29Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-vh66-26gq-q6x8",
+        "CVE-2026-101908"
+      ],
+      "title": "Prototype pollution gadget in fetch adapter can alter outbound requests",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-vh66-26gq-q6x8",
+      "patched_versions": [
+        "1.20.0"
+      ],
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T09:00:51Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-9fr6-4gfg-395g",
+        "CVE-2026-101902"
+      ],
+      "title": "Prototype-Pollution Gadget in Axios Default Instance Allows Inherited Object.prototype.method to Override HTTP Method",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-9fr6-4gfg-395g",
+      "patched_versions": [
+        "0.34.0",
+        "1.20.0"
+      ],
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T09:00:09Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-c29m-xwm3-cm6r",
+        "CVE-2026-101903"
+      ],
+      "title": "ReDoS in fromDataURI data: URL parser freezes the Node event loop (DoS)",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-c29m-xwm3-cm6r",
+      "patched_versions": [
+        "1.20.0"
+      ],
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T08:59:41Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-mghh-pgcx-3jjj",
+        "CVE-2026-101906"
+      ],
+      "title": "ReDoS (O(N²)) in shouldBypassProxy host normalization, reachable via untrusted redirect Location",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-mghh-pgcx-3jjj",
+      "patched_versions": [
+        "1.20.0"
+      ],
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T08:59:17Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-x97p-jq2g-jp4f",
+        "CVE-2026-101909"
+      ],
+      "title": "Prototype Pollution Gadget in axios toFormData Options",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-x97p-jq2g-jp4f",
+      "patched_versions": [
+        "0.34.0",
+        "1.20.0"
+      ],
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T08:58:16Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-3pq3-5fj3-cg6v",
+        "CVE-2026-101898"
+      ],
+      "title": "HTTP/2 adapter bypasses configured DNS lookup and proxy controls",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-3pq3-5fj3-cg6v",
+      "patched_versions": [
+        "1.20.0"
+      ],
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-16T08:56:36Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-542g-h47m-68v8",
+        "CVE-2026-101901"
+      ],
+      "title": "Denial of Service  via Unhandled 'error' Event in HTTP/2 ClientHttp2Session Initialization",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-542g-h47m-68v8",
+      "patched_versions": [
+        "1.20.0"
+      ],
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-06T06:10:09Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-hcpx-6fm6-wx23",
+        "CVE-2026-69125"
+      ],
+      "title": "Axios form serializer maxDepth bypass via {} metatoken",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-hcpx-6fm6-wx23",
+      "patched_versions": [
+        "0.33.0",
+        "1.18.0"
+      ],
+      "release": "v0.33.0",
+      "release_date": "2026-06-13T11:53:34Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-06T06:09:57Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-gcfj-64vw-6mp9",
+        "CVE-2026-69124"
+      ],
+      "title": "Axios Node HTTP adapter can use an inherited proxy after interceptor config cloning",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-gcfj-64vw-6mp9",
+      "patched_versions": [
+        "0.33.0",
+        "1.18.0"
+      ],
+      "release": "v0.33.0",
+      "release_date": "2026-06-13T11:53:34Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-06T06:09:44Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-7q8q-rj6j-mhjq",
+        "CVE-2026-69123"
+      ],
+      "title": "Nested axios option objects can consume polluted prototype values",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-7q8q-rj6j-mhjq",
+      "patched_versions": [
+        "0.33.0",
+        "1.18.0"
+      ],
+      "release": "v0.33.0",
+      "release_date": "2026-06-13T11:53:34Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-06T06:09:33Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-mwf2-3pr3-8698",
+        "CVE-2026-68948"
+      ],
+      "title": "HTTP/2 streamed uploads bypass `maxBodyLength`",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-mwf2-3pr3-8698",
+      "patched_versions": [
+        "1.18.0"
+      ],
+      "release": "v1.18.0",
+      "release_date": "2026-06-13T12:00:31Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-06T06:09:23Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-jqh4-m9w3-8hp9",
+        "CVE-2026-68947"
+      ],
+      "title": "Fetch adapter `ReadableStream` uploads bypass `maxBodyLength`",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-jqh4-m9w3-8hp9",
+      "patched_versions": [
+        "1.18.0"
+      ],
+      "release": "v1.18.0",
+      "release_date": "2026-06-13T12:00:31Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-06T06:09:03Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-mmx7-hfxf-jppx",
+        "CVE-2026-68944"
+      ],
+      "title": "Prototype pollution gadgets can alter axios request construction",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-mmx7-hfxf-jppx",
+      "patched_versions": [
+        "1.18.0",
+        "0.33.0"
+      ],
+      "release": "v1.18.0",
+      "release_date": "2026-06-13T12:00:31Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-06T06:08:51Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-f4gw-2p7v-4548",
+        "CVE-2026-68946"
+      ],
+      "title": "NO_PROXY bypass for 0.0.0.0 local addresses in axios",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-f4gw-2p7v-4548",
+      "patched_versions": [
+        "1.18.0",
+        "0.33.0"
+      ],
+      "release": "v1.18.0",
+      "release_date": "2026-06-13T12:00:31Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-06T06:08:39Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-xj6q-8x83-jv6g",
+        "CVE-2026-68943"
+      ],
+      "title": "Prototype pollution auth subfields can inject Basic auth",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-xj6q-8x83-jv6g",
+      "patched_versions": [
+        "1.18.0"
+      ],
+      "release": "v1.18.0",
+      "release_date": "2026-06-13T12:00:31Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-06T06:08:26Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-42h9-826w-cgv3",
+        "CVE-2026-68942"
+      ],
+      "title": "Excessive recursion in formDataToJSON can cause denial of service",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-42h9-826w-cgv3",
+      "patched_versions": [
+        "1.18.0"
+      ],
+      "release": "v1.18.0",
+      "release_date": "2026-06-13T12:00:31Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-06T06:07:40Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-pmv8-rq9r-6j72",
+        "CVE-2026-68941"
+      ],
+      "title": "Deep formToJSON Key Recursion Can Cause Denial of Service",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-pmv8-rq9r-6j72",
+      "patched_versions": [
+        "0.33.0",
+        "1.18.0"
+      ],
+      "release": "v0.33.0",
+      "release_date": "2026-06-13T11:53:34Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-06-22T18:28:55Z",
+      "type": "commit",
+      "ids": [],
+      "title": "chore(deps): bump form-data floor to ^4.0.6 to patch CRLF injection (#11028)",
+      "sha": "5d2af0485354580dce4b6b77890b84cadc0ead0e",
+      "url": "https://github.com/axios/axios/commit/5d2af0485354580dce4b6b77890b84cadc0ead0e",
+      "release": "v1.19.0",
+      "release_date": "2026-07-26T14:13:32Z",
+      "mapping": "date heuristic (first release on/after commit)"
+    },
+    {
+      "date": "2026-05-30T12:17:22Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-777c-7fjr-54vf",
+        "CVE-2026-44488"
+      ],
+      "title": "Allocation of Resources Without Limits or Throttling in axios",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-777c-7fjr-54vf",
+      "patched_versions": [
+        "1.16.0"
+      ],
+      "release": "v1.16.0",
+      "release_date": "2026-05-02T12:31:06Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-05-30T11:04:19Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-p92q-9vqr-4j8v",
+        "CVE-2026-44487"
+      ],
+      "title": "Proxy-Authorization Credential Leak to Origin Server Across HTTP-to-HTTPS Redirect in Axios Node.js HTTP Adapter",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-p92q-9vqr-4j8v",
+      "patched_versions": [
+        "1.16.0",
+        "0.32.0"
+      ],
+      "release": "v1.16.0",
+      "release_date": "2026-05-02T12:31:06Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-05-30T10:50:43Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-j5f8-grm9-p9fc",
+        "CVE-2026-44486"
+      ],
+      "title": "Proxy-Authorization header leaks to redirect target when proxy is re-evaluated to direct connection",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-j5f8-grm9-p9fc",
+      "patched_versions": [
+        "1.16.0",
+        "0.32.0"
+      ],
+      "release": "v1.16.0",
+      "release_date": "2026-05-02T12:31:06Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-05-30T10:27:43Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-hfxv-24rg-xrqf",
+        "CVE-2026-44496"
+      ],
+      "title": "Regular Expression Denial of Service (ReDoS) via Cookie Name Injection",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-hfxv-24rg-xrqf",
+      "patched_versions": [
+        "1.16.0",
+        "0.32.0"
+      ],
+      "release": "v1.16.0",
+      "release_date": "2026-05-02T12:31:06Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-05-29T09:05:09Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-3g43-6gmg-66jw",
+        "CVE-2026-44495"
+      ],
+      "title": "Prototype Pollution Gadget in Axios Config Merge Allows Inherited transformResponse Execution",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-3g43-6gmg-66jw",
+      "patched_versions": [
+        "1.15.2",
+        "0.31.1"
+      ],
+      "release": "v1.15.2",
+      "release_date": "2026-04-21T17:51:16Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-05-29T06:49:56Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-35jp-ww65-95wh",
+        "CVE-2026-44494"
+      ],
+      "title": "Prototype Pollution Gadget in Axios Node Proxy Handling",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-35jp-ww65-95wh",
+      "patched_versions": [
+        "1.16.0"
+      ],
+      "release": "v1.16.0",
+      "release_date": "2026-05-02T12:31:06Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-05-29T06:32:41Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-pjwm-pj3p-43mv",
+        "CVE-2026-44492"
+      ],
+      "title": "shouldBypassProxy does not recognize IPv4-mapped IPv6 addresses, allowing NO_PROXY bypass (incomplete fix for CVE-2025-62718)",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-pjwm-pj3p-43mv",
+      "patched_versions": [
+        "1.16.0",
+        "0.32.0"
+      ],
+      "release": "v1.16.0",
+      "release_date": "2026-05-02T12:31:06Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-05-29T06:32:22Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-898c-q2cr-xwhg",
+        "CVE-2026-44490"
+      ],
+      "title": "DoS & Header Injection via Prototype Pollution Read-Side Gadgets in axios merge functions",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-898c-q2cr-xwhg",
+      "patched_versions": [
+        "1.16.0",
+        "0.32.0"
+      ],
+      "release": "v1.16.0",
+      "release_date": "2026-05-02T12:31:06Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-05-29T06:31:28Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-654m-c8p4-x5fp",
+        "CVE-2026-44489"
+      ],
+      "title": "Proxy-Authorization Header Injection via Prototype Pollution — Incomplete Null-Prototype Fix",
+      "severity": "low",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-654m-c8p4-x5fp",
+      "patched_versions": [
+        "1.16.0"
+      ],
+      "release": "v1.16.0",
+      "release_date": "2026-05-02T12:31:06Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-05-24T17:05:48Z",
+      "type": "commit",
+      "ids": [
+        "CVE-2026-42264",
+        "GHSA-72mg-mc2j-cwf6"
+      ],
+      "title": "fix: guard socketPath with own() to prevent prototype pollution SSRF (#10901)",
+      "sha": "140a17944a6ff175611597c874e218ad6c2afd1c",
+      "url": "https://github.com/axios/axios/commit/140a17944a6ff175611597c874e218ad6c2afd1c",
+      "release": "v1.17.0",
+      "release_date": "2026-06-03T06:14:01Z",
+      "mapping": "date heuristic (first release on/after commit)"
+    },
+    {
+      "date": "2026-04-24T13:11:26Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-445q-vr5w-6q77",
+        "CVE-2026-42037"
+      ],
+      "title": "CRLF Injection in multipart/form-data body via unsanitized blob.type in formDataToStream",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-445q-vr5w-6q77",
+      "patched_versions": [
+        "1.15.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:10:58Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-m7pr-hjqh-92cm",
+        "CVE-2026-42038"
+      ],
+      "title": "no_proxy bypass via IP alias allows SSRF",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-m7pr-hjqh-92cm",
+      "patched_versions": [
+        "1.15.1",
+        "0.31.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:10:47Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-62hf-57xw-28j9",
+        "CVE-2026-42039"
+      ],
+      "title": "axios: unbounded recursion in toFormData causes DoS via deeply nested request data",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-62hf-57xw-28j9",
+      "patched_versions": [
+        "1.15.1",
+        "0.31.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:10:13Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-5c9x-8gcm-mpgx",
+        "CVE-2026-42034"
+      ],
+      "title": " HTTP adapter streamed uploads bypass maxBodyLength when maxRedirects: 0",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-5c9x-8gcm-mpgx",
+      "patched_versions": [
+        "1.15.1",
+        "0.31.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:10:02Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-vf2m-468p-8v99",
+        "CVE-2026-42036"
+      ],
+      "title": "HTTP adapter streamed responses bypass maxContentLength",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-vf2m-468p-8v99",
+      "patched_versions": [
+        "1.15.1",
+        "0.31.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:09:40Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-pf86-5x62-jrwf",
+        "CVE-2026-42033"
+      ],
+      "title": "Prototype Pollution Gadgets in axios: Response Tampering, Data Exfiltration, and Request Hijacking",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-pf86-5x62-jrwf",
+      "patched_versions": [
+        "1.15.1",
+        "0.31.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:09:31Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-6chq-wfr3-2hj9",
+        "CVE-2026-42035"
+      ],
+      "title": "Header Injection via Prototype Pollution",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-6chq-wfr3-2hj9",
+      "patched_versions": [
+        "1.15.1",
+        "0.31.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:09:02Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-xx6v-rp6x-q39c",
+        "CVE-2026-42042"
+      ],
+      "title": "XSRF Token Cross-Origin Leakage via Prototype Pollution Gadget in `withXSRFToken` Boolean Coercion",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-xx6v-rp6x-q39c",
+      "patched_versions": [
+        "1.15.1",
+        "0.31.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:08:07Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-w9j2-pvgh-6h63",
+        "CVE-2026-42041"
+      ],
+      "title": "Authentication Bypass via Prototype Pollution Gadget in `validateStatus` Merge Strategy",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-w9j2-pvgh-6h63",
+      "patched_versions": [
+        "1.15.1",
+        "0.31.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:07:44Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-pmwg-cvhr-8vh7",
+        "CVE-2026-42043"
+      ],
+      "title": "[Patch Bypass] Incomplete Fix for GHSA-3p68-rc4w-qgx5 (CVE-2025-62718) — NO_PROXY  Protection Bypassed via RFC 1122 Loopback Subnet (127.0.0.0/8)  in Axios 1.15.0",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-pmwg-cvhr-8vh7",
+      "patched_versions": [
+        "1.15.1",
+        "0.31.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:07:11Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-3w6x-2g7m-8v23",
+        "CVE-2026-42044"
+      ],
+      "title": "Invisible JSON Response Tampering via Prototype Pollution Gadget in `parseReviver`",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-3w6x-2g7m-8v23",
+      "patched_versions": [
+        "1.15.2"
+      ],
+      "release": "v1.15.2",
+      "release_date": "2026-04-21T17:51:16Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:06:33Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-q8qp-cvcw-x6jj",
+        "CVE-2026-42264"
+      ],
+      "title": "Prototype pollution read-side gadgets in HTTP adapter allow credential injection and request hijacking",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-q8qp-cvcw-x6jj",
+      "patched_versions": [
+        "1.15.2"
+      ],
+      "release": "v1.15.2",
+      "release_date": "2026-04-21T17:51:16Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-24T13:05:35Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-xhjh-pmcv-23jw",
+        "CVE-2026-42040"
+      ],
+      "title": "Null Byte Injection via Reverse-Encoding in AxiosURLSearchParams",
+      "severity": "low",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-xhjh-pmcv-23jw",
+      "patched_versions": [
+        "1.15.1",
+        "0.31.1"
+      ],
+      "release": "v1.15.1",
+      "release_date": "2026-04-19T17:06:30Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-09T14:01:33Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-fvcv-3m26-pcqx",
+        "CVE-2026-40175"
+      ],
+      "title": "Unrestricted Cloud Metadata Exfiltration via Header Injection Chain",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-fvcv-3m26-pcqx",
+      "patched_versions": [
+        "1.15.0",
+        "0.31.0"
+      ],
+      "release": "v1.15.0",
+      "release_date": "2026-04-07T16:09:08Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-09T14:01:12Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-3p68-rc4w-qgx5",
+        "CVE-2025-62718"
+      ],
+      "title": "NO_PROXY Hostname Normalization Bypass Leads to SSRF",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-3p68-rc4w-qgx5",
+      "patched_versions": [
+        "1.15.0",
+        "0.31.0"
+      ],
+      "release": "v1.15.0",
+      "release_date": "2026-04-07T16:09:08Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-07T15:38:21Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-qj83-cq47-w5f8",
+        "CVE-2026-39865"
+      ],
+      "title": "Axios HTTP/2 Session Cleanup State Corruption Vulnerability",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-qj83-cq47-w5f8",
+      "patched_versions": [
+        "1.13.2"
+      ],
+      "release": "v1.13.2",
+      "release_date": "2025-11-04T20:01:14Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-02-08T11:05:59Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-43fc-jf86-j433",
+        "CVE-2026-25639"
+      ],
+      "title": "Denial of Service via __proto__ Key in mergeConfig",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-43fc-jf86-j433",
+      "patched_versions": [
+        "1.13.5",
+        "0.30.3"
+      ],
+      "release": "v1.13.5",
+      "release_date": "2026-02-08T11:04:44Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-09-11T19:35:13Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-4hjh-wcwx-xvwj",
+        "CVE-2025-58754"
+      ],
+      "title": "Axios DoS via data: URL decode (CVE-2025-58754)",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-4hjh-wcwx-xvwj",
+      "patched_versions": [
+        "1.12.0",
+        "0.30.0"
+      ],
+      "release": "v1.12.0",
+      "release_date": "2025-09-11T19:33:08Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-07-23T07:35:58Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-rm8p-cx58-hcvx",
+        "CVE-2025-54371"
+      ],
+      "title": "Transitive Critical Vulnerability via form-data@4.0.0 in axios@1.10.0 — Predictable Boundary Values (CVE-2025-7783)",
+      "severity": "high",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-rm8p-cx58-hcvx",
+      "patched_versions": [
+        "1.11.0"
+      ],
+      "release": "v1.11.0",
+      "release_date": "2025-07-23T06:05:12Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-03-07T07:41:03Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-jr5f-v2jv-69x6",
+        "CVE-2025-27152"
+      ],
+      "title": "Possible SSRF and Credential Leakage via Absolute URL in axios Requests",
+      "severity": "medium",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-jr5f-v2jv-69x6",
+      "patched_versions": [
+        "1.8.2",
+        "0.30.0"
+      ],
+      "release": "v1.8.2",
+      "release_date": "2025-03-07T07:41:06Z",
+      "mapping": "advisory patched_versions"
+    }
+  ],
+  "dependency_updates": [
+    {
+      "date": "2026-10-08T07:52:55Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "CVE-2026-90711",
+        "GHSA-jqcg-44mw-7w3h"
+      ],
+      "title": "chore(deps-dev): bump proxy-addr from 2.0.7 to 2.0.8",
+      "security": true,
+      "url": "https://github.com/axios/axios/pull/11306",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-10-08T06:16:28Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "CVE-2026-93749"
+      ],
+      "title": "chore(deps-dev): bump source-map-js from 1.2.1 to 1.2.2",
+      "security": true,
+      "url": "https://github.com/axios/axios/pull/11305",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-10-08T06:12:47Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump @vue/server-renderer and vue in /docs",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11304",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-10-08T06:11:00Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump brace-expansion from 2.1.4 to 2.1.7 in /tests/smoke/cjs",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11303",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-10-08T06:09:57Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "CVE-2026-93749"
+      ],
+      "title": "chore(deps-dev): bump source-map-js from 1.2.1 to 1.2.2 in /tests/module/esm",
+      "security": true,
+      "url": "https://github.com/axios/axios/pull/11302",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-10-07T18:14:28Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump lint-staged from 17.5.1 to 17.6.0 in the development_dependencies group",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11298",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-10-02T19:00:44Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump the development_dependencies group across 1 directory with 6 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11271",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-10-02T12:10:28Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump brace-expansion from 1.1.12 to 1.1.21 in /tests/module/cjs",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11270",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-10-02T12:09:59Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump brace-expansion from 5.0.7 to 5.0.12",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11269",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-10-02T11:28:25Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "GHSA-hmw2-7cc7-3qxx"
+      ],
+      "title": "chore(deps): bump axios from 1.18.1 to 1.20.0 in /docs",
+      "security": true,
+      "url": "https://github.com/axios/axios/pull/11268",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-09-22T13:49:16Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump zizmorcore/zizmor-action from 0.6.3 to 0.6.4 in the github-actions group",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11245",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-09-22T13:48:53Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "CVE-2026-88932",
+        "GHSA-3pph-fpjx-jg34"
+      ],
+      "title": "chore(deps-dev): bump the development_dependencies group with 3 updates",
+      "security": true,
+      "url": "https://github.com/axios/axios/pull/11244",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-09-16T07:39:50Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump the development_dependencies group with 4 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11234",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-09-13T17:32:59Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump nanoid from 3.3.17 to 3.3.19 in /docs",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11230",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-09-09T13:09:34Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump js-yaml from 4.3.1 to 4.3.2",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11221",
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-09T12:12:54Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump @vitest/mocker and vitest in /tests/smoke/esm",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11220",
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-09T06:32:32Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump js-yaml from 4.1.0 to 4.3.2 in /tests/smoke/cjs",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11218",
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-08T16:07:14Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "CVE-2026-77078",
+        "GHSA-wc9g-mqfw-jrwm",
+        "CVE-2026-77037",
+        "GHSA-qfvm-cv95-jqjf",
+        "CVE-2026-77063",
+        "GHSA-qvfw-j98x-7q72",
+        "CVE-2026-82333",
+        "GHSA-535w-7cp7-47q4"
+      ],
+      "title": "chore(deps-dev): bump the development_dependencies group with 3 updates",
+      "security": true,
+      "url": "https://github.com/axios/axios/pull/11212",
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-08T15:56:17Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump zizmorcore/zizmor-action from 0.6.2 to 0.6.3 in the github-actions group",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11213",
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-04T07:05:38Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "GHSA-qw65-cvwx-89v3",
+        "GHSA-58mr-gqgx-xq4g",
+        "GHSA-5jgf-p345-68v8",
+        "GHSA-fph4-wmhf-6fwf",
+        "GHSA-f65p-4m7j-42xc",
+        "GHSA-jqff-g426-hqxp"
+      ],
+      "title": "chore(deps-dev): bump fast-uri from 3.1.5 to 3.1.7",
+      "security": true,
+      "url": "https://github.com/axios/axios/pull/11195",
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-01T18:45:32Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump browserslist from 4.28.4 to 4.28.8",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11189",
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-01T18:27:31Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump the development_dependencies group with 5 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11188",
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-26T08:20:53Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump the development_dependencies group across 1 directory with 4 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11169",
+      "release": "v0.34.0",
+      "release_date": "2026-09-13T16:40:14Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-11T11:45:27Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump zizmorcore/zizmor-action from 0.6.1 to 0.6.2 in the github-actions group",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11144",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-11T11:45:14Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump the development_dependencies group with 4 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11143",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-11T08:28:36Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump js-yaml and mocha in /tests/smoke/cjs",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11133",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-11T08:27:51Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump js-yaml from 4.3.0 to 4.3.1",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11140",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-04T19:31:43Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump the development_dependencies group across 1 directory with 7 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11123",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-04T18:26:04Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "GHSA-7p8r-x3mc-p8w7"
+      ],
+      "title": "chore(deps-dev): bump fast-uri from 3.1.4 to 3.1.5",
+      "security": true,
+      "url": "https://github.com/axios/axios/pull/11126",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-04T17:44:07Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump postcss from 8.5.12 to 8.5.25 in /docs",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11127",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-04T16:37:26Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump zizmorcore/zizmor-action from 0.6.0 to 0.6.1 in the github-actions group",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11122",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-29T17:14:44Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump the github-actions group with 2 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11107",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-29T17:09:02Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump the development_dependencies group with 2 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11106",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-26T14:50:51Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump postcss from 8.5.10 to 8.5.23 in /tests/module/esm",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11099",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-26T14:45:40Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump postcss from 8.5.16 to 8.5.23",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11098",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-26T14:16:09Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "GHSA-v2hh-gcrm-f6hx"
+      ],
+      "title": "chore(deps-dev): bump fast-uri from 3.1.3 to 3.1.4",
+      "security": true,
+      "url": "https://github.com/axios/axios/pull/11092",
+      "release": "v1.20.0",
+      "release_date": "2026-08-24T13:40:40Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-21T15:48:19Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump axios from 1.16.1 to 1.18.1 in /docs",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11088",
+      "release": "v1.19.0",
+      "release_date": "2026-07-26T14:13:32Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-21T15:44:04Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump actions/setup-node from 6.4.0 to 7.0.0 in the github-actions group",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11090",
+      "release": "v1.19.0",
+      "release_date": "2026-07-26T14:13:32Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-21T15:40:05Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump the development_dependencies group with 3 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11089",
+      "release": "v1.19.0",
+      "release_date": "2026-07-26T14:13:32Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-14T14:57:18Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump the development_dependencies group with 3 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11079",
+      "release": "v1.19.0",
+      "release_date": "2026-07-26T14:13:32Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-14T14:51:45Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump denoland/setup-deno from 2.0.4 to 2.0.5 in the github-actions group",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11080",
+      "release": "v1.19.0",
+      "release_date": "2026-07-26T14:13:32Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-06-30T18:24:22Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps-dev): bump the development_dependencies group with 3 updates",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11055",
+      "release": "v1.19.0",
+      "release_date": "2026-07-26T14:13:32Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-06-17T11:08:00Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore(deps): bump form-data from 4.0.5 to 4.0.6",
+      "security": false,
+      "url": "https://github.com/axios/axios/pull/11015",
+      "release": "v1.18.1",
+      "release_date": "2026-06-21T17:25:10Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    }
+  ],
+  "summary": {
+    "advisories": 51,
+    "security_commits": 2,
+    "dependency_updates": 43,
+    "security_dependency_updates": 9,
+    "unreleased_fixes": 0
+  }
+}

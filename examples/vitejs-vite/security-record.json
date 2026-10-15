@@ -1,0 +1,2283 @@
+{
+  "schema": "fixledger/v1",
+  "repo": "vitejs/vite",
+  "generated_at": "2026-10-12T13:37:02.744Z",
+  "sources_checked": {
+    "releases": 200,
+    "tags": 200,
+    "closed_pulls": 200,
+    "advisories": 22,
+    "commits": 200
+  },
+  "gaps": [
+    "releases: stopped after 2 pages (raise max_pages for full history)",
+    "tags: stopped after 2 pages (raise max_pages for full history)",
+    "pull requests: stopped after 2 pages (raise max_pages for full history)",
+    "commits: stopped after 2 pages (raise max_pages for full history)"
+  ],
+  "releases": [
+    {
+      "tag": "v8.3.4",
+      "name": "v8.3.4",
+      "date": "2026-10-08T12:03:54Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.4",
+      "prerelease": false,
+      "sha": "b6c20f6a8126d8561891e5fb9368e8fc9da37538"
+    },
+    {
+      "tag": "v6.4.4",
+      "name": "v6.4.4",
+      "date": "2026-10-06T05:45:15Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.4.4",
+      "prerelease": false,
+      "sha": "5f0d9a4aaa31124695e7cf6ffe349e9d0a4b705e"
+    },
+    {
+      "tag": "v7.3.7",
+      "name": "v7.3.7",
+      "date": "2026-10-06T05:07:26Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.3.7",
+      "prerelease": false,
+      "sha": "284f6b58d6b511cebdd52ab7731975f385bf3c6b"
+    },
+    {
+      "tag": "v8.1.6",
+      "name": "v8.1.6",
+      "date": "2026-10-06T04:48:45Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.1.6",
+      "prerelease": false,
+      "sha": "dade886f0cc17fedf777eff804593d2af182abd4"
+    },
+    {
+      "tag": "v8.2.4",
+      "name": "v8.2.4",
+      "date": "2026-10-06T04:42:58Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.2.4",
+      "prerelease": false,
+      "sha": "eb3137d38934b557a410c85e54f10682a944440b"
+    },
+    {
+      "tag": "v8.3.3",
+      "name": "v8.3.3",
+      "date": "2026-10-06T04:07:42Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.3",
+      "prerelease": false,
+      "sha": "fea5b21dd9524ed7308632407b996f1fe5942c9c"
+    },
+    {
+      "tag": "v8.3.2",
+      "name": "v8.3.2",
+      "date": "2026-10-01T10:14:36Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.2",
+      "prerelease": false,
+      "sha": "10033218d239c927cdc375970b5741cce408e81b"
+    },
+    {
+      "tag": "v8.3.1",
+      "name": "v8.3.1",
+      "date": "2026-09-24T12:23:55Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.1",
+      "prerelease": false,
+      "sha": "39ddf7ccf7e7469ff6a3ba37bca38c32ea804d6e"
+    },
+    {
+      "tag": "create-vite@9.2.1",
+      "name": "create-vite@9.2.1",
+      "date": "2026-09-10T11:41:17Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.2.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.3.0",
+      "name": "v8.3.0",
+      "date": "2026-09-10T11:25:16Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.0",
+      "prerelease": false,
+      "sha": "434e8e9495436a60789f2b588a04a6a24a3d1661"
+    },
+    {
+      "tag": "v8.3.0-beta.1",
+      "name": "v8.3.0-beta.1",
+      "date": "2026-09-07T11:38:41Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.0-beta.1",
+      "prerelease": true,
+      "sha": "5bce8ca0f19bfdd5206c98bfabc1f8453deb32c7"
+    },
+    {
+      "tag": "v8.3.0-beta.0",
+      "name": "v8.3.0-beta.0",
+      "date": "2026-09-02T08:42:32Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.3.0-beta.0",
+      "prerelease": true,
+      "sha": "1c46db555d2927fc62686341911b03f6d365a36a"
+    },
+    {
+      "tag": "create-vite@9.2.0",
+      "name": "create-vite@9.2.0",
+      "date": "2026-08-24T04:58:55Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.2.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.2.2",
+      "name": "v8.2.2",
+      "date": "2026-08-20T04:08:13Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.2.2",
+      "prerelease": false,
+      "sha": "de1111ab0be00879b404e7ed3b2a80e264edddc1"
+    },
+    {
+      "tag": "plugin-legacy@8.2.3",
+      "name": "plugin-legacy@8.2.3",
+      "date": "2026-08-06T13:44:50Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.3",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.2.1",
+      "name": "v8.2.1",
+      "date": "2026-08-06T13:44:35Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.2.1",
+      "prerelease": false,
+      "sha": "421615865dad3ed39137d17281814fc78a41246c"
+    },
+    {
+      "tag": "create-vite@9.1.2",
+      "name": "create-vite@9.1.2",
+      "date": "2026-07-30T12:03:27Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.1.2",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.2.0",
+      "name": "v8.2.0",
+      "date": "2026-07-30T12:00:47Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.2.0",
+      "prerelease": false,
+      "sha": "fa79f9ab699f9a22a6f9b50f3d247be6b51f684d"
+    },
+    {
+      "tag": "plugin-legacy@8.2.2",
+      "name": "plugin-legacy@8.2.2",
+      "date": "2026-07-23T04:45:07Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.2",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.2.0-beta.0",
+      "name": "v8.2.0-beta.0",
+      "date": "2026-07-22T06:41:43Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.2.0-beta.0",
+      "prerelease": true,
+      "sha": "34af7b76301fa5d297883fa5053e806c6f8e5f3b"
+    },
+    {
+      "tag": "v8.1.5",
+      "name": "v8.1.5",
+      "date": "2026-07-16T06:50:05Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.1.5",
+      "prerelease": false,
+      "sha": "5e7fe129a4dde4f41934083b25e490059985f4e6"
+    },
+    {
+      "tag": "plugin-legacy@8.2.1",
+      "name": "plugin-legacy@8.2.1",
+      "date": "2026-07-16T06:49:00Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "plugin-legacy@8.2.0",
+      "name": "plugin-legacy@8.2.0",
+      "date": "2026-07-09T04:45:33Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.2.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.1.4",
+      "name": "v8.1.4",
+      "date": "2026-07-09T04:40:56Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.1.4",
+      "prerelease": false,
+      "sha": "a477454442eff649b430f9e3c6caf2500fcb7183"
+    },
+    {
+      "tag": "v8.1.3",
+      "name": "v8.1.3",
+      "date": "2026-07-02T04:44:20Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.1.3",
+      "prerelease": false,
+      "sha": "578ffb80d46940f3b99cd96ed609f8b3a0ac5ede"
+    },
+    {
+      "tag": "v8.1.2",
+      "name": "v8.1.2",
+      "date": "2026-06-30T16:46:03Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.1.2",
+      "prerelease": false,
+      "sha": "ba3119397d0110952f29965774c627a3017d7292"
+    },
+    {
+      "tag": "create-vite@9.1.1",
+      "name": "create-vite@9.1.1",
+      "date": "2026-06-30T10:32:54Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.1.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.1.1",
+      "name": "v8.1.1",
+      "date": "2026-06-30T10:31:05Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.1.1",
+      "prerelease": false,
+      "sha": "4ae9e14f2c4db0706b2e9d815656e050accbd2bf"
+    },
+    {
+      "tag": "v7.3.6",
+      "name": "v7.3.6",
+      "date": "2026-06-25T01:50:44Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.3.6",
+      "prerelease": false,
+      "sha": "0a7b53ba230c6e68f502a89864534c607d393ab7"
+    },
+    {
+      "tag": "create-vite@9.1.0",
+      "name": "create-vite@9.1.0",
+      "date": "2026-06-23T11:43:13Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.1.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "plugin-legacy@8.1.0",
+      "name": "plugin-legacy@8.1.0",
+      "date": "2026-06-23T11:40:54Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.1.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.1.0",
+      "name": "v8.1.0",
+      "date": "2026-06-23T11:32:13Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.1.0",
+      "prerelease": false,
+      "sha": "63b14898598fc242ac2d3dd37dafeb39c864befa"
+    },
+    {
+      "tag": "plugin-legacy@8.1.0-beta.0",
+      "name": "plugin-legacy@8.1.0-beta.0",
+      "date": "2026-06-15T03:07:19Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.1.0-beta.0",
+      "prerelease": true,
+      "sha": null
+    },
+    {
+      "tag": "v8.1.0-beta.0",
+      "name": "v8.1.0-beta.0",
+      "date": "2026-06-15T03:06:07Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.1.0-beta.0",
+      "prerelease": true,
+      "sha": "5deed202929159c20740897009c56d7ab5d32e28"
+    },
+    {
+      "tag": "v6.4.3",
+      "name": "v6.4.3",
+      "date": "2026-06-01T10:39:31Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.4.3",
+      "prerelease": false,
+      "sha": "6c2c881f15495738ff03bc1d67cc052c07e0cac4"
+    },
+    {
+      "tag": "v7.3.5",
+      "name": "v7.3.5",
+      "date": "2026-06-01T10:16:24Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.3.5",
+      "prerelease": false,
+      "sha": "077945cb60df372a52cf999b6e532ba70fac7423"
+    },
+    {
+      "tag": "v8.0.16",
+      "name": "v8.0.16",
+      "date": "2026-06-01T09:50:08Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.16",
+      "prerelease": false,
+      "sha": "f94df87ff03b40b65e29bacdc04cc18c7bccaa4a"
+    },
+    {
+      "tag": "v8.0.15",
+      "name": "v8.0.15",
+      "date": "2026-06-01T04:14:37Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.15",
+      "prerelease": false,
+      "sha": "8d1b0195fd186d0b3297d7cd17acff6c96797420"
+    },
+    {
+      "tag": "v8.0.14",
+      "name": "v8.0.14",
+      "date": "2026-05-21T07:15:28Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.14",
+      "prerelease": false,
+      "sha": "c917f1ef9d9c6ef131af96d89089d8ec680b18f2"
+    },
+    {
+      "tag": "plugin-legacy@8.0.2",
+      "name": "plugin-legacy@8.0.2",
+      "date": "2026-05-14T11:15:33Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.0.2",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.13",
+      "name": "v8.0.13",
+      "date": "2026-05-14T11:09:38Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.13",
+      "prerelease": false,
+      "sha": "a46f11a6c218f74b08ffb3e33a25c2ce02ba6643"
+    },
+    {
+      "tag": "create-vite@9.0.7",
+      "name": "create-vite@9.0.7",
+      "date": "2026-05-11T07:11:48Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.0.7",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.12",
+      "name": "v8.0.12",
+      "date": "2026-05-11T07:09:32Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.12",
+      "prerelease": false,
+      "sha": "4dce8b44d7f844d2b68aabb4e10fa267879cd1a6"
+    },
+    {
+      "tag": "v8.0.11",
+      "name": "v8.0.11",
+      "date": "2026-05-07T06:04:36Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.11",
+      "prerelease": false,
+      "sha": "66f3194aa8e59924562575f0a98e7f4ae0acdd89"
+    },
+    {
+      "tag": "v7.3.3",
+      "name": "v7.3.3",
+      "date": "2026-05-07T05:06:02Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.3.3",
+      "prerelease": false,
+      "sha": "ca31424cccb075c88131132b929a63527d0e2b69"
+    },
+    {
+      "tag": "create-vite@9.0.6",
+      "name": "create-vite@9.0.6",
+      "date": "2026-04-23T05:19:11Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.0.6",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.10",
+      "name": "v8.0.10",
+      "date": "2026-04-23T05:18:26Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.10",
+      "prerelease": false,
+      "sha": "32c29780404c353f5a7c5ba4d06fc5e676741714"
+    },
+    {
+      "tag": "create-vite@9.0.5",
+      "name": "create-vite@9.0.5",
+      "date": "2026-04-20T04:25:53Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.0.5",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.9",
+      "name": "v8.0.9",
+      "date": "2026-04-20T04:24:48Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.9",
+      "prerelease": false,
+      "sha": "ce729f5fa1a5adca373b2adcb0e1b18099164a14"
+    },
+    {
+      "tag": "v8.0.8",
+      "name": "v8.0.8",
+      "date": "2026-04-09T04:28:11Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.8",
+      "prerelease": false,
+      "sha": "6e585dcb05a3b159fba7ae57f7faf0b1eca7a390"
+    },
+    {
+      "tag": "v8.0.7",
+      "name": "v8.0.7",
+      "date": "2026-04-07T15:49:10Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.7",
+      "prerelease": false,
+      "sha": "fdb2e6f63894d8c458c1778f3df77afe537f2bb2"
+    },
+    {
+      "tag": "v8.0.6",
+      "name": "v8.0.6",
+      "date": "2026-04-07T11:25:14Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.6",
+      "prerelease": false,
+      "sha": "7b3086fae4170252e4cd53f3988f207a943ac5cb"
+    },
+    {
+      "tag": "v6.4.2",
+      "name": "v6.4.2",
+      "date": "2026-04-06T12:05:42Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.4.2",
+      "prerelease": false,
+      "sha": "6b3fad02abd550bd7b79934ff92c58dbd7f33045"
+    },
+    {
+      "tag": "v7.3.2",
+      "name": "v7.3.2",
+      "date": "2026-04-06T12:03:55Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.3.2",
+      "prerelease": false,
+      "sha": "cc383e07b66d4c5a9768fcb570e0af812cb8d999"
+    },
+    {
+      "tag": "v8.0.5",
+      "name": "v8.0.5",
+      "date": "2026-04-06T12:02:21Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.5",
+      "prerelease": false,
+      "sha": "1a12d4ca4c62eedaeaf734d722b27ab17b5b1dd0"
+    },
+    {
+      "tag": "create-vite@9.0.4",
+      "name": "create-vite@9.0.4",
+      "date": "2026-04-06T06:30:57Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.0.4",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.4",
+      "name": "v8.0.4",
+      "date": "2026-04-06T06:29:34Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.4",
+      "prerelease": false,
+      "sha": "7339bdc915c297e16e6530f6ebcbb2509cb57f24"
+    },
+    {
+      "tag": "plugin-legacy@8.0.1",
+      "name": "plugin-legacy@8.0.1",
+      "date": "2026-03-26T06:13:23Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.0.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.3",
+      "name": "v8.0.3",
+      "date": "2026-03-26T06:13:13Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.3",
+      "prerelease": false,
+      "sha": "a248a410426a08916771ba82f37b3496375636b8"
+    },
+    {
+      "tag": "v8.0.2",
+      "name": "v8.0.2",
+      "date": "2026-03-23T12:44:40Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.2",
+      "prerelease": false,
+      "sha": "faeb746721da80689d2cb62b589cc45edb779bdc"
+    },
+    {
+      "tag": "create-vite@9.0.3",
+      "name": "create-vite@9.0.3",
+      "date": "2026-03-19T04:48:40Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.0.3",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.1",
+      "name": "v8.0.1",
+      "date": "2026-03-19T04:47:44Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.1",
+      "prerelease": false,
+      "sha": "028ff86dd68f679dac659024b18c4e0a0d511c22"
+    },
+    {
+      "tag": "create-vite@9.0.2",
+      "name": "create-vite@9.0.2",
+      "date": "2026-03-13T07:07:54Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.0.2",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "create-vite@9.0.1",
+      "name": "create-vite@9.0.1",
+      "date": "2026-03-12T15:33:15Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.0.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "create-vite@9.0.0",
+      "name": "create-vite@9.0.0",
+      "date": "2026-03-12T15:01:36Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.0.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "plugin-legacy@8.0.0",
+      "name": "plugin-legacy@8.0.0",
+      "date": "2026-03-12T14:02:37Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.0.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.0",
+      "name": "v8.0.0",
+      "date": "2026-03-12T13:57:45Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0",
+      "prerelease": false,
+      "sha": "b565af6f1123a62b3058253b2147574b8515e89f"
+    },
+    {
+      "tag": "v8.0.0-beta.18",
+      "name": "v8.0.0-beta.18",
+      "date": "2026-03-09T07:01:44Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.18",
+      "prerelease": true,
+      "sha": "1ee5372e80c23be3c17cf6d09d58c25ccd62531f"
+    },
+    {
+      "tag": "v8.0.0-beta.17",
+      "name": "v8.0.0-beta.17",
+      "date": "2026-03-09T06:22:43Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.17",
+      "prerelease": true,
+      "sha": "7de12e9f6b014c2b40faa4d6d5be4074326044b0"
+    },
+    {
+      "tag": "v8.0.0-beta.16",
+      "name": "v8.0.0-beta.16",
+      "date": "2026-02-27T04:09:40Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.16",
+      "prerelease": true,
+      "sha": "9ed2b43d16a7b36a849a87e6a7ee2facc243f70f"
+    },
+    {
+      "tag": "v8.0.0-beta.15",
+      "name": "v8.0.0-beta.15",
+      "date": "2026-02-19T03:10:50Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.15",
+      "prerelease": true,
+      "sha": "6e88f40b7b093ed780f0f8da70b763baa2574894"
+    },
+    {
+      "tag": "plugin-legacy@8.0.0-beta.3",
+      "name": "plugin-legacy@8.0.0-beta.3",
+      "date": "2026-02-12T05:45:29Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.0.0-beta.3",
+      "prerelease": true,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.0-beta.14",
+      "name": "v8.0.0-beta.14",
+      "date": "2026-02-12T05:44:23Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.14",
+      "prerelease": true,
+      "sha": "d4fb7ccac41ae3edb4f29b970ba5dd02c877ccbd"
+    },
+    {
+      "tag": "create-vite@8.3.0",
+      "name": "create-vite@8.3.0",
+      "date": "2026-02-09T06:05:21Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%408.3.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.0-beta.13",
+      "name": "v8.0.0-beta.13",
+      "date": "2026-02-05T03:14:08Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.13",
+      "prerelease": true,
+      "sha": "59700ae401a038ad4d98d302a5ea97bd658b58e5"
+    },
+    {
+      "tag": "plugin-legacy@8.0.0-beta.2",
+      "name": "plugin-legacy@8.0.0-beta.2",
+      "date": "2026-02-03T05:58:14Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.0.0-beta.2",
+      "prerelease": true,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.0-beta.12",
+      "name": "v8.0.0-beta.12",
+      "date": "2026-02-03T05:58:06Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.12",
+      "prerelease": true,
+      "sha": "f124ed846fff2dca679d3b0dd2b27b029ed4ec5c"
+    },
+    {
+      "tag": "v8.0.0-beta.11",
+      "name": "v8.0.0-beta.11",
+      "date": "2026-01-29T03:22:19Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.11",
+      "prerelease": true,
+      "sha": "b68900bf6090b65d35bba3b759a55fa51e99fee5"
+    },
+    {
+      "tag": "v8.0.0-beta.10",
+      "name": "v8.0.0-beta.10",
+      "date": "2026-01-24T09:27:44Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.10",
+      "prerelease": true,
+      "sha": "e299d62b93670fc4d7016748d1217a0892de953f"
+    },
+    {
+      "tag": "plugin-legacy@8.0.0-beta.1",
+      "name": "plugin-legacy@8.0.0-beta.1",
+      "date": "2026-01-22T12:50:35Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.0.0-beta.1",
+      "prerelease": true,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.0-beta.9",
+      "name": "v8.0.0-beta.9",
+      "date": "2026-01-22T12:49:56Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.9",
+      "prerelease": true,
+      "sha": "9798696a74982a0cf5522217c198d018993159a2"
+    },
+    {
+      "tag": "v8.0.0-beta.8",
+      "name": "v8.0.0-beta.8",
+      "date": "2026-01-15T01:33:26Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.8",
+      "prerelease": true,
+      "sha": "dac242af165c2851b7947b928c52dafc65d6eaae"
+    },
+    {
+      "tag": "v8.0.0-beta.7",
+      "name": "v8.0.0-beta.7",
+      "date": "2026-01-08T01:49:35Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.7",
+      "prerelease": true,
+      "sha": "e6bc1a8b3229d8a499481aa0ae500315d7a61aaf"
+    },
+    {
+      "tag": "v8.0.0-beta.6",
+      "name": "v8.0.0-beta.6",
+      "date": "2026-01-07T06:07:20Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.6",
+      "prerelease": true,
+      "sha": "10b24952cf0121410c45537931b609de60ae0471"
+    },
+    {
+      "tag": "v7.3.1",
+      "name": "v7.3.1",
+      "date": "2026-01-07T06:06:19Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.3.1",
+      "prerelease": false,
+      "sha": "95e8923f35d0252c9f6eb2d5e358c084542706f1"
+    },
+    {
+      "tag": "v8.0.0-beta.5",
+      "name": "v8.0.0-beta.5",
+      "date": "2025-12-25T02:01:57Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.5",
+      "prerelease": true,
+      "sha": "63391ee64450cfbe13020ee2de84f8bc8cb4a490"
+    },
+    {
+      "tag": "v8.0.0-beta.4",
+      "name": "v8.0.0-beta.4",
+      "date": "2025-12-22T06:28:38Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.4",
+      "prerelease": true,
+      "sha": "e1d53be297b0e82eed6b138d75583ba0367c1f99"
+    },
+    {
+      "tag": "v8.0.0-beta.3",
+      "name": "v8.0.0-beta.3",
+      "date": "2025-12-18T01:46:35Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.3",
+      "prerelease": true,
+      "sha": "8118d1a3ac723586ccf176c8cd4bc979bee04c15"
+    },
+    {
+      "tag": "v7.3.0",
+      "name": "v7.3.0",
+      "date": "2025-12-15T08:52:06Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.3.0",
+      "prerelease": false,
+      "sha": "acf7e05eaeb18e98f5e19e2d3e648950726f20d1"
+    },
+    {
+      "tag": "v8.0.0-beta.2",
+      "name": "v8.0.0-beta.2",
+      "date": "2025-12-12T02:38:11Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.2",
+      "prerelease": true,
+      "sha": "181d870c53e908b61328e384b35ca143ff990cfd"
+    },
+    {
+      "tag": "v8.0.0-beta.1",
+      "name": "v8.0.0-beta.1",
+      "date": "2025-12-08T09:45:32Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.1",
+      "prerelease": true,
+      "sha": "08c74cc54b1892e1d2f29840c18ef61f05963301"
+    },
+    {
+      "tag": "v7.2.7",
+      "name": "v7.2.7",
+      "date": "2025-12-08T01:53:33Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.2.7",
+      "prerelease": false,
+      "sha": "317b3b272f9ef6faa647a51ab3b0768fecc1071d"
+    },
+    {
+      "tag": "plugin-legacy@8.0.0-beta.0",
+      "name": "plugin-legacy@8.0.0-beta.0",
+      "date": "2025-12-03T11:07:39Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%408.0.0-beta.0",
+      "prerelease": true,
+      "sha": null
+    },
+    {
+      "tag": "v8.0.0-beta.0",
+      "name": "v8.0.0-beta.0",
+      "date": "2025-12-03T11:06:19Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v8.0.0-beta.0",
+      "prerelease": true,
+      "sha": "350feed9d3a680302e1c341f4db0669b71794b3c"
+    },
+    {
+      "tag": "v7.2.6",
+      "name": "v7.2.6",
+      "date": "2025-12-01T06:08:49Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.2.6",
+      "prerelease": false,
+      "sha": "bda5dbb648fa7cf877ea9c76ba8a7da226b65cce"
+    },
+    {
+      "tag": "v7.2.5",
+      "name": "v7.2.5",
+      "date": "2025-12-01T05:49:46Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.2.5",
+      "prerelease": false,
+      "sha": "3aa7527fb4fc7dafe3ab57c41d637d2985c7bb6e"
+    },
+    {
+      "tag": "create-vite@8.2.0",
+      "name": "create-vite@8.2.0",
+      "date": "2025-11-20T07:24:22Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%408.2.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v7.2.4",
+      "name": "v7.2.4",
+      "date": "2025-11-20T07:22:41Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.2.4",
+      "prerelease": false,
+      "sha": "24a611f1c83a976d32262628d42f683609746635"
+    },
+    {
+      "tag": "v7.2.3",
+      "name": "v7.2.3",
+      "date": "2025-11-20T07:13:34Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.2.3",
+      "prerelease": false,
+      "sha": "a668014dba377c2b82a32d8124f1761e9ea74f82"
+    },
+    {
+      "tag": "create-vite@8.1.0",
+      "name": "create-vite@8.1.0",
+      "date": "2025-11-12T12:56:59Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%408.1.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "create-vite@8.0.3",
+      "name": "create-vite@8.0.3",
+      "date": "2025-11-10T03:52:27Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%408.0.3",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v7.2.2",
+      "name": "v7.2.2",
+      "date": "2025-11-07T06:32:13Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.2.2",
+      "prerelease": false,
+      "sha": "572aaca4594ed2377a4f63443a449e4bf3c0468c"
+    },
+    {
+      "tag": "v7.2.1",
+      "name": "v7.2.1",
+      "date": "2025-11-06T03:51:01Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.2.1",
+      "prerelease": false,
+      "sha": "a532e68c6b7ed82ae7569d2d3380eb6417e9267d"
+    },
+    {
+      "tag": "v7.2.0",
+      "name": "v7.2.0",
+      "date": "2025-11-05T08:23:20Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.2.0",
+      "prerelease": false,
+      "sha": "8293de0e17af8a876d49761ed6651bd38b709174"
+    },
+    {
+      "tag": "v7.2.0-beta.1",
+      "name": "v7.2.0-beta.1",
+      "date": "2025-10-29T02:40:46Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.2.0-beta.1",
+      "prerelease": true,
+      "sha": "793baa207beecb2d85860df57c80904b2e628902"
+    },
+    {
+      "tag": "v7.2.0-beta.0",
+      "name": "v7.2.0-beta.0",
+      "date": "2025-10-28T03:05:13Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.2.0-beta.0",
+      "prerelease": true,
+      "sha": "e7a0c5e519381f6a1b694b2f8211a78ea44545f9"
+    },
+    {
+      "tag": "v7.1.12",
+      "name": "v7.1.12",
+      "date": "2025-10-23T06:43:40Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.12",
+      "prerelease": false,
+      "sha": "2436afef044d90f710fdfd714488a71efdd29092"
+    },
+    {
+      "tag": "v5.4.21",
+      "name": "v5.4.21",
+      "date": "2025-10-20T05:30:37Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v5.4.21",
+      "prerelease": false,
+      "sha": "adce3c22c64cc9d44cc8f45cc92b543e3e4bf385"
+    },
+    {
+      "tag": "v6.4.1",
+      "name": "v6.4.1",
+      "date": "2025-10-20T05:25:55Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.4.1",
+      "prerelease": false,
+      "sha": "5487f4f641f70c47ea05fd101a4319897df048b3"
+    },
+    {
+      "tag": "v7.0.8",
+      "name": "v7.0.8",
+      "date": "2025-10-20T05:20:29Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.8",
+      "prerelease": false,
+      "sha": "d3c21673fcc32fade3755a480fc0f2ae820c05c6"
+    },
+    {
+      "tag": "v7.1.11",
+      "name": "v7.1.11",
+      "date": "2025-10-20T05:09:01Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.11",
+      "prerelease": false,
+      "sha": "8b69c9e32c3606ae375a1333cd38e91848d27781"
+    },
+    {
+      "tag": "v6.4.0",
+      "name": "v6.4.0",
+      "date": "2025-10-15T09:42:05Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.4.0",
+      "prerelease": false,
+      "sha": "f12697c0f64b9a37196b9ab218a0911829d5b103"
+    },
+    {
+      "tag": "v6.3.7",
+      "name": "v6.3.7",
+      "date": "2025-10-14T13:43:29Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.7",
+      "prerelease": false,
+      "sha": "0e173d83681daa31be10fa8a62d56b1ec84690af"
+    },
+    {
+      "tag": "v7.1.10",
+      "name": "v7.1.10",
+      "date": "2025-10-14T13:16:35Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.10",
+      "prerelease": false,
+      "sha": "ed4a0dc9132dc8436760dbd04825e29a57946369"
+    },
+    {
+      "tag": "v7.1.9",
+      "name": "v7.1.9",
+      "date": "2025-10-03T00:41:51Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.9",
+      "prerelease": false,
+      "sha": "17e2517028550283eb253299a784001da57901e5"
+    },
+    {
+      "tag": "v7.1.8",
+      "name": "v7.1.8",
+      "date": "2025-10-02T06:15:47Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.8",
+      "prerelease": false,
+      "sha": "8d12c8bb14061713e0b7636dd2e188533c3b533a"
+    },
+    {
+      "tag": "create-vite@8.0.2",
+      "name": "create-vite@8.0.2",
+      "date": "2025-10-02T05:51:22Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%408.0.2",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "create-vite@8.0.1",
+      "name": "create-vite@8.0.1",
+      "date": "2025-09-23T14:02:50Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%408.0.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "create-vite@8.0.0",
+      "name": "create-vite@8.0.0",
+      "date": "2025-09-23T08:18:30Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%408.0.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "create-vite@8.0.0-beta.0",
+      "name": "create-vite@8.0.0-beta.0",
+      "date": "2025-09-23T02:20:30Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%408.0.0-beta.0",
+      "prerelease": true,
+      "sha": null
+    },
+    {
+      "tag": "create-vite@7.1.3",
+      "name": "create-vite@7.1.3",
+      "date": "2025-09-22T05:53:50Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%407.1.3",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v7.1.7",
+      "name": "v7.1.7",
+      "date": "2025-09-22T05:53:27Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.7",
+      "prerelease": false,
+      "sha": "693d25510aba3322e8e689764df8c3b18db04a98"
+    },
+    {
+      "tag": "create-vite@7.1.2",
+      "name": "create-vite@7.1.2",
+      "date": "2025-09-18T03:42:56Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%407.1.2",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v7.1.6",
+      "name": "v7.1.6",
+      "date": "2025-09-18T03:42:17Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.6",
+      "prerelease": false,
+      "sha": "54377f70ad72d56a2c5b4f36a812b5991573d5b1"
+    },
+    {
+      "tag": "v5.4.20",
+      "name": "v5.4.20",
+      "date": "2025-09-08T06:58:19Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v5.4.20",
+      "prerelease": false,
+      "sha": "997700f01c7199daf7330d33a7fd3a43b2e9e3ba"
+    },
+    {
+      "tag": "v6.3.6",
+      "name": "v6.3.6",
+      "date": "2025-09-08T06:50:47Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.6",
+      "prerelease": false,
+      "sha": "3f337c5e24504e51188d29c970de1416ee523dbb"
+    },
+    {
+      "tag": "v7.0.7",
+      "name": "v7.0.7",
+      "date": "2025-09-08T06:48:46Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.7",
+      "prerelease": false,
+      "sha": "f88a1c0999f4f0d8efc42810f27dff5aa30ad680"
+    },
+    {
+      "tag": "v7.1.5",
+      "name": "v7.1.5",
+      "date": "2025-09-08T06:47:48Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.5",
+      "prerelease": false,
+      "sha": "564754061e9494f355370e31ee9d7ea5abef6037"
+    },
+    {
+      "tag": "v7.1.4",
+      "name": "v7.1.4",
+      "date": "2025-09-01T10:39:50Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.4",
+      "prerelease": false,
+      "sha": "bcc31449c0c4f852ccb1eedda1842bc7ded23d01"
+    },
+    {
+      "tag": "v7.1.3",
+      "name": "v7.1.3",
+      "date": "2025-08-19T06:08:44Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.3",
+      "prerelease": false,
+      "sha": "e090b7d1e55f59722f5a312067242e96bb8d8994"
+    },
+    {
+      "tag": "create-vite@7.1.1",
+      "name": "create-vite@7.1.1",
+      "date": "2025-08-12T01:59:07Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%407.1.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v7.1.2",
+      "name": "v7.1.2",
+      "date": "2025-08-12T01:57:56Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.2",
+      "prerelease": false,
+      "sha": "42de3e67638251a26a64abf5fbce4b2c226b288e"
+    },
+    {
+      "tag": "v7.1.1",
+      "name": "v7.1.1",
+      "date": "2025-08-08T01:14:40Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.1",
+      "prerelease": false,
+      "sha": "f4438a17eb703a6e6bd9486fae56c8e7b35adbdd"
+    },
+    {
+      "tag": "plugin-legacy@7.2.1",
+      "name": "plugin-legacy@7.2.1",
+      "date": "2025-08-07T08:21:44Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%407.2.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "create-vite@7.1.0",
+      "name": "create-vite@7.1.0",
+      "date": "2025-08-07T08:08:50Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%407.1.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "plugin-legacy@7.2.0",
+      "name": "plugin-legacy@7.2.0",
+      "date": "2025-08-07T08:06:56Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%407.2.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v7.1.0",
+      "name": "v7.1.0",
+      "date": "2025-08-07T08:06:08Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.0",
+      "prerelease": false,
+      "sha": "931684ef1ea8b120fcc2f1f2b001b8d24d85daa7"
+    },
+    {
+      "tag": "v7.1.0-beta.1",
+      "name": "v7.1.0-beta.1",
+      "date": "2025-08-05T07:04:55Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.0-beta.1",
+      "prerelease": true,
+      "sha": "ddd76e0d84d61cc85f73831aafe6fc55de9f3c33"
+    },
+    {
+      "tag": "v7.1.0-beta.0",
+      "name": "v7.1.0-beta.0",
+      "date": "2025-07-30T04:54:47Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.1.0-beta.0",
+      "prerelease": true,
+      "sha": "946831f986cb797009b8178659d2b31f570c44ff"
+    },
+    {
+      "tag": "v7.0.6",
+      "name": "v7.0.6",
+      "date": "2025-07-24T05:33:26Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.6",
+      "prerelease": false,
+      "sha": "bdde0f9e5077ca1a21a04eefc30abad055047226"
+    },
+    {
+      "tag": "plugin-legacy@7.1.0",
+      "name": "plugin-legacy@7.1.0",
+      "date": "2025-07-22T07:41:42Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%407.1.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "plugin-legacy@7.0.1",
+      "name": "plugin-legacy@7.0.1",
+      "date": "2025-07-17T02:46:24Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%407.0.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v7.0.5",
+      "name": "v7.0.5",
+      "date": "2025-07-17T02:45:26Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.5",
+      "prerelease": false,
+      "sha": "832f687c2c1c2805c164c70e91e220fdfc6c1bc8"
+    },
+    {
+      "tag": "create-vite@7.0.3",
+      "name": "create-vite@7.0.3",
+      "date": "2025-07-11T01:44:16Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%407.0.3",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "create-vite@7.0.2",
+      "name": "create-vite@7.0.2",
+      "date": "2025-07-10T09:46:56Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%407.0.2",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v7.0.4",
+      "name": "v7.0.4",
+      "date": "2025-07-10T09:46:11Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.4",
+      "prerelease": false,
+      "sha": "8a654337767296497d4fda6b8a03f76a817beb6d"
+    },
+    {
+      "tag": "create-vite@7.0.1",
+      "name": "create-vite@7.0.1",
+      "date": "2025-07-08T07:46:34Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%407.0.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v7.0.3",
+      "name": "v7.0.3",
+      "date": "2025-07-08T07:45:58Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.3",
+      "prerelease": false,
+      "sha": "f562df85a3a20ed52b84581945f1809b22cec068"
+    },
+    {
+      "tag": "v7.0.2",
+      "name": "v7.0.2",
+      "date": "2025-07-04T04:11:39Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.2",
+      "prerelease": false,
+      "sha": "d6464bcea558341d88c392bd22e21860956cc86d"
+    },
+    {
+      "tag": "v7.0.1",
+      "name": "v7.0.1",
+      "date": "2025-07-03T10:13:52Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.1",
+      "prerelease": false,
+      "sha": "0badf642a633d0cda7a55babf461dbd9b8543a29"
+    },
+    {
+      "tag": "create-vite@7.0.0",
+      "name": "create-vite@7.0.0",
+      "date": "2025-06-24T10:38:48Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%407.0.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "plugin-legacy@7.0.0",
+      "name": "plugin-legacy@7.0.0",
+      "date": "2025-06-24T09:21:45Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%407.0.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v7.0.0",
+      "name": "v7.0.0",
+      "date": "2025-06-24T09:17:02Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.0",
+      "prerelease": false,
+      "sha": "b85f32275b443bf6b647572a9209f1e078b5b4dd"
+    },
+    {
+      "tag": "plugin-legacy@7.0.0-beta.1",
+      "name": "plugin-legacy@7.0.0-beta.1",
+      "date": "2025-06-17T03:26:30Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%407.0.0-beta.1",
+      "prerelease": true,
+      "sha": null
+    },
+    {
+      "tag": "v7.0.0-beta.2",
+      "name": "v7.0.0-beta.2",
+      "date": "2025-06-17T03:26:09Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.0-beta.2",
+      "prerelease": true,
+      "sha": "1d5b9be5c60359fb01daf23aa0cbfc1fb5c3d113"
+    },
+    {
+      "tag": "v7.0.0-beta.1",
+      "name": "v7.0.0-beta.1",
+      "date": "2025-06-10T01:54:34Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.0-beta.1",
+      "prerelease": true,
+      "sha": "9c6cbe602187644887b0a4342de6b486c8f60f4d"
+    },
+    {
+      "tag": "plugin-legacy@7.0.0-beta.0",
+      "name": "plugin-legacy@7.0.0-beta.0",
+      "date": "2025-06-02T06:56:07Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%407.0.0-beta.0",
+      "prerelease": true,
+      "sha": null
+    },
+    {
+      "tag": "v7.0.0-beta.0",
+      "name": "v7.0.0-beta.0",
+      "date": "2025-06-02T06:53:57Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v7.0.0-beta.0",
+      "prerelease": true,
+      "sha": "24692dbeccd148a60f563bc96e12e3609e5ba642"
+    },
+    {
+      "tag": "create-vite@6.5.0",
+      "name": "create-vite@6.5.0",
+      "date": "2025-05-05T09:36:41Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%406.5.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v6.3.5",
+      "name": "v6.3.5",
+      "date": "2025-05-05T09:35:35Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.5",
+      "prerelease": false,
+      "sha": "84e4647efac01efafcef95fb1c7ec9336fe0a94c"
+    },
+    {
+      "tag": "v4.5.14",
+      "name": "v4.5.14",
+      "date": "2025-04-30T05:59:25Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v4.5.14",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v5.4.19",
+      "name": "v5.4.19",
+      "date": "2025-04-30T05:56:54Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v5.4.19",
+      "prerelease": false,
+      "sha": "80a333a23103ced0442d4463d1191433d90f5e19"
+    },
+    {
+      "tag": "v6.1.6",
+      "name": "v6.1.6",
+      "date": "2025-04-30T05:55:35Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.1.6",
+      "prerelease": false,
+      "sha": "3b2299f6f57be23867e0d793d3ec32b4dfb5eaaf"
+    },
+    {
+      "tag": "v6.2.7",
+      "name": "v6.2.7",
+      "date": "2025-04-30T05:54:28Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.2.7",
+      "prerelease": false,
+      "sha": "3d6a42728f645bcab7c391983604ecdb3619eca9"
+    },
+    {
+      "tag": "v6.3.4",
+      "name": "v6.3.4",
+      "date": "2025-04-30T05:53:22Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.4",
+      "prerelease": false,
+      "sha": "b040d547a17c4bfe8aba44534228667a50612318"
+    },
+    {
+      "tag": "plugin-legacy@6.1.1",
+      "name": "plugin-legacy@6.1.1",
+      "date": "2025-04-28T07:57:48Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%406.1.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v6.3.3",
+      "name": "v6.3.3",
+      "date": "2025-04-24T03:38:03Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.3",
+      "prerelease": false,
+      "sha": "db9eb97b2f530a3985b29c5d1a529772f1ab1893"
+    },
+    {
+      "tag": "v6.3.2",
+      "name": "v6.3.2",
+      "date": "2025-04-18T04:41:51Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.2",
+      "prerelease": false,
+      "sha": "4bc17b4683f941b48d6547167942e03c4ace3e79"
+    },
+    {
+      "tag": "create-vite@6.4.1",
+      "name": "create-vite@6.4.1",
+      "date": "2025-04-17T01:54:06Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%406.4.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v6.3.1",
+      "name": "v6.3.1",
+      "date": "2025-04-17T01:53:38Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.1",
+      "prerelease": false,
+      "sha": "a7349ef31e3c2d7d9889ca629d43935745b7044e"
+    },
+    {
+      "tag": "create-vite@6.4.0",
+      "name": "create-vite@6.4.0",
+      "date": "2025-04-16T07:54:33Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%406.4.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "plugin-legacy@6.1.0",
+      "name": "plugin-legacy@6.1.0",
+      "date": "2025-04-16T07:53:10Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/plugin-legacy%406.1.0",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v6.3.0",
+      "name": "v6.3.0",
+      "date": "2025-04-16T07:51:08Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.0",
+      "prerelease": false,
+      "sha": "5fdcfe77a93ca7bc90a5427a2a20eceaee1c4da1"
+    },
+    {
+      "tag": "v6.3.0-beta.2",
+      "name": "v6.3.0-beta.2",
+      "date": "2025-04-11T12:55:34Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.0-beta.2",
+      "prerelease": true,
+      "sha": "bf9728e79e8df905de457e15001e65e33cf13f0e"
+    },
+    {
+      "tag": "v4.5.13",
+      "name": "v4.5.13",
+      "date": "2025-04-10T06:46:22Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v4.5.13",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v5.4.18",
+      "name": "v5.4.18",
+      "date": "2025-04-10T06:45:30Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v5.4.18",
+      "prerelease": false,
+      "sha": "731b77d19d36f5682a5441b49cb2f6473389ad99"
+    },
+    {
+      "tag": "v6.0.15",
+      "name": "v6.0.15",
+      "date": "2025-04-10T06:43:36Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.0.15",
+      "prerelease": false,
+      "sha": "e3504684e873e2319f3c8ce1fc0d1b5c0724fbdf"
+    },
+    {
+      "tag": "v6.1.5",
+      "name": "v6.1.5",
+      "date": "2025-04-10T06:41:53Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.1.5",
+      "prerelease": false,
+      "sha": "c279023cc3b3fed9cfcb43938cd452aa9ce11995"
+    },
+    {
+      "tag": "v6.2.6",
+      "name": "v6.2.6",
+      "date": "2025-04-10T06:38:43Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.2.6",
+      "prerelease": false,
+      "sha": "d3dbf25fd5e21448f9ea6cec8fb5ac45d220037b"
+    },
+    {
+      "tag": "v4.5.12",
+      "name": "v4.5.12",
+      "date": "2025-04-03T09:55:32Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v4.5.12",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v5.4.17",
+      "name": "v5.4.17",
+      "date": "2025-04-03T09:48:47Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v5.4.17",
+      "prerelease": false,
+      "sha": "0a2518a98d2354c61ee8ef51f7d00fa92aebb511"
+    },
+    {
+      "tag": "v6.0.14",
+      "name": "v6.0.14",
+      "date": "2025-04-03T09:31:41Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.0.14",
+      "prerelease": false,
+      "sha": "f678baacaf2242083a0b1be3a65cbbd1f2a034f3"
+    },
+    {
+      "tag": "v6.1.4",
+      "name": "v6.1.4",
+      "date": "2025-04-03T09:29:11Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.1.4",
+      "prerelease": false,
+      "sha": "f4d34dc4cd1f9b6aab7aa83846082c8461f311a9"
+    },
+    {
+      "tag": "v6.2.5",
+      "name": "v6.2.5",
+      "date": "2025-04-03T09:26:42Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.2.5",
+      "prerelease": false,
+      "sha": "c176acf70a113c33c33cb24b63ab7260e713d4b2"
+    },
+    {
+      "tag": "v6.3.0-beta.1",
+      "name": "v6.3.0-beta.1",
+      "date": "2025-04-03T02:49:50Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.0-beta.1",
+      "prerelease": true,
+      "sha": "a299106a277f316c7d1ca9259e128f865d9eeb5c"
+    },
+    {
+      "tag": "v4.5.11",
+      "name": "v4.5.11",
+      "date": "2025-03-31T09:56:23Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v4.5.11",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v5.4.16",
+      "name": "v5.4.16",
+      "date": "2025-03-31T09:52:22Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v5.4.16",
+      "prerelease": false,
+      "sha": "712cb71aa0e2a03dbf49db92043fb4ecbfc826b1"
+    },
+    {
+      "tag": "v6.0.13",
+      "name": "v6.0.13",
+      "date": "2025-03-31T09:33:22Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.0.13",
+      "prerelease": false,
+      "sha": "0eaadcf952062f13f6457c16f0120833783ade22"
+    },
+    {
+      "tag": "v6.1.3",
+      "name": "v6.1.3",
+      "date": "2025-03-31T09:31:21Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.1.3",
+      "prerelease": false,
+      "sha": "98d066a35501cee393432dfabc8d8012372b8d24"
+    },
+    {
+      "tag": "v6.2.4",
+      "name": "v6.2.4",
+      "date": "2025-03-31T09:28:43Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.2.4",
+      "prerelease": false,
+      "sha": "037f801075ec35bb6e52145d659f71a23813c48f"
+    },
+    {
+      "tag": "v6.3.0-beta.0",
+      "name": "v6.3.0-beta.0",
+      "date": "2025-03-26T02:05:13Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.3.0-beta.0",
+      "prerelease": true,
+      "sha": "ecc85ca282c3046f57859dae993879357cc10ea5"
+    },
+    {
+      "tag": "v4.5.10",
+      "name": "v4.5.10",
+      "date": "2025-03-24T09:55:41Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v4.5.10",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v5.4.15",
+      "name": "v5.4.15",
+      "date": "2025-03-24T09:54:37Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v5.4.15",
+      "prerelease": false,
+      "sha": "9b0f4c80eea8b136d262c705234353e96abfbe75"
+    },
+    {
+      "tag": "v6.0.12",
+      "name": "v6.0.12",
+      "date": "2025-03-24T09:52:58Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.0.12",
+      "prerelease": false,
+      "sha": "9d981f9d380e974f8435ab604ce4dc68496f0733"
+    },
+    {
+      "tag": "v6.1.2",
+      "name": "v6.1.2",
+      "date": "2025-03-24T09:51:57Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.1.2",
+      "prerelease": false,
+      "sha": "0044d54c6d773cb1a8a687b129c6c776180854ae"
+    },
+    {
+      "tag": "v6.2.3",
+      "name": "v6.2.3",
+      "date": "2025-03-24T09:50:34Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.2.3",
+      "prerelease": false,
+      "sha": "16869d7c9917eb58d9a0101e30064ab65e64fa91"
+    },
+    {
+      "tag": "v6.2.2",
+      "name": "v6.2.2",
+      "date": "2025-03-14T04:08:48Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.2.2",
+      "prerelease": false,
+      "sha": "b12911edba0cd9edbad170a0940d37bb1e16ef2c"
+    },
+    {
+      "tag": "v6.2.1",
+      "name": "v6.2.1",
+      "date": "2025-03-07T01:53:51Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.2.1",
+      "prerelease": false,
+      "sha": "e52af4512300fbfabfd63eae2065654eee9073dc"
+    },
+    {
+      "tag": "create-vite@6.3.1",
+      "name": "create-vite@6.3.1",
+      "date": "2025-02-27T12:02:30Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/create-vite%406.3.1",
+      "prerelease": false,
+      "sha": null
+    },
+    {
+      "tag": "v6.2.0",
+      "name": "v6.2.0",
+      "date": "2025-02-25T03:05:32Z",
+      "url": "https://github.com/vitejs/vite/releases/tag/v6.2.0",
+      "prerelease": false,
+      "sha": "d8461b5b4f2884105bab2175b86af4aac521cb5c"
+    }
+  ],
+  "tags_without_release": [
+    "v6.2.0-beta.1",
+    "v6.2.0-beta.0",
+    "v6.1.1",
+    "v6.1.0",
+    "v6.1.0-beta.2",
+    "v6.1.0-beta.1",
+    "v6.1.0-beta.0",
+    "v6.0.11",
+    "v6.0.10",
+    "v6.0.9",
+    "v6.0.8",
+    "v6.0.7",
+    "v6.0.6",
+    "v6.0.5",
+    "v6.0.4",
+    "v6.0.3",
+    "v6.0.2",
+    "v6.0.1",
+    "v6.0.0",
+    "v6.0.0-beta.10",
+    "v6.0.0-beta.9",
+    "v6.0.0-beta.8",
+    "v6.0.0-beta.7",
+    "v6.0.0-beta.6",
+    "v6.0.0-beta.5",
+    "v6.0.0-beta.4",
+    "v6.0.0-beta.3",
+    "v6.0.0-beta.2",
+    "v6.0.0-beta.1",
+    "v6.0.0-beta.0",
+    "v6.0.0-alpha.24",
+    "v6.0.0-alpha.23",
+    "v6.0.0-alpha.22",
+    "v6.0.0-alpha.21",
+    "v6.0.0-alpha.20",
+    "v6.0.0-alpha.19",
+    "v6.0.0-alpha.18",
+    "v6.0.0-alpha.17",
+    "v6.0.0-alpha.16",
+    "v6.0.0-alpha.15",
+    "v6.0.0-alpha.14",
+    "v6.0.0-alpha.13",
+    "v6.0.0-alpha.12",
+    "v6.0.0-alpha.11",
+    "v6.0.0-alpha.10",
+    "v6.0.0-alpha.9",
+    "v6.0.0-alpha.8",
+    "v6.0.0-alpha.7",
+    "v6.0.0-alpha.6",
+    "v6.0.0-alpha.5",
+    "v6.0.0-alpha.4",
+    "v6.0.0-alpha.3",
+    "v6.0.0-alpha.2",
+    "v6.0.0-alpha.1",
+    "v6.0.0-alpha.0",
+    "v5.4.14",
+    "v5.4.13",
+    "v5.4.12",
+    "v5.4.11",
+    "v5.4.10"
+  ],
+  "security_fixes": [
+    {
+      "date": "2026-10-06T14:15:37Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-9jrq-w75r-8gcw"
+      ],
+      "title": "Cross origin script execution through Vite custom middleware",
+      "severity": "low",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-9jrq-w75r-8gcw",
+      "patched_versions": [
+        "8.3.3",
+        "8.2.4",
+        "8.1.6",
+        "7.3.7",
+        "6.4.4",
+        "1.1.0"
+      ],
+      "release": "v8.3.3",
+      "release_date": "2026-10-06T04:07:42Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-10-06T14:15:34Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-vfpm-58rq-9qcg"
+      ],
+      "title": "First 4 bytes of files outside of `server.fs` setting is exposed by `?vite-wasm-instance`",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-vfpm-58rq-9qcg",
+      "patched_versions": [
+        "8.3.3",
+        "8.2.4",
+        "1.1.0"
+      ],
+      "release": "v8.3.3",
+      "release_date": "2026-10-06T04:07:42Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-10-06T14:15:31Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-rq7h-c2jc-7f22"
+      ],
+      "title": "Files outside `server.fs.allow` could be served when project paths match system paths on non-Windows machine",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-rq7h-c2jc-7f22",
+      "patched_versions": [
+        "8.3.3",
+        "8.2.4",
+        "8.1.6",
+        "7.3.7",
+        "6.4.4",
+        "1.1.0"
+      ],
+      "release": "v8.3.3",
+      "release_date": "2026-10-06T04:07:42Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-06-01T13:32:24Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-fx2h-pf6j-xcff",
+        "CVE-2026-53571"
+      ],
+      "title": "`server.fs.deny` bypass on Windows alternate paths",
+      "severity": "high",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-fx2h-pf6j-xcff",
+      "patched_versions": [
+        "8.0.16",
+        "7.3.5",
+        "6.4.3",
+        "0.1.24"
+      ],
+      "release": "v8.0.16",
+      "release_date": "2026-06-01T09:50:08Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-06T12:13:21Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-4w7w-66w2-5vf9",
+        "CVE-2026-39365"
+      ],
+      "title": "Path Traversal in Optimized Deps `.map` Handling",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-4w7w-66w2-5vf9",
+      "patched_versions": [
+        "8.0.5",
+        "7.3.2",
+        "6.4.2",
+        "0.1.16"
+      ],
+      "release": "v8.0.5",
+      "release_date": "2026-04-06T12:02:21Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-06T12:12:37Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-v2wj-q39q-566r",
+        "CVE-2026-39364"
+      ],
+      "title": "`server.fs.deny` bypassed with queries",
+      "severity": "high",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-v2wj-q39q-566r",
+      "patched_versions": [
+        "8.0.5",
+        "7.3.2",
+        "0.1.16"
+      ],
+      "release": "v8.0.5",
+      "release_date": "2026-04-06T12:02:21Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-06T12:11:59Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-p9ff-h696-f583",
+        "CVE-2026-39363"
+      ],
+      "title": "Arbitrary File Read via Vite Dev Server WebSocket",
+      "severity": "high",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-p9ff-h696-f583",
+      "patched_versions": [
+        "8.0.5",
+        "7.3.2",
+        "6.4.2",
+        "0.1.16"
+      ],
+      "release": "v8.0.5",
+      "release_date": "2026-04-06T12:02:21Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-10-20T05:41:09Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-93m4-6634-74q7",
+        "CVE-2025-62522"
+      ],
+      "title": "`server.fs.deny` bypassed with `\\` on Windows",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-93m4-6634-74q7",
+      "patched_versions": [
+        "7.1.11",
+        "7.0.8",
+        "6.4.1",
+        "5.4.21"
+      ],
+      "release": "v7.1.11",
+      "release_date": "2025-10-20T05:09:01Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-09-08T07:03:21Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-g4jq-h2w9-997c",
+        "CVE-2025-58751"
+      ],
+      "title": "Files starting with the same name with the public directory were served",
+      "severity": "low",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-g4jq-h2w9-997c",
+      "patched_versions": [
+        "7.1.5",
+        "7.0.7",
+        "6.3.6",
+        "5.4.20"
+      ],
+      "release": "v7.1.5",
+      "release_date": "2025-09-08T06:47:48Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-09-08T07:03:19Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-jqfw-vq24-v9c3",
+        "CVE-2025-58752"
+      ],
+      "title": "`server.fs` settings was not applied to HTML files",
+      "severity": "low",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-jqfw-vq24-v9c3",
+      "patched_versions": [
+        "7.1.5",
+        "7.0.7",
+        "6.3.6",
+        "5.4.20"
+      ],
+      "release": "v7.1.5",
+      "release_date": "2025-09-08T06:47:48Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-04-30T08:11:08Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-859w-5945-r5v3",
+        "CVE-2025-46565"
+      ],
+      "title": "`server.fs.deny` bypassed with `/.` for files under project `root`",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-859w-5945-r5v3",
+      "patched_versions": [
+        "6.3.4",
+        "6.2.7",
+        "6.3.0",
+        "6.1.6",
+        "6.2.0",
+        "5.4.19",
+        "6.0.0",
+        "4.5.14",
+        "5.0.0"
+      ],
+      "release": "v6.3.4",
+      "release_date": "2025-04-30T05:53:22Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-04-10T07:07:20Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-356w-63v5-8wf4",
+        "CVE-2025-32395"
+      ],
+      "title": "`server.fs.deny` bypassed with an invalid `request-target`",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-356w-63v5-8wf4",
+      "patched_versions": [
+        "6.2.6",
+        "6.1.5",
+        "6.2.0",
+        "6.0.15",
+        "6.1.0",
+        "5.4.18",
+        "6.0.0",
+        "4.5.13",
+        "5.0.0"
+      ],
+      "release": "v6.2.6",
+      "release_date": "2025-04-10T06:38:43Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-04-03T10:01:21Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-xcj6-pq6g-qj4x",
+        "CVE-2025-31486"
+      ],
+      "title": "`server.fs.deny` bypassed with `.svg` or relative paths",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-xcj6-pq6g-qj4x",
+      "patched_versions": [
+        "6.2.5",
+        "6.1.4",
+        "6.2.0",
+        "6.0.14",
+        "6.1.0",
+        "5.4.17",
+        "6.0.0",
+        "4.5.12",
+        "5.0.0"
+      ],
+      "release": "v6.2.5",
+      "release_date": "2025-04-03T09:26:42Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-03-31T10:12:27Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-4r4m-qw57-chr8",
+        "CVE-2025-31125"
+      ],
+      "title": "`server.fs.deny` bypassed for `inline` and `raw` with `?import` query",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-4r4m-qw57-chr8",
+      "patched_versions": [
+        "6.2.4",
+        "6.1.3",
+        "6.2.0",
+        "6.0.13",
+        "6.1.0",
+        "5.4.16",
+        "6.0.0",
+        "4.5.11",
+        "5.0.0"
+      ],
+      "release": "v6.2.4",
+      "release_date": "2025-03-31T09:28:43Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-03-24T10:24:13Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-x574-m823-4x7w",
+        "CVE-2025-30208"
+      ],
+      "title": " server.fs.deny bypassed when using `?raw??`",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-x574-m823-4x7w",
+      "patched_versions": [
+        "6.2.3",
+        "6.1.2",
+        "6.2.0",
+        "6.0.12",
+        "6.1.0",
+        "5.4.15",
+        "6.0.0",
+        "4.5.10",
+        "5.0.0"
+      ],
+      "release": "v6.2.3",
+      "release_date": "2025-03-24T09:50:34Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-01-20T10:10:42Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-vg6x-rcgg-rjx6",
+        "CVE-2025-24010"
+      ],
+      "title": "Any websites were able to send any requests to the development server and read the response",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-vg6x-rcgg-rjx6",
+      "patched_versions": [
+        "6.0.9",
+        "5.4.12",
+        "6.0.0",
+        "4.5.6",
+        "5.0.0"
+      ],
+      "release": "v6.2.0",
+      "release_date": "2025-02-25T03:05:32Z",
+      "mapping": "date heuristic (first release on/after publish)"
+    },
+    {
+      "date": "2024-09-17T09:12:49Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-64vr-g452-qvp3",
+        "CVE-2024-45812"
+      ],
+      "title": "DOM Clobbering gadget found in vite bundled scripts that leads to XSS",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-64vr-g452-qvp3",
+      "patched_versions": [
+        "5.4.6",
+        "5.3.6",
+        "5.4.0",
+        "5.2.14",
+        "5.3.0",
+        "5.1.8",
+        "5.2.0",
+        "4.5.5",
+        "5.0.0",
+        "3.2.11",
+        "4.0.0"
+      ],
+      "release": "v6.2.0",
+      "release_date": "2025-02-25T03:05:32Z",
+      "mapping": "date heuristic (first release on/after publish)"
+    },
+    {
+      "date": "2024-09-17T09:12:39Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-9cwx-2883-4wfx",
+        "CVE-2024-45811"
+      ],
+      "title": "server.fs.deny bypassed when using ?import&raw",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-9cwx-2883-4wfx",
+      "patched_versions": [
+        "5.4.6",
+        "5.3.6",
+        "5.4.0",
+        "5.2.14",
+        "5.3.0",
+        "5.1.8",
+        "5.2.0",
+        "4.5.5",
+        "5.0.0",
+        "3.2.11",
+        "4.0.0"
+      ],
+      "release": "v6.2.0",
+      "release_date": "2025-02-25T03:05:32Z",
+      "mapping": "date heuristic (first release on/after publish)"
+    },
+    {
+      "date": "2024-04-03T11:28:40Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-8jhw-289h-jh2g",
+        "CVE-2024-31207"
+      ],
+      "title": "`server.fs.deny` did not deny requests for patterns with directories.",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-8jhw-289h-jh2g",
+      "patched_versions": [
+        "2.9.18",
+        "3.2.10",
+        "4.5.3",
+        "5.0.13",
+        "5.1.7",
+        "5.2.6"
+      ],
+      "release": "v6.2.0",
+      "release_date": "2025-02-25T03:05:32Z",
+      "mapping": "date heuristic (first release on/after publish)"
+    },
+    {
+      "date": "2024-01-19T14:22:35Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-c24v-8rfc-w8vw",
+        "CVE-2024-23331"
+      ],
+      "title": "Vite dev server option `server.fs.deny` can be bypassed when hosted on case-insensitive filesystem",
+      "severity": "high",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-c24v-8rfc-w8vw",
+      "patched_versions": [
+        "2.9.173.0.0",
+        "3.2.84.0.0",
+        "4.5.25.0.0",
+        "5.0.12"
+      ],
+      "release": "v6.2.0",
+      "release_date": "2025-02-25T03:05:32Z",
+      "mapping": "date heuristic (first release on/after publish)"
+    },
+    {
+      "date": "2023-12-04T22:07:59Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-92r3-m2mg-pj97",
+        "CVE-2023-49293"
+      ],
+      "title": "XSS vulnerability in `server.transformIndexHtml` via URL payload",
+      "severity": "medium",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-92r3-m2mg-pj97",
+      "patched_versions": [
+        "4.4.124.5.0",
+        "4.5.15.0.0",
+        "5.0.5"
+      ],
+      "release": "v6.2.0",
+      "release_date": "2025-02-25T03:05:32Z",
+      "mapping": "date heuristic (first release on/after publish)"
+    },
+    {
+      "date": "2023-06-01T11:09:57Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-353f-5xf4-qw67",
+        "CVE-2023-34092"
+      ],
+      "title": "Vite Server Options (server.fs.deny) can be bypassed using double forward-slash (//)",
+      "severity": "high",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-353f-5xf4-qw67",
+      "patched_versions": [
+        "2.9.163.0.0",
+        "3.2.74.0.0",
+        "4.0.54.1.0",
+        "4.1.54.2.0",
+        "4.2.34.3.0",
+        "4.3.9"
+      ],
+      "release": "v6.2.0",
+      "release_date": "2025-02-25T03:05:32Z",
+      "mapping": "date heuristic (first release on/after publish)"
+    }
+  ],
+  "dependency_updates": [
+    {
+      "date": "2026-10-12T09:39:31Z",
+      "type": "dependency-update",
+      "bot": "renovate[bot]",
+      "ids": [],
+      "title": "chore(deps): update actions/setup-node digest to 949feb2",
+      "security": false,
+      "url": "https://github.com/vitejs/vite/pull/23730",
+      "release": null,
+      "release_date": null,
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-10-07T08:23:01Z",
+      "type": "dependency-update",
+      "bot": "renovate[bot]",
+      "ids": [],
+      "title": "fix(deps): update all non-major dependencies",
+      "security": false,
+      "url": "https://github.com/vitejs/vite/pull/23648",
+      "release": "v8.3.4",
+      "release_date": "2026-10-08T12:03:54Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-10-07T08:05:39Z",
+      "type": "dependency-update",
+      "bot": "renovate[bot]",
+      "ids": [],
+      "title": "fix(deps): update rolldown-related dependencies",
+      "security": false,
+      "url": "https://github.com/vitejs/vite/pull/23649",
+      "release": "v8.3.4",
+      "release_date": "2026-10-08T12:03:54Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-29T02:25:34Z",
+      "type": "dependency-update",
+      "bot": "renovate[bot]",
+      "ids": [],
+      "title": "chore(deps): update vitest monorepo to v5",
+      "security": false,
+      "url": "https://github.com/vitejs/vite/pull/23604",
+      "release": "v8.3.2",
+      "release_date": "2026-10-01T10:14:36Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-28T02:19:04Z",
+      "type": "dependency-update",
+      "bot": "renovate[bot]",
+      "ids": [],
+      "title": "fix(deps): update rolldown-related dependencies",
+      "security": false,
+      "url": "https://github.com/vitejs/vite/pull/23602",
+      "release": "v8.3.2",
+      "release_date": "2026-10-01T10:14:36Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-28T01:29:24Z",
+      "type": "dependency-update",
+      "bot": "renovate[bot]",
+      "ids": [],
+      "title": "fix(deps): update all non-major dependencies",
+      "security": false,
+      "url": "https://github.com/vitejs/vite/pull/23601",
+      "release": "v8.3.2",
+      "release_date": "2026-10-01T10:14:36Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-24T08:05:04Z",
+      "type": "dependency-update",
+      "bot": "renovate[bot]",
+      "ids": [],
+      "title": "fix(deps): update all non-major dependencies",
+      "security": false,
+      "url": "https://github.com/vitejs/vite/pull/23537",
+      "release": "v8.3.1",
+      "release_date": "2026-09-24T12:23:55Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-18T03:32:32Z",
+      "type": "dependency-update",
+      "bot": "renovate[bot]",
+      "ids": [],
+      "title": "fix(deps): update all non-major dependencies",
+      "security": false,
+      "url": "https://github.com/vitejs/vite/pull/23482",
+      "release": "v8.3.1",
+      "release_date": "2026-09-24T12:23:55Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-09-18T02:47:05Z",
+      "type": "dependency-update",
+      "bot": "renovate[bot]",
+      "ids": [],
+      "title": "fix(deps): update rolldown-related dependencies",
+      "security": false,
+      "url": "https://github.com/vitejs/vite/pull/23483",
+      "release": "v8.3.1",
+      "release_date": "2026-09-24T12:23:55Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    }
+  ],
+  "summary": {
+    "advisories": 22,
+    "security_commits": 0,
+    "dependency_updates": 9,
+    "security_dependency_updates": 0,
+    "unreleased_fixes": 0
+  }
+}

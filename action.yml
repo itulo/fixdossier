@@ -1,0 +1,60 @@
+name: 'fixledger'
+description: 'Builds a dated security-fix record (SECURITY-RECORD.md + JSON) and a SUPPORT.md support-period policy from your GitHub history.'
+author: 'Italo Armenti'
+branding: { icon: 'shield', color: 'blue' }
+inputs:
+  token: { description: 'Token for the GitHub API. GITHUB_TOKEN is enough.', default: '${{ github.token }}' }
+  repo: { description: 'owner/name to read. Defaults to the current repository.', default: '${{ github.repository }}' }
+  support_period_months: { description: 'Months of security updates per release (SUPPORT.md).', default: '12' }
+  eol_date: { description: 'Optional end-of-life date (YYYY-MM-DD) that caps every support window.', default: '' }
+  contact: { description: 'Where to report vulnerabilities (email or URL).', default: '' }
+  product_name: { description: 'Name shown in SUPPORT.md. Defaults to the repo name.', default: '' }
+  output_dir: { description: 'Directory for the generated files.', default: '.' }
+  max_pages: { description: 'Max API pages (100 items each) per source. Raise for long histories.', default: '10' }
+  mode: { description: '"artifact" (upload files), "commit" (commit them to the current branch), or "none".', default: 'artifact' }
+  commit_message: { description: 'Commit message in commit mode.', default: 'chore: update security record [skip ci]' }
+  fail_on_gaps: { description: 'Fail the step if any source could not be read.', default: 'false' }
+outputs:
+  record_file: { description: 'Path of SECURITY-RECORD.md', value: '${{ steps.gen.outputs.record_file }}' }
+  json_file: { description: 'Path of the JSON record', value: '${{ steps.gen.outputs.json_file }}' }
+  support_file: { description: 'Path of SUPPORT.md', value: '${{ steps.gen.outputs.support_file }}' }
+  fix_count: { description: 'Number of security fixes found', value: '${{ steps.gen.outputs.fix_count }}' }
+  gap_count: { description: 'Number of sources that could not be fully read', value: '${{ steps.gen.outputs.gap_count }}' }
+runs:
+  using: 'composite'
+  steps:
+    - id: gen
+      shell: bash
+      run: node "${{ github.action_path }}/src/index.js"
+      env:
+        INPUT_TOKEN: ${{ inputs.token }}
+        INPUT_REPO: ${{ inputs.repo }}
+        INPUT_SUPPORT_PERIOD_MONTHS: ${{ inputs.support_period_months }}
+        INPUT_EOL_DATE: ${{ inputs.eol_date }}
+        INPUT_CONTACT: ${{ inputs.contact }}
+        INPUT_PRODUCT_NAME: ${{ inputs.product_name }}
+        INPUT_OUTPUT_DIR: ${{ inputs.output_dir }}
+        INPUT_MAX_PAGES: ${{ inputs.max_pages }}
+        INPUT_FAIL_ON_GAPS: ${{ inputs.fail_on_gaps }}
+    - if: inputs.mode == 'artifact'
+      uses: actions/upload-artifact@v4
+      with:
+        name: security-record
+        path: |
+          ${{ steps.gen.outputs.record_file }}
+          ${{ steps.gen.outputs.json_file }}
+          ${{ steps.gen.outputs.support_file }}
+    - if: inputs.mode == 'commit'
+      shell: bash
+      env:
+        FILES: '${{ steps.gen.outputs.record_file }} ${{ steps.gen.outputs.json_file }} ${{ steps.gen.outputs.support_file }}'
+        MSG: ${{ inputs.commit_message }}
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add $FILES
+        if git diff --cached --quiet; then echo "fixledger: no changes to commit"; exit 0; fi
+        git commit -m "$MSG"
+        if ! git push; then
+          echo "::warning title=fixledger::Could not push (needs 'permissions: contents: write', a checked-out branch, and no branch protection blocking the bot). Files were generated but not committed."
+        fi

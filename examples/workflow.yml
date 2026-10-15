@@ -1,0 +1,20 @@
+# Example: copy to .github/workflows/security-record.yml in your repo.
+name: security-record
+on:
+  release: { types: [published] }
+  schedule: [{ cron: '0 6 * * 1' }]   # weekly, so new advisories and Dependabot merges are picked up
+  workflow_dispatch:
+permissions:
+  contents: write            # only needed for mode: commit (artifact mode needs contents: read)
+  pull-requests: read       # published GHSA advisories are public; drafts are never included
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: itulo/fixledger@v0
+        with:
+          support_period_months: 24
+          eol_date: '2030-12-31'
+          contact: security@example.com
+          mode: commit            # or: artifact

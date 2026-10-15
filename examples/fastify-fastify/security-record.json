@@ -1,0 +1,1976 @@
+{
+  "schema": "fixledger/v1",
+  "repo": "fastify/fastify",
+  "generated_at": "2026-10-12T13:36:58.908Z",
+  "sources_checked": {
+    "releases": 200,
+    "tags": 200,
+    "closed_pulls": 200,
+    "advisories": 15,
+    "commits": 200
+  },
+  "gaps": [
+    "releases: stopped after 2 pages (raise max_pages for full history)",
+    "tags: stopped after 2 pages (raise max_pages for full history)",
+    "pull requests: stopped after 2 pages (raise max_pages for full history)",
+    "commits: stopped after 2 pages (raise max_pages for full history)"
+  ],
+  "releases": [
+    {
+      "tag": "v6.0.0-alpha.4",
+      "name": "v6.0.0-alpha.4",
+      "date": "2026-09-17T07:53:08Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v6.0.0-alpha.4",
+      "prerelease": true,
+      "sha": "630acd0b6cf8a91322ff05c3d95feb991091866d"
+    },
+    {
+      "tag": "v5.12.5",
+      "name": "v5.12.5",
+      "date": "2026-09-16T10:19:43Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.12.5",
+      "prerelease": false,
+      "sha": "ba235fdcd9a83a4c7ccf793f7b2596a8f65389b6"
+    },
+    {
+      "tag": "v5.12.4",
+      "name": "v5.12.4",
+      "date": "2026-09-11T09:19:29Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.12.4",
+      "prerelease": false,
+      "sha": "1690e350121afa6eedce8ada46ac07d1a423ce75"
+    },
+    {
+      "tag": "v6.0.0-alpha.3",
+      "name": "v6.0.0-alpha.3",
+      "date": "2026-09-04T09:21:10Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v6.0.0-alpha.3",
+      "prerelease": true,
+      "sha": "15ebc8e2fe6932d3e91afa84709523804f8a2537"
+    },
+    {
+      "tag": "v5.12.2",
+      "name": "v5.12.2",
+      "date": "2026-09-04T08:20:39Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.12.2",
+      "prerelease": false,
+      "sha": "942a2be8704244db778f8db9a0bb4951b8825156"
+    },
+    {
+      "tag": "v6.0.0-alpha.2",
+      "name": "v6.0.0-alpha.2",
+      "date": "2026-08-19T01:54:36Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v6.0.0-alpha.2",
+      "prerelease": true,
+      "sha": "9334d07129589f7340adfa4729ebe6c55e34bbfd"
+    },
+    {
+      "tag": "v5.12.1",
+      "name": "v5.12.1",
+      "date": "2026-08-18T19:51:41Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.12.1",
+      "prerelease": false,
+      "sha": "7d196a998c422062a3aaa3f8041db91ad576cea0"
+    },
+    {
+      "tag": "v6.0.0-alpha.1",
+      "name": "v6.0.0-alpha.1",
+      "date": "2026-08-13T15:57:10Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v6.0.0-alpha.1",
+      "prerelease": true,
+      "sha": "377533a260d5de8966f4f9dbe7de9eff5e0d0da9"
+    },
+    {
+      "tag": "v5.12.0",
+      "name": "v5.12.0",
+      "date": "2026-08-13T15:55:21Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.12.0",
+      "prerelease": false,
+      "sha": "27d1fec147852f5379c062dd531c31c2bbf19880"
+    },
+    {
+      "tag": "v6.0.0-alpha.0",
+      "name": "v6.0.0-alpha.0",
+      "date": "2026-08-11T08:32:37Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v6.0.0-alpha.0",
+      "prerelease": true,
+      "sha": "ed664c344f4d7e0171f252d5e886db6d7d241770"
+    },
+    {
+      "tag": "v5.11.3",
+      "name": "v5.11.3",
+      "date": "2026-08-08T06:55:46Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.11.3",
+      "prerelease": false,
+      "sha": "a22ceded3dfbb44354dcb0fe683d4b142a7487c4"
+    },
+    {
+      "tag": "v5.11.2",
+      "name": "v5.11.2",
+      "date": "2026-08-03T08:21:47Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.11.2",
+      "prerelease": false,
+      "sha": "043baf988048c08ee87190193089a3b714f163fe"
+    },
+    {
+      "tag": "v5.11.1",
+      "name": "v5.11.1",
+      "date": "2026-08-03T08:10:10Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.11.1",
+      "prerelease": false,
+      "sha": "2afc49b4ededd036b7b56d209f313c8764696d55"
+    },
+    {
+      "tag": "v5.11.0",
+      "name": "v5.11.0",
+      "date": "2026-07-30T09:32:16Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.11.0",
+      "prerelease": false,
+      "sha": "b93d611c7cefc2cd4a0b6f05cc864f2b6c397a6d"
+    },
+    {
+      "tag": "v5.10.0",
+      "name": "v5.10.0",
+      "date": "2026-07-05T09:37:06Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.10.0",
+      "prerelease": false,
+      "sha": "94bcbcc6e2ef3b8e8f8e8797fe551ccbe7b942fd"
+    },
+    {
+      "tag": "v5.9.0",
+      "name": "v5.9.0",
+      "date": "2026-06-28T08:21:36Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.9.0",
+      "prerelease": false,
+      "sha": "2e45a4472fc83d1342661f4ec8a92334f46277c9"
+    },
+    {
+      "tag": "v5.8.5",
+      "name": "v5.8.5",
+      "date": "2026-04-14T12:09:02Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.8.5",
+      "prerelease": false,
+      "sha": "3983cce8124714242099e8756a7a9a80a0ba0aea"
+    },
+    {
+      "tag": "v5.8.4",
+      "name": "v5.8.4",
+      "date": "2026-03-23T10:31:20Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.8.4",
+      "prerelease": false,
+      "sha": "af92d0d2a9280a41e23fea4dc2b5cfff41169d5d"
+    },
+    {
+      "tag": "v5.8.3",
+      "name": "v5.8.3",
+      "date": "2026-03-23T10:20:21Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.8.3",
+      "prerelease": false,
+      "sha": "a3e77ce171516e95f0c28ce60b9e5228a4c42fe4"
+    },
+    {
+      "tag": "v5.8.2",
+      "name": "v5.8.2",
+      "date": "2026-03-07T09:42:46Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.8.2",
+      "prerelease": false,
+      "sha": "375e136074c77347a9bbbf6c02ad2d106a88fd76"
+    },
+    {
+      "tag": "v5.8.1",
+      "name": "v5.8.1",
+      "date": "2026-03-05T10:10:57Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.8.1",
+      "prerelease": false,
+      "sha": "073ff8132f350aaa53935231019499e983cb9794"
+    },
+    {
+      "tag": "v5.8.0",
+      "name": "v5.8.0",
+      "date": "2026-03-05T09:33:05Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.8.0",
+      "prerelease": false,
+      "sha": "9b06a781f90d5a8d5ac5fc43eb2fddc392864681"
+    },
+    {
+      "tag": "v5.7.4",
+      "name": "v5.7.4",
+      "date": "2026-02-02T18:23:39Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.7.4",
+      "prerelease": false,
+      "sha": "4682a78381fcb7b9c382cc734295cfc926e581e4"
+    },
+    {
+      "tag": "v5.7.3",
+      "name": "v5.7.3",
+      "date": "2026-02-02T17:57:52Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.7.3",
+      "prerelease": false,
+      "sha": "49468eddb7c59e07fb95183afbf03498fccac99e"
+    },
+    {
+      "tag": "v5.7.2",
+      "name": "v5.7.2",
+      "date": "2026-01-26T11:15:54Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.7.2",
+      "prerelease": false,
+      "sha": "e1e4fe75910c36e1b9ebb87026ca16c053a9c1f2"
+    },
+    {
+      "tag": "v5.7.1",
+      "name": "v5.7.1",
+      "date": "2026-01-16T08:27:19Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.7.1",
+      "prerelease": false,
+      "sha": "8eadc22b984e3f2496aa8c4552777b871517135b"
+    },
+    {
+      "tag": "v5.7.0",
+      "name": "v5.7.0",
+      "date": "2026-01-15T13:03:39Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.7.0",
+      "prerelease": false,
+      "sha": "d863116fa709c66470112679f566273d0223db71"
+    },
+    {
+      "tag": "v5.6.2",
+      "name": "v5.6.2",
+      "date": "2025-11-09T08:47:59Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.6.2",
+      "prerelease": false,
+      "sha": "f15d4eaba03d86786bec2de7aed1236718c813f9"
+    },
+    {
+      "tag": "v5.6.1",
+      "name": "v5.6.1",
+      "date": "2025-09-22T16:00:44Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.6.1",
+      "prerelease": false,
+      "sha": "91414fecaa0ad383c7f97c91f86bee87bf4f06c0"
+    },
+    {
+      "tag": "v5.6.0",
+      "name": "v5.6.0",
+      "date": "2025-09-05T08:22:58Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.6.0",
+      "prerelease": false,
+      "sha": "70b14e92c0b55e8201f5530ba2e6bab4e928c784"
+    },
+    {
+      "tag": "v5.5.0",
+      "name": "v5.5.0",
+      "date": "2025-08-11T12:30:20Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.5.0",
+      "prerelease": false,
+      "sha": "b84733e997340076240d93db5bbeef716df58756"
+    },
+    {
+      "tag": "v5.4.0",
+      "name": "v5.4.0",
+      "date": "2025-06-12T13:29:42Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.4.0",
+      "prerelease": false,
+      "sha": "0111d0a30052b060c79b534295e309513d74ebd6"
+    },
+    {
+      "tag": "v5.3.3",
+      "name": "v5.3.3",
+      "date": "2025-05-13T16:12:19Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.3.3",
+      "prerelease": false,
+      "sha": "220b5320b3560bb0f34b3b0c3de16b09d53e1bca"
+    },
+    {
+      "tag": "v4.29.1",
+      "name": "v4.29.1",
+      "date": "2025-04-28T17:30:59Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.29.1",
+      "prerelease": false,
+      "sha": "2d85fee1d317208e0f9c7c9103c4ebb30d7c35e6"
+    },
+    {
+      "tag": "v5.3.2",
+      "name": "v5.3.2",
+      "date": "2025-04-18T20:31:40Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.3.2",
+      "prerelease": false,
+      "sha": "32f7e1eb97b638bad3ff8b80948e5b2c07d1b8b5"
+    },
+    {
+      "tag": "v5.3.1",
+      "name": "v5.3.1",
+      "date": "2025-04-18T07:39:09Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.3.1",
+      "prerelease": false,
+      "sha": "644b68d788b4183af312f2d6fea8fec0e6e38151"
+    },
+    {
+      "tag": "v5.3.0",
+      "name": "v5.3.0",
+      "date": "2025-04-13T10:35:06Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.3.0",
+      "prerelease": false,
+      "sha": "1b56b8bf75f6ed5ba2ca28a631f86b26a063f26a"
+    },
+    {
+      "tag": "v5.2.2",
+      "name": "v5.2.2",
+      "date": "2025-03-25T20:21:40Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.2.2",
+      "prerelease": false,
+      "sha": "1b6ddaaa888833f7192fe721e9ecc292e410d344"
+    },
+    {
+      "tag": "v5.2.1",
+      "name": "v5.2.1",
+      "date": "2025-01-06T08:16:24Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.2.1",
+      "prerelease": false,
+      "sha": "eafe0aa25ced21033310ae708b33e645ffb0d532"
+    },
+    {
+      "tag": "v5.2.0",
+      "name": "v5.2.0",
+      "date": "2024-12-14T07:56:25Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.2.0",
+      "prerelease": false,
+      "sha": "9177df07b091f440ddec9f76ee7625b466b37e8d"
+    },
+    {
+      "tag": "v4.29.0",
+      "name": "v4.29.0",
+      "date": "2024-12-04T11:34:17Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.29.0",
+      "prerelease": false,
+      "sha": "3a6d4aeb241706fc9b71858281800a0cf193a308"
+    },
+    {
+      "tag": "v5.1.0",
+      "name": "v5.1.0",
+      "date": "2024-10-31T19:29:39Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.1.0",
+      "prerelease": false,
+      "sha": "3eddee4a2ce5ba4632298769ba405171121948a6"
+    },
+    {
+      "tag": "v5.0.0",
+      "name": "v5.0.0",
+      "date": "2024-09-17T14:12:57Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.0.0",
+      "prerelease": false,
+      "sha": "6bde7d7b0a51010d56df901cab9be5d9351b0d91"
+    },
+    {
+      "tag": "v5.0.0-alpha.4",
+      "name": "v5.0.0-alpha.4",
+      "date": "2024-09-03T07:46:22Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.0.0-alpha.4",
+      "prerelease": true,
+      "sha": "985b3c32c9dcd416282b31c1af2d8f7d4e310cff"
+    },
+    {
+      "tag": "v4.28.1",
+      "name": "v4.28.1",
+      "date": "2024-06-29T09:41:59Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.28.1",
+      "prerelease": false,
+      "sha": "94068edf593534d9c1b6b4edf71ecd55ff4b3124"
+    },
+    {
+      "tag": "v5.0.0-alpha.2",
+      "name": "v5.0.0-alpha.2",
+      "date": "2024-06-21T17:31:11Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.0.0-alpha.2",
+      "prerelease": true,
+      "sha": "61a8419d97a1808cb8ef9c7e5f1d35e42bc2afe7"
+    },
+    {
+      "tag": "v4.28.0",
+      "name": "v4.28.0",
+      "date": "2024-06-14T08:22:36Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.28.0",
+      "prerelease": false,
+      "sha": "4212551b3b34ca9554e4168a6a395e0d0fdd2c5f"
+    },
+    {
+      "tag": "v5.0.0-alpha.1",
+      "name": "v5.0.0-alpha.1",
+      "date": "2024-05-07T13:15:27Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.0.0-alpha.1",
+      "prerelease": true,
+      "sha": "7f26c0ecd224f77b1f7c0069b2fc2c13dd943b84"
+    },
+    {
+      "tag": "v4.27.0",
+      "name": "v4.27.0",
+      "date": "2024-05-07T13:02:52Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.27.0",
+      "prerelease": false,
+      "sha": "fe25981df1cd9d4fa686ae8227e4c1b3ce804cfd"
+    },
+    {
+      "tag": "v4.26.2",
+      "name": "v4.26.2",
+      "date": "2024-03-03T17:18:51Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.26.2",
+      "prerelease": false,
+      "sha": "5c263b4dc2cb6d5eda2df7b3602238ae24957c55"
+    },
+    {
+      "tag": "v4.26.1",
+      "name": "v4.26.1",
+      "date": "2024-02-12T14:37:16Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.26.1",
+      "prerelease": false,
+      "sha": "ffbc92c78a588e5ec6f16d20492f23b08654345f"
+    },
+    {
+      "tag": "v4.26.0",
+      "name": "v4.26.0",
+      "date": "2024-01-29T18:57:38Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.26.0",
+      "prerelease": false,
+      "sha": "e10ae402f5736b03dc7e9c6c2541bf87c01df2c9"
+    },
+    {
+      "tag": "v4.25.2",
+      "name": "v4.25.2",
+      "date": "2023-12-24T16:54:25Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.25.2",
+      "prerelease": false,
+      "sha": "04a4c9751e3b2501aa0a0866c512e9feb1641fb6"
+    },
+    {
+      "tag": "v4.25.1",
+      "name": "v4.25.1",
+      "date": "2023-12-15T08:35:58Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.25.1",
+      "prerelease": false,
+      "sha": "e3a07eaa444d0e769802195816d4e1718c2fc9ea"
+    },
+    {
+      "tag": "v4.25.0",
+      "name": "v4.25.0",
+      "date": "2023-12-13T10:46:36Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.25.0",
+      "prerelease": false,
+      "sha": "635acc8ae50ed9a5a0ca03720a5d1bab70f64b51"
+    },
+    {
+      "tag": "v4.24.3",
+      "name": "v4.24.3",
+      "date": "2023-10-19T08:51:51Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.24.3",
+      "prerelease": false,
+      "sha": "fc6bf5cb9f000ad4cda5e197f4fd22166a15dab9"
+    },
+    {
+      "tag": "v4.24.2",
+      "name": "v4.24.2",
+      "date": "2023-10-15T06:56:33Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.24.2",
+      "prerelease": false,
+      "sha": "18088ba61b8b4950bf3dd5b1d99341c875c6f51d"
+    },
+    {
+      "tag": "v4.24.1",
+      "name": "v4.24.1",
+      "date": "2023-10-13T07:47:06Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.24.1",
+      "prerelease": false,
+      "sha": "a9eea1cdc94259da81eb7a828e2f6e6e260dc6f2"
+    },
+    {
+      "tag": "v4.24.0",
+      "name": "v4.24.0",
+      "date": "2023-10-11T10:55:27Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.24.0",
+      "prerelease": false,
+      "sha": "d3d8804ca4022674eb661b11943188eac79ae02c"
+    },
+    {
+      "tag": "v4.23.2",
+      "name": "v4.23.2",
+      "date": "2023-09-14T08:38:08Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.23.2",
+      "prerelease": false,
+      "sha": "c08b67e0bfedc9935b51c787ae4cd6b250ad303c"
+    },
+    {
+      "tag": "v4.23.1",
+      "name": "v4.23.1",
+      "date": "2023-09-13T10:00:25Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.23.1",
+      "prerelease": false,
+      "sha": "5f09e059235ffa4c1a77bcd3187f22dd67b57eaa"
+    },
+    {
+      "tag": "v4.23.0",
+      "name": "v4.23.0",
+      "date": "2023-09-11T09:43:16Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.23.0",
+      "prerelease": false,
+      "sha": "cea0536c49af460f7e6da0f76fb892576f12f2bb"
+    },
+    {
+      "tag": "v4.22.2",
+      "name": "v4.22.2",
+      "date": "2023-09-01T12:34:08Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.22.2",
+      "prerelease": false,
+      "sha": "3aee2e74de5c366f1e3b2e80e55441057f48c64b"
+    },
+    {
+      "tag": "v4.22.1",
+      "name": "v4.22.1",
+      "date": "2023-08-31T18:23:52Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.22.1",
+      "prerelease": false,
+      "sha": "8162801b5f4a66106cbbb165bc5744959e9abcef"
+    },
+    {
+      "tag": "v4.22.0",
+      "name": "v4.22.0",
+      "date": "2023-08-27T02:59:00Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.22.0",
+      "prerelease": false,
+      "sha": "5b5e1b8ec76d4ac8ba472cb6653c17b0f8af6da9"
+    },
+    {
+      "tag": "v4.21.0",
+      "name": "v4.21.0",
+      "date": "2023-07-26T08:32:09Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.21.0",
+      "prerelease": false,
+      "sha": "ef7408a3feb377838e2aa580a4c05e34e00fdf1a"
+    },
+    {
+      "tag": "v4.20.0",
+      "name": "v4.20.0",
+      "date": "2023-07-17T10:19:24Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.20.0",
+      "prerelease": false,
+      "sha": "f4a661295cf0685c0dd05497bafa05e23a012746"
+    },
+    {
+      "tag": "v4.19.2",
+      "name": "v4.19.2",
+      "date": "2023-07-03T14:47:03Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.19.2",
+      "prerelease": false,
+      "sha": "4ca4c3e6a3b3dbd58d255dc5f612151e56a21f35"
+    },
+    {
+      "tag": "v4.19.1",
+      "name": "v4.19.1",
+      "date": "2023-07-02T12:45:29Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.19.1",
+      "prerelease": false,
+      "sha": "5b7fd1835cc4f8efb52a6946677da37d8c1561c1"
+    },
+    {
+      "tag": "v4.19.0",
+      "name": "v4.19.0",
+      "date": "2023-06-30T12:56:31Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.19.0",
+      "prerelease": false,
+      "sha": "6684a3775fdc8aa38f765540000ae97699323b23"
+    },
+    {
+      "tag": "v4.18.0",
+      "name": "v4.18.0",
+      "date": "2023-06-09T17:08:50Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.18.0",
+      "prerelease": false,
+      "sha": "5d084fb842f6465340f2bf2b1317b3639fe3962a"
+    },
+    {
+      "tag": "v4.17.0",
+      "name": "v4.17.0",
+      "date": "2023-04-27T08:28:30Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.17.0",
+      "prerelease": false,
+      "sha": "0dd31b71eeb79da4a43738473eaebcf5844fc8d4"
+    },
+    {
+      "tag": "v4.16.3",
+      "name": "v4.16.3",
+      "date": "2023-04-26T08:02:40Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.16.3",
+      "prerelease": false,
+      "sha": "b3ebbdc1ab363233b7728d2bcb4a5b8fe64ccfb3"
+    },
+    {
+      "tag": "v4.16.2",
+      "name": "v4.16.2",
+      "date": "2023-04-26T07:44:31Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.16.2",
+      "prerelease": false,
+      "sha": "ce7a81e95692df2b753da472df8542384acfab85"
+    },
+    {
+      "tag": "v4.16.1",
+      "name": "v4.16.1",
+      "date": "2023-04-26T07:17:39Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.16.1",
+      "prerelease": false,
+      "sha": "3a5e57d2ffff7bb707da48bcdc2d0e47f861168d"
+    },
+    {
+      "tag": "v4.16.0",
+      "name": "v4.16.0",
+      "date": "2023-04-25T22:13:15Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.16.0",
+      "prerelease": false,
+      "sha": "c2f3ff669a00c2e480d2d6c345b045d225696f9e"
+    },
+    {
+      "tag": "v4.15.0",
+      "name": "v4.15.0",
+      "date": "2023-03-20T09:13:46Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.15.0",
+      "prerelease": false,
+      "sha": "87b644087c5b15bd70766bc4efeb940308d97066"
+    },
+    {
+      "tag": "v4.14.1",
+      "name": "v4.14.1",
+      "date": "2023-03-06T11:52:52Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.14.1",
+      "prerelease": false,
+      "sha": "ac121b6581bbdb939155619e82cbdfc583918e64"
+    },
+    {
+      "tag": "v4.14.0",
+      "name": "v4.14.0",
+      "date": "2023-03-03T11:38:35Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.14.0",
+      "prerelease": false,
+      "sha": "a489611b4f92e1d302ef36e2307074629240505a"
+    },
+    {
+      "tag": "v4.13.0",
+      "name": "v4.13.0",
+      "date": "2023-02-09T18:23:49Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.13.0",
+      "prerelease": false,
+      "sha": "b09fa763c56706941dc6eb9eafaead6dff51b509"
+    },
+    {
+      "tag": "v4.12.0",
+      "name": "v4.12.0",
+      "date": "2023-01-21T14:29:25Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.12.0",
+      "prerelease": false,
+      "sha": "d34f81bfa01842432a4eb06da25fd83c7b30742d"
+    },
+    {
+      "tag": "v3.29.5",
+      "name": "v3.29.5",
+      "date": "2023-01-21T14:22:21Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.29.5",
+      "prerelease": false,
+      "sha": "30ad4f388e2b302fa3d4da24dfbdb0b881286a15"
+    },
+    {
+      "tag": "v4.11.0",
+      "name": "v4.11.0",
+      "date": "2023-01-01T22:36:38Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.11.0",
+      "prerelease": false,
+      "sha": "1b2b383e82a5c81e8188ded6c8a7e9ad2f3cbeaf"
+    },
+    {
+      "tag": "v3.29.4",
+      "name": "v3.29.4",
+      "date": "2022-11-21T16:14:50Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.29.4",
+      "prerelease": false,
+      "sha": "605303133ee853b9b293d545f210910473ea4553"
+    },
+    {
+      "tag": "v4.10.2",
+      "name": "v4.10.2",
+      "date": "2022-11-21T16:14:22Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.10.2",
+      "prerelease": false,
+      "sha": "311590c147af90e32f7bcbcc10e0d176cbbafaca"
+    },
+    {
+      "tag": "v4.10.1",
+      "name": "v4.10.1",
+      "date": "2022-11-21T14:38:34Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.10.1",
+      "prerelease": false,
+      "sha": "6fc06c12c5021cf41ce632bcc902ad66637d15b3"
+    },
+    {
+      "tag": "v4.10.0",
+      "name": "v4.10.0",
+      "date": "2022-11-16T13:48:12Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.10.0",
+      "prerelease": false,
+      "sha": "3767bc262d17b2e9c39aaef7642d03571e7f358c"
+    },
+    {
+      "tag": "v4.9.2",
+      "name": "v4.9.2",
+      "date": "2022-10-18T07:46:02Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.9.2",
+      "prerelease": false,
+      "sha": "7c8ff1791495cc55236e06e62dc1780789366976"
+    },
+    {
+      "tag": "v4.9.1",
+      "name": "v4.9.1",
+      "date": "2022-10-17T15:59:09Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.9.1",
+      "prerelease": false,
+      "sha": "79107281bf096ca6d56262b5920d9f2eda7a33a2"
+    },
+    {
+      "tag": "v4.9.0",
+      "name": "v4.9.0",
+      "date": "2022-10-17T07:47:28Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.9.0",
+      "prerelease": false,
+      "sha": "f1480fc03b88343f6830239040e77dfac0e30682"
+    },
+    {
+      "tag": "v3.29.3",
+      "name": "v3.29.3",
+      "date": "2022-10-10T07:35:17Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.29.3",
+      "prerelease": false,
+      "sha": "5df766561559b7b0f2c9c586fc4e5131bc9f55b7"
+    },
+    {
+      "tag": "v4.8.1",
+      "name": "v4.8.1",
+      "date": "2022-10-10T07:27:31Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.8.1",
+      "prerelease": false,
+      "sha": "6b2aff6c6808bdc162b461ce68c025e00c58e878"
+    },
+    {
+      "tag": "v4.8.0",
+      "name": "v4.8.0",
+      "date": "2022-10-10T07:08:19Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.8.0",
+      "prerelease": false,
+      "sha": "5053ad91177f16fb4bcfd06ca65f6a6df6acd2b1"
+    },
+    {
+      "tag": "v4.7.0",
+      "name": "v4.7.0",
+      "date": "2022-09-30T16:28:28Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.7.0",
+      "prerelease": false,
+      "sha": "2394f76b1eebf9fca3ce4f78e17be0a6a81b79dd"
+    },
+    {
+      "tag": "v4.6.0",
+      "name": "v4.6.0",
+      "date": "2022-09-14T13:04:51Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.6.0",
+      "prerelease": false,
+      "sha": "123753774f0ee6392f41ebc7cce4e790a2a264d9"
+    },
+    {
+      "tag": "v3.29.2",
+      "name": "v3.29.2",
+      "date": "2022-08-30T16:39:11Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.29.2",
+      "prerelease": false,
+      "sha": "596c8c37c21600c1146a4065b4ab9bd15f8e73f7"
+    },
+    {
+      "tag": "v4.5.3",
+      "name": "v4.5.3",
+      "date": "2022-08-26T10:26:09Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.5.3",
+      "prerelease": false,
+      "sha": "0824881947ca7ccf9a947ced2dc539630aba47d5"
+    },
+    {
+      "tag": "v4.5.2",
+      "name": "v4.5.2",
+      "date": "2022-08-18T14:27:41Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.5.2",
+      "prerelease": false,
+      "sha": "d3c3ad78060dd356ef174a45c9585fb36643db7e"
+    },
+    {
+      "tag": "v4.5.1",
+      "name": "v4.5.1",
+      "date": "2022-08-18T12:46:14Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.5.1",
+      "prerelease": false,
+      "sha": "208d05b42b3240a6d2f6caf73f3296d85b6dfb0f"
+    },
+    {
+      "tag": "v4.5.0",
+      "name": "v4.5.0",
+      "date": "2022-08-17T11:06:49Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.5.0",
+      "prerelease": false,
+      "sha": "3af02e43be5a818a31282e36c9970912baaf1ac1"
+    },
+    {
+      "tag": "v4.4.0",
+      "name": "v4.4.0",
+      "date": "2022-08-08T08:51:18Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.4.0",
+      "prerelease": false,
+      "sha": "e618c7cd7d9d7b067aebdc4dbde22c290d8e3987"
+    },
+    {
+      "tag": "v4.3.0",
+      "name": "v4.3.0",
+      "date": "2022-07-21T16:40:29Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.3.0",
+      "prerelease": false,
+      "sha": "95f9fa5abc105397a715fc376c3a6e704181d2e1"
+    },
+    {
+      "tag": "v4.2.1",
+      "name": "v4.2.1",
+      "date": "2022-07-12T09:57:11Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.2.1",
+      "prerelease": false,
+      "sha": "d6e06c7d89a0c80f8c2a42ffbda6ae927f6ef0dc"
+    },
+    {
+      "tag": "v3.29.1",
+      "name": "v3.29.1",
+      "date": "2022-07-01T17:25:36Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.29.1",
+      "prerelease": false,
+      "sha": "5a791810ba418a43da7c86930ebee2e0295d737e"
+    },
+    {
+      "tag": "v4.2.0",
+      "name": "v4.2.0",
+      "date": "2022-06-28T08:34:05Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.2.0",
+      "prerelease": false,
+      "sha": "977dec0371c275dda0ec6f1f8cba731c5ca4b563"
+    },
+    {
+      "tag": "v4.1.0",
+      "name": "v4.1.0",
+      "date": "2022-06-21T09:28:05Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.1.0",
+      "prerelease": false,
+      "sha": "1f0dc84605d14dfd4c92d8aad7b3ba2c8c9af136"
+    },
+    {
+      "tag": "v4.0.3",
+      "name": "v4.0.3",
+      "date": "2022-06-15T19:57:10Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.3",
+      "prerelease": false,
+      "sha": "bf12b12e1be5908caacd12648ab5b714fc43a23a"
+    },
+    {
+      "tag": "v4.0.2",
+      "name": "v4.0.2",
+      "date": "2022-06-13T10:11:20Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.2",
+      "prerelease": false,
+      "sha": "86e64248f4c4010047f04fd59e85ab5cbe5af5eb"
+    },
+    {
+      "tag": "v4.0.1",
+      "name": "v4.0.1",
+      "date": "2022-06-10T22:20:49Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.1",
+      "prerelease": false,
+      "sha": "c73d86ae5bcf8b1b2ca347492c7caefdb1b4d64a"
+    },
+    {
+      "tag": "v4.0.0",
+      "name": "v4.0.0",
+      "date": "2022-06-08T17:32:50Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.0",
+      "prerelease": false,
+      "sha": "e941c24bf51af7184cf658ca138e069e8c166ef8"
+    },
+    {
+      "tag": "v4.0.0-rc.5",
+      "name": "v4.0.0-rc.5",
+      "date": "2022-06-06T11:55:11Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.0-rc.5",
+      "prerelease": true,
+      "sha": "afd887fb044eafbeae33c99bf5fadbdf7faa8bdc"
+    },
+    {
+      "tag": "v4.0.0-rc.4",
+      "name": "v4.0.0-rc.4",
+      "date": "2022-05-31T08:52:17Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.0-rc.4",
+      "prerelease": true,
+      "sha": "7ee94e8869276ee9565e5ef76817dc301e716281"
+    },
+    {
+      "tag": "v4.0.0-rc.3",
+      "name": "v4.0.0-rc.3",
+      "date": "2022-05-23T09:18:27Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.0-rc.3",
+      "prerelease": true,
+      "sha": "4efa00b64ae67596797e9a19ea565e5fba94b7ae"
+    },
+    {
+      "tag": "v4.0.0-rc.2",
+      "name": "v4.0.0-rc.2",
+      "date": "2022-05-04T14:02:05Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.0-rc.2",
+      "prerelease": true,
+      "sha": "2c3aa4fd379a40389271c005383b9d444f32fcd4"
+    },
+    {
+      "tag": "v3.29.0",
+      "name": "v3.29.0",
+      "date": "2022-04-28T23:21:19Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.29.0",
+      "prerelease": false,
+      "sha": "8a2b226d99c4a7d54a538bdbbb905a4fbbada6fa"
+    },
+    {
+      "tag": "v4.0.0-rc.1",
+      "name": "v4.0.0-rc.1",
+      "date": "2022-04-12T18:21:14Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.0-rc.1",
+      "prerelease": true,
+      "sha": "85743a337630cda6b3790c3770716b555d35d86e"
+    },
+    {
+      "tag": "v3.28.0",
+      "name": "v3.28.0",
+      "date": "2022-04-05T07:59:23Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.28.0",
+      "prerelease": false,
+      "sha": "8e06ace279dbe5c027309b4b9f6b534734a8e77b"
+    },
+    {
+      "tag": "v4.0.0-alpha.3",
+      "name": "v4.0.0-alpha.3",
+      "date": "2022-03-29T09:11:57Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.0-alpha.3",
+      "prerelease": true,
+      "sha": "b9046c201a322d60c6937db2643869b60c535c3e"
+    },
+    {
+      "tag": "v4.0.0-alpha.2",
+      "name": "v4.0.0-alpha.2",
+      "date": "2022-03-09T09:07:01Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.0-alpha.2",
+      "prerelease": true,
+      "sha": "96909edeaa45a2b54bb844eddb06d0f2e0686b23"
+    },
+    {
+      "tag": "v3.27.4",
+      "name": "v3.27.4",
+      "date": "2022-03-09T08:44:17Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.27.4",
+      "prerelease": false,
+      "sha": "f66d2a8eebaff5cf3b788b8a9e98792d038910c3"
+    },
+    {
+      "tag": "v3.27.3",
+      "name": "v3.27.3",
+      "date": "2022-03-07T14:53:01Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.27.3",
+      "prerelease": false,
+      "sha": "427fac4cc983ec46dcfa35a37b523eae85c3db01"
+    },
+    {
+      "tag": "v4.0.0-alpha.1",
+      "name": "v4.0.0-alpha.1",
+      "date": "2022-02-18T16:45:13Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v4.0.0-alpha.1",
+      "prerelease": true,
+      "sha": "4b4b711ec4d9e5cdf621464714df5380d4f5badc"
+    },
+    {
+      "tag": "v3.27.2",
+      "name": "v3.27.2",
+      "date": "2022-02-18T15:18:26Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.27.2",
+      "prerelease": false,
+      "sha": "9ed25c5cde979a233c1baf5a81c44496b208ee21"
+    },
+    {
+      "tag": "v3.27.1",
+      "name": "v3.27.1",
+      "date": "2022-02-03T09:12:21Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.27.1",
+      "prerelease": false,
+      "sha": "b8f20152f0ed55d72106d58a75ef5c4cc946cd9f"
+    },
+    {
+      "tag": "v3.27.0",
+      "name": "v3.27.0",
+      "date": "2022-01-19T17:22:00Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.27.0",
+      "prerelease": false,
+      "sha": "f55978cc7912750b239bbd2088f08d92976e6a49"
+    },
+    {
+      "tag": "v3.26.0",
+      "name": "v3.26.0",
+      "date": "2022-01-18T10:30:34Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.26.0",
+      "prerelease": false,
+      "sha": "af1a598616b09a1081c310ee841ec048b20565ec"
+    },
+    {
+      "tag": "v3.25.3",
+      "name": "v3.25.3",
+      "date": "2021-12-28T16:04:45Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.25.3",
+      "prerelease": false,
+      "sha": "5fee6a75c9f59e7cec32888ecbb38ac66f21cf2f"
+    },
+    {
+      "tag": "v3.25.2",
+      "name": "v3.25.2",
+      "date": "2021-12-23T13:49:24Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.25.2",
+      "prerelease": false,
+      "sha": "157c0400b18cdb3c9bc02cf1291b044257d94933"
+    },
+    {
+      "tag": "v3.25.1",
+      "name": "v3.25.1",
+      "date": "2021-12-21T10:30:58Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.25.1",
+      "prerelease": false,
+      "sha": "bb9b057ef663659a996b9009caba3240a4a992bb"
+    },
+    {
+      "tag": "v3.25.0",
+      "name": "v3.25.0",
+      "date": "2021-12-14T09:25:41Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.25.0",
+      "prerelease": false,
+      "sha": "33ad2fcfe63ac7779e02203a323c9429dcf9e5fe"
+    },
+    {
+      "tag": "v3.24.1",
+      "name": "v3.24.1",
+      "date": "2021-11-29T14:10:34Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.24.1",
+      "prerelease": false,
+      "sha": "ab7d51d9c394d71464d187caf2a9550629bf453a"
+    },
+    {
+      "tag": "v3.24.0",
+      "name": "v3.24.0",
+      "date": "2021-11-15T10:28:18Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.24.0",
+      "prerelease": false,
+      "sha": "37add428a50a450ccd5585c2d382bfab9ee91eaa"
+    },
+    {
+      "tag": "v3.23.1",
+      "name": "v3.23.1",
+      "date": "2021-11-07T18:57:02Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.23.1",
+      "prerelease": false,
+      "sha": "bc19a34ab9e71fec731ecb41db15ef5faee1c88c"
+    },
+    {
+      "tag": "v3.23.0",
+      "name": "v3.23.0",
+      "date": "2021-11-04T16:56:42Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.23.0",
+      "prerelease": false,
+      "sha": "6a0403319148163fe6f826aba16e33e46fdb88d4"
+    },
+    {
+      "tag": "v3.22.1",
+      "name": "v3.22.1",
+      "date": "2021-10-19T15:31:41Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.22.1",
+      "prerelease": false,
+      "sha": "4290f2843c38ec823d1592018f0def783e2a88ad"
+    },
+    {
+      "tag": "v3.22.0",
+      "name": "v3.22.0",
+      "date": "2021-09-30T08:06:26Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.22.0",
+      "prerelease": false,
+      "sha": "43d61a57efaba3eaf1b63db1b28f28673e7cd8fa"
+    },
+    {
+      "tag": "v3.21.6",
+      "name": "v3.21.6",
+      "date": "2021-09-23T13:33:26Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.21.6",
+      "prerelease": false,
+      "sha": "cfc13fbba0ed480977b02ef6d7eec48c28811827"
+    },
+    {
+      "tag": "v3.21.5",
+      "name": "v3.21.5",
+      "date": "2021-09-22T16:29:36Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.21.5",
+      "prerelease": false,
+      "sha": "295559c3cf3ad5c04038e63980b2e7284073e33d"
+    },
+    {
+      "tag": "v3.21.4",
+      "name": "v3.21.4",
+      "date": "2021-09-22T13:03:00Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.21.4",
+      "prerelease": false,
+      "sha": "8f4d97a0903f89c8e98e74eb4800e10c131dbcb4"
+    },
+    {
+      "tag": "v3.21.3",
+      "name": "v3.21.3",
+      "date": "2021-09-17T15:02:14Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.21.3",
+      "prerelease": false,
+      "sha": "ce6270608be0dd56de629be0df149f94c5df95ba"
+    },
+    {
+      "tag": "v3.21.2",
+      "name": "v3.21.2",
+      "date": "2021-09-17T08:16:09Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.21.2",
+      "prerelease": false,
+      "sha": "f624eb27b686b689dd2c943248d270bdf41de09b"
+    },
+    {
+      "tag": "v3.21.1",
+      "name": "v3.21.1",
+      "date": "2021-09-14T16:30:41Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.21.1",
+      "prerelease": false,
+      "sha": "11cdc231510011efe64af8fe57836ab2b5a7c3aa"
+    },
+    {
+      "tag": "v3.21.0",
+      "name": "v3.21.0",
+      "date": "2021-09-06T13:16:35Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.21.0",
+      "prerelease": false,
+      "sha": "fee342794ec886ddae9f03dcc37a189630402341"
+    },
+    {
+      "tag": "v3.20.2",
+      "name": "v3.20.2",
+      "date": "2021-08-13T22:01:01Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.20.2",
+      "prerelease": false,
+      "sha": "3956e684247492bff41bae30eed4355bfb0ef63d"
+    },
+    {
+      "tag": "v3.20.1",
+      "name": "v3.20.1",
+      "date": "2021-08-03T09:43:44Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.20.1",
+      "prerelease": false,
+      "sha": "8371ba04d6ee8fb320ae1535233b3a999882fe3c"
+    },
+    {
+      "tag": "v3.20.0",
+      "name": "v3.20.0",
+      "date": "2021-08-02T13:35:55Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.20.0",
+      "prerelease": false,
+      "sha": "8f75d1859ebce41c720f6504ac2194032e702d0e"
+    },
+    {
+      "tag": "v3.19.2",
+      "name": "v3.19.2",
+      "date": "2021-07-21T20:19:38Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.19.2",
+      "prerelease": false,
+      "sha": "4664ce533f8bafe268cc688978c6ef861694ebde"
+    },
+    {
+      "tag": "v3.19.1",
+      "name": "v3.19.1",
+      "date": "2021-07-12T22:36:54Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.19.1",
+      "prerelease": false,
+      "sha": "7db09f107d83e6f85907e43199ac945e4d761e52"
+    },
+    {
+      "tag": "v3.19.0",
+      "name": "v3.19.0",
+      "date": "2021-07-09T07:48:00Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.19.0",
+      "prerelease": false,
+      "sha": "493d2531740152c806aa197bbca592cf395d504b"
+    },
+    {
+      "tag": "v3.18.1",
+      "name": "v3.18.1",
+      "date": "2021-06-29T09:21:23Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.18.1",
+      "prerelease": false,
+      "sha": "a7127bbb9f1410817ff64d2b96a9d71c07422d49"
+    },
+    {
+      "tag": "v3.18.0",
+      "name": "v3.18.0",
+      "date": "2021-06-16T11:03:01Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.18.0",
+      "prerelease": false,
+      "sha": "514f2c4111402e60a0de7aee6aeca90063fb1a8c"
+    },
+    {
+      "tag": "v3.17.0",
+      "name": "v3.17.0",
+      "date": "2021-05-29T08:45:22Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.17.0",
+      "prerelease": false,
+      "sha": "97fb1bd3a0c1461fd1013eb29e885cb842eb51a5"
+    },
+    {
+      "tag": "v3.16.2",
+      "name": "v3.16.2",
+      "date": "2021-05-26T08:27:17Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.16.2",
+      "prerelease": false,
+      "sha": "0e55fce93fc40a8713a8664258854e5b73fb11cb"
+    },
+    {
+      "tag": "v3.16.1",
+      "name": "v3.16.1",
+      "date": "2021-05-25T17:00:31Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.16.1",
+      "prerelease": false,
+      "sha": "0c39ac9ed322aed7672f28d35cedc41de69afc78"
+    },
+    {
+      "tag": "v3.16.0",
+      "name": "v3.16.0",
+      "date": "2021-05-25T16:59:01Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.16.0",
+      "prerelease": false,
+      "sha": "3ad32beeefab169713ae115059434a803c2e3ebb"
+    },
+    {
+      "tag": "v3.15.1",
+      "name": "v3.15.1",
+      "date": "2021-04-30T14:19:32Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.15.1",
+      "prerelease": false,
+      "sha": "88ede94dfc37ec65c5390d10bed9e654bce19a14"
+    },
+    {
+      "tag": "v3.15.0",
+      "name": "v3.15.0",
+      "date": "2021-04-21T10:03:48Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.15.0",
+      "prerelease": false,
+      "sha": "cd75539356a8ee672cee3d0504b5147464f63688"
+    },
+    {
+      "tag": "v3.14.2",
+      "name": "v3.14.2",
+      "date": "2021-03-31T15:13:51Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.14.2",
+      "prerelease": false,
+      "sha": "7efd2540f1ca169f128c1dd4318512347583b293"
+    },
+    {
+      "tag": "v3.14.1",
+      "name": "v3.14.1",
+      "date": "2021-03-26T16:32:13Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.14.1",
+      "prerelease": false,
+      "sha": "fbd025ec462b511f9801b4aed4cfc32a3ee25b66"
+    },
+    {
+      "tag": "v3.14.0",
+      "name": "v3.14.0",
+      "date": "2021-03-11T11:50:36Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.14.0",
+      "prerelease": false,
+      "sha": "69d10a3679c7ec79257193559a242ef9083c090e"
+    },
+    {
+      "tag": "v3.13.0",
+      "name": "v3.13.0",
+      "date": "2021-03-02T17:52:34Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.13.0",
+      "prerelease": false,
+      "sha": "8a74ab0194d1551f09686b6a6b8301a6d4a8ed54"
+    },
+    {
+      "tag": "v3.12.0",
+      "name": "v3.12.0",
+      "date": "2021-02-13T12:01:54Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.12.0",
+      "prerelease": false,
+      "sha": "65106acc184e3ecac8d649b1b46d954df96422ef"
+    },
+    {
+      "tag": "v3.11.0",
+      "name": "v3.11.0",
+      "date": "2021-01-25T09:53:53Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.11.0",
+      "prerelease": false,
+      "sha": "d1f7754635b9f9c4e714953fdd0c152ac426ea41"
+    },
+    {
+      "tag": "v3.10.1",
+      "name": "v3.10.1",
+      "date": "2021-01-15T11:30:25Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.10.1",
+      "prerelease": false,
+      "sha": "8abfd250b1542315bb7f9304f0296f98cac29c63"
+    },
+    {
+      "tag": "v3.10.0",
+      "name": "v3.10.0",
+      "date": "2021-01-15T09:52:47Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.10.0",
+      "prerelease": false,
+      "sha": "e34d1eded110635c49a9e1b99040e22c316e288c"
+    },
+    {
+      "tag": "v3.9.2",
+      "name": "v3.9.2",
+      "date": "2020-12-16T12:33:16Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.9.2",
+      "prerelease": false,
+      "sha": "9fd2f89652c5cb5e007baa2b4dcb5f914afc0a72"
+    },
+    {
+      "tag": "v3.9.1",
+      "name": "v3.9.1",
+      "date": "2020-12-02T20:37:33Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.9.1",
+      "prerelease": false,
+      "sha": "ee127e1587c0ba1461fa858d7867105c1757e71e"
+    },
+    {
+      "tag": "v3.9.0",
+      "name": "v3.9.0",
+      "date": "2020-12-02T17:42:59Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.9.0",
+      "prerelease": false,
+      "sha": "d63ad850700cfdcaa2b6505d469f8ffc373de9e2"
+    },
+    {
+      "tag": "v3.8.0",
+      "name": "v3.8.0",
+      "date": "2020-11-09T18:35:29Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.8.0",
+      "prerelease": false,
+      "sha": "14f967961623defb907852be9108f710dffa185d"
+    },
+    {
+      "tag": "v3.7.0",
+      "name": "v3.7.0",
+      "date": "2020-10-19T15:21:18Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.7.0",
+      "prerelease": false,
+      "sha": "0501b3a189b309fc6e81b00046f80efdccdfd521"
+    },
+    {
+      "tag": "v3.6.0",
+      "name": "v3.6.0",
+      "date": "2020-10-11T10:49:51Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.6.0",
+      "prerelease": false,
+      "sha": "9ea78a9f185f4416113c05c8e3a6429fb7bfb1b1"
+    },
+    {
+      "tag": "v3.5.1",
+      "name": "v3.5.1",
+      "date": "2020-10-04T11:17:45Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.5.1",
+      "prerelease": false,
+      "sha": "d406c41b1435e7bbd9d6326d4916abc57f166156"
+    },
+    {
+      "tag": "v3.5.0",
+      "name": "v3.5.0",
+      "date": "2020-09-30T16:14:42Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.5.0",
+      "prerelease": false,
+      "sha": "473718d6688cab6b37026661ee9f214f9620a749"
+    },
+    {
+      "tag": "v3.4.1",
+      "name": "v3.4.1",
+      "date": "2020-09-14T13:12:51Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.4.1",
+      "prerelease": false,
+      "sha": "1ce1b308513d2f3e491d8cc2da68b25806e49760"
+    },
+    {
+      "tag": "v3.4.0",
+      "name": "v3.4.0",
+      "date": "2020-09-14T09:23:19Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.4.0",
+      "prerelease": false,
+      "sha": "5e54f7278196426ce18f90cd42835fb34291fcc0"
+    },
+    {
+      "tag": "v3.3.0",
+      "name": "v3.3.0",
+      "date": "2020-08-25T08:53:02Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.3.0",
+      "prerelease": false,
+      "sha": "003eedf7ce5810b910f3ca6a074cbf86c3aeacee"
+    },
+    {
+      "tag": "v3.2.1",
+      "name": "v3.2.1",
+      "date": "2020-08-17T16:20:23Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.2.1",
+      "prerelease": false,
+      "sha": "7ac9da63f7d0ab03dd0548fdb52db03d3295f3e7"
+    },
+    {
+      "tag": "v3.2.0",
+      "name": "v3.2.0",
+      "date": "2020-08-06T12:49:08Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.2.0",
+      "prerelease": false,
+      "sha": "f7a1ed3c892466c5bae7000eb1cbbfa3868d2e3b"
+    },
+    {
+      "tag": "v2.15.3",
+      "name": "v2.15.3",
+      "date": "2020-08-06T12:42:50Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v2.15.3",
+      "prerelease": false,
+      "sha": "e3850c9f0936730fb2b8eaa084c78d8c3ca2ee57"
+    },
+    {
+      "tag": "v3.1.1",
+      "name": "v3.1.1",
+      "date": "2020-07-17T14:32:11Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.1.1",
+      "prerelease": false,
+      "sha": "f4cb706144bbf2ebb67257914f78020126488ba5"
+    },
+    {
+      "tag": "v3.1.0",
+      "name": "v3.1.0",
+      "date": "2020-07-17T14:18:38Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.1.0",
+      "prerelease": false,
+      "sha": "2f1863d4b13fdb55f53ec9d77397e3443371f310"
+    },
+    {
+      "tag": "v3.0.3",
+      "name": "v3.0.3",
+      "date": "2020-07-15T14:27:28Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.0.3",
+      "prerelease": false,
+      "sha": "9293cc3d8ac00f40d1d19c48b5f9b96dc37cc483"
+    },
+    {
+      "tag": "v2.15.2",
+      "name": "v2.15.2",
+      "date": "2020-07-14T12:54:29Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v2.15.2",
+      "prerelease": false,
+      "sha": "e513a59b7fc80ec7d9e80e3c097e4d3576c055d4"
+    },
+    {
+      "tag": "v3.0.2",
+      "name": "v3.0.2",
+      "date": "2020-07-11T21:49:38Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.0.2",
+      "prerelease": false,
+      "sha": "f9dd8f1502a0cbc432a4c855c114821300b93965"
+    },
+    {
+      "tag": "v3.0.1",
+      "name": "v3.0.1",
+      "date": "2020-07-11T09:38:45Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.0.1",
+      "prerelease": false,
+      "sha": "7545f514ebd02b464ac3d2b13d7856943e247d6d"
+    },
+    {
+      "tag": "v3.0.0",
+      "name": "v3.0.0",
+      "date": "2020-07-08T08:52:16Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.0.0",
+      "prerelease": false,
+      "sha": "d2d533494b143a2c944c491c56960f1107f96733"
+    },
+    {
+      "tag": "v3.0.0-rc.5",
+      "name": "v3.0.0-rc.5",
+      "date": "2020-06-29T12:49:37Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.0.0-rc.5",
+      "prerelease": true,
+      "sha": "ccca58e36d49cad41fc2393b408f468a486b5946"
+    },
+    {
+      "tag": "v2.15.1",
+      "name": "v2.15.1",
+      "date": "2020-06-29T12:47:16Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v2.15.1",
+      "prerelease": false,
+      "sha": "627096fbf9062e6fd9850df05834190966b5011a"
+    },
+    {
+      "tag": "v2.15.0",
+      "name": "v2.15.0",
+      "date": "2020-06-20T09:03:47Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v2.15.0",
+      "prerelease": false,
+      "sha": "fd94ad3bf4bb1c415a92ecf89ee6f4f038448c39"
+    },
+    {
+      "tag": "v3.0.0-rc.4",
+      "name": "v3.0.0-rc.4",
+      "date": "2020-06-11T09:01:48Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.0.0-rc.4",
+      "prerelease": true,
+      "sha": "96f153785f8fdef0aa574fd84e3e370687c865dd"
+    },
+    {
+      "tag": "v3.0.0-rc.3",
+      "name": "v3.0.0-rc.3",
+      "date": "2020-05-22T08:24:16Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.0.0-rc.3",
+      "prerelease": true,
+      "sha": "8b8485ac5ff56d1ead387f6dd76384f996a2cf8e"
+    },
+    {
+      "tag": "v3.0.0-rc.2",
+      "name": "v3.0.0-rc.2",
+      "date": "2020-05-08T16:37:26Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.0.0-rc.2",
+      "prerelease": true,
+      "sha": "e84d9bebc2273b327e40bfb61f79ba1f5fe8acbc"
+    },
+    {
+      "tag": "v2.14.1",
+      "name": "v2.14.1",
+      "date": "2020-05-08T16:24:15Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v2.14.1",
+      "prerelease": false,
+      "sha": "6b0ffc6672fb2bf4ba8e4337958c5ee46e6e0300"
+    },
+    {
+      "tag": "v2.14.0",
+      "name": "v2.14.0",
+      "date": "2020-04-28T10:20:29Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v2.14.0",
+      "prerelease": false,
+      "sha": "92f106a7b08359303b8dbee3bdb277ad8282e043"
+    },
+    {
+      "tag": "v3.0.0-rc.1",
+      "name": "v3.0.0-rc.1",
+      "date": "2020-04-28T08:31:26Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.0.0-rc.1",
+      "prerelease": true,
+      "sha": "2b6765523fd0afddbe3ead5b4f71c0d847dd704b"
+    },
+    {
+      "tag": "v3.0.0-alpha.1",
+      "name": "v3.0.0-alpha.1",
+      "date": "2020-04-22T18:20:32Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v3.0.0-alpha.1",
+      "prerelease": true,
+      "sha": "12ff59a29466ae9140590538f532e9269a2854ee"
+    },
+    {
+      "tag": "v2.13.1",
+      "name": "v2.13.1",
+      "date": "2020-04-12T09:44:08Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v2.13.1",
+      "prerelease": false,
+      "sha": "13595c897029c7bb050effe8c4bdec02e7559acf"
+    },
+    {
+      "tag": "v2.13.0",
+      "name": "v2.13.0",
+      "date": "2020-03-20T08:51:59Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v2.13.0",
+      "prerelease": false,
+      "sha": "04b696b63b4b700af0c0709df678ca3b1fea7023"
+    },
+    {
+      "tag": "v2.12.1",
+      "name": "v2.12.1",
+      "date": "2020-02-28T18:23:32Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v2.12.1",
+      "prerelease": false,
+      "sha": "c4a83ae32c925bcf801fa82f542d9d0ce4a63a1d"
+    },
+    {
+      "tag": "v2.12.0",
+      "name": "v2.12.0",
+      "date": "2020-02-06T19:33:27Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v2.12.0",
+      "prerelease": false,
+      "sha": "7a37924ef954e113f94140a4653ddc52be1510a1"
+    }
+  ],
+  "tags_without_release": [],
+  "security_fixes": [
+    {
+      "date": "2026-09-16T07:38:07Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-4mh8-r7rc-xpvc",
+        "CVE-2026-92081"
+      ],
+      "title": "fastify vulnerable to Denial of Service via unhandled exception on HTTP/2 trailer responses",
+      "severity": "medium",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-4mh8-r7rc-xpvc",
+      "patched_versions": [
+        "5.12.5"
+      ],
+      "release": "v5.12.5",
+      "release_date": "2026-09-16T10:19:43Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-04T08:20:48Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-667r-xxjv-c9mm",
+        "CVE-2026-84504"
+      ],
+      "title": "fastify vulnerable to request body replacement via an async validation result collision",
+      "severity": "high",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-667r-xxjv-c9mm",
+      "patched_versions": [
+        "5.12.2"
+      ],
+      "release": "v5.12.2",
+      "release_date": "2026-09-04T08:20:39Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-04T08:20:13Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-p68q-wchp-6fh7",
+        "CVE-2026-76169"
+      ],
+      "title": "fastify vulnerable to authentication bypass via malformed URLs reaching encapsulated not-found handlers",
+      "severity": "high",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-p68q-wchp-6fh7",
+      "patched_versions": [
+        "5.12.2"
+      ],
+      "release": "v5.12.2",
+      "release_date": "2026-09-04T08:20:39Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-04T08:20:02Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-hwr6-493r-vm6h",
+        "CVE-2026-84469"
+      ],
+      "title": "fastify vulnerable to request validation bypass via skipped boolean false schemas",
+      "severity": "high",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-hwr6-493r-vm6h",
+      "patched_versions": [
+        "5.12.2"
+      ],
+      "release": "v5.12.2",
+      "release_date": "2026-09-04T08:20:39Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-04T08:19:48Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-9q9j-q6p8-xq58",
+        "CVE-2026-84428"
+      ],
+      "title": "fastify vulnerable to header validation bypass via incomplete schema case normalization",
+      "severity": "high",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-9q9j-q6p8-xq58",
+      "patched_versions": [
+        "5.12.2"
+      ],
+      "release": "v5.12.2",
+      "release_date": "2026-09-04T08:20:39Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-08-18T19:50:51Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-3m5p-2c4r-xxw2",
+        "CVE-2026-16732"
+      ],
+      "title": "fastify vulnerable to X-Forwarded-* spoofing under trustProxy hop-count",
+      "severity": "medium",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-3m5p-2c4r-xxw2",
+      "patched_versions": [
+        "5.12.1"
+      ],
+      "release": "v5.12.1",
+      "release_date": "2026-08-18T19:51:41Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-08-18T19:50:33Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-w2qp-rph6-63g4",
+        "CVE-2026-18504"
+      ],
+      "title": "fastify vulnerable to schema validation bypass via root primitive coercion mismatch",
+      "severity": "medium",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-w2qp-rph6-63g4",
+      "patched_versions": [
+        "5.12.1"
+      ],
+      "release": "v5.12.1",
+      "release_date": "2026-08-18T19:51:41Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-14T12:01:45Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-247c-9743-5963",
+        "CVE-2026-33806"
+      ],
+      "title": "Body Schema Validation Bypass via Leading Space in Content-Type Header",
+      "severity": "high",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-247c-9743-5963",
+      "patched_versions": [
+        "5.8.5"
+      ],
+      "release": "v5.8.5",
+      "release_date": "2026-04-14T12:09:02Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-03-23T10:23:30Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-444r-cwp2-x5xf",
+        "CVE-2026-3635"
+      ],
+      "title": "request.protocol and request.host spoofable via X-Forwarded-Proto/Host from untrusted connections when trustProxy uses restrictive trust function",
+      "severity": "medium",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-444r-cwp2-x5xf",
+      "patched_versions": [
+        "5.8.3"
+      ],
+      "release": "v5.8.3",
+      "release_date": "2026-03-23T10:20:21Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-03-05T09:55:12Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-573f-x89g-hqp9",
+        "CVE-2026-3419"
+      ],
+      "title": "Missing End Anchor in \"subtypeNameReg\" Allows Malformed Content-Types to Pass Validation",
+      "severity": "medium",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-573f-x89g-hqp9",
+      "patched_versions": [
+        "5.8.1"
+      ],
+      "release": "v5.8.1",
+      "release_date": "2026-03-05T10:10:57Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-02-02T17:57:02Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-mrq3-vjjr-p77c",
+        "CVE-2026-25224"
+      ],
+      "title": "DoS via Unbounded Memory Allocation in sendWebStream",
+      "severity": "low",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-mrq3-vjjr-p77c",
+      "patched_versions": [
+        "5.7.3"
+      ],
+      "release": "v5.7.3",
+      "release_date": "2026-02-02T17:57:52Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-02-02T17:45:41Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-jx2c-rxcm-jvmq",
+        "CVE-2026-25223"
+      ],
+      "title": "Content-Type header tab character allows body validation bypass",
+      "severity": "high",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-jx2c-rxcm-jvmq",
+      "patched_versions": [
+        "5.7.2"
+      ],
+      "release": "v5.7.2",
+      "release_date": "2026-01-26T11:15:54Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-04-18T09:18:48Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-mg2h-6x62-wpwc",
+        "CVE-2025-32442"
+      ],
+      "title": "Invalid content-type parsing could lead to validation bypass",
+      "severity": "high",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-mg2h-6x62-wpwc",
+      "patched_versions": [
+        "5.3.2",
+        "4.29.1"
+      ],
+      "release": "v5.3.2",
+      "release_date": "2025-04-18T20:31:40Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2022-11-21T16:19:07Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-3fjj-p79j-c9hh",
+        "CVE-2022-41919"
+      ],
+      "title": "Incorrect Content-Type parsing can lead to CSRF attack ",
+      "severity": "medium",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-3fjj-p79j-c9hh",
+      "patched_versions": [
+        "v4.10.2",
+        "v3.29.4"
+      ],
+      "release": "v4.10.2",
+      "release_date": "2022-11-21T16:14:22Z",
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2022-10-10T07:37:54Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-455w-c45v-86rg",
+        "CVE-2022-39288"
+      ],
+      "title": "Deny of service via malicious Content-Type",
+      "severity": "high",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-455w-c45v-86rg",
+      "patched_versions": [
+        "4.8.1"
+      ],
+      "release": "v4.8.1",
+      "release_date": "2022-10-10T07:27:31Z",
+      "mapping": "advisory patched_versions"
+    }
+  ],
+  "dependency_updates": [
+    {
+      "date": "2026-07-02T14:42:39Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore: Bump @types/node from 25.9.4 to 26.0.1 in the dev-dependencies-typescript group",
+      "security": false,
+      "url": "https://github.com/fastify/fastify/pull/6829",
+      "release": "v5.10.0",
+      "release_date": "2026-07-05T09:37:06Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-06-28T06:25:05Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore: Bump actions/checkout from 6 to 7",
+      "security": false,
+      "url": "https://github.com/fastify/fastify/pull/6812",
+      "release": "v5.9.0",
+      "release_date": "2026-06-28T08:21:36Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-06-23T08:25:30Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore: Bump fastify-plugin from 5.1.0 to 6.0.0",
+      "security": false,
+      "url": "https://github.com/fastify/fastify/pull/6801",
+      "release": "v5.9.0",
+      "release_date": "2026-06-28T08:21:36Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-06-14T02:25:11Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "GHSA-g7r4-m6w7-qqqr",
+        "GHSA-gv7w-rqvm-qjhr"
+      ],
+      "title": "chore: Bump esbuild from 0.25.12 to 0.28.1 in /test/bundler/esbuild in the npm_and_yarn group across 1 directory",
+      "security": true,
+      "url": "https://github.com/fastify/fastify/pull/6788",
+      "release": "v5.9.0",
+      "release_date": "2026-06-28T08:21:36Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-05-01T17:17:52Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore: Bump JustinBeckwith/linkinator-action from 2.4.0 to 2.4.2",
+      "security": false,
+      "url": "https://github.com/fastify/fastify/pull/6706",
+      "release": "v5.9.0",
+      "release_date": "2026-06-28T08:21:36Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-05-01T17:16:09Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore: Bump actions/github-script from 8 to 9",
+      "security": false,
+      "url": "https://github.com/fastify/fastify/pull/6705",
+      "release": "v5.9.0",
+      "release_date": "2026-06-28T08:21:36Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-05-01T17:14:31Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "chore: Bump pnpm/action-setup from 5.0.0 to 6.0.4",
+      "security": false,
+      "url": "https://github.com/fastify/fastify/pull/6704",
+      "release": "v5.9.0",
+      "release_date": "2026-06-28T08:21:36Z",
+      "mapping": "date heuristic (first release on/after merge)"
+    }
+  ],
+  "summary": {
+    "advisories": 15,
+    "security_commits": 0,
+    "dependency_updates": 7,
+    "security_dependency_updates": 1,
+    "unreleased_fixes": 0
+  }
+}

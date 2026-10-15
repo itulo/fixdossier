@@ -1,0 +1,38 @@
+# Runs fixledger on this repository itself.
+# - push to main / workflow_dispatch: artifact mode
+# - push to the selftest-commit branch: commit mode (commits the files back to that branch)
+name: self-test
+on:
+  push:
+    branches: [main, selftest-commit]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  artifact:
+    if: github.ref != 'refs/heads/selftest-commit'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: fl
+        uses: ./
+        with:
+          support_period_months: 24
+          contact: https://github.com/itulo/fixledger/security
+          output_dir: out
+          mode: artifact
+      - run: echo "fixes=${{ steps.fl.outputs.fix_count }} gaps=${{ steps.fl.outputs.gap_count }}"
+  commit:
+    if: github.ref == 'refs/heads/selftest-commit'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          support_period_months: 24
+          output_dir: selftest-output
+          mode: commit
