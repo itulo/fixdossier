@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>fixledger — dated security-fix records for your GitHub repo</title>
-  <meta name="description" content="Free GitHub Action that builds SECURITY-RECORD.md and SUPPORT.md from releases, Dependabot/Renovate, GHSA advisories, and security commits. Not legal advice." />
+  <title>fixledger — evidence collection for security fixes in your GitHub repo</title>
+  <meta name="description" content="Free GitHub Action that collects dated security-fix evidence from releases, advisories, Dependabot/Renovate, and commits — for your review. Not a complete inventory. Not legal advice." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -18,10 +18,13 @@
         <span class="brand-mark" aria-hidden="true">fl</span>
         fixledger
       </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a class="hide-sm" href="#what">What it does</a>
-        <a class="hide-sm" href="#install">Install</a>
-        <a class="hide-sm" href="#sample">Sample</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="#what">What it does</a>
+        <a href="#install">Install</a>
+        <a href="#sample">Sample</a>
         <a href="https://github.com/itulo/fixledger">GitHub</a>
         <a class="btn btn-ghost" href="#waitlist" style="padding:0.4rem 0.8rem;font-size:0.85rem">Interest</a>
       </nav>
@@ -32,11 +35,13 @@
     <section class="hero">
       <div class="wrap">
         <span class="badge">Free · MIT · GitHub Action</span>
-        <h1>Your repo already knows when you shipped every security fix. Write it down.</h1>
+        <h1>Collect dated security-fix evidence from your GitHub history — then review it.</h1>
         <p class="lede">
-          <strong style="color:var(--text);font-weight:600">fixledger</strong> is a free GitHub Action.
-          It reads releases, tags, published GitHub security advisories, merged Dependabot/Renovate PRs,
-          and security-looking commits — then writes a dated fix record and a support-period policy.
+          <strong style="color:var(--text);font-weight:600">fixledger</strong> is a free GitHub Action for
+          <strong style="color:var(--text);font-weight:600">evidence collection and review support</strong>,
+          not a complete security-fix inventory. It reads releases, tags, published GitHub security advisories,
+          merged Dependabot/Renovate PRs, and security-looking commits — then writes a dated fix record and a
+          support-period policy you can check before you rely on it.
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://github.com/itulo/fixledger">Get it on GitHub</a>
@@ -53,16 +58,17 @@
     <section id="what">
       <div class="wrap">
         <p class="section-label">What it does</p>
-        <h2>Three files from the history you already have</h2>
+        <h2>Three files that help you review what history shows</h2>
         <p class="section-intro">
           Runs on every release and weekly with the default <code style="font-family:var(--mono);font-size:0.85em">GITHUB_TOKEN</code>.
-          Commits the files or uploads them as a build artifact. If a permission is missing, it notes the gap instead of failing.
+          Commits the files or uploads them as a build artifact. Output is starting evidence to review — silent fixes,
+          keyword misses, and backport mapping errors still need a human pass. If a permission is missing, it notes the gap instead of failing.
         </p>
         <div class="grid-3">
           <article class="card">
             <span class="file">SECURITY-RECORD.md</span>
             <h3>Dated fix log</h3>
-            <p>Each security fix mapped to the release that shipped it, with how the mapping was made, plus bot dependency updates.</p>
+            <p>Dated candidates mapped to a release when possible, with how each mapping was made, plus bot dependency updates — for review, not a guarantee of completeness.</p>
           </article>
           <article class="card">
             <span class="file">security-record.json</span>
@@ -83,6 +89,18 @@
           <li>Merged Dependabot and Renovate PRs</li>
           <li>Commits whose messages look like security fixes (CVE…, GHSA…, “security”, XSS/SSRF/RCE…)</li>
         </ul>
+
+        <article class="card coverage-card" id="coverage" style="margin-top:1.75rem">
+          <span class="file">Coverage</span>
+          <h3>What the record covers — and what it does not</h3>
+          <ul class="coverage-list">
+            <li><strong>Advisory-derived</strong> rows use the advisory’s <code>patched_versions</code> matched to a release tag (shown as “advisory patched_versions”).</li>
+            <li><strong>Heuristic-derived</strong> rows use the first stable release on or after the fix date (shown as “date heuristic”) — can be wrong for backports and multi-branch repos.</li>
+            <li><strong>Unmatched / unreleased</strong> fixes stay listed when no release mapping is found (sample stats include an “Unreleased fixes” count).</li>
+            <li><strong>Sources skipped for permissions</strong> (401/403/404 or rate limit) are noted as gaps in the record instead of failing the run.</li>
+            <li><strong>Numeric confidence scores</strong> are not in the Action yet (roadmap). Today each row’s mapping method is the transparency signal — as in the sample table’s “How mapped” column.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
@@ -97,7 +115,8 @@
         </p>
         <div class="pre-wrap">
           <span class="lang">yaml</span>
-<pre><span class="tok-key">permissions</span>:
+          <button type="button" class="copy-btn" id="copy-workflow" aria-label="Copy workflow snippet">Copy</button>
+<pre id="workflow-snippet"><span class="tok-key">permissions</span>:
   <span class="tok-key">contents</span>: write        <span class="tok-com"># commit mode; artifact mode: contents: read</span>
   <span class="tok-key">pull-requests</span>: read
 <span class="tok-key">steps</span>:
@@ -177,7 +196,7 @@
             </tbody>
           </table>
         </div>
-        <p class="sample-note">Excerpt only — first rows of SECURITY-RECORD.md. Mapping method is shown for every row in the full file.</p>
+        <p class="sample-note">Excerpt only — first rows of SECURITY-RECORD.md. Mapping method (advisory vs date heuristic) is shown for every row; treat heuristic rows and keyword-only commits as candidates to verify.</p>
 
         <h2 style="margin-top:2.25rem;font-size:1.15rem">SUPPORT.md excerpt (fastify/fastify)</h2>
         <p class="section-intro" style="margin-bottom:1rem">Inputs: 24 months support, EOL 2030-12-31.</p>
@@ -227,9 +246,9 @@
         <p class="section-label">Why (context, not a promise)</p>
         <h2>Ordinary engineering hygiene that is useful under new EU rules</h2>
         <ul class="why-list">
-          <li>The EU Product Liability Directive <strong style="color:var(--text)">(EU) 2024/2853</strong> treats software as a product for products placed on the market from <strong style="color:var(--text)">9 Dec 2026</strong>. Courts can order disclosure of relevant evidence (Art. 9); some presumptions apply if it isn’t produced (Art. 10).</li>
-          <li>The Cyber Resilience Act <strong style="color:var(--text)">(EU) 2024/2847</strong> will expect manufacturers to state a support period and provide security updates (main obligations from Dec 2027).</li>
-          <li>A dated, versioned record of fixes and a published support policy is useful in either setting — it is not a certificate of compliance.</li>
+          <li>The EU Product Liability Directive <strong style="color:var(--text)"><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L2853" rel="noopener noreferrer">Directive (EU) 2024/2853</a></strong> treats software as a product for products placed on the market from <strong style="color:var(--text)">9 Dec 2026</strong>. Courts can order disclosure of relevant evidence (Art. 9); some presumptions apply if it isn’t produced (Art. 10). Official text: <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj" rel="noopener noreferrer">EUR-Lex ELI</a>.</li>
+          <li>The Cyber Resilience Act <strong style="color:var(--text)"><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847" rel="noopener noreferrer">Regulation (EU) 2024/2847</a></strong> will expect manufacturers to state a support period and provide security updates (main obligations from Dec 2027). Official text: <a href="https://eur-lex.europa.eu/eli/reg/2024/2847/oj" rel="noopener noreferrer">EUR-Lex ELI</a>.</li>
+          <li>A dated, versioned evidence record and a published support policy can help in either setting — they are not a complete inventory or a certificate of compliance.</li>
         </ul>
       </div>
     </section>
@@ -241,14 +260,23 @@
         <div class="waitlist-box">
           <p>
             The Action itself is free (MIT). If you want a heads-up when docs, templates, or an optional evidence-pack draft land,
-            send a short note. Nothing is charged; there is no price on this page yet.
+            leave your email below. Nothing is charged; there is no price on this page yet.
           </p>
-          <a class="btn btn-primary mailto-btn"
-             href="mailto:italo.armenti@gmail.com?subject=fixledger%20interest&body=Hi%20Italo%2C%0A%0AI%27m%20interested%20in%20fixledger%20%2F%20updates%20about%20the%20optional%20pack.%0A%0AGitHub%3A%20%0ARepo%20I%20might%20try%20it%20on%3A%20%0A">
-            Email interest (mailto)
-          </a>
-          <p style="font-size:0.85rem;color:var(--faint)">
-            Opens your mail client to <strong style="color:var(--muted)">italo.armenti@gmail.com</strong>.
+          <form id="interest-form" class="interest-form" novalidate>
+            <div class="form-row">
+              <label for="interest-name">Name <span class="optional">(optional)</span></label>
+              <input type="text" id="interest-name" name="name" autocomplete="name" placeholder="Your name" />
+            </div>
+            <div class="form-row">
+              <label for="interest-email">Email <span class="required-mark">(required)</span></label>
+              <input type="email" id="interest-email" name="email" autocomplete="email" required placeholder="you@example.com" />
+            </div>
+            <button type="submit" class="btn btn-primary">Open email to send interest</button>
+            <p class="form-hint" id="interest-hint" role="status" aria-live="polite"></p>
+          </form>
+          <p class="fallback-mail">
+            Or email directly:
+            <a href="mailto:italo.armenti@gmail.com?subject=fixledger%20interest&amp;body=Hi%20Italo%2C%0A%0AI%27m%20interested%20in%20fixledger%20%2F%20updates%20about%20the%20optional%20pack.%0A%0AGitHub%3A%20%0ARepo%20I%20might%20try%20it%20on%3A%20%0A">italo.armenti@gmail.com</a>
           </p>
         </div>
       </div>
@@ -257,7 +285,7 @@
     <section id="disclaimer">
       <div class="wrap">
         <div class="disclaimer">
-          <p><strong>Not legal advice.</strong> fixledger is an engineering tool. It does not make any product “compliant” or “certified” with the PLD, the CRA, or anything else. It does not limit liability. The record is compiled automatically — fixes with no keyword or advisory are missed, and release mapping can be wrong for backports — so review it. Talk to a lawyer about your situation.</p>
+          <p><strong>Not legal advice.</strong> fixledger is an engineering tool for evidence collection and review support. It does not make any product “compliant” or “certified” with the PLD, the CRA, or anything else. It does not limit liability. The record is compiled automatically and is <strong>not</strong> a complete security-fix inventory — fixes with no keyword or advisory are missed, and release mapping can be wrong for backports — so review it. Talk to a lawyer about your situation.</p>
           <p>fixledger provides tooling and templates for information only. It creates no lawyer–client relationship.</p>
         </div>
       </div>
@@ -278,5 +306,98 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById("nav-toggle");
+      var nav = document.getElementById("primary-nav");
+      if (toggle && nav) {
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        });
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            nav.classList.remove("is-open");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-label", "Open menu");
+          });
+        });
+      }
+
+      var copyBtn = document.getElementById("copy-workflow");
+      var snippet = document.getElementById("workflow-snippet");
+      if (copyBtn && snippet) {
+        copyBtn.addEventListener("click", function () {
+          var text = snippet.textContent.replace(/\n$/, "");
+          function done() {
+            copyBtn.textContent = "Copied";
+            copyBtn.classList.add("copied");
+            setTimeout(function () {
+              copyBtn.textContent = "Copy";
+              copyBtn.classList.remove("copied");
+            }, 1600);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done).catch(function () {
+              fallbackCopy(text, done);
+            });
+          } else {
+            fallbackCopy(text, done);
+          }
+        });
+      }
+
+      function fallbackCopy(text, done) {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand("copy");
+          done();
+        } catch (e) { /* ignore */ }
+        document.body.removeChild(ta);
+      }
+
+      var form = document.getElementById("interest-form");
+      var hint = document.getElementById("interest-hint");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var emailEl = document.getElementById("interest-email");
+          var nameEl = document.getElementById("interest-name");
+          var email = (emailEl && emailEl.value || "").trim();
+          var name = (nameEl && nameEl.value || "").trim();
+          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            if (hint) hint.textContent = "Please enter a valid email address.";
+            if (emailEl) emailEl.focus();
+            return;
+          }
+          if (hint) hint.textContent = "";
+          var body =
+            "Hi Italo,\n\n" +
+            "I'm interested in fixledger / updates about the optional pack.\n\n" +
+            "Name: " + (name || "(not provided)") + "\n" +
+            "Email: " + email + "\n" +
+            "GitHub: \n" +
+            "Repo I might try it on: \n";
+          var mailto =
+            "mailto:italo.armenti@gmail.com" +
+            "?subject=" + encodeURIComponent("fixledger interest") +
+            "&body=" + encodeURIComponent(body);
+          window.location.href = mailto;
+          if (hint) {
+            hint.textContent =
+              "Your mail app should open. If it doesn’t, email italo.armenti@gmail.com directly.";
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
