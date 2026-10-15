@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>fixledger — dated security-fix records for your GitHub repo</title>
+  <meta name="description" content="Free GitHub Action that builds SECURITY-RECORD.md and SUPPORT.md from releases, Dependabot/Renovate, GHSA advisories, and security commits. Not legal advice." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">fl</span>
+        fixledger
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="hide-sm" href="#what">What it does</a>
+        <a class="hide-sm" href="#install">Install</a>
+        <a class="hide-sm" href="#sample">Sample</a>
+        <a href="https://github.com/itulo/fixledger">GitHub</a>
+        <a class="btn btn-ghost" href="#waitlist" style="padding:0.4rem 0.8rem;font-size:0.85rem">Interest</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <span class="badge">Free · MIT · GitHub Action</span>
+        <h1>Your repo already knows when you shipped every security fix. Write it down.</h1>
+        <p class="lede">
+          <strong style="color:var(--text);font-weight:600">fixledger</strong> is a free GitHub Action.
+          It reads releases, tags, published GitHub security advisories, merged Dependabot/Renovate PRs,
+          and security-looking commits — then writes a dated fix record and a support-period policy.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/itulo/fixledger">Get it on GitHub</a>
+          <a class="btn btn-ghost" href="https://github.com/itulo/fixledger/releases/tag/v0.1.0">Release v0.1.0</a>
+          <a class="btn btn-ghost" href="#waitlist">Join the interest list</a>
+        </div>
+        <p class="meta-line">
+          Use with <code>uses: itulo/fixledger@v0</code>
+          · <code>https://itulo.github.io/fixledger/</code>
+        </p>
+      </div>
+    </section>
+
+    <section id="what">
+      <div class="wrap">
+        <p class="section-label">What it does</p>
+        <h2>Three files from the history you already have</h2>
+        <p class="section-intro">
+          Runs on every release and weekly with the default <code style="font-family:var(--mono);font-size:0.85em">GITHUB_TOKEN</code>.
+          Commits the files or uploads them as a build artifact. If a permission is missing, it notes the gap instead of failing.
+        </p>
+        <div class="grid-3">
+          <article class="card">
+            <span class="file">SECURITY-RECORD.md</span>
+            <h3>Dated fix log</h3>
+            <p>Each security fix mapped to the release that shipped it, with how the mapping was made, plus bot dependency updates.</p>
+          </article>
+          <article class="card">
+            <span class="file">security-record.json</span>
+            <h3>Machine-readable</h3>
+            <p>Same data as JSON (<code style="font-family:var(--mono);font-size:0.8em">schema: fixledger/v1</code>) for tooling and audits.</p>
+          </article>
+          <article class="card">
+            <span class="file">SUPPORT.md</span>
+            <h3>Support policy</h3>
+            <p>Built from your inputs: support period in months, optional EOL date, security contact — with a “supported until” date per release.</p>
+          </article>
+        </div>
+
+        <h2 style="margin-top:2.5rem;font-size:1.25rem">Sources it reads</h2>
+        <ul class="sources" style="margin-top:1rem">
+          <li>Releases and tags</li>
+          <li>Published GitHub security advisories (GHSA) for the repo</li>
+          <li>Merged Dependabot and Renovate PRs</li>
+          <li>Commits whose messages look like security fixes (CVE…, GHSA…, “security”, XSS/SSRF/RCE…)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="install">
+      <div class="wrap">
+        <p class="section-label">Install</p>
+        <h2>Drop into a workflow</h2>
+        <p class="section-intro">
+          Copy from
+          <a href="https://github.com/itulo/fixledger/blob/main/examples/workflow.yml">examples/workflow.yml</a>.
+          Artifact mode needs only <code style="font-family:var(--mono);font-size:0.85em">contents: read</code>; commit mode needs <code style="font-family:var(--mono);font-size:0.85em">contents: write</code>.
+        </p>
+        <div class="pre-wrap">
+          <span class="lang">yaml</span>
+<pre><span class="tok-key">permissions</span>:
+  <span class="tok-key">contents</span>: write        <span class="tok-com"># commit mode; artifact mode: contents: read</span>
+  <span class="tok-key">pull-requests</span>: read
+<span class="tok-key">steps</span>:
+  - <span class="tok-key">uses</span>: actions/checkout@v4
+  - <span class="tok-key">uses</span>: itulo/fixledger@v0
+    <span class="tok-key">with</span>:
+      <span class="tok-key">support_period_months</span>: <span class="tok-num">24</span>
+      <span class="tok-key">eol_date</span>: <span class="tok-str">'2030-12-31'</span>
+      <span class="tok-key">contact</span>: security@example.com
+      <span class="tok-key">mode</span>: commit                    <span class="tok-com"># artifact (default) | commit | none</span></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="sample">
+      <div class="wrap">
+        <p class="section-label">Sample output</p>
+        <h2>Real run against axios/axios</h2>
+        <p class="section-intro">
+          Generated 12 Oct 2026 from the public GitHub API. Full examples for axios, fastify, and vite live in the
+          <a href="https://github.com/itulo/fixledger/tree/main/examples">examples/</a> folder.
+        </p>
+
+        <div class="stats" aria-label="Summary counts">
+          <div class="stat"><div class="n">51</div><div class="l">Advisories</div></div>
+          <div class="stat"><div class="n">2</div><div class="l">Security commits</div></div>
+          <div class="stat"><div class="n">43</div><div class="l">Bot updates (9 flagged)</div></div>
+          <div class="stat"><div class="n">125</div><div class="l">Releases</div></div>
+          <div class="stat"><div class="n">0</div><div class="l">Unreleased fixes</div></div>
+        </div>
+
+        <div class="table-scroll" role="region" aria-label="Security fixes excerpt" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>IDs</th>
+                <th>Fix</th>
+                <th>Shipped in</th>
+                <th>How mapped</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">2026-09-16</td>
+                <td><span class="sev sev-medium">advisory</span></td>
+                <td class="mono">GHSA-j8rh-479h-cp32</td>
+                <td>Header Injection via Inherited headers After Minimal Interceptor</td>
+                <td class="mono">v1.20.0</td>
+                <td>advisory patched_versions</td>
+              </tr>
+              <tr>
+                <td class="mono">2026-09-16</td>
+                <td><span class="sev sev-high">advisory</span></td>
+                <td class="mono">GHSA-m8m8-qj5v-23w3</td>
+                <td>Node HTTP adapter prototype-pollution gadget (socket hijack)</td>
+                <td class="mono">v1.20.0</td>
+                <td>advisory patched_versions</td>
+              </tr>
+              <tr>
+                <td class="mono">2026-09-16</td>
+                <td><span class="sev sev-high">advisory</span></td>
+                <td class="mono">GHSA-r4gj-5m52-g5wh</td>
+                <td>maxRedirects: 0 not enforced by fetch adapter (SSRF)</td>
+                <td class="mono">v1.20.0</td>
+                <td>advisory patched_versions</td>
+              </tr>
+              <tr>
+                <td class="mono">2026-05-24</td>
+                <td><span class="sev sev-medium">commit</span></td>
+                <td class="mono">CVE-2026-42264</td>
+                <td>fix: guard socketPath with own() to prevent prototype pollution SSRF</td>
+                <td class="mono">v1.17.0</td>
+                <td>date heuristic</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="sample-note">Excerpt only — first rows of SECURITY-RECORD.md. Mapping method is shown for every row in the full file.</p>
+
+        <h2 style="margin-top:2.25rem;font-size:1.15rem">SUPPORT.md excerpt (fastify/fastify)</h2>
+        <p class="section-intro" style="margin-bottom:1rem">Inputs: 24 months support, EOL 2030-12-31.</p>
+        <div class="table-scroll" role="region" aria-label="Support policy excerpt" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th>Release</th>
+                <th>Released</th>
+                <th>Security support until</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">v5.12.5</td>
+                <td class="mono">2026-09-16</td>
+                <td class="mono">2028-09-16</td>
+                <td>supported</td>
+              </tr>
+              <tr>
+                <td class="mono">v5.12.4</td>
+                <td class="mono">2026-09-11</td>
+                <td class="mono">2028-09-11</td>
+                <td>supported</td>
+              </tr>
+              <tr>
+                <td class="mono">v5.12.2</td>
+                <td class="mono">2026-09-04</td>
+                <td class="mono">2028-09-04</td>
+                <td>supported</td>
+              </tr>
+              <tr>
+                <td class="mono">v5.12.1</td>
+                <td class="mono">2026-08-18</td>
+                <td class="mono">2028-08-18</td>
+                <td>supported</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap">
+        <p class="section-label">Why (context, not a promise)</p>
+        <h2>Ordinary engineering hygiene that is useful under new EU rules</h2>
+        <ul class="why-list">
+          <li>The EU Product Liability Directive <strong style="color:var(--text)">(EU) 2024/2853</strong> treats software as a product for products placed on the market from <strong style="color:var(--text)">9 Dec 2026</strong>. Courts can order disclosure of relevant evidence (Art. 9); some presumptions apply if it isn’t produced (Art. 10).</li>
+          <li>The Cyber Resilience Act <strong style="color:var(--text)">(EU) 2024/2847</strong> will expect manufacturers to state a support period and provide security updates (main obligations from Dec 2027).</li>
+          <li>A dated, versioned record of fixes and a published support policy is useful in either setting — it is not a certificate of compliance.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="waitlist">
+      <div class="wrap">
+        <p class="section-label">Interest list</p>
+        <h2>Follow along — no paid pack on this page</h2>
+        <div class="waitlist-box">
+          <p>
+            The Action itself is free (MIT). If you want a heads-up when docs, templates, or an optional evidence-pack draft land,
+            send a short note. Nothing is charged; there is no price on this page yet.
+          </p>
+          <a class="btn btn-primary mailto-btn"
+             href="mailto:italo.armenti@gmail.com?subject=fixledger%20interest&body=Hi%20Italo%2C%0A%0AI%27m%20interested%20in%20fixledger%20%2F%20updates%20about%20the%20optional%20pack.%0A%0AGitHub%3A%20%0ARepo%20I%20might%20try%20it%20on%3A%20%0A">
+            Email interest (mailto)
+          </a>
+          <p style="font-size:0.85rem;color:var(--faint)">
+            Opens your mail client to <strong style="color:var(--muted)">italo.armenti@gmail.com</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="disclaimer">
+      <div class="wrap">
+        <div class="disclaimer">
+          <p><strong>Not legal advice.</strong> fixledger is an engineering tool. It does not make any product “compliant” or “certified” with the PLD, the CRA, or anything else. It does not limit liability. The record is compiled automatically — fixes with no keyword or advisory are missed, and release mapping can be wrong for backports — so review it. Talk to a lawyer about your situation.</p>
+          <p>fixledger provides tooling and templates for information only. It creates no lawyer–client relationship.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        © 2026 fixledger · MIT ·
+        <a href="https://github.com/itulo/fixledger">github.com/itulo/fixledger</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/itulo/fixledger/releases/tag/v0.1.0">v0.1.0</a>
+        <a href="https://github.com/itulo/fixledger/blob/main/LICENSE">License</a>
+        <a href="https://github.com/itulo/fixledger/tree/main/examples">Examples</a>
+        <a href="#disclaimer">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
