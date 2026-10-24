@@ -8,14 +8,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+  <script>
+    (function() {
+      var saved = localStorage.getItem('fixdossier_theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+  </script>
 </head>
 <body>
 
   <header class="nav">
     <div class="nav-inner">
       <a class="brand" href="#top">
-        <span class="brand-mark" aria-hidden="true">fl</span>
+        <span class="brand-mark" aria-hidden="true">fd</span>
         fixdossier
       </a>
       <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
@@ -26,7 +34,12 @@
         <a href="#install">Install</a>
         <a href="#sample">Sample</a>
         <a href="https://github.com/itulo/fixdossier">GitHub</a>
+        <a href="https://app.fixdossier.dev">fixdossier Pro</a>
         <a class="btn btn-ghost" href="#waitlist" style="padding:0.4rem 0.8rem;font-size:0.85rem">Interest</a>
+        <button class="btn-icon" id="theme-btn" type="button" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
       </nav>
     </div>
   </header>
@@ -309,6 +322,15 @@
 
   <script>
     (function () {
+      var themeBtn = document.getElementById("theme-btn");
+      if (themeBtn) {
+        themeBtn.addEventListener("click", function () {
+          var cur = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+          document.documentElement.setAttribute("data-theme", cur);
+          localStorage.setItem("fixdossier_theme", cur);
+        });
+      }
+
       var toggle = document.getElementById("nav-toggle");
       var nav = document.getElementById("primary-nav");
       if (toggle && nav) {
