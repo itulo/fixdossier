@@ -1,0 +1,45 @@
+# fixdossier
+
+> Evidence collection and review support for security fixes in GitHub repositories. A free, MIT-licensed GitHub Action (`itulo/fixdossier@v0`) that reads a repository's releases, tags, GitHub Security Advisories (GHSA/CVE), Dependabot/Renovate pull requests, and security-flagged commits to generate a dated record (`SECURITY-RECORD.md`, `security-record.json` schema `fixdossier/v1`) and a support-period policy template (`SUPPORT.md`).
+
+Important notes:
+- fixdossier is a technical evidence-collection and review-support tool for software maintainers and small vendors preparing for the EU revised Product Liability Directive (Directive (EU) 2024/2853, applicable 9 Dec 2026) and the EU Cyber Resilience Act (Regulation (EU) 2024/2847).
+- It is not legal advice, not a certification, and not a complete security-fix inventory on its own. Every generated record includes a coverage summary showing advisory-derived vs. heuristic-derived entries, unmatched commits/PRs, and any sources unavailable due to token permissions so a human engineer can review and sign off.
+
+## Quickstart (GitHub Actions)
+
+Add `.github/workflows/fixdossier.yml`:
+
+```yaml
+name: fixdossier
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+  security-events: read
+
+jobs:
+  dossier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: itulo/fixdossier@v0
+        with:
+          mode: artifact
+```
+
+## Outputs
+
+- `SECURITY-RECORD.md`: Human-readable dated log of releases, security fixes (GHSA/CVE and heuristic-matched PRs/commits), and a coverage/confidence summary.
+- `security-record.json`: Machine-readable record (`"schema": "fixdossier/v1"`).
+- `SUPPORT.md`: Draft support-period and vulnerability disclosure policy template with explicit placeholders for human review.
+
+## Links
+
+- [Landing Page](https://fixdossier.dev/): Overview, sample output, coverage summary, and regulatory background.
+- [GitHub Repository](https://github.com/itulo/fixdossier): Source code (MIT license), `action.yml` inputs/outputs, and examples.
+- [Changelog](https://fixdossier.dev/CHANGELOG.md): Release history.
