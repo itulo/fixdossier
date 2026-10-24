@@ -1,4 +1,4 @@
-# Runs fixledger on this repository itself.
+# Runs fixdossier on this repository itself.
 # - push to main / workflow_dispatch: artifact mode
 # - push to the selftest-commit branch: commit mode (commits the files back to that branch)
 name: self-test
@@ -19,7 +19,7 @@ jobs:
         uses: ./
         with:
           support_period_months: 24
-          contact: https://github.com/itulo/fixledger/security
+          contact: https://github.com/itulo/fixdossier/security
           output_dir: out
           mode: artifact
       - run: echo "fixes=${{ steps.fl.outputs.fix_count }} gaps=${{ steps.fl.outputs.gap_count }}"

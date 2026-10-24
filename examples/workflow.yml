@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: itulo/fixledger@v0
+      - uses: itulo/fixdossier@v0
         with:
           support_period_months: 24
           eol_date: '2030-12-31'

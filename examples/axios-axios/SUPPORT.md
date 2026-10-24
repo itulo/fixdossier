@@ -37,4 +37,4 @@ Report vulnerabilities to: security@example.com. See SECURITY-RECORD.md for the 
 | v0.30.1 | 2025-08-04 | 2027-08-04 | supported |
 | v1.11.0 | 2025-07-23 | 2027-07-23 | supported |
 
-_Generated 2026-10-12T13:36:53.690Z by fixledger from inputs support_period_months=24, eol_date=2030-12-31. This is a statement of intent written by the maintainer, not legal advice._
+_Generated 2026-10-12T13:36:53.690Z by fixdossier from inputs support_period_months=24, eol_date=2030-12-31. This is a statement of intent written by the maintainer, not legal advice._

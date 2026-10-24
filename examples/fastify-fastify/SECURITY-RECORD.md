@@ -1,6 +1,6 @@
 # Security record — fastify/fastify
 
-_Generated 2026-10-12T13:36:58.908Z by fixledger from GitHub data (releases, tags, security advisories, merged Dependabot/Renovate PRs, commit messages). Automatically compiled; review before relying on it. Not legal advice._
+_Generated 2026-10-12T13:36:58.908Z by fixdossier from GitHub data (releases, tags, security advisories, merged Dependabot/Renovate PRs, commit messages). Automatically compiled; review before relying on it. Not legal advice._
 
 ## Summary
 

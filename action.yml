@@ -1,4 +1,4 @@
-name: 'fixledger'
+name: 'fixdossier'
 description: 'Builds a dated security-fix record (SECURITY-RECORD.md + JSON) and a SUPPORT.md support-period policy from your GitHub history.'
 author: 'Italo Armenti'
 branding: { icon: 'shield', color: 'blue' }
@@ -53,8 +53,8 @@ runs:
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add $FILES
-        if git diff --cached --quiet; then echo "fixledger: no changes to commit"; exit 0; fi
+        if git diff --cached --quiet; then echo "fixdossier: no changes to commit"; exit 0; fi
         git commit -m "$MSG"
         if ! git push; then
-          echo "::warning title=fixledger::Could not push (needs 'permissions: contents: write', a checked-out branch, and no branch protection blocking the bot). Files were generated but not committed."
+          echo "::warning title=fixdossier::Could not push (needs 'permissions: contents: write', a checked-out branch, and no branch protection blocking the bot). Files were generated but not committed."
         fi

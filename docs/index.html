@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>fixledger — evidence collection for security fixes in your GitHub repo</title>
+  <title>fixdossier — evidence collection for security fixes in your GitHub repo</title>
   <meta name="description" content="Free GitHub Action that collects dated security-fix evidence from releases, advisories, Dependabot/Renovate, and commits — for your review. Not a complete inventory. Not legal advice." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
     <div class="nav-inner">
       <a class="brand" href="#top">
         <span class="brand-mark" aria-hidden="true">fl</span>
-        fixledger
+        fixdossier
       </a>
       <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
         <span class="nav-toggle-bars" aria-hidden="true"></span>
@@ -25,7 +25,7 @@
         <a href="#what">What it does</a>
         <a href="#install">Install</a>
         <a href="#sample">Sample</a>
-        <a href="https://github.com/itulo/fixledger">GitHub</a>
+        <a href="https://github.com/itulo/fixdossier">GitHub</a>
         <a class="btn btn-ghost" href="#waitlist" style="padding:0.4rem 0.8rem;font-size:0.85rem">Interest</a>
       </nav>
     </div>
@@ -37,20 +37,20 @@
         <span class="badge">Free · MIT · GitHub Action</span>
         <h1>Collect dated security-fix evidence from your GitHub history — then review it.</h1>
         <p class="lede">
-          <strong style="color:var(--text);font-weight:600">fixledger</strong> is a free GitHub Action for
+          <strong style="color:var(--text);font-weight:600">fixdossier</strong> is a free GitHub Action for
           <strong style="color:var(--text);font-weight:600">evidence collection and review support</strong>,
           not a complete security-fix inventory. It reads releases, tags, published GitHub security advisories,
           merged Dependabot/Renovate PRs, and security-looking commits — then writes a dated fix record and a
           support-period policy you can check before you rely on it.
         </p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://github.com/itulo/fixledger">Get it on GitHub</a>
-          <a class="btn btn-ghost" href="https://github.com/itulo/fixledger/releases/tag/v0.1.0">Release v0.1.0</a>
+          <a class="btn btn-primary" href="https://github.com/itulo/fixdossier">Get it on GitHub</a>
+          <a class="btn btn-ghost" href="https://github.com/itulo/fixdossier/releases/tag/v0.1.0">Release v0.1.0</a>
           <a class="btn btn-ghost" href="#waitlist">Join the interest list</a>
         </div>
         <p class="meta-line">
-          Use with <code>uses: itulo/fixledger@v0</code>
-          · <code>https://itulo.github.io/fixledger/</code>
+          Use with <code>uses: itulo/fixdossier@v0</code>
+          · <code>https://itulo.github.io/fixdossier/</code>
         </p>
       </div>
     </section>
@@ -73,7 +73,7 @@
           <article class="card">
             <span class="file">security-record.json</span>
             <h3>Machine-readable</h3>
-            <p>Same data as JSON (<code style="font-family:var(--mono);font-size:0.8em">schema: fixledger/v1</code>) for tooling and audits.</p>
+            <p>Same data as JSON (<code style="font-family:var(--mono);font-size:0.8em">schema: fixdossier/v1</code>) for tooling and audits.</p>
           </article>
           <article class="card">
             <span class="file">SUPPORT.md</span>
@@ -110,7 +110,7 @@
         <h2>Drop into a workflow</h2>
         <p class="section-intro">
           Copy from
-          <a href="https://github.com/itulo/fixledger/blob/main/examples/workflow.yml">examples/workflow.yml</a>.
+          <a href="https://github.com/itulo/fixdossier/blob/main/examples/workflow.yml">examples/workflow.yml</a>.
           Artifact mode needs only <code style="font-family:var(--mono);font-size:0.85em">contents: read</code>; commit mode needs <code style="font-family:var(--mono);font-size:0.85em">contents: write</code>.
         </p>
         <div class="pre-wrap">
@@ -121,7 +121,7 @@
   <span class="tok-key">pull-requests</span>: read
 <span class="tok-key">steps</span>:
   - <span class="tok-key">uses</span>: actions/checkout@v4
-  - <span class="tok-key">uses</span>: itulo/fixledger@v0
+  - <span class="tok-key">uses</span>: itulo/fixdossier@v0
     <span class="tok-key">with</span>:
       <span class="tok-key">support_period_months</span>: <span class="tok-num">24</span>
       <span class="tok-key">eol_date</span>: <span class="tok-str">'2030-12-31'</span>
@@ -137,7 +137,7 @@
         <h2>Real run against axios/axios</h2>
         <p class="section-intro">
           Generated 12 Oct 2026 from the public GitHub API. Full examples for axios, fastify, and vite live in the
-          <a href="https://github.com/itulo/fixledger/tree/main/examples">examples/</a> folder.
+          <a href="https://github.com/itulo/fixdossier/tree/main/examples">examples/</a> folder.
         </p>
 
         <div class="stats" aria-label="Summary counts">
@@ -276,7 +276,7 @@
           </form>
           <p class="fallback-mail">
             Or email directly:
-            <a href="mailto:italo.armenti@gmail.com?subject=fixledger%20interest&amp;body=Hi%20Italo%2C%0A%0AI%27m%20interested%20in%20fixledger%20%2F%20updates%20about%20the%20optional%20pack.%0A%0AGitHub%3A%20%0ARepo%20I%20might%20try%20it%20on%3A%20%0A">italo.armenti@gmail.com</a>
+            <a href="mailto:italo.armenti@gmail.com?subject=fixdossier%20interest&amp;body=Hi%20Italo%2C%0A%0AI%27m%20interested%20in%20fixdossier%20%2F%20updates%20about%20the%20optional%20pack.%0A%0AGitHub%3A%20%0ARepo%20I%20might%20try%20it%20on%3A%20%0A">italo.armenti@gmail.com</a>
           </p>
         </div>
       </div>
@@ -285,8 +285,8 @@
     <section id="disclaimer">
       <div class="wrap">
         <div class="disclaimer">
-          <p><strong>Not legal advice.</strong> fixledger is an engineering tool for evidence collection and review support. It does not make any product “compliant” or “certified” with the PLD, the CRA, or anything else. It does not limit liability. The record is compiled automatically and is <strong>not</strong> a complete security-fix inventory — fixes with no keyword or advisory are missed, and release mapping can be wrong for backports — so review it. Talk to a lawyer about your situation.</p>
-          <p>fixledger provides tooling and templates for information only. It creates no lawyer–client relationship.</p>
+          <p><strong>Not legal advice.</strong> fixdossier is an engineering tool for evidence collection and review support. It does not make any product “compliant” or “certified” with the PLD, the CRA, or anything else. It does not limit liability. The record is compiled automatically and is <strong>not</strong> a complete security-fix inventory — fixes with no keyword or advisory are missed, and release mapping can be wrong for backports — so review it. Talk to a lawyer about your situation.</p>
+          <p>fixdossier provides tooling and templates for information only. It creates no lawyer–client relationship.</p>
         </div>
       </div>
     </section>
@@ -295,13 +295,13 @@
   <footer>
     <div class="footer-inner">
       <div>
-        © 2026 fixledger · MIT ·
-        <a href="https://github.com/itulo/fixledger">github.com/itulo/fixledger</a>
+        © 2026 fixdossier · MIT ·
+        <a href="https://github.com/itulo/fixdossier">github.com/itulo/fixdossier</a>
       </div>
       <div class="footer-links">
-        <a href="https://github.com/itulo/fixledger/releases/tag/v0.1.0">v0.1.0</a>
-        <a href="https://github.com/itulo/fixledger/blob/main/LICENSE">License</a>
-        <a href="https://github.com/itulo/fixledger/tree/main/examples">Examples</a>
+        <a href="https://github.com/itulo/fixdossier/releases/tag/v0.1.0">v0.1.0</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/LICENSE">License</a>
+        <a href="https://github.com/itulo/fixdossier/tree/main/examples">Examples</a>
         <a href="#disclaimer">Disclaimer</a>
       </div>
     </div>
@@ -381,14 +381,14 @@
           if (hint) hint.textContent = "";
           var body =
             "Hi Italo,\n\n" +
-            "I'm interested in fixledger / updates about the optional pack.\n\n" +
+            "I'm interested in fixdossier / updates about the optional pack.\n\n" +
             "Name: " + (name || "(not provided)") + "\n" +
             "Email: " + email + "\n" +
             "GitHub: \n" +
             "Repo I might try it on: \n";
           var mailto =
             "mailto:italo.armenti@gmail.com" +
-            "?subject=" + encodeURIComponent("fixledger interest") +
+            "?subject=" + encodeURIComponent("fixdossier interest") +
             "&body=" + encodeURIComponent(body);
           window.location.href = mailto;
           if (hint) {

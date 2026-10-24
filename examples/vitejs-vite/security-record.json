@@ -1,5 +1,5 @@
 {
-  "schema": "fixledger/v1",
+  "schema": "fixdossier/v1",
   "repo": "vitejs/vite",
   "generated_at": "2026-10-12T13:37:02.744Z",
   "sources_checked": {

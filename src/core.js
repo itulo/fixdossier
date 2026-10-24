@@ -1,5 +1,5 @@
 'use strict';
-// fixledger core logic. Zero dependencies, Node >= 20.
+// fixdossier core logic. Zero dependencies, Node >= 20.
 
 const SEC_RE = /\b(CVE-\d{4}-\d{4,}|GHSA(-[a-z0-9]{4}){3})\b/gi;
 const SEC_WORDS = /\b(security|vulnerab\w*|vuln|exploit|xss|csrf|ssrf|rce|injection|prototype pollution|denial of service|redos)\b/i;
@@ -34,7 +34,7 @@ class Api {
           headers: {
             accept: 'application/vnd.github+json',
             'x-github-api-version': '2022-11-28',
-            'user-agent': 'fixledger-action',
+            'user-agent': 'fixdossier-action',
             ...(this.token ? { authorization: `Bearer ${this.token}` } : {}),
           },
         });
@@ -127,7 +127,7 @@ function build(raw, opts = {}) {
   fixes.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
   deps.sort((a, b) => b.date.localeCompare(a.date));
   return {
-    schema: 'fixledger/v1', repo, generated_at: opts.now || new Date().toISOString(),
+    schema: 'fixdossier/v1', repo, generated_at: opts.now || new Date().toISOString(),
     sources_checked: { releases: raw.releases.length, tags: raw.tags.length, closed_pulls: raw.pulls.length, advisories: raw.advisories.length, commits: raw.commits.length },
     gaps: opts.gaps || [],
     releases: releases.slice().reverse(), tags_without_release: tagsWithoutRelease,
@@ -148,7 +148,7 @@ const link = (text, url) => (url ? `[${esc(text)}](${url})` : esc(text));
 function renderRecord(rec, { maxRows = 200 } = {}) {
   const L = [];
   L.push(`# Security record — ${rec.repo}`, '');
-  L.push(`_Generated ${rec.generated_at} by fixledger from GitHub data (releases, tags, security advisories, merged Dependabot/Renovate PRs, commit messages). Automatically compiled; review before relying on it. Not legal advice._`, '');
+  L.push(`_Generated ${rec.generated_at} by fixdossier from GitHub data (releases, tags, security advisories, merged Dependabot/Renovate PRs, commit messages). Automatically compiled; review before relying on it. Not legal advice._`, '');
   const s = rec.summary;
   L.push('## Summary', '', `| Item | Count |`, `|---|---|`,
     `| Published GitHub security advisories | ${s.advisories} |`,
@@ -184,7 +184,7 @@ function renderSupport(rec, { supportMonths = 12, eolDate = '', contact = '', pr
     if (eolDate && eolDate < until) until = eolDate;
     L.push(`| ${esc(r.tag)} | ${d(r.date)} | ${until} | ${until >= today ? 'supported' : 'ended'} |`);
   });
-  L.push('', `_Generated ${rec.generated_at} by fixledger from inputs support_period_months=${supportMonths}${eolDate ? `, eol_date=${eolDate}` : ''}. This is a statement of intent written by the maintainer, not legal advice._`, '');
+  L.push('', `_Generated ${rec.generated_at} by fixdossier from inputs support_period_months=${supportMonths}${eolDate ? `, eol_date=${eolDate}` : ''}. This is a statement of intent written by the maintainer, not legal advice._`, '');
   return L.join('\n');
 }
 

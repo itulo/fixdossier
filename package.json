@@ -1,4 +1,4 @@
-{ "name": "fixledger", "version": "0.1.0", "private": true, "license": "MIT",
+{ "name": "fixdossier", "version": "0.1.0", "private": true, "license": "MIT",
   "description": "GitHub Action: dated security-fix record + support policy.",
   "engines": { "node": ">=20" },
   "scripts": { "test": "node --test test/", "live": "bash scripts/live-test.sh" } }

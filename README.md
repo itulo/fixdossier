@@ -1,4 +1,4 @@
-# fixledger
+# fixdossier
 
 A free GitHub Action that writes down what your repo already knows: **when you fixed each security issue and which release shipped the fix.**
 
@@ -10,7 +10,7 @@ On each run it reads your repository's:
 
 It then generates:
 - **`SECURITY-RECORD.md`**: a dated log of security fixes, each mapped to the release that shipped it, plus bot dependency updates and a release list
-- **`security-record.json`**: the same data, machine-readable (`schema: fixledger/v1`)
+- **`security-record.json`**: the same data, machine-readable (`schema: fixdossier/v1`)
 - **`SUPPORT.md`**: a support-period policy built from your inputs (`support_period_months`, `eol_date`, `contact`), with a per-release "supported until" table
 
 See [`examples/`](examples/) for real output from axios/axios, fastify/fastify and vitejs/vite.
@@ -22,7 +22,7 @@ permissions:
   pull-requests: read
 steps:
   - uses: actions/checkout@v4
-  - uses: itulo/fixledger@v0
+  - uses: itulo/fixdossier@v0
     with:
       support_period_months: 24
       eol_date: '2030-12-31'
@@ -63,7 +63,7 @@ Outputs: `record_file`, `json_file`, `support_file`, `fix_count`, `gap_count`.
 ## Why (context, not a promise)
 The EU Product Liability Directive **(EU) 2024/2853** treats software as a product for products placed on the market from 9 Dec 2026. In a dispute, courts can order disclosure of relevant evidence (Art. 9), and some presumptions apply if it isn't produced (Art. 10). The Cyber Resilience Act **(EU) 2024/2847** will expect manufacturers to state a support period and provide security updates (main obligations from Dec 2027). A dated, versioned record of fixes and a published support policy is ordinary engineering hygiene that is useful in either setting.
 
-> **Not legal advice.** fixledger is an engineering tool. It does not make any product "compliant" or "certified" with the PLD, the CRA or anything else, does not limit liability, and its output may be incomplete or wrong. Check it yourself and ask a lawyer about your situation.
+> **Not legal advice.** fixdossier is an engineering tool. It does not make any product "compliant" or "certified" with the PLD, the CRA or anything else, does not limit liability, and its output may be incomplete or wrong. Check it yourself and ask a lawyer about your situation.
 
 ## Development
 ```bash

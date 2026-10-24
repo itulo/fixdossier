@@ -40,6 +40,7 @@ test('commit classification', () => {
 
 test('build maps fixes to releases', () => {
   const r = core.build(mini, { repo: 'o/r', now: NOW });
+  assert.strictEqual(r.schema, 'fixdossier/v1');
   const adv = r.security_fixes.find((f) => f.type === 'advisory');
   assert.strictEqual(adv.release, 'v1.1.0');
   assert.strictEqual(adv.mapping, 'advisory patched_versions');
