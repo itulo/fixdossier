@@ -14,6 +14,9 @@ inputs:
   mode: { description: '"artifact" (upload files), "commit" (commit them to the current branch), or "none".', default: 'artifact' }
   commit_message: { description: 'Commit message in commit mode.', default: 'chore: update security record [skip ci]' }
   fail_on_gaps: { description: 'Fail the step if any source could not be read.', default: 'false' }
+  pro_upload: { description: 'Upload security-record.json to fixdossier Pro via GitHub OIDC (requires permissions: id-token: write) or pro_token.', default: 'false' }
+  pro_url: { description: 'Base URL for fixdossier Pro.', default: 'https://app.fixdossier.dev' }
+  pro_token: { description: 'Optional upload token (fxd_tok_...) if not using GitHub Actions OIDC.', default: '' }
 outputs:
   record_file: { description: 'Path of SECURITY-RECORD.md', value: '${{ steps.gen.outputs.record_file }}' }
   json_file: { description: 'Path of the JSON record', value: '${{ steps.gen.outputs.json_file }}' }
@@ -36,6 +39,9 @@ runs:
         INPUT_OUTPUT_DIR: ${{ inputs.output_dir }}
         INPUT_MAX_PAGES: ${{ inputs.max_pages }}
         INPUT_FAIL_ON_GAPS: ${{ inputs.fail_on_gaps }}
+        INPUT_PRO_UPLOAD: ${{ inputs.pro_upload }}
+        INPUT_PRO_URL: ${{ inputs.pro_url }}
+        INPUT_PRO_TOKEN: ${{ inputs.pro_token }}
     - if: inputs.mode == 'artifact'
       uses: actions/upload-artifact@v4
       with:

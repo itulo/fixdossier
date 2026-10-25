@@ -35,5 +35,18 @@ function arg(name, def = '') {
   if (process.env.GITHUB_OUTPUT) {
     fs.appendFileSync(process.env.GITHUB_OUTPUT, `record_file=${files.md}\njson_file=${files.json}\nsupport_file=${files.support}\nfix_count=${rec.security_fixes.length}\ngap_count=${rec.gaps.length}\n`);
   }
+  const proUpload = arg('pro_upload', 'false') === 'true' || Boolean(arg('pro_token', ''));
+  if (proUpload) {
+    const up = await core.uploadToPro(JSON.stringify(rec), {
+      proUrl: arg('pro_url', 'https://app.fixdossier.dev'),
+      proToken: arg('pro_token', ''),
+      repo,
+    });
+    if (up.ok) {
+      console.log(`fixdossier Pro: uploaded snapshot (${up.data && up.data.ingest ? up.data.ingest.id : 'ok'})`);
+    } else {
+      console.log(`::warning title=fixdossier Pro upload failed::${up.error}`);
+    }
+  }
   if (arg('fail_on_gaps', 'false') === 'true' && rec.gaps.length) process.exit(2);
 })().catch((e) => { console.error(`fixdossier failed: ${e.stack || e}`); process.exit(1); });

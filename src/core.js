@@ -188,4 +188,83 @@ function renderSupport(rec, { supportMonths = 12, eolDate = '', contact = '', pr
   return L.join('\n');
 }
 
-module.exports = { Api, collect, build, renderRecord, renderSupport, isSecurityCommit, ids };
+
+async function uploadToPro(jsonBody, { proUrl = 'https://app.fixdossier.dev', proToken = '', repo = '', env = process.env, fetchImpl = fetch } = {}) {
+  const baseUrl = String(proUrl || 'https://app.fixdossier.dev').trim().replace(/\/+$/, '');
+  const ingestUrl = `${baseUrl}/api/v1/ingest`;
+  const bodyStr = typeof jsonBody === 'string' ? jsonBody : JSON.stringify(jsonBody);
+  const ownerFromRepo = (repo || env.GITHUB_REPOSITORY || '').split('/')[0] || '';
+  const diagHeaders = {
+    'content-type': 'application/json',
+    'user-agent': 'fixdossier-action',
+    'x-github-repository': repo || env.GITHUB_REPOSITORY || '',
+    'x-github-repository-owner': env.GITHUB_REPOSITORY_OWNER || ownerFromRepo,
+    'x-github-repository-owner-id': env.GITHUB_REPOSITORY_OWNER_ID || '',
+    'x-github-run-id': env.GITHUB_RUN_ID || '',
+    'x-github-sha': env.GITHUB_SHA || '',
+    'x-github-ref': env.GITHUB_REF || '',
+    'x-github-workflow': env.GITHUB_WORKFLOW || '',
+  };
+
+  let bearer = String(proToken || '').trim();
+  let clientError = '';
+
+  if (!bearer) {
+    const reqUrlRaw = env.ACTIONS_ID_TOKEN_REQUEST_URL || '';
+    const reqTok = env.ACTIONS_ID_TOKEN_REQUEST_TOKEN || '';
+    if (!reqUrlRaw || !reqTok) {
+      clientError = "Missing GitHub OIDC environment (ACTIONS_ID_TOKEN_REQUEST_URL). Add 'permissions: id-token: write' to your workflow job, or pass 'pro_token'.";
+    } else {
+      try {
+        const u = new URL(reqUrlRaw);
+        u.searchParams.set('audience', baseUrl);
+        const oidcRes = await fetchImpl(u.toString(), {
+          headers: {
+            authorization: `bearer ${reqTok}`,
+            accept: 'application/json; api-version=2.0',
+            'user-agent': 'fixdossier-action',
+          },
+        });
+        if (!oidcRes.ok) {
+          clientError = `GitHub OIDC token request returned HTTP ${oidcRes.status}`;
+        } else {
+          const oidcData = await oidcRes.json();
+          if (!oidcData || !oidcData.value) {
+            clientError = 'GitHub OIDC token response did not contain a token value';
+          } else {
+            bearer = oidcData.value;
+          }
+        }
+      } catch (err) {
+        clientError = `Failed to request GitHub OIDC token: ${err.message}`;
+      }
+    }
+  }
+
+  const headers = { ...diagHeaders };
+  if (bearer) headers.authorization = `Bearer ${bearer}`;
+  if (clientError) headers['x-fixdossier-client-error'] = clientError;
+
+  let lastErr = clientError;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetchImpl(ingestUrl, { method: 'POST', headers, body: bodyStr });
+      let data = {};
+      try { data = await res.json(); } catch (_) {}
+      if (res.ok) {
+        return { ok: true, status: res.status, data };
+      }
+      const serverErr = data.error || `HTTP ${res.status}`;
+      if (res.status >= 502 && res.status <= 504 && attempt < 3) {
+        lastErr = serverErr;
+        continue;
+      }
+      return { ok: false, status: res.status, error: clientError || serverErr, data };
+    } catch (err) {
+      lastErr = err.message;
+    }
+  }
+  return { ok: false, status: 0, error: lastErr || 'network error uploading to fixdossier Pro' };
+}
+
+module.exports = { Api, collect, build, renderRecord, renderSupport, isSecurityCommit, ids, uploadToPro };
