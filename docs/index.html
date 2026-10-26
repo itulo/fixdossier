@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>fixdossier — evidence collection for security fixes in your GitHub repo</title>
-  <meta name="description" content="Free GitHub Action that collects dated security-fix evidence from releases, advisories, Dependabot/Renovate, and commits — for your review. Not a complete inventory. Not legal advice." />
+  <meta name="description" content="Free GitHub Action that collects dated security-fix evidence from releases, advisories, Dependabot/Renovate, and commits — for your review. Optional hosted workspace & signed Evidence Packs via fixdossier Pro. Not a complete inventory. Not legal advice." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -33,9 +33,9 @@
         <a href="#what">What it does</a>
         <a href="#install">Install</a>
         <a href="#sample">Sample</a>
+        <a href="#pro">fixdossier Pro</a>
         <a href="https://github.com/itulo/fixdossier">GitHub</a>
-        <a href="https://app.fixdossier.dev">fixdossier Pro</a>
-        <a class="btn btn-ghost" href="#waitlist" style="padding:0.4rem 0.8rem;font-size:0.85rem">Interest</a>
+        <a class="btn btn-ghost" href="https://app.fixdossier.dev" style="padding:0.4rem 0.8rem;font-size:0.85rem">Open Pro App</a>
         <button class="btn-icon" id="theme-btn" type="button" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
           <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -58,8 +58,8 @@
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://github.com/itulo/fixdossier">Get it on GitHub</a>
-          <a class="btn btn-ghost" href="https://github.com/itulo/fixdossier/releases/tag/v0.1.0">Release v0.1.0</a>
-          <a class="btn btn-ghost" href="#waitlist">Join the interest list</a>
+          <a class="btn btn-ghost" href="https://app.fixdossier.dev">fixdossier Pro · €69</a>
+          <a class="btn btn-ghost" href="https://app.fixdossier.dev/demo">Interactive Pro Demo</a>
         </div>
         <p class="meta-line">
           Use with <code>uses: itulo/fixdossier@v0</code>
@@ -111,7 +111,7 @@
             <li><strong>Heuristic-derived</strong> rows use the first stable release on or after the fix date (shown as “date heuristic”) — can be wrong for backports and multi-branch repos.</li>
             <li><strong>Unmatched / unreleased</strong> fixes stay listed when no release mapping is found (sample stats include an “Unreleased fixes” count).</li>
             <li><strong>Sources skipped for permissions</strong> (401/403/404 or rate limit) are noted as gaps in the record instead of failing the run.</li>
-            <li><strong>Numeric confidence scores</strong> are not in the Action yet (roadmap). Today each row’s mapping method is the transparency signal — as in the sample table’s “How mapped” column.</li>
+            <li><strong>Transparent mapping method</strong> is shown on every row (“advisory patched_versions”, “tag commit match”, or “date heuristic”) so reviewers know what requires verification.</li>
           </ul>
         </article>
       </div>
@@ -266,32 +266,51 @@
       </div>
     </section>
 
-    <section id="waitlist">
+    <section id="pro">
       <div class="wrap">
-        <p class="section-label">Interest list</p>
-        <h2>Follow along — no paid pack on this page</h2>
-        <div class="waitlist-box">
-          <p>
-            The Action itself is free (MIT). If you want a heads-up when docs, templates, or an optional evidence-pack draft land,
-            leave your email below. Nothing is charged; there is no price on this page yet.
-          </p>
-          <form id="interest-form" class="interest-form" novalidate>
-            <div class="form-row">
-              <label for="interest-name">Name <span class="optional">(optional)</span></label>
-              <input type="text" id="interest-name" name="name" autocomplete="name" placeholder="Your name" />
-            </div>
-            <div class="form-row">
-              <label for="interest-email">Email <span class="required-mark">(required)</span></label>
-              <input type="email" id="interest-email" name="email" autocomplete="email" required placeholder="you@example.com" />
-            </div>
-            <button type="submit" class="btn btn-primary">Open email to send interest</button>
-            <p class="form-hint" id="interest-hint" role="status" aria-live="polite"></p>
-          </form>
-          <p class="fallback-mail">
-            Or email directly:
-            <a href="mailto:italo.armenti@gmail.com?subject=fixdossier%20interest&amp;body=Hi%20Italo%2C%0A%0AI%27m%20interested%20in%20fixdossier%20%2F%20updates%20about%20the%20optional%20pack.%0A%0AGitHub%3A%20%0ARepo%20I%20might%20try%20it%20on%3A%20%0A">italo.armenti@gmail.com</a>
-          </p>
+        <p class="section-label">fixdossier Pro · Hosted Workspace &amp; Signed Evidence Packs</p>
+        <h2>Review, classify, and export Ed25519-signed Evidence Packs</h2>
+        <p class="section-intro">
+          The GitHub Action is free (MIT). <strong style="color:var(--text);font-weight:600">fixdossier Pro</strong> adds a hosted multi-repository review workspace: your CI uploads <code style="font-family:var(--mono);font-size:0.85em">security-record.json</code> via short-lived GitHub Actions OIDC (<code style="font-family:var(--mono);font-size:0.85em">pro_upload: 'true'</code> — zero long-lived repo secrets), your engineers classify and sign off on each candidate fix, and you export a signed PDF + ZIP Evidence Pack (<code style="font-family:var(--mono);font-size:0.85em">fixdossier-evidence-pack-*.zip</code>) for customer questionnaires or internal archives.
+        </p>
+
+        <div class="grid-3" style="margin-bottom:1.5rem">
+          <article class="card">
+            <span class="file">OIDC CI Ingestion</span>
+            <h3>Zero repo secrets</h3>
+            <p>Set <code>pro_upload: 'true'</code> with <code>id-token: write</code>. We never read your source code and never store repository tokens.</p>
+          </article>
+          <article class="card">
+            <span class="file">Human Sign-Off &amp; Audit Trail</span>
+            <h3>Append-only review ledger</h3>
+            <p>Classify advisory and heuristic candidates (<code>confirmed_security_fix</code>, <code>excluded_not_security</code>, <code>needs_followup</code>) with reviewer attribution and rationale.</p>
+          </article>
+          <article class="card">
+            <span class="file">Ed25519-Signed Packs</span>
+            <h3>PDF + ZIP + SHA-256</h3>
+            <p>Export Draft or Final Evidence Packs with <code>pack-manifest.json</code> signed with Ed25519 and verifiable at <code>/api/v1/verify</code>.</p>
+          </article>
         </div>
+
+        <article class="card coverage-card">
+          <span class="file">Founding Licence · First 50 GitHub Organizations</span>
+          <h3 style="font-size:1.25rem;margin-bottom:0.4rem">€69 one-time <span style="font-weight:400;font-size:0.9rem;color:var(--muted)">(tax incl. via Dodo Payments · no recurring annual fee)</span></h3>
+          <p style="margin-bottom:0.75rem">
+            Active <strong style="color:var(--text)">for as long as the service runs</strong>. Includes <strong style="color:var(--text)">at least 90 days’ notice and a full 1-click organization export</strong> (<code style="font-family:var(--mono);font-size:0.85em">/app/export.zip</code>) on shutdown (no refund on shutdown), plus a <strong style="color:var(--text)">14-day EU-standard no-questions-asked purchase refund policy</strong>.
+          </p>
+          <ul class="coverage-list" style="margin-bottom:1.25rem">
+            <li><strong>1 GitHub organization</strong> (bound to immutable numeric GitHub <code>org_id</code>) · up to <strong>3 repositories/products</strong> · up to <strong>5 reviewers</strong> (unlimited read-only viewers).</li>
+            <li>Up to <strong>24 Final Evidence Packs / year</strong>, <strong>60 Draft PDFs / month</strong>, <strong>2 GB storage</strong>, and fair-use ingestion up to <strong>300 uploads / month</strong> (max 5 MB per snapshot).</li>
+            <li>Hosted in the EU (Hetzner). Digital software tool only — not a review service and not legal advice.</li>
+          </ul>
+          <div class="cta-row" style="margin-bottom:0.75rem">
+            <a class="btn btn-primary" href="https://app.fixdossier.dev">Open fixdossier Pro · €69 Founding Licence</a>
+            <a class="btn btn-ghost" href="https://app.fixdossier.dev/demo">View Interactive Demo</a>
+          </div>
+          <p class="fallback-mail" style="margin:0">
+            Questions? Email <a href="mailto:contact@fixdossier.dev">contact@fixdossier.dev</a>
+          </p>
+        </article>
       </div>
     </section>
 
@@ -309,9 +328,12 @@
     <div class="footer-inner">
       <div>
         © 2026 fixdossier · MIT ·
-        <a href="https://github.com/itulo/fixdossier">github.com/itulo/fixdossier</a>
+        <a href="https://github.com/itulo/fixdossier">github.com/itulo/fixdossier</a> ·
+        <a href="mailto:contact@fixdossier.dev">contact@fixdossier.dev</a>
       </div>
       <div class="footer-links">
+        <a href="https://app.fixdossier.dev">fixdossier Pro</a>
+        <a href="https://app.fixdossier.dev/demo">Demo</a>
         <a href="https://github.com/itulo/fixdossier/releases/tag/v0.1.0">v0.1.0</a>
         <a href="https://github.com/itulo/fixdossier/blob/main/LICENSE">License</a>
         <a href="https://github.com/itulo/fixdossier/tree/main/examples">Examples</a>
@@ -384,40 +406,6 @@
           done();
         } catch (e) { /* ignore */ }
         document.body.removeChild(ta);
-      }
-
-      var form = document.getElementById("interest-form");
-      var hint = document.getElementById("interest-hint");
-      if (form) {
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          var emailEl = document.getElementById("interest-email");
-          var nameEl = document.getElementById("interest-name");
-          var email = (emailEl && emailEl.value || "").trim();
-          var name = (nameEl && nameEl.value || "").trim();
-          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            if (hint) hint.textContent = "Please enter a valid email address.";
-            if (emailEl) emailEl.focus();
-            return;
-          }
-          if (hint) hint.textContent = "";
-          var body =
-            "Hi Italo,\n\n" +
-            "I'm interested in fixdossier / updates about the optional pack.\n\n" +
-            "Name: " + (name || "(not provided)") + "\n" +
-            "Email: " + email + "\n" +
-            "GitHub: \n" +
-            "Repo I might try it on: \n";
-          var mailto =
-            "mailto:italo.armenti@gmail.com" +
-            "?subject=" + encodeURIComponent("fixdossier interest") +
-            "&body=" + encodeURIComponent(body);
-          window.location.href = mailto;
-          if (hint) {
-            hint.textContent =
-              "Your mail app should open. If it doesn’t, email italo.armenti@gmail.com directly.";
-          }
-        });
       }
     })();
   </script>

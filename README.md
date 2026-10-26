@@ -43,10 +43,36 @@ Full example: [`examples/workflow.yml`](examples/workflow.yml) (runs on release,
 | `max_pages` | `10` | 100 items/page per source |
 | `mode` | `artifact` | `artifact`, `commit` or `none` |
 | `fail_on_gaps` | `false` | fail if any source was unreadable |
+| `pro_upload` | `false` | upload `security-record.json` to fixdossier Pro via GitHub OIDC (`id-token: write`) or `pro_token` |
+| `pro_url` | `https://app.fixdossier.dev` | base URL for fixdossier Pro |
+| `pro_token` | `''` | optional upload token (`fxd_tok_...`) if not using GitHub Actions OIDC |
 
 Outputs: `record_file`, `json_file`, `support_file`, `fix_count`, `gap_count`.
 
 **Missing permissions:** if a source returns 401/403/404 (or the rate limit is hit), that section is skipped, a workflow warning is printed, and the gap is listed in the record under "Gaps in this record". The run still succeeds unless `fail_on_gaps: true`. In commit mode, a failed push (no `contents: write`, branch protection) becomes a warning, not a failure.
+
+## fixdossier Pro (optional hosted workspace & signed Evidence Packs)
+
+The GitHub Action is free and MIT-licensed. **[fixdossier Pro](https://app.fixdossier.dev)** ([interactive demo](https://app.fixdossier.dev/demo)) is an optional hosted workspace for teams that want:
+- **Zero-secret CI ingestion:** upload `security-record.json` directly from GitHub Actions using short-lived GitHub OIDC tokens (`pro_upload: 'true'` with `id-token: write`) — fixdossier Pro never reads your source code and never holds tokens to your repositories.
+- **Human review & immutable audit trail:** classify candidate rows (`confirmed_security_fix`, `excluded_not_security`, `needs_followup`) with reviewer attribution and rationale in an append-only review ledger.
+- **Ed25519-signed Evidence Packs:** export Draft or Final PDF + ZIP bundles (`fixdossier-evidence-pack-*.zip`) containing `pack-manifest.json` with SHA-256 checksums and an Ed25519 signature verifiable at `https://app.fixdossier.dev/api/v1/verify`.
+
+```yaml
+permissions:
+  contents: read
+  pull-requests: read
+  security-events: read
+  id-token: write
+
+steps:
+  - uses: actions/checkout@v4
+  - uses: itulo/fixdossier@v0
+    with:
+      pro_upload: 'true'
+```
+
+**Founding Licence:** **€69 one-time** (for the first 50 GitHub organizations; 1 GitHub org, up to 3 repositories and 5 reviewers, active for as long as the service runs, with at least 90 days' notice + full 1-click export on shutdown and a 14-day EU-standard refund policy). Questions: [contact@fixdossier.dev](mailto:contact@fixdossier.dev).
 
 ## How fixes are mapped to releases
 1. **Advisory:** its `patched_versions` are matched to a release tag (`1.2.3` ↔ `v1.2.3`).

@@ -1,6 +1,6 @@
 # fixdossier
 
-> Evidence collection and review support for security fixes in GitHub repositories. A free, MIT-licensed GitHub Action (`itulo/fixdossier@v0`) that reads a repository's releases, tags, GitHub Security Advisories (GHSA/CVE), Dependabot/Renovate pull requests, and security-flagged commits to generate a dated record (`SECURITY-RECORD.md`, `security-record.json` schema `fixdossier/v1`) and a support-period policy template (`SUPPORT.md`).
+> Evidence collection and review support for security fixes in GitHub repositories. A free, MIT-licensed GitHub Action (`itulo/fixdossier@v0`) that reads a repository's releases, tags, GitHub Security Advisories (GHSA/CVE), Dependabot/Renovate pull requests, and security-flagged commits to generate a dated record (`SECURITY-RECORD.md`, `security-record.json` schema `fixdossier/v1`) and a support-period policy template (`SUPPORT.md`). Optional hosted workspace and Ed25519-signed Evidence Packs via fixdossier Pro (`https://app.fixdossier.dev`).
 
 Important notes:
 - fixdossier is a technical evidence-collection and review-support tool for software maintainers and small vendors preparing for the EU revised Product Liability Directive (Directive (EU) 2024/2853, applicable 9 Dec 2026) and the EU Cyber Resilience Act (Regulation (EU) 2024/2847).
@@ -21,6 +21,7 @@ permissions:
   contents: read
   pull-requests: read
   security-events: read
+  id-token: write        # only required when pro_upload: 'true'
 
 jobs:
   dossier:
@@ -30,6 +31,7 @@ jobs:
       - uses: itulo/fixdossier@v0
         with:
           mode: artifact
+          pro_upload: 'false'   # set to 'true' to upload to fixdossier Pro via GitHub OIDC
 ```
 
 ## Outputs
@@ -38,8 +40,17 @@ jobs:
 - `security-record.json`: Machine-readable record (`"schema": "fixdossier/v1"`).
 - `SUPPORT.md`: Draft support-period and vulnerability disclosure policy template with explicit placeholders for human review.
 
+## fixdossier Pro (Optional Hosted Workspace & Signed Evidence Packs)
+
+- URL: https://app.fixdossier.dev (Interactive Demo: https://app.fixdossier.dev/demo)
+- Ingests `security-record.json` via short-lived GitHub Actions OIDC (`pro_upload: 'true'`) with zero long-lived repository secrets.
+- Provides a multi-repository review queue (`confirmed_security_fix`, `excluded_not_security`, `needs_followup`), append-only audit trail, and Ed25519-signed PDF + ZIP Evidence Packs (`fixdossier-evidence-pack-*.zip`, verifiable at `https://app.fixdossier.dev/api/v1/verify`).
+- Founding Licence: €69 one-time for the first 50 GitHub organizations (1 GitHub org, up to 3 repositories and 5 reviewers, active for as long as the service runs, at least 90 days' notice + full 1-click export on shutdown, 14-day EU-standard refund policy).
+
 ## Links
 
 - [Landing Page](https://fixdossier.dev/): Overview, sample output, coverage summary, and regulatory background.
+- [fixdossier Pro](https://app.fixdossier.dev): Hosted workspace and signed Evidence Packs.
+- [Interactive Demo](https://app.fixdossier.dev/demo): Try fixdossier Pro in the browser.
 - [GitHub Repository](https://github.com/itulo/fixdossier): Source code (MIT license), `action.yml` inputs/outputs, and examples.
-- [Changelog](https://fixdossier.dev/CHANGELOG.md): Release history.
+- [Contact](mailto:contact@fixdossier.dev): contact@fixdossier.dev
