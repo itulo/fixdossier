@@ -1,5 +1,5 @@
 name: 'fixdossier'
-description: 'Builds a dated security-fix record (SECURITY-RECORD.md + JSON) and a SUPPORT.md support-period policy from your GitHub history.'
+description: 'Generate dated security-fix records (SECURITY-RECORD.md + JSON) and SUPPORT.md policy from GitHub history (EU CRA / PLD).'
 author: 'Italo Armenti'
 branding: { icon: 'shield', color: 'blue' }
 inputs:
