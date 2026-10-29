@@ -50,6 +50,12 @@ jobs:
 ## Links
 
 - [Landing Page](https://fixdossier.dev/): Overview, sample output, coverage summary, and regulatory background.
+- [Docs](https://fixdossier.dev/docs/): Index of the pages below.
+- [Security fix record from GitHub](https://fixdossier.dev/docs/security-fix-record-from-github.html): Build a dated record of security fixes from GitHub history.
+- [Map a GitHub advisory to a release](https://fixdossier.dev/docs/map-github-advisory-to-release.html): How a GitHub security advisory is mapped to a release.
+- [What the record covers](https://fixdossier.dev/docs/what-the-record-covers.html): What a fixdossier security record covers, and what it does not.
+- [CRA support period](https://fixdossier.dev/docs/cra-support-period-support-md.html): Generate a SUPPORT.md support-period policy from GitHub releases.
+- [PLD evidence checklist](https://fixdossier.dev/docs/pld-evidence-checklist-for-engineers.html): Dated security-fix evidence checklist for engineers.
 - [fixdossier Pro](https://app.fixdossier.dev): Hosted workspace and signed Evidence Packs.
 - [Interactive Demo](https://app.fixdossier.dev/demo): Try fixdossier Pro in the browser.
 - [GitHub Repository](https://github.com/itulo/fixdossier): Source code (MIT license), `action.yml` inputs/outputs, and examples.

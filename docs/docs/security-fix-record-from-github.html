@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Security fix evidence from GitHub releases | fixdossier</title>
+  <meta name="description" content="Build a dated record of security fixes from GitHub releases, advisories, Dependabot/Renovate PRs and commits with one GitHub Action step." />
+  <link rel="canonical" href="https://fixdossier.dev/docs/security-fix-record-from-github.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="fixdossier" />
+  <meta property="og:title" content="Security fix evidence from GitHub releases | fixdossier" />
+  <meta property="og:description" content="Build a dated record of security fixes from GitHub releases, advisories, Dependabot/Renovate PRs and commits with one GitHub Action step." />
+  <meta property="og:url" content="https://fixdossier.dev/docs/security-fix-record-from-github.html" />
+  <meta property="og:locale" content="en" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=2" />
+  <style>
+    .doc h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1.2; letter-spacing: -0.03em; margin: 0.4rem 0 1rem; }
+    .doc h2 { margin-top: 2.4rem; }
+    .doc h3 { font-size: 1.05rem; margin: 1.6rem 0 0.5rem; }
+    .doc p, .doc li { color: var(--muted); }
+    .doc p strong, .doc li strong { color: var(--text); }
+    .doc :not(pre) > code { font-family: var(--mono); font-size: 0.85em; background: var(--bg-elev); padding: 0.1rem 0.35rem; border-radius: 4px; color: var(--text); }
+    .doc .pre-wrap, .doc .table-scroll { margin: 1rem 0 1.25rem; }
+    .doc table { min-width: 0; }
+    .doc ul, .doc ol { padding-left: 1.2rem; }
+    .doc li + li { margin-top: 0.35rem; }
+    .crumbs { font-size: 0.85rem; color: var(--faint); }
+    .doc-index { columns: 2; list-style: none; padding: 0 !important; }
+    @media (max-width: 560px) { .doc-index { columns: 1; } }
+  </style>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('fixdossier_theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Build a dated record of security fixes from GitHub history",
+  "description": "Build a dated record of security fixes from GitHub releases, advisories, Dependabot/Renovate PRs and commits with one GitHub Action step.",
+  "url": "https://fixdossier.dev/docs/security-fix-record-from-github.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fixdossier.dev/docs/security-fix-record-from-github.html"
+  },
+  "inLanguage": "en",
+  "datePublished": "2026-10-29",
+  "dateModified": "2026-10-29",
+  "author": {
+    "@type": "Person",
+    "name": "Italo Armenti"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "fixdossier",
+    "url": "https://fixdossier.dev/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "fixdossier",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "GitHub Actions",
+    "license": "https://opensource.org/licenses/MIT",
+    "codeRepository": "https://github.com/itulo/fixdossier",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "fixdossier",
+    "url": "https://fixdossier.dev/"
+  }
+}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">fd</span> fixdossier</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="./">Docs</a>
+        <a href="https://github.com/itulo/fixdossier">GitHub</a>
+        <button class="btn-icon" id="theme-btn" type="button" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section>
+      <article class="wrap doc">
+        <p class="crumbs"><a href="../">fixdossier</a> / <a href="./">Docs</a> / Build the record</p>
+        <h1>Build a dated record of security fixes from GitHub history</h1>
+
+        <p>If your project already uses GitHub releases, security advisories and Dependabot or Renovate, most of the facts for a security-fix history are already in the API: what was fixed, on which date, and which release contained it. fixdossier collects those facts into one dated file per run, and marks each row with how it was linked to a release.</p>
+
+        <h2>Quick start</h2>
+        <p>This commits the files to the default branch on every release and once a week.</p>
+        <div class="pre-wrap"><span class="lang">yaml</span><pre>name: security-record
+on:
+  release:
+    types: [published]
+  schedule:
+    - cron: &#x27;0 6 * * 1&#x27;
+  workflow_dispatch:
+permissions:
+  contents: write        # needed to commit the files
+  pull-requests: read
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: itulo/fixdossier@v0
+        with:
+          support_period_months: 24
+          eol_date: &#x27;2030-12-31&#x27;
+          contact: security@example.com
+          mode: commit</pre></div>
+        <p>For artifact mode (default), drop <code>mode</code> and use <code>contents: read</code>. The artifact is named <code>security-record</code>. Artifacts expire under the repository's retention setting (<a href="https://docs.github.com/en/organizations/managing-organization-settings/configuring-the-retention-period-for-github-actions-artifacts-and-logs-in-your-organization">GitHub docs</a>); commit mode keeps every version in git history.</p>
+
+        <h2>What it reads</h2>
+        <p>Five list endpoints of the GitHub REST API, 100 items per page, up to <code>max_pages</code> pages each (default 10):</p>
+        <div class="table-scroll" role="region" aria-label="Sources read" tabindex="0"><table><thead><tr><th>Source</th><th>Endpoint</th><th>Used for</th></tr></thead><tbody>
+<tr><td>Releases</td><td><code>GET /repos/{owner}/{repo}/releases</code></td><td>Release tag, date, pre-release flag. Drafts and unpublished releases are dropped.</td></tr>
+<tr><td>Tags</td><td><code>GET /repos/{owner}/{repo}/tags</code></td><td>Commit SHA behind each tag, used for exact SHA matches; tags with no GitHub Release are listed in <code>tags_without_release</code>.</td></tr>
+<tr><td>Pull requests</td><td><code>GET /repos/{owner}/{repo}/pulls?state=closed&amp;sort=updated&amp;direction=desc</code></td><td>Merged PRs opened by <code>dependabot[bot]</code>, <code>renovate[bot]</code>, <code>dependabot-preview[bot]</code> or <code>renovate-bot</code>.</td></tr>
+<tr><td>Security advisories</td><td><code>GET /repos/{owner}/{repo}/security-advisories?state=published</code></td><td>Published repository advisories (GHSA ID, CVE ID, severity, <code>patched_versions</code>).</td></tr>
+<tr><td>Commits</td><td><code>GET /repos/{owner}/{repo}/commits</code></td><td>Default branch history. Messages that look like security fixes become rows.</td></tr>
+</tbody></table></div>
+
+        <h3>Which commits count as security fixes</h3>
+        <ul>
+          <li>Any commit whose message contains a <code>CVE-YYYY-NNNN</code> or <code>GHSA-xxxx-xxxx-xxxx</code> ID.</li>
+          <li>Otherwise, a commit whose <strong>first line</strong> contains one of: security, vulnerab…, vuln, exploit, xss, csrf, ssrf, rce, injection, prototype pollution, denial of service, redos.</li>
+          <li>First lines starting with <code>docs:</code>, <code>test:</code>, <code>ci:</code>, <code>build:</code> or <code>chore(docs):</code> are skipped unless they contain an ID.</li>
+          <li>Commits authored by the bots above are skipped here; they appear as dependency updates instead.</li>
+        </ul>
+        <p>This is keyword matching. A fix committed as “handle edge case in parser” is not found, and some non-fixes are. The record says so in its footer.</p>
+
+        <h3>Which bot PRs are flagged as security</h3>
+        <p>Every merged bot PR is listed under “Dependency updates by bots”. The “Security?” column is <strong>yes</strong> only if the title or body contains a CVE/GHSA ID, the title contains one of the words above, or a label matches <code>secur</code> or <code>vuln</code>.</p>
+
+        <h2>What it writes</h2>
+        <h3>SECURITY-RECORD.md</h3>
+        <p>Summary from the axios/axios example (generated 29 Oct 2026, <code>max_pages=2</code>):</p>
+        <div class="pre-wrap"><span class="lang">markdown</span><pre>## Summary
+
+| Item | Count |
+|---|---|
+| Published GitHub security advisories | 51 |
+| Commits that look like security fixes | 1 |
+| Merged bot dependency updates (security-flagged) | 47 (13) |
+| Releases | 126 |
+| Fixes not yet in a release | 0 |</pre></div>
+        <p>Three rows from the same file:</p>
+        <div class="pre-wrap"><span class="lang">markdown</span><pre>| Date | Type | IDs | Fix | Shipped in | Release date | How mapped |
+|---|---|---|---|---|---|---|
+| 2026-09-16 | advisory (medium) | GHSA-j8rh-479h-cp32, CVE-2026-101904 | [Header Injection via Inherited headers After Minimal Interceptor](https://github.com/axios/axios/security/advisories/GHSA-j8rh-479h-cp32) | v1.20.0 | 2026-08-24 | advisory patched_versions |
+| 2026-09-16 | advisory (medium) | GHSA-9fr6-4gfg-395g, CVE-2026-101902 | [Prototype-Pollution Gadget in Axios Default Instance Allows Inherited Object.prototype.method to Override HTTP Method](https://github.com/axios/axios/security/advisories/GHSA-9fr6-4gfg-395g) | v0.34.0, v1.20.0 | 2026-09-13, 2026-08-24 | advisory patched_versions |
+| 2026-06-22 | commit | — | [chore(deps): bump form-data floor to ^4.0.6 to patch CRLF injection (#11028)](https://github.com/axios/axios/commit/5d2af0485354580dce4b6b77890b84cadc0ead0e) | v1.19.0 | 2026-07-26 | date heuristic (first release on/after commit) |</pre></div>
+        <p>For advisories, “Date” is the advisory's publish date, so it can be later than the release that fixed it (above: advisory 2026-09-16, v1.20.0 released 2026-08-24). For commits it is the commit date. When an advisory matches several releases (one per patched range, for example a fix backported to 0.x and 1.x), “Shipped in” and “Release date” list all of them, comma-separated, in the same order.</p>
+        <p>The dependency-updates table has the same “Shipped in” and “How mapped” columns:</p>
+        <div class="pre-wrap"><span class="lang">markdown</span><pre>| Merged | Bot | Update | Security? | Shipped in | How mapped |
+|---|---|---|---|---|---|
+| 2026-10-27 | dependabot[bot] | [chore(deps): bump qs from 6.16.0 to 6.17.0](https://github.com/axios/axios/pull/11395) |  | _unreleased_ | unreleased |</pre></div>
+        <p>The file also has a release list (latest 50), a “Gaps in this record” section when anything was missed, and a footer that explains each mapping label. Fix and dependency tables are capped at 200 rows each; the JSON has everything.</p>
+
+        <h3>security-record.json</h3>
+        <p>Top level of <a href="https://github.com/itulo/fixdossier/blob/main/examples/axios-axios/security-record.json">examples/axios-axios/security-record.json</a>, arrays shortened:</p>
+        <div class="pre-wrap"><span class="lang">json</span><pre>{
+  &quot;schema&quot;: &quot;fixdossier/v1&quot;,
+  &quot;repo&quot;: &quot;axios/axios&quot;,
+  &quot;generated_at&quot;: &quot;2026-10-29T13:16:44.058Z&quot;,
+  &quot;sources_checked&quot;: { &quot;releases&quot;: 126, &quot;tags&quot;: 148, &quot;closed_pulls&quot;: 200, &quot;advisories&quot;: 51, &quot;commits&quot;: 200 },
+  &quot;gaps&quot;: [
+    &quot;pull requests: stopped after 2 pages (raise max_pages for full history)&quot;,
+    &quot;commits: stopped after 2 pages (raise max_pages for full history)&quot;
+  ],
+  &quot;summary&quot;: { &quot;advisories&quot;: 51, &quot;security_commits&quot;: 1, &quot;dependency_updates&quot;: 47,
+               &quot;security_dependency_updates&quot;: 13, &quot;unreleased_fixes&quot;: 0 },
+  &quot;releases&quot;: [ ... ], &quot;tags_without_release&quot;: [ ... ],
+  &quot;security_fixes&quot;: [ ... ], &quot;dependency_updates&quot;: [ ... ]
+}</pre></div>
+        <p>Every row in <code>security_fixes</code> and <code>dependency_updates</code> has <code>release</code> and <code>release_date</code> (the first matched release, or <code>null</code>), <code>matched_releases</code> (all matched releases as <code>{tag, date}</code>), and <code>mapping</code>. Advisory rows also carry <code>patched_versions</code> as normalised ranges. An example is on <a href="map-github-advisory-to-release.html#matched-releases">the mapping page</a>.</p>
+
+        <h3>SUPPORT.md</h3>
+        <p>A support-period statement plus a per-release “supported until” table. See <a href="cra-support-period-support-md.html">Generate SUPPORT.md with a support period</a>.</p>
+
+        <h2>Run it locally</h2>
+        <p>The entry point reads the same inputs as <code>--name=value</code> flags. Anonymous API access works for public repos (60 requests/hour); set <code>GITHUB_TOKEN</code> for more. Real output from a run on 29 Oct 2026 (it fetched 1 page per source, so every source except advisories reports a gap):</p>
+        <div class="pre-wrap"><span class="lang">shell</span><pre>$ git clone https://github.com/itulo/fixdossier &amp;&amp; cd fixdossier
+$ node src/index.js --repo=fastify/fastify --max_pages=1 --output_dir=/tmp/fdrun \
+    --support_period_months=24 --eol_date=2030-12-31 --contact=security@example.com
+fixdossier: fastify/fastify — {&quot;advisories&quot;:16,&quot;security_commits&quot;:0,&quot;dependency_updates&quot;:0,&quot;security_dependency_updates&quot;:0,&quot;unreleased_fixes&quot;:0} — 5 API calls
+::warning title=fixdossier gap::releases: stopped after 1 pages (raise max_pages for full history)
+::warning title=fixdossier gap::tags: stopped after 1 pages (raise max_pages for full history)
+::warning title=fixdossier gap::pull requests: stopped after 1 pages (raise max_pages for full history)
+::warning title=fixdossier gap::commits: stopped after 1 pages (raise max_pages for full history)</pre></div>
+        <p>Run outside Actions, <code>max_pages</code> defaults to 5, not 10.</p>
+
+        <h2>Use the outputs in later steps</h2>
+        <p><code>fix_count</code> and <code>gap_count</code> are step outputs. Give the step an <code>id</code> and read <code>steps.&lt;id&gt;.outputs.gap_count</code>, for example to post a summary or open an issue when gaps appear. An example is on <a href="what-the-record-covers.html">the coverage page</a>.</p>
+
+        <h2>Next</h2>
+        <ul>
+          <li><a href="map-github-advisory-to-release.html">How rows are mapped to releases</a>, and why backports need a manual check.</li>
+          <li><a href="what-the-record-covers.html">What the record covers and what it does not</a>.</li>
+        </ul>
+
+        <h2>Docs pages</h2>
+        <ul class="doc-index">
+          <li><a href="./">Docs home</a></li>
+          <li><a href="security-fix-record-from-github.html" aria-current="page">Build the record</a></li>
+          <li><a href="map-github-advisory-to-release.html">Advisory → release mapping</a></li>
+          <li><a href="what-the-record-covers.html">Coverage and limits</a></li>
+          <li><a href="cra-support-period-support-md.html">SUPPORT.md and support periods</a></li>
+          <li><a href="pld-evidence-checklist-for-engineers.html">PLD evidence checklist</a></li>
+          <li><a href="https://github.com/itulo/fixdossier">Source on GitHub (MIT)</a></li>
+        </ul>
+        <div class="disclaimer" role="note">
+  <p><strong>Not legal advice.</strong> fixdossier is an engineering tool for evidence collection and review support. It is not legal advice and not a compliance certificate. It does not make a product compliant with the PLD, the CRA or anything else, and its output can be incomplete or wrong. Review it, and ask a lawyer about your situation.</p>
+</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 fixdossier · MIT · <a href="https://github.com/itulo/fixdossier">github.com/itulo/fixdossier</a> · <a href="mailto:contact@fixdossier.dev">contact@fixdossier.dev</a></div>
+      <div class="footer-links">
+        <a href="./">Docs</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/action.yml">action.yml</a>
+        <a href="https://github.com/itulo/fixdossier/tree/main/examples">Examples</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var t = document.getElementById('theme-btn');
+      if (t) t.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', cur);
+        localStorage.setItem('fixdossier_theme', cur);
+      });
+      var toggle = document.getElementById('nav-toggle'), nav = document.getElementById('primary-nav');
+      if (toggle && nav) toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+    })();
+  </script>
+</body>
+</html>

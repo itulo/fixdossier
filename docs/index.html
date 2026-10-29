@@ -34,6 +34,7 @@
         <a href="#install">Install</a>
         <a href="#sample">Sample</a>
         <a href="#pro">fixdossier Pro</a>
+        <a href="docs/">Docs</a>
         <a href="https://github.com/itulo/fixdossier">GitHub</a>
         <a class="btn btn-ghost" href="https://app.fixdossier.dev" style="padding:0.4rem 0.8rem;font-size:0.85rem">Open Pro App</a>
         <button class="btn-icon" id="theme-btn" type="button" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
@@ -107,10 +108,10 @@
           <span class="file">Coverage</span>
           <h3>What the record covers — and what it does not</h3>
           <ul class="coverage-list">
-            <li><strong>Advisory-derived</strong> rows parse each <code>patched_versions</code> range and match the earliest fetched release tag that satisfies it. The label is <code>advisory patched_versions</code>. Every matched release is listed.</li>
+            <li><strong>Advisory-derived</strong> rows parse each <code>patched_versions</code> range and, for each range, pick the fetched release with the lowest version that satisfies it. The label is <code>advisory patched_versions</code>. Every matched release is listed.</li>
             <li><strong>Tag commit match</strong> rows are commits or bot pull requests whose SHA is the commit a release tag points at (annotated tags use the peeled commit). The label is <code>tag commit match</code>.</li>
             <li><strong>Heuristic-derived</strong> rows are used when the two methods above do not match: the first stable release on or after the fix date. The label is <code>date heuristic (first release on/after publish)</code>, <code>date heuristic (first release on/after commit)</code>, or <code>date heuristic (first release on/after merge)</code>. This can be wrong for backports and multi-branch repos.</li>
-            <li><strong>Unmatched / unreleased</strong> fixes stay listed when no release mapping is found. Commits and bot pull requests use <code>unreleased</code>. An advisory with no match and no usable date uses <code>none</code>. Sample stats include an “Unreleased fixes” count.</li>
+            <li><strong>Unmatched / unreleased</strong> fixes stay listed when no release mapping is found. Commits and bot pull requests use <code>unreleased</code>. An advisory uses <code>none</code> when no range matched and no release was published on or after its publish date. Sample stats include an “Unreleased fixes” count.</li>
             <li><strong>Sources skipped for permissions</strong> (401/403/404 or rate limit) are noted as gaps in the record instead of failing the run.</li>
             <li><strong>Transparent mapping method</strong> is the string above on every row, in the Markdown and in the JSON, so reviewers know what requires verification.</li>
           </ul>
@@ -337,6 +338,7 @@
         <a href="https://app.fixdossier.dev/demo">Demo</a>
         <a href="https://github.com/itulo/fixdossier/releases/tag/v0.1.0">v0.1.0</a>
         <a href="https://github.com/itulo/fixdossier/blob/main/LICENSE">License</a>
+        <a href="docs/">Docs</a>
         <a href="https://github.com/itulo/fixdossier/tree/main/examples">Examples</a>
         <a href="#disclaimer">Disclaimer</a>
       </div>

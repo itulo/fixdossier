@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Map a GitHub security advisory to a release | fixdossier</title>
+  <meta name="description" content="How fixdossier links advisories, commits and bot PRs to releases: patched_versions ranges, tag commit match, date heuristic, and matched_releases." />
+  <link rel="canonical" href="https://fixdossier.dev/docs/map-github-advisory-to-release.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="fixdossier" />
+  <meta property="og:title" content="Map a GitHub security advisory to a release | fixdossier" />
+  <meta property="og:description" content="How fixdossier links advisories, commits and bot PRs to releases: patched_versions ranges, tag commit match, date heuristic, and matched_releases." />
+  <meta property="og:url" content="https://fixdossier.dev/docs/map-github-advisory-to-release.html" />
+  <meta property="og:locale" content="en" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=2" />
+  <style>
+    .doc h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1.2; letter-spacing: -0.03em; margin: 0.4rem 0 1rem; }
+    .doc h2 { margin-top: 2.4rem; }
+    .doc h3 { font-size: 1.05rem; margin: 1.6rem 0 0.5rem; }
+    .doc p, .doc li { color: var(--muted); }
+    .doc p strong, .doc li strong { color: var(--text); }
+    .doc :not(pre) > code { font-family: var(--mono); font-size: 0.85em; background: var(--bg-elev); padding: 0.1rem 0.35rem; border-radius: 4px; color: var(--text); }
+    .doc .pre-wrap, .doc .table-scroll { margin: 1rem 0 1.25rem; }
+    .doc table { min-width: 0; }
+    .doc ul, .doc ol { padding-left: 1.2rem; }
+    .doc li + li { margin-top: 0.35rem; }
+    .crumbs { font-size: 0.85rem; color: var(--faint); }
+    .doc-index { columns: 2; list-style: none; padding: 0 !important; }
+    @media (max-width: 560px) { .doc-index { columns: 1; } }
+  </style>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('fixdossier_theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How fixdossier maps a GitHub security advisory to a release",
+  "description": "How fixdossier links advisories, commits and bot PRs to releases: patched_versions ranges, tag commit match, date heuristic, and matched_releases.",
+  "url": "https://fixdossier.dev/docs/map-github-advisory-to-release.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fixdossier.dev/docs/map-github-advisory-to-release.html"
+  },
+  "inLanguage": "en",
+  "datePublished": "2026-10-29",
+  "dateModified": "2026-10-29",
+  "author": {
+    "@type": "Person",
+    "name": "Italo Armenti"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "fixdossier",
+    "url": "https://fixdossier.dev/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "fixdossier",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "GitHub Actions",
+    "license": "https://opensource.org/licenses/MIT",
+    "codeRepository": "https://github.com/itulo/fixdossier",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "fixdossier",
+    "url": "https://fixdossier.dev/"
+  }
+}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">fd</span> fixdossier</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="./">Docs</a>
+        <a href="https://github.com/itulo/fixdossier">GitHub</a>
+        <button class="btn-icon" id="theme-btn" type="button" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section>
+      <article class="wrap doc">
+        <p class="crumbs"><a href="../">fixdossier</a> / <a href="./">Docs</a> / Advisory → release mapping</p>
+        <h1>How fixdossier maps a GitHub security advisory to a release</h1>
+
+        <p>A security advisory tells users which versions are fixed. A release tells them what they can install. fixdossier links the two for every advisory, commit and bot PR it finds, and writes the method it used into the “How mapped” column. This page describes the three methods in fixdossier 0.1.1, the <code>matched_releases</code> field, and the cases that still need a person to check.</p>
+
+        <h2>Quick start</h2>
+        <div class="pre-wrap"><span class="lang">yaml</span><pre>permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: itulo/fixdossier@v0
+        with:
+          max_pages: 20   # more releases fetched = more patched_versions matches</pre></div>
+
+        <h2>The labels you will see</h2>
+        <p>These are the exact strings written to <code>SECURITY-RECORD.md</code> and to the <code>mapping</code> field in <code>security-record.json</code>:</p>
+        <div class="table-scroll" role="region" aria-label="Mapping labels" tabindex="0"><table><thead><tr><th>Label</th><th>Row type</th><th>Meaning</th></tr></thead><tbody>
+<tr><td><code>advisory patched_versions</code></td><td>Advisory</td><td>At least one patched range in the advisory was satisfied by a fetched release tag. Method 1.</td></tr>
+<tr><td><code>tag commit match</code></td><td>Commit, bot PR</td><td>The commit SHA (for PRs, the merge commit SHA) is the commit a release tag points at. Method 2.</td></tr>
+<tr><td><code>date heuristic (first release on/after publish)</code></td><td>Advisory</td><td>No patched range matched; first release published on or after the advisory's publish date. Method 3.</td></tr>
+<tr><td><code>date heuristic (first release on/after commit)</code></td><td>Commit</td><td>No tag points at the commit; first release on or after the commit date. Method 3.</td></tr>
+<tr><td><code>date heuristic (first release on/after merge)</code></td><td>Bot PR</td><td>No tag points at the merge commit; first release on or after the merge date. Method 3.</td></tr>
+<tr><td><code>unreleased</code></td><td>Commit, bot PR</td><td>No tag match and no release on or after the date. Shown as <code>_unreleased_</code>.</td></tr>
+<tr><td><code>none</code></td><td>Advisory</td><td>No patched range matched and no release on or after the publish date. “Shipped in” shows <code>_unreleased_</code>.</td></tr>
+</tbody></table></div>
+
+        <h2>1. Advisory patched_versions</h2>
+        <p>Used for advisories. fixdossier reads <code>patched_versions</code> from every package listed in the advisory and parses each string into one or more version ranges:</p>
+        <ul>
+          <li>Comparators <code>&gt;=</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&lt;</code>, <code>=</code> (also <code>==</code>), separated by commas or spaces, are combined into one range: <code>&gt;=5.4.12, &lt;6.0.0</code> is one range.</li>
+          <li>A new lower bound starts a new range, so <code>&gt;=4.5.2 &lt;5.0.0 &gt;=5.0.12</code> is two ranges. <code>||</code> also separates ranges.</li>
+          <li><code>^1.2.3</code> becomes <code>&gt;=1.2.3 &lt;2.0.0</code> and <code>~1.2.3</code> becomes <code>&gt;=1.2.3 &lt;1.3.0</code>.</li>
+          <li>A bare version such as <code>1.2.3</code> is an exact match.</li>
+        </ul>
+        <p>For each range, the release chosen is the fetched GitHub Release with the <strong>lowest version</strong> that satisfies it. Tag versions are read with or without a leading <code>v</code>, and from <code>name@version</code> tags such as <code>create-vite@9.3.3</code>. When both kinds satisfy a range, plain tags (<code>v1.2.3</code>) win over <code>name@version</code> tags; the package name in a scoped tag is not compared with the advisory's package. Stable versions win over pre-releases, and a pre-release only satisfies a range whose own bound is a pre-release of the same version.</p>
+        <p>Each range adds at most one release, and duplicates are dropped. All matched releases are listed, in the order of the ranges. The JSON <code>patched_versions</code> field holds the parsed ranges in a normalised form, for example <code>&gt;=2.9.17 &lt;3.0.0</code>.</p>
+        <p>In the vite example, GHSA-859w-5945-r5v3 has five patched ranges and all five matched:</p>
+        <div class="pre-wrap"><span class="lang">markdown</span><pre>| 2025-04-30 | advisory (medium) | GHSA-859w-5945-r5v3, CVE-2025-46565 | [`server.fs.deny` bypassed with `/.` for files under project `root`](https://github.com/vitejs/vite/security/advisories/GHSA-859w-5945-r5v3) | v6.3.4, v6.2.7, v6.1.6, v5.4.19, v4.5.14 | 2025-04-30, 2025-04-30, 2025-04-30, 2025-04-30, 2025-04-30 | advisory patched_versions |</pre></div>
+        <p>22 of the 23 vite advisories and all advisories in the axios and fastify examples were mapped this way.</p>
+
+        <h3 id="matched-releases">matched_releases in the JSON</h3>
+        <p>axios advisory GHSA-9fr6-4gfg-395g was fixed in both the 0.x and 1.x lines:</p>
+        <div class="pre-wrap"><span class="lang">json</span><pre>{
+  &quot;date&quot;: &quot;2026-09-16T09:00:51Z&quot;,
+  &quot;type&quot;: &quot;advisory&quot;,
+  &quot;ids&quot;: [&quot;GHSA-9fr6-4gfg-395g&quot;, &quot;CVE-2026-101902&quot;],
+  &quot;title&quot;: &quot;Prototype-Pollution Gadget in Axios Default Instance Allows Inherited Object.prototype.method to Override HTTP Method&quot;,
+  &quot;severity&quot;: &quot;medium&quot;,
+  &quot;url&quot;: &quot;https://github.com/axios/axios/security/advisories/GHSA-9fr6-4gfg-395g&quot;,
+  &quot;patched_versions&quot;: [&quot;&gt;=0.34.0&quot;, &quot;&gt;=1.20.0&quot;],
+  &quot;release&quot;: &quot;v0.34.0&quot;,
+  &quot;release_date&quot;: &quot;2026-09-13T16:40:14Z&quot;,
+  &quot;matched_releases&quot;: [
+    { &quot;tag&quot;: &quot;v0.34.0&quot;, &quot;date&quot;: &quot;2026-09-13T16:40:14Z&quot; },
+    { &quot;tag&quot;: &quot;v1.20.0&quot;, &quot;date&quot;: &quot;2026-08-24T13:40:40Z&quot; }
+  ],
+  &quot;mapping&quot;: &quot;advisory patched_versions&quot;
+}</pre></div>
+        <p><code>matched_releases</code> is the full list. <code>release</code> and <code>release_date</code> are the first entry, kept for tools that read one value. The first entry follows the order of the advisory's ranges, not the release dates: here v0.34.0 (2026-09-13) comes first although v1.20.0 (2026-08-24) is older. To answer “when was this fixed in line X?”, read <code>matched_releases</code>.</p>
+
+        <h2>2. Tag commit match</h2>
+        <p>Used for commits and bot PRs, before the date heuristic. fixdossier records the commit each release tag points at and compares it with the commit SHA (for bot PRs, the PR's merge commit SHA). The row is labelled <code>tag commit match</code> when:</p>
+        <ul>
+          <li>the SHAs are equal (case and surrounding spaces ignored). If several release tags point at the same commit, all of them are listed, oldest release first; or</li>
+          <li>one SHA is an abbreviation of the other, at least 7 hex characters long, and it matches exactly one release. Ambiguous or shorter prefixes are not used.</li>
+        </ul>
+        <p>Annotated tags are peeled to the commit they point at; the SHA of the tag object itself is never compared. The tags list endpoint normally returns the commit already. If it returns a tag object instead, fixdossier makes one extra API request per such tag to read its commit. If that request fails, the tag is not used for SHA matching and the record gets a gap line: <code>tags: could not peel annotated tag &lt;name&gt; (HTTP &lt;status&gt;)</code>.</p>
+        <p>A tag commit match happens only when a release was tagged on the fix commit or merge commit itself. Fix commits are rarely tagged directly, so none of the three examples contains one.</p>
+
+        <h2>3. Date heuristic</h2>
+        <p>Used when methods 1 and 2 find nothing. fixdossier takes the earliest <strong>stable</strong> release (not marked pre-release) with a publish date on or after the reference date. If there is none, it takes the earliest release of any kind. The reference date is:</p>
+        <ul>
+          <li>the commit date, for commits;</li>
+          <li>the merge date, for bot PRs;</li>
+          <li>the advisory <strong>publish</strong> date, for advisories. Advisories are often published after the fixed release, so this can point at a later release than the one that contained the fix.</li>
+        </ul>
+        <p>One vite advisory fell back this way. Its patched versions are exact versions (<code>2.9.18</code>, <code>3.2.10</code>, <code>4.5.3</code>, …) and none of them was among the fetched releases:</p>
+        <div class="pre-wrap"><span class="lang">markdown</span><pre>| 2024-04-03 | advisory (medium) | GHSA-8jhw-289h-jh2g, CVE-2024-31207 | [`server.fs.deny` did not deny requests for patterns with directories.](https://github.com/vitejs/vite/security/advisories/GHSA-8jhw-289h-jh2g) | v6.2.3 | 2025-03-24 | date heuristic (first release on/after publish) |</pre></div>
+        <p>A 2024 advisory shown as shipped in a 2025 release is a sign that history was cut short. With more releases fetched, method 1 would have found the exact versions.</p>
+
+        <h2>What still needs a manual check</h2>
+        <h3>Releases outside the fetched history</h3>
+        <p>Method 1 can only choose from releases it fetched. If the real patched release is older than the oldest fetched one, the lowest fetched version that satisfies the range is used instead: that release contains the fix but did not introduce it. The vite example was generated with <code>max_pages=2</code>, and its oldest fetched release is from 2025-03-24. A January 2024 advisory therefore maps to 2025 releases:</p>
+        <div class="pre-wrap"><span class="lang">markdown</span><pre>| 2024-01-19 | advisory (medium) | GHSA-c24v-8rfc-w8vw, CVE-2024-23331 | [Vite dev server option `server.fs.deny` can be bypassed when hosted on case-insensitive filesystem](https://github.com/vitejs/vite/security/advisories/GHSA-c24v-8rfc-w8vw) | v4.5.11, v5.4.16 | 2025-03-31, 2025-03-31 | advisory patched_versions |</pre></div>
+        <div class="pre-wrap"><span class="lang">json</span><pre>&quot;patched_versions&quot;: [&quot;&gt;=2.9.17 &lt;3.0.0&quot;, &quot;&gt;=3.2.8 &lt;4.0.0&quot;, &quot;&gt;=4.5.2 &lt;5.0.0&quot;, &quot;&gt;=5.0.12&quot;]</pre></div>
+        <p>The ranges for 2.x and 3.x had no fetched release, so they are not listed, and the 4.x and 5.x ranges matched v4.5.11 and v5.4.16 rather than v4.5.2 and v5.0.12. Compare <code>patched_versions</code> with <code>matched_releases</code>: a range with no matching entry, or a release date long after the advisory, means history is missing. Raise <code>max_pages</code> until the “stopped after N pages” gap for releases disappears.</p>
+
+        <h3>Fixes on maintenance branches</h3>
+        <p>The commits endpoint returns the default branch only. A fix committed only to a <code>v0.x</code> or <code>4.x</code> branch does not appear as a commit row. Publish an advisory for it, or reference the CVE/GHSA ID in a commit that lands on the default branch.</p>
+
+        <h3>Date heuristic across release lines</h3>
+        <p>Stable releases from all branches are sorted by date together. A fix committed to <code>main</code> on Monday maps to whatever stable release came next, which may be a backport release of an older line that does not contain the fix.</p>
+
+        <h3>Tags without GitHub Releases</h3>
+        <p>Only GitHub Releases count as releases. Tags with no Release object are listed in <code>tags_without_release</code> (62 in the vite example, 22 in axios) and are never used for mapping. If your release process pushes tags only, create Releases for them.</p>
+
+        <h2>Making the mapping more accurate</h2>
+        <ul>
+          <li>In advisories, give each affected release line its own patched range or version, using versions you actually tag.</li>
+          <li>Create a GitHub Release for every tag you ship, including backport releases.</li>
+          <li>Put the CVE or GHSA ID in the commit message of the fix.</li>
+          <li>Raise <code>max_pages</code> until the “stopped after N pages” gaps disappear.</li>
+          <li>Review every row whose label starts with <code>date heuristic</code> and record your conclusion next to the file, for example in the PR that updates it.</li>
+        </ul>
+        <p>More on what is not covered at all: <a href="what-the-record-covers.html">What the record covers</a>.</p>
+
+        <h2>Docs pages</h2>
+        <ul class="doc-index">
+          <li><a href="./">Docs home</a></li>
+          <li><a href="security-fix-record-from-github.html">Build the record</a></li>
+          <li><a href="map-github-advisory-to-release.html" aria-current="page">Advisory → release mapping</a></li>
+          <li><a href="what-the-record-covers.html">Coverage and limits</a></li>
+          <li><a href="cra-support-period-support-md.html">SUPPORT.md and support periods</a></li>
+          <li><a href="pld-evidence-checklist-for-engineers.html">PLD evidence checklist</a></li>
+          <li><a href="https://github.com/itulo/fixdossier">Source on GitHub (MIT)</a></li>
+        </ul>
+        <div class="disclaimer" role="note">
+  <p><strong>Not legal advice.</strong> fixdossier is an engineering tool for evidence collection and review support. It is not legal advice and not a compliance certificate. It does not make a product compliant with the PLD, the CRA or anything else, and its output can be incomplete or wrong. Review it, and ask a lawyer about your situation.</p>
+</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 fixdossier · MIT · <a href="https://github.com/itulo/fixdossier">github.com/itulo/fixdossier</a> · <a href="mailto:contact@fixdossier.dev">contact@fixdossier.dev</a></div>
+      <div class="footer-links">
+        <a href="./">Docs</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/action.yml">action.yml</a>
+        <a href="https://github.com/itulo/fixdossier/tree/main/examples">Examples</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var t = document.getElementById('theme-btn');
+      if (t) t.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', cur);
+        localStorage.setItem('fixdossier_theme', cur);
+      });
+      var toggle = document.getElementById('nav-toggle'), nav = document.getElementById('primary-nav');
+      if (toggle && nav) toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+    })();
+  </script>
+</body>
+</html>

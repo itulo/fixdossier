@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>fixdossier docs: GitHub security fix records</title>
+  <meta name="description" content="Docs for fixdossier, an MIT GitHub Action that builds a dated security-fix record and SUPPORT.md from releases, advisories and commits." />
+  <link rel="canonical" href="https://fixdossier.dev/docs/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="fixdossier" />
+  <meta property="og:title" content="fixdossier docs: GitHub security fix records" />
+  <meta property="og:description" content="Docs for fixdossier, an MIT GitHub Action that builds a dated security-fix record and SUPPORT.md from releases, advisories and commits." />
+  <meta property="og:url" content="https://fixdossier.dev/docs/" />
+  <meta property="og:locale" content="en" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=2" />
+  <style>
+    .doc h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1.2; letter-spacing: -0.03em; margin: 0.4rem 0 1rem; }
+    .doc h2 { margin-top: 2.4rem; }
+    .doc h3 { font-size: 1.05rem; margin: 1.6rem 0 0.5rem; }
+    .doc p, .doc li { color: var(--muted); }
+    .doc p strong, .doc li strong { color: var(--text); }
+    .doc :not(pre) > code { font-family: var(--mono); font-size: 0.85em; background: var(--bg-elev); padding: 0.1rem 0.35rem; border-radius: 4px; color: var(--text); }
+    .doc .pre-wrap, .doc .table-scroll { margin: 1rem 0 1.25rem; }
+    .doc table { min-width: 0; }
+    .doc ul, .doc ol { padding-left: 1.2rem; }
+    .doc li + li { margin-top: 0.35rem; }
+    .crumbs { font-size: 0.85rem; color: var(--faint); }
+    .doc-index { columns: 2; list-style: none; padding: 0 !important; }
+    @media (max-width: 560px) { .doc-index { columns: 1; } }
+  </style>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('fixdossier_theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "fixdossier documentation",
+  "description": "Docs for fixdossier, an MIT GitHub Action that builds a dated security-fix record and SUPPORT.md from releases, advisories and commits.",
+  "url": "https://fixdossier.dev/docs/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fixdossier.dev/docs/"
+  },
+  "inLanguage": "en",
+  "datePublished": "2026-10-29",
+  "dateModified": "2026-10-29",
+  "author": {
+    "@type": "Person",
+    "name": "Italo Armenti"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "fixdossier",
+    "url": "https://fixdossier.dev/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "fixdossier",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "GitHub Actions",
+    "license": "https://opensource.org/licenses/MIT",
+    "codeRepository": "https://github.com/itulo/fixdossier",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "fixdossier",
+    "url": "https://fixdossier.dev/"
+  }
+}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">fd</span> fixdossier</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="./">Docs</a>
+        <a href="https://github.com/itulo/fixdossier">GitHub</a>
+        <button class="btn-icon" id="theme-btn" type="button" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section>
+      <article class="wrap doc">
+        <p class="crumbs"><a href="../">fixdossier</a> / Docs</p>
+        <h1>fixdossier documentation</h1>
+
+        <p>fixdossier is an MIT-licensed GitHub Action. It reads a repository's releases, tags, published GitHub security advisories, merged Dependabot and Renovate pull requests, and commit messages, and writes three files: <code>SECURITY-RECORD.md</code>, <code>security-record.json</code> (schema <code>fixdossier/v1</code>) and <code>SUPPORT.md</code>. Each fix row states how it was linked to a release, so you can see which rows need checking.</p>
+        <p>These pages document fixdossier 0.1.1 (the version in <a href="https://github.com/itulo/fixdossier/blob/main/package.json">package.json</a> on <code>main</code>), based on <a href="https://github.com/itulo/fixdossier/blob/main/action.yml">action.yml</a> and <a href="https://github.com/itulo/fixdossier/blob/main/src/core.js">src/core.js</a>, with output from the <a href="https://github.com/itulo/fixdossier/tree/main/examples">examples/</a> folder (axios/axios, fastify/fastify, vitejs/vite).</p>
+
+        <h2>Quick start</h2>
+        <p>Save as <code>.github/workflows/security-record.yml</code>. Artifact mode is the default and needs only read permissions.</p>
+        <div class="pre-wrap"><span class="lang">yaml</span><pre>name: security-record
+on:
+  release:
+    types: [published]
+  schedule:
+    - cron: &#x27;0 6 * * 1&#x27;   # weekly
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: itulo/fixdossier@v0
+        with:
+          support_period_months: 24
+          contact: security@example.com
+          # mode: artifact is the default</pre></div>
+        <p>To commit the files back to the branch instead, set <code>mode: commit</code> and grant <code>contents: write</code>. See <a href="security-fix-record-from-github.html">Build a dated record of security fixes</a>.</p>
+
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="security-fix-record-from-github.html">Build a dated record of security fixes from GitHub history</a>: what the Action reads, what it writes, how to run it in CI or locally.</li>
+          <li><a href="map-github-advisory-to-release.html">How a GitHub security advisory is mapped to a release</a>: the three mapping methods, <code>matched_releases</code>, and what still needs a manual check.</li>
+          <li><a href="what-the-record-covers.html">What the record covers and what it does not</a>: advisory vs heuristic rows, unreleased fixes, permission gaps, <code>max_pages</code>.</li>
+          <li><a href="cra-support-period-support-md.html">Generate SUPPORT.md with a support period</a>: how <code>support_period_months</code> and <code>eol_date</code> turn into per-release dates, and what the CRA text says about support periods.</li>
+          <li><a href="pld-evidence-checklist-for-engineers.html">PLD evidence checklist for engineers</a>: practical steps for keeping dated, reviewable fix evidence.</li>
+        </ul>
+
+        <h2>Inputs</h2>
+        <p>From <a href="https://github.com/itulo/fixdossier/blob/main/action.yml">action.yml</a>. Three further inputs (<code>pro_upload</code>, <code>pro_url</code>, <code>pro_token</code>) control the optional upload mentioned at the end of this page.</p>
+        <div class="table-scroll" role="region" aria-label="Action inputs" tabindex="0"><table><thead><tr><th>Input</th><th>Default</th><th>What it does</th></tr></thead><tbody>
+<tr><td><code>token</code></td><td><code>${{ github.token }}</code></td><td>Token for the GitHub API. The default GITHUB_TOKEN is enough for public data.</td></tr>
+<tr><td><code>repo</code></td><td><code>${{ github.repository }}</code></td><td><code>owner/name</code> to read.</td></tr>
+<tr><td><code>support_period_months</code></td><td><code>12</code></td><td>Months of security updates per release, used in SUPPORT.md.</td></tr>
+<tr><td><code>eol_date</code></td><td>empty</td><td>Optional end-of-life date (YYYY-MM-DD) that caps every support window.</td></tr>
+<tr><td><code>contact</code></td><td>empty</td><td>Where to report vulnerabilities (email or URL).</td></tr>
+<tr><td><code>product_name</code></td><td>empty</td><td>Name shown in SUPPORT.md. Falls back to <code>owner/name</code>.</td></tr>
+<tr><td><code>output_dir</code></td><td><code>.</code></td><td>Directory for the three generated files.</td></tr>
+<tr><td><code>max_pages</code></td><td><code>10</code></td><td>API pages (100 items each) per source.</td></tr>
+<tr><td><code>mode</code></td><td><code>artifact</code></td><td><code>artifact</code> uploads the files as a workflow artifact, <code>commit</code> commits them to the checked-out branch, <code>none</code> only writes them.</td></tr>
+<tr><td><code>commit_message</code></td><td><code>chore: update security record [skip ci]</code></td><td>Commit message in commit mode.</td></tr>
+<tr><td><code>fail_on_gaps</code></td><td><code>false</code></td><td>If <code>true</code>, the step exits with code 2 when any source was unreadable or cut short.</td></tr>
+</tbody></table></div>
+
+        <h2>Outputs</h2>
+        <div class="table-scroll" role="region" aria-label="Action outputs" tabindex="0"><table><thead><tr><th>Output</th><th>Value</th></tr></thead><tbody>
+<tr><td><code>record_file</code></td><td>Path of SECURITY-RECORD.md</td></tr>
+<tr><td><code>json_file</code></td><td>Path of security-record.json</td></tr>
+<tr><td><code>support_file</code></td><td>Path of SUPPORT.md</td></tr>
+<tr><td><code>fix_count</code></td><td>Number of rows in <code>security_fixes</code></td></tr>
+<tr><td><code>gap_count</code></td><td>Number of gap messages</td></tr>
+</tbody></table></div>
+        <p>Gaps are printed as workflow warnings (<code>::warning title=fixdossier gap::...</code>) and listed under “Gaps in this record”. The run still succeeds unless <code>fail_on_gaps: &#x27;true&#x27;</code>. In commit mode a failed push is a warning, not a failure.</p>
+
+        <h2>Requirements</h2>
+        <ul>
+          <li>Runs as a composite action with Node on the runner (Node 20+, no npm dependencies). <code>ubuntu-latest</code> works.</li>
+          <li>Permissions: <code>contents: read</code> and <code>pull-requests: read</code>; <code>contents: write</code> for commit mode. If you set a <code>permissions:</code> block, anything you leave out is not granted, so a missing <code>pull-requests: read</code> shows up as a gap for pull requests.</li>
+        </ul>
+        <p>The Action works on its own; if you want a hosted review queue and signed exports, there is an optional paid service, <a href="https://app.fixdossier.dev">fixdossier Pro</a> (<a href="https://app.fixdossier.dev/demo">demo</a>), at €69 one-time for a Founding Licence covering 1 GitHub org, up to 3 repos and 5 reviewers.</p>
+
+        <h2>Docs pages</h2>
+        <ul class="doc-index">
+          <li><a href="./" aria-current="page">Docs home</a></li>
+          <li><a href="security-fix-record-from-github.html">Build the record</a></li>
+          <li><a href="map-github-advisory-to-release.html">Advisory → release mapping</a></li>
+          <li><a href="what-the-record-covers.html">Coverage and limits</a></li>
+          <li><a href="cra-support-period-support-md.html">SUPPORT.md and support periods</a></li>
+          <li><a href="pld-evidence-checklist-for-engineers.html">PLD evidence checklist</a></li>
+          <li><a href="https://github.com/itulo/fixdossier">Source on GitHub (MIT)</a></li>
+        </ul>
+        <div class="disclaimer" role="note">
+  <p><strong>Not legal advice.</strong> fixdossier is an engineering tool for evidence collection and review support. It is not legal advice and not a compliance certificate. It does not make a product compliant with the PLD, the CRA or anything else, and its output can be incomplete or wrong. Review it, and ask a lawyer about your situation.</p>
+</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 fixdossier · MIT · <a href="https://github.com/itulo/fixdossier">github.com/itulo/fixdossier</a> · <a href="mailto:contact@fixdossier.dev">contact@fixdossier.dev</a></div>
+      <div class="footer-links">
+        <a href="./">Docs</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/action.yml">action.yml</a>
+        <a href="https://github.com/itulo/fixdossier/tree/main/examples">Examples</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var t = document.getElementById('theme-btn');
+      if (t) t.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', cur);
+        localStorage.setItem('fixdossier_theme', cur);
+      });
+      var toggle = document.getElementById('nav-toggle'), nav = document.getElementById('primary-nav');
+      if (toggle && nav) toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+    })();
+  </script>
+</body>
+</html>

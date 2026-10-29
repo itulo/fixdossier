@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRA support period on GitHub: generate SUPPORT.md</title>
+  <meta name="description" content="Generate SUPPORT.md from GitHub releases: per-release security support end dates from support_period_months and eol_date, and what CRA Art. 13(8) says." />
+  <link rel="canonical" href="https://fixdossier.dev/docs/cra-support-period-support-md.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="fixdossier" />
+  <meta property="og:title" content="CRA support period on GitHub: generate SUPPORT.md" />
+  <meta property="og:description" content="Generate SUPPORT.md from GitHub releases: per-release security support end dates from support_period_months and eol_date, and what CRA Art. 13(8) says." />
+  <meta property="og:url" content="https://fixdossier.dev/docs/cra-support-period-support-md.html" />
+  <meta property="og:locale" content="en" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=2" />
+  <style>
+    .doc h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1.2; letter-spacing: -0.03em; margin: 0.4rem 0 1rem; }
+    .doc h2 { margin-top: 2.4rem; }
+    .doc h3 { font-size: 1.05rem; margin: 1.6rem 0 0.5rem; }
+    .doc p, .doc li { color: var(--muted); }
+    .doc p strong, .doc li strong { color: var(--text); }
+    .doc :not(pre) > code { font-family: var(--mono); font-size: 0.85em; background: var(--bg-elev); padding: 0.1rem 0.35rem; border-radius: 4px; color: var(--text); }
+    .doc .pre-wrap, .doc .table-scroll { margin: 1rem 0 1.25rem; }
+    .doc table { min-width: 0; }
+    .doc ul, .doc ol { padding-left: 1.2rem; }
+    .doc li + li { margin-top: 0.35rem; }
+    .crumbs { font-size: 0.85rem; color: var(--faint); }
+    .doc-index { columns: 2; list-style: none; padding: 0 !important; }
+    @media (max-width: 560px) { .doc-index { columns: 1; } }
+  </style>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('fixdossier_theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Generate a SUPPORT.md support-period policy from GitHub releases",
+  "description": "Generate SUPPORT.md from GitHub releases: per-release security support end dates from support_period_months and eol_date, and what CRA Art. 13(8) says.",
+  "url": "https://fixdossier.dev/docs/cra-support-period-support-md.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fixdossier.dev/docs/cra-support-period-support-md.html"
+  },
+  "inLanguage": "en",
+  "datePublished": "2026-10-29",
+  "dateModified": "2026-10-29",
+  "author": {
+    "@type": "Person",
+    "name": "Italo Armenti"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "fixdossier",
+    "url": "https://fixdossier.dev/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "fixdossier",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "GitHub Actions",
+    "license": "https://opensource.org/licenses/MIT",
+    "codeRepository": "https://github.com/itulo/fixdossier",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "fixdossier",
+    "url": "https://fixdossier.dev/"
+  }
+}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">fd</span> fixdossier</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="./">Docs</a>
+        <a href="https://github.com/itulo/fixdossier">GitHub</a>
+        <button class="btn-icon" id="theme-btn" type="button" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section>
+      <article class="wrap doc">
+        <p class="crumbs"><a href="../">fixdossier</a> / <a href="./">Docs</a> / SUPPORT.md and support periods</p>
+        <h1>Generate a SUPPORT.md support-period policy from GitHub releases</h1>
+
+        <p><code>SUPPORT.md</code> states how long each release gets security updates and where to report vulnerabilities. fixdossier builds it from three inputs and your GitHub Releases, so the per-release end dates stay current without editing the file by hand.</p>
+
+        <h2>Quick start</h2>
+        <div class="pre-wrap"><span class="lang">yaml</span><pre>name: support-policy
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: read
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: itulo/fixdossier@v0
+        with:
+          product_name: Example Gateway
+          support_period_months: 60   # your decision; the action default is 12
+          eol_date: &#x27;2031-12-31&#x27;
+          contact: security@example.com
+          mode: commit</pre></div>
+
+        <h2>How the dates are computed</h2>
+        <ul>
+          <li>For each <strong>stable</strong> GitHub Release (pre-releases and drafts are skipped), “Security support until” is the release date plus <code>support_period_months</code> months.</li>
+          <li>If <code>eol_date</code> is set and is earlier, it replaces that date.</li>
+          <li>“Status” is <code>supported</code> if the end date is on or after the generation date, otherwise <code>ended</code>. Re-run the workflow (for example weekly) to keep it current.</li>
+          <li>The table lists the 30 most recent stable releases.</li>
+          <li><code>contact</code> is printed as the reporting address; if empty, the file says “(set the `contact` input)”.</li>
+          <li><code>product_name</code> is used as the heading; it falls back to <code>owner/name</code>.</li>
+        </ul>
+        <p>Output from <a href="https://github.com/itulo/fixdossier/blob/main/examples/fastify-fastify/SUPPORT.md">examples/fastify-fastify/SUPPORT.md</a> (24 months, EOL 2030-12-31, first rows):</p>
+        <div class="pre-wrap"><span class="lang">markdown</span><pre># Support policy — fastify/fastify
+
+Security updates are provided for each release for **24 months** from its release date, and in any case not after **2030-12-31** (end of life).
+
+Report vulnerabilities to: security@example.com. See SECURITY-RECORD.md for the dated history of security fixes.
+
+| Release | Released | Security support until | Status |
+|---|---|---|---|
+| v5.12.7 | 2026-10-13 | 2028-10-13 | supported |
+| v5.12.6 | 2026-10-13 | 2028-10-13 | supported |
+| v5.12.5 | 2026-09-16 | 2028-09-16 | supported |
+| v5.12.4 | 2026-09-11 | 2028-09-11 | supported |
+| v5.12.2 | 2026-09-04 | 2028-09-04 | supported |</pre></div>
+        <p>The file ends with a line recording the inputs, for example <code>Generated 2026-10-29T13:16:44.107Z by fixdossier from inputs support_period_months=24, eol_date=2030-12-31. This is a statement of intent written by the maintainer, not legal advice.</code></p>
+
+        <h2>What the CRA text says about support periods</h2>
+        <p>The Cyber Resilience Act is <a href="https://eur-lex.europa.eu/eli/reg/2024/2847/oj">Regulation (EU) 2024/2847</a>. Points relevant to this file, from the official text:</p>
+        <ul>
+          <li><strong>Dates (Art. 71(2)).</strong> The Regulation applies from 11 December 2027. Article 14 (reporting of actively exploited vulnerabilities and severe incidents) has applied since 11 September 2026, and Chapter IV (notification of conformity assessment bodies) since 11 June 2026.</li>
+          <li><strong>Support period (Art. 13(8)).</strong> Manufacturers determine the support period to reflect how long the product is expected to be in use. It “shall be at least five years”, unless the product is expected to be in use for less than five years, in which case it corresponds to the expected use time. The information used to determine it goes into the technical documentation.</li>
+          <li><strong>User information (Annex II, point 7).</strong> The information for users includes the type of technical security support offered and the end date of the support period.</li>
+        </ul>
+        <p>Whether the CRA applies to your project, and what support period is right, depends on facts such as whether the software is made available in the course of a commercial activity. fixdossier does not decide this.</p>
+
+        <h2>What fixdossier does not do here</h2>
+        <ul>
+          <li>It does not choose or check your support period. The default <code>support_period_months</code> is 12, which is below the five-year figure in Art. 13(8); set the value you have decided on.</li>
+          <li>It does not write <code>SECURITY.md</code> (your vulnerability disclosure policy) or a coordinated vulnerability disclosure process.</li>
+          <li>It does not report anything to ENISA or a CSIRT under Article 14.</li>
+          <li>It does not know which release lines you actually maintain. Every stable release gets the same window, so if you only patch the latest minor, edit the period or the wording accordingly.</li>
+        </ul>
+
+        <h2>Monorepos</h2>
+        <p>Every stable GitHub Release is listed, including package-scoped ones. The vite example lists entries such as <code>create-vite@9.3.3</code> next to <code>v8.3.4</code>. If different packages have different policies, generate separate files (different <code>output_dir</code>) or edit the result.</p>
+
+        <h2>Where GitHub shows the file</h2>
+        <p>With the default <code>output_dir: .</code> the file lands in the repository root. GitHub links a <code>SUPPORT.md</code> in the root, <code>docs/</code> or <code>.github/</code> from the repository's support resources (<a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-support-resources-to-your-project">GitHub docs</a>). If you already have a SUPPORT.md for general help, write fixdossier's file to another directory.</p>
+        <p>The fix history that backs the policy is described in <a href="security-fix-record-from-github.html">Build a dated record of security fixes</a>.</p>
+
+        <h2>Docs pages</h2>
+        <ul class="doc-index">
+          <li><a href="./">Docs home</a></li>
+          <li><a href="security-fix-record-from-github.html">Build the record</a></li>
+          <li><a href="map-github-advisory-to-release.html">Advisory → release mapping</a></li>
+          <li><a href="what-the-record-covers.html">Coverage and limits</a></li>
+          <li><a href="cra-support-period-support-md.html" aria-current="page">SUPPORT.md and support periods</a></li>
+          <li><a href="pld-evidence-checklist-for-engineers.html">PLD evidence checklist</a></li>
+          <li><a href="https://github.com/itulo/fixdossier">Source on GitHub (MIT)</a></li>
+        </ul>
+        <div class="disclaimer" role="note">
+  <p><strong>Not legal advice.</strong> fixdossier is an engineering tool for evidence collection and review support. It is not legal advice and not a compliance certificate. It does not make a product compliant with the PLD, the CRA or anything else, and its output can be incomplete or wrong. Review it, and ask a lawyer about your situation.</p>
+</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 fixdossier · MIT · <a href="https://github.com/itulo/fixdossier">github.com/itulo/fixdossier</a> · <a href="mailto:contact@fixdossier.dev">contact@fixdossier.dev</a></div>
+      <div class="footer-links">
+        <a href="./">Docs</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/action.yml">action.yml</a>
+        <a href="https://github.com/itulo/fixdossier/tree/main/examples">Examples</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var t = document.getElementById('theme-btn');
+      if (t) t.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', cur);
+        localStorage.setItem('fixdossier_theme', cur);
+      });
+      var toggle = document.getElementById('nav-toggle'), nav = document.getElementById('primary-nav');
+      if (toggle && nav) toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+    })();
+  </script>
+</body>
+</html>

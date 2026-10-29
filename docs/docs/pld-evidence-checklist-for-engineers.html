@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PLD evidence checklist for software engineers | fixdossier</title>
+  <meta name="description" content="Engineering checklist for keeping dated security-fix evidence under the revised EU Product Liability Directive (EU) 2024/2853. Not legal advice." />
+  <link rel="canonical" href="https://fixdossier.dev/docs/pld-evidence-checklist-for-engineers.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="fixdossier" />
+  <meta property="og:title" content="PLD evidence checklist for software engineers | fixdossier" />
+  <meta property="og:description" content="Engineering checklist for keeping dated security-fix evidence under the revised EU Product Liability Directive (EU) 2024/2853. Not legal advice." />
+  <meta property="og:url" content="https://fixdossier.dev/docs/pld-evidence-checklist-for-engineers.html" />
+  <meta property="og:locale" content="en" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=2" />
+  <style>
+    .doc h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1.2; letter-spacing: -0.03em; margin: 0.4rem 0 1rem; }
+    .doc h2 { margin-top: 2.4rem; }
+    .doc h3 { font-size: 1.05rem; margin: 1.6rem 0 0.5rem; }
+    .doc p, .doc li { color: var(--muted); }
+    .doc p strong, .doc li strong { color: var(--text); }
+    .doc :not(pre) > code { font-family: var(--mono); font-size: 0.85em; background: var(--bg-elev); padding: 0.1rem 0.35rem; border-radius: 4px; color: var(--text); }
+    .doc .pre-wrap, .doc .table-scroll { margin: 1rem 0 1.25rem; }
+    .doc table { min-width: 0; }
+    .doc ul, .doc ol { padding-left: 1.2rem; }
+    .doc li + li { margin-top: 0.35rem; }
+    .crumbs { font-size: 0.85rem; color: var(--faint); }
+    .doc-index { columns: 2; list-style: none; padding: 0 !important; }
+    @media (max-width: 560px) { .doc-index { columns: 1; } }
+  </style>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('fixdossier_theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Keeping dated security-fix evidence: a PLD checklist for engineers",
+  "description": "Engineering checklist for keeping dated security-fix evidence under the revised EU Product Liability Directive (EU) 2024/2853. Not legal advice.",
+  "url": "https://fixdossier.dev/docs/pld-evidence-checklist-for-engineers.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fixdossier.dev/docs/pld-evidence-checklist-for-engineers.html"
+  },
+  "inLanguage": "en",
+  "datePublished": "2026-10-29",
+  "dateModified": "2026-10-29",
+  "author": {
+    "@type": "Person",
+    "name": "Italo Armenti"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "fixdossier",
+    "url": "https://fixdossier.dev/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "fixdossier",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "GitHub Actions",
+    "license": "https://opensource.org/licenses/MIT",
+    "codeRepository": "https://github.com/itulo/fixdossier",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "fixdossier",
+    "url": "https://fixdossier.dev/"
+  }
+}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">fd</span> fixdossier</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="../">Home</a>
+        <a href="./">Docs</a>
+        <a href="https://github.com/itulo/fixdossier">GitHub</a>
+        <button class="btn-icon" id="theme-btn" type="button" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section>
+      <article class="wrap doc">
+        <p class="crumbs"><a href="../">fixdossier</a> / <a href="./">Docs</a> / PLD evidence checklist</p>
+        <h1>Keeping dated security-fix evidence: a PLD checklist for engineers</h1>
+
+        <p>The revised Product Liability Directive covers software. If a claim is brought, a court can order disclosure of relevant evidence, and failing to disclose it has consequences. For an engineering team the practical question is narrow: can you show, with dates, which security fixes you made and which releases contained them? This checklist covers that question only.</p>
+
+        <h2>Quick start</h2>
+        <p>Commit mode keeps each version of the record in git history, with its own commit date.</p>
+        <div class="pre-wrap"><span class="lang">yaml</span><pre>name: security-record
+on:
+  release:
+    types: [published]
+  schedule:
+    - cron: &#x27;0 6 * * 1&#x27;
+  workflow_dispatch:
+permissions:
+  contents: write        # needed to commit the files
+  pull-requests: read
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: itulo/fixdossier@v0
+        with:
+          support_period_months: 24
+          eol_date: &#x27;2030-12-31&#x27;
+          contact: security@example.com
+          mode: commit</pre></div>
+
+        <h2>What the Directive says (verified articles)</h2>
+        <p>Directive (EU) 2024/2853 (<a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">EUR-Lex</a>):</p>
+        <ul>
+          <li><strong>Art. 2(1), as corrected.</strong> It applies to products placed on the market or put into service after 8 December 2026, i.e. from 9 December 2026. The original text said “after 9 December 2026”; a <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/corrigendum/2026-05-07/oj">corrigendum published 7 May 2026</a> changed it.</li>
+          <li><strong>Art. 2(2).</strong> It does not apply to free and open-source software developed or supplied outside the course of a commercial activity.</li>
+          <li><strong>Art. 4(1).</strong> “Product” includes software.</li>
+          <li><strong>Art. 9(1) and 9(3).</strong> Member States must ensure that, at the request of a claimant who has presented facts and evidence sufficient to support the plausibility of the claim, the defendant is required to disclose relevant evidence at its disposal. Disclosure is limited to what is necessary and proportionate.</li>
+          <li><strong>Art. 10(2)(a).</strong> Defectiveness is presumed if the defendant fails to disclose relevant evidence under Art. 9(1). Under Art. 10(5) the defendant can rebut this presumption.</li>
+          <li><strong>Art. 11(2).</strong> The exemption in Art. 11(1)(c), for defectiveness that came into being after the product was placed on the market, does not apply where the defectiveness is due to a related service, software (including software updates or upgrades), a lack of software updates or upgrades necessary to maintain safety, or a substantial modification, provided that it is within the manufacturer's control.</li>
+          <li><strong>Art. 17.</strong> The right to compensation expires 10 years after the product was placed on the market or put into service (or, for a substantially modified product, made available or put into service again after the modification), unless proceedings have started. Where the latency of a personal injury prevented proceedings within 10 years, the period is 25 years.</li>
+        </ul>
+        <p>Recital 51 adds that the Directive itself “does not impose any obligation to provide updates or upgrades for a product”. How these rules apply to you depends on national transposition and your facts. That is a question for a lawyer.</p>
+
+        <h2>Engineering checklist</h2>
+        <h3>Make the facts exist</h3>
+        <ol>
+          <li>Publish a GitHub Release for every version you ship, including backports. Tags alone are not used.</li>
+          <li>Publish a repository security advisory for each vulnerability you fix, with a patched range or version for each release line you fixed, using versions you actually tag.</li>
+          <li>Put the CVE or GHSA ID in the fix commit message, on the default branch.</li>
+          <li>Merge dependency security updates through Dependabot or Renovate PRs so they are dated and attributable.</li>
+        </ol>
+        <h3>Record them</h3>
+        <ol start="5">
+          <li>Run fixdossier on every release and weekly, in commit mode, so each state of the record is a dated git commit.</li>
+          <li>If you use artifact mode, archive the artifacts somewhere they do not expire; GitHub deletes them after the retention period.</li>
+          <li>Set <code>max_pages</code> high enough that “stopped after N pages” gaps disappear, and consider <code>fail_on_gaps: &#x27;true&#x27;</code> so missing sources fail the job.</li>
+        </ol>
+        <h3>Review them</h3>
+        <ol start="8">
+          <li>Check every row labelled <code>date heuristic (…)</code>; the label explains what was guessed (<a href="map-github-advisory-to-release.html">mapping details</a>).</li>
+          <li>For each advisory, check that every range in <code>patched_versions</code> has a release in <code>matched_releases</code>; a missing entry or a release dated long after the advisory usually means the history was cut short.</li>
+          <li>Look for fixes the record cannot see: silent fixes, maintenance-branch-only commits, releases outside GitHub (<a href="what-the-record-covers.html">coverage limits</a>).</li>
+          <li>Write down who reviewed the record and when, for example in the PR that updates it.</li>
+        </ol>
+        <h3>State the policy</h3>
+        <ol start="12">
+          <li>Publish a support period and end-of-life date, and keep it consistent with what you actually patch (<a href="cra-support-period-support-md.html">SUPPORT.md</a>).</li>
+          <li>Keep released versions and their fixes available; do not delete old Releases that the record refers to.</li>
+        </ol>
+
+        <h2>What the record does not show</h2>
+        <ul>
+          <li>That a fix was correct or complete.</li>
+          <li>That users installed the update.</li>
+          <li>That every vulnerability was found or fixed.</li>
+          <li>Anything about products built from your code by others.</li>
+        </ul>
+        <p>Related: the Cyber Resilience Act (<a href="https://eur-lex.europa.eu/eli/reg/2024/2847/oj">Regulation (EU) 2024/2847</a>) sets separate obligations on support periods and vulnerability handling, mostly from 11 December 2027; see <a href="cra-support-period-support-md.html">the SUPPORT.md page</a>.</p>
+
+        <h2>Docs pages</h2>
+        <ul class="doc-index">
+          <li><a href="./">Docs home</a></li>
+          <li><a href="security-fix-record-from-github.html">Build the record</a></li>
+          <li><a href="map-github-advisory-to-release.html">Advisory → release mapping</a></li>
+          <li><a href="what-the-record-covers.html">Coverage and limits</a></li>
+          <li><a href="cra-support-period-support-md.html">SUPPORT.md and support periods</a></li>
+          <li><a href="pld-evidence-checklist-for-engineers.html" aria-current="page">PLD evidence checklist</a></li>
+          <li><a href="https://github.com/itulo/fixdossier">Source on GitHub (MIT)</a></li>
+        </ul>
+        <div class="disclaimer" role="note">
+  <p><strong>Not legal advice.</strong> fixdossier is an engineering tool for evidence collection and review support. It is not legal advice and not a compliance certificate. It does not make a product compliant with the PLD, the CRA or anything else, and its output can be incomplete or wrong. Review it, and ask a lawyer about your situation.</p>
+</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 fixdossier · MIT · <a href="https://github.com/itulo/fixdossier">github.com/itulo/fixdossier</a> · <a href="mailto:contact@fixdossier.dev">contact@fixdossier.dev</a></div>
+      <div class="footer-links">
+        <a href="./">Docs</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/action.yml">action.yml</a>
+        <a href="https://github.com/itulo/fixdossier/tree/main/examples">Examples</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var t = document.getElementById('theme-btn');
+      if (t) t.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', cur);
+        localStorage.setItem('fixdossier_theme', cur);
+      });
+      var toggle = document.getElementById('nav-toggle'), nav = document.getElementById('primary-nav');
+      if (toggle && nav) toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+    })();
+  </script>
+</body>
+</html>
