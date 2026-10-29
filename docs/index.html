@@ -107,11 +107,12 @@
           <span class="file">Coverage</span>
           <h3>What the record covers — and what it does not</h3>
           <ul class="coverage-list">
-            <li><strong>Advisory-derived</strong> rows use the advisory’s <code>patched_versions</code> matched to a release tag (shown as “advisory patched_versions”).</li>
-            <li><strong>Heuristic-derived</strong> rows use the first stable release on or after the fix date (shown as “date heuristic”) — can be wrong for backports and multi-branch repos.</li>
-            <li><strong>Unmatched / unreleased</strong> fixes stay listed when no release mapping is found (sample stats include an “Unreleased fixes” count).</li>
+            <li><strong>Advisory-derived</strong> rows parse each <code>patched_versions</code> range and match the earliest fetched release tag that satisfies it. The label is <code>advisory patched_versions</code>. Every matched release is listed.</li>
+            <li><strong>Tag commit match</strong> rows are commits or bot pull requests whose SHA is the commit a release tag points at (annotated tags use the peeled commit). The label is <code>tag commit match</code>.</li>
+            <li><strong>Heuristic-derived</strong> rows are used when the two methods above do not match: the first stable release on or after the fix date. The label is <code>date heuristic (first release on/after publish)</code>, <code>date heuristic (first release on/after commit)</code>, or <code>date heuristic (first release on/after merge)</code>. This can be wrong for backports and multi-branch repos.</li>
+            <li><strong>Unmatched / unreleased</strong> fixes stay listed when no release mapping is found. Commits and bot pull requests use <code>unreleased</code>. An advisory with no match and no usable date uses <code>none</code>. Sample stats include an “Unreleased fixes” count.</li>
             <li><strong>Sources skipped for permissions</strong> (401/403/404 or rate limit) are noted as gaps in the record instead of failing the run.</li>
-            <li><strong>Transparent mapping method</strong> is shown on every row (“advisory patched_versions”, “tag commit match”, or “date heuristic”) so reviewers know what requires verification.</li>
+            <li><strong>Transparent mapping method</strong> is the string above on every row, in the Markdown and in the JSON, so reviewers know what requires verification.</li>
           </ul>
         </article>
       </div>
@@ -204,12 +205,12 @@
                 <td class="mono">CVE-2026-42264</td>
                 <td>fix: guard socketPath with own() to prevent prototype pollution SSRF</td>
                 <td class="mono">v1.17.0</td>
-                <td>date heuristic</td>
+                <td>date heuristic (first release on/after commit)</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="sample-note">Excerpt only — first rows of SECURITY-RECORD.md. Mapping method (advisory vs date heuristic) is shown for every row; treat heuristic rows and keyword-only commits as candidates to verify.</p>
+        <p class="sample-note">Excerpt only — first rows of SECURITY-RECORD.md. Every row shows the mapping string that was used (<code>advisory patched_versions</code>, <code>tag commit match</code>, <code>date heuristic (first release on/after publish)</code>, <code>date heuristic (first release on/after commit)</code>, <code>date heuristic (first release on/after merge)</code>, <code>unreleased</code>, or <code>none</code>). Treat heuristic rows and keyword-only commits as candidates to verify.</p>
 
         <h2 style="margin-top:2.25rem;font-size:1.15rem">SUPPORT.md excerpt (fastify/fastify)</h2>
         <p class="section-intro" style="margin-bottom:1rem">Inputs: 24 months support, EOL 2030-12-31.</p>

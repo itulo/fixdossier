@@ -75,12 +75,15 @@ steps:
 **Founding Licence:** **€69 one-time** (for the first 50 GitHub organizations; 1 GitHub org, up to 3 repositories and 5 reviewers, active for as long as the service runs, with at least 90 days' notice + full 1-click export on shutdown and a 14-day EU-standard refund policy). Questions: [contact@fixdossier.dev](mailto:contact@fixdossier.dev).
 
 ## How fixes are mapped to releases
-1. **Advisory:** its `patched_versions` are matched to a release tag (`1.2.3` ↔ `v1.2.3`).
-2. **Commit or PR whose SHA is a release tag's commit:** exact match.
-3. **Otherwise:** the first stable release published on or after the fix date ("date heuristic"). The record says which method was used for every row.
+Each row records the method that was actually used. The same strings are written to `SECURITY-RECORD.md` and `security-record.json`:
+
+1. `advisory patched_versions` — each advisory `patched_versions` range is parsed (lower and upper bounds, comma or space between bounds, `||`, `^`, and `~`) and matched to the earliest fetched release tag that satisfies that range. A leading `v` and `name@version` tags are accepted. A plain version tag is used when both it and a `name@version` tag satisfy the range. Every matched release is listed. `release` and `release_date` stay the first match; `matched_releases` lists them all.
+2. `tag commit match` — the commit SHA, or a bot pull request's merge SHA, equals the commit a release tag points at. Annotated tags use the peeled commit, not the tag object. A short SHA counts only when it is a unique prefix of at least 7 hex characters of one tag commit.
+3. `date heuristic (first release on/after publish)`, `date heuristic (first release on/after commit)`, or `date heuristic (first release on/after merge)` — the first stable release published on or after that date. Used only when the methods above do not match.
+4. `unreleased` — a commit or bot pull request matched no release. An advisory that matches nothing and has no usable date is `none`.
 
 ## Known limits
-- The date heuristic can be wrong for backports, maintenance branches and monorepos with per-package tags.
+- `date heuristic (first release on/after publish|commit|merge)` can be wrong when the fixing release is outside the fetched pages, and for maintenance branches and monorepos with per-package tags.
 - Commit detection is keyword-based: silent fixes are missed, and some false positives get in. Review the record.
 - Only *published* repository advisories are read. Global advisories that affect your dependencies are not, and Dependabot alerts need a token with `security_events` access that GITHUB_TOKEN usually lacks.
 - "Security?" on bot PRs is strict: it needs a CVE/GHSA ID, a security label, or a security word in the title.

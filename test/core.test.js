@@ -46,6 +46,10 @@ test('build maps fixes to releases', () => {
   assert.strictEqual(adv.mapping, 'advisory patched_versions');
   const c = r.security_fixes.find((f) => f.sha === 'abc');
   assert.strictEqual(c.release, 'v1.1.0'); // exact tag SHA match
+  assert.strictEqual(c.mapping, 'tag commit match');
+  const dep = r.dependency_updates.find((d) => d.url === 'p1');
+  assert.strictEqual(dep.release, 'v1.1.0');
+  assert.strictEqual(dep.mapping, 'date heuristic (first release on/after merge)');
   const unreleased = r.security_fixes.find((f) => f.sha === 'x2');
   assert.strictEqual(unreleased.release, null);
   assert.strictEqual(r.summary.unreleased_fixes, 1);
@@ -103,6 +107,235 @@ test('real-data fixture (trimmed axios/axios API responses, fetched 2026-10-12)'
   assert.ok(r.summary.advisories === 6);
   assert.ok(r.security_fixes.filter((f) => f.type === 'advisory').every((f) => f.release), 'every advisory mapped');
   assert.ok(r.security_fixes.some((f) => f.mapping === 'advisory patched_versions'));
+  const backports = r.security_fixes.find((f) => f.ids.includes('GHSA-9fr6-4gfg-395g'));
+  assert.strictEqual(backports.release, 'v0.34.0');
+  assert.deepStrictEqual(backports.matched_releases.map((x) => x.tag), ['v0.34.0', 'v1.20.0']);
+  assert.match(core.renderRecord(r), /v0\.34\.0, v1\.20\.0/);
+});
+
+function rel(tag, date, extra = {}) {
+  return { tag_name: tag, published_at: date, html_url: tag, ...extra };
+}
+
+test('tag commit match labels SHA equality, peeled annotated tags, and unique short SHAs', () => {
+  const full = 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb';
+  const other = 'ccccccc111111111111111111111111111111111';
+  const tagObject = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+  const raw = {
+    releases: [
+      rel('v1.0.0', '2026-01-01T00:00:00Z'),
+      rel('v1.2.0', '2026-03-01T00:00:00Z'),
+      rel('v2.0.0', '2026-04-01T00:00:00Z'),
+    ],
+    tags: [
+      { name: 'v1.0.0', commit: { sha: 'abc1234def567890abc1234def567890abc1234d' } },
+      // Annotated tag: commit.sha is the tag object; object.sha is the peeled commit
+      // (list-tags normally peels this itself; git tag objects do not).
+      { name: 'v1.2.0', commit: { sha: tagObject }, object: { type: 'commit', sha: full } },
+      { name: 'v2.0.0', commit: { sha: other } },
+    ],
+    pulls: [
+      { merged_at: '2026-02-01T00:00:00Z', merge_commit_sha: full, user: { login: 'dependabot[bot]' }, title: 'Bump left-pad', html_url: 'pr-sha', labels: [] },
+      { merged_at: '2026-02-02T00:00:00Z', merge_commit_sha: '0123456789abcdef0123456789abcdef01234567', user: { login: 'renovate[bot]' }, title: 'Bump eslint', html_url: 'pr-date', labels: [] },
+    ],
+    advisories: [],
+    commits: [
+      { sha: full, html_url: 'c-full', author: { login: 'bob' }, commit: { message: 'fix: security patch', committer: { date: '2026-02-15T00:00:00Z' } } },
+      { sha: full.slice(0, 7), html_url: 'c-short', author: { login: 'bob' }, commit: { message: 'fix: security follow-up', committer: { date: '2026-02-16T00:00:00Z' } } },
+      { sha: tagObject, html_url: 'c-tagobj', author: { login: 'bob' }, commit: { message: 'fix: security tag object is not the commit', committer: { date: '2026-02-17T00:00:00Z' } } },
+      { sha: '0123456789abcdef0123456789abcdef01234567', html_url: 'c-miss', author: { login: 'bob' }, commit: { message: 'fix: security not on a tag', committer: { date: '2026-02-18T00:00:00Z' } } },
+    ],
+  };
+  const r = core.build(raw, { repo: 'o/r', now: NOW });
+  const byUrl = (u) => r.security_fixes.find((f) => f.url === u) || r.dependency_updates.find((f) => f.url === u);
+  assert.strictEqual(byUrl('c-full').mapping, 'tag commit match');
+  assert.strictEqual(byUrl('c-full').release, 'v1.2.0');
+  assert.strictEqual(byUrl('c-short').mapping, 'tag commit match');
+  assert.strictEqual(byUrl('c-short').release, 'v1.2.0');
+  // Tag-object SHA is not the commit the tag points at.
+  assert.strictEqual(byUrl('c-tagobj').mapping, 'date heuristic (first release on/after commit)');
+  assert.strictEqual(byUrl('c-tagobj').release, 'v1.2.0');
+  assert.strictEqual(byUrl('c-miss').mapping, 'date heuristic (first release on/after commit)');
+  assert.strictEqual(byUrl('c-miss').release, 'v1.2.0');
+  assert.strictEqual(byUrl('pr-sha').mapping, 'tag commit match');
+  assert.strictEqual(byUrl('pr-sha').release, 'v1.2.0');
+  assert.strictEqual(byUrl('pr-date').mapping, 'date heuristic (first release on/after merge)');
+  assert.match(core.renderRecord(r), /tag commit match/);
+  const depLine = core.renderRecord(r).split('\n').find((l) => l.includes('pr-sha'));
+  assert.match(depLine, /tag commit match/);
+});
+
+test('ambiguous short SHAs are not labelled tag commit match', () => {
+  const raw = {
+    releases: [rel('v1.0.0', '2026-03-01T00:00:00Z'), rel('v1.1.0', '2026-04-01T00:00:00Z')],
+    tags: [
+      { name: 'v1.0.0', commit: { sha: 'aaaaaaa111111111111111111111111111111111' } },
+      { name: 'v1.1.0', commit: { sha: 'aaaaaaa222222222222222222222222222222222' } },
+    ],
+    pulls: [],
+    advisories: [],
+    commits: [
+      { sha: 'aaaaaaa', html_url: 'c-amb', author: { login: 'bob' }, commit: { message: 'fix security hole', committer: { date: '2026-02-01T00:00:00Z' } } },
+    ],
+  };
+  const r = core.build(raw, { repo: 'o/r', now: NOW });
+  const c = r.security_fixes.find((f) => f.url === 'c-amb');
+  assert.strictEqual(c.mapping, 'date heuristic (first release on/after commit)');
+  assert.strictEqual(c.release, 'v1.0.0');
+});
+
+test('patched version ranges match the earliest tag in each range, including backports', () => {
+  const raw = {
+    releases: [
+      rel('v2.9.16', '2023-05-01T00:00:00Z'),
+      rel('v2.9.18', '2023-06-02T00:00:00Z'),
+      rel('v3.0.0', '2023-07-01T00:00:00Z'),
+      rel('v3.2.8', '2023-08-01T00:00:00Z'),
+      rel('v4.5.10', '2024-06-01T00:00:00Z'),
+      rel('v5.0.12', '2024-02-01T00:00:00Z'),
+      rel('v6.2.0', '2025-02-25T00:00:00Z'),
+      rel('plugin@2.9.17', '2023-06-01T00:00:00Z'),
+      rel('v0.34.0', '2024-01-15T00:00:00Z'),
+      rel('v1.2.3', '2024-01-01T00:00:00Z'),
+      rel('v1.20.0', '2024-05-01T00:00:00Z'),
+      rel('v1.2.9', '2024-02-01T00:00:00Z'),
+      rel('v1.3.0', '2024-03-01T00:00:00Z'),
+      rel('v2.0.0', '2024-04-01T00:00:00Z'),
+    ],
+    tags: [],
+    pulls: [],
+    advisories: [
+      {
+        ghsa_id: 'GHSA-c24v-8rfc-w8vw', summary: 'space separated bounds', severity: 'high', html_url: 'a-space',
+        published_at: '2024-01-19T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '>=2.9.17 <3.0.0' }, { patched_versions: '>= 3.2.8 < 4.0.0' }, { patched_versions: '>= 5.0.12' }],
+      },
+      {
+        ghsa_id: 'GHSA-comma-andx-xxxx', summary: 'comma AND bounds', severity: 'medium', html_url: 'a-comma',
+        published_at: '2024-01-19T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '>= 2.9.17, < 3.0.0' }],
+      },
+      {
+        ghsa_id: 'GHSA-9fr6-4gfg-395g', summary: 'backport lines', severity: 'medium', html_url: 'a-back',
+        published_at: '2026-09-16T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '>=0.34.0' }, { patched_versions: '>=1.20.0' }],
+      },
+      {
+        ghsa_id: 'GHSA-tilde-caret-xxxx', summary: 'caret and tilde', severity: 'low', html_url: 'a-caret',
+        published_at: '2024-01-02T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '^1.2.3 || ~1.2.3' }],
+      },
+      {
+        ghsa_id: 'GHSA-none-none-xxxx', summary: 'nothing in range', severity: 'low', html_url: 'a-none',
+        published_at: '2024-08-01T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '>= 9.9.9, < 9.9.10' }],
+      },
+      {
+        ghsa_id: 'GHSA-late-late-xxxx', summary: 'nothing and no later release', severity: 'low', html_url: 'a-late',
+        published_at: '2026-12-01T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '>= 9.9.9 < 9.9.10' }],
+      },
+    ],
+    commits: [],
+  };
+  // v prefix on the lower-bound tag, and an unprefixed tag for another line.
+  raw.releases.push(rel('2.9.17', '2023-05-20T00:00:00Z'));
+  const r = core.build(raw, { repo: 'o/r', now: NOW });
+  const space = r.security_fixes.find((f) => f.url === 'a-space');
+  assert.deepStrictEqual(space.patched_versions, ['>=2.9.17 <3.0.0', '>=3.2.8 <4.0.0', '>=5.0.12']);
+  assert.ok(!space.patched_versions.some((p) => p.includes('2.9.173')));
+  // 2.9.17 is present (no v). 2.9.18 is later. 3.0.0 is outside the upper bound.
+  // plugin@2.9.17 is the same version but a package tag; the plain tag wins.
+  assert.deepStrictEqual(space.matched_releases.map((x) => x.tag), ['2.9.17', 'v3.2.8', 'v5.0.12']);
+  assert.strictEqual(space.mapping, 'advisory patched_versions');
+  assert.strictEqual(space.release, '2.9.17');
+  const md = core.renderRecord(r);
+  assert.match(md, /\| 2\.9\.17, v3\.2\.8, v5\.0\.12 \|/);
+  const comma = r.security_fixes.find((f) => f.url === 'a-comma');
+  assert.deepStrictEqual(comma.patched_versions, ['>=2.9.17 <3.0.0']);
+  assert.strictEqual(comma.release, '2.9.17');
+  assert.notStrictEqual(comma.release, 'v3.0.0');
+  const back = r.security_fixes.find((f) => f.url === 'a-back');
+  assert.deepStrictEqual(back.matched_releases.map((x) => x.tag), ['v0.34.0', 'v1.20.0']);
+  assert.strictEqual(back.release, 'v0.34.0');
+  assert.match(md, /v0\.34\.0, v1\.20\.0/);
+  const caret = r.security_fixes.find((f) => f.url === 'a-caret');
+  // ^1.2.3 is >=1.2.3 <2.0.0, ~1.2.3 is >=1.2.3 <1.3.0. Both resolve to v1.2.3, listed once.
+  assert.strictEqual(caret.release, 'v1.2.3');
+  assert.ok(!caret.matched_releases.some((x) => x.tag === 'v2.0.0' || x.tag === 'v1.3.0'));
+  const none = r.security_fixes.find((f) => f.url === 'a-none');
+  assert.strictEqual(none.mapping, 'date heuristic (first release on/after publish)');
+  assert.strictEqual(none.release, 'v6.2.0');
+  const late = r.security_fixes.find((f) => f.url === 'a-late');
+  assert.strictEqual(late.release, null);
+  assert.strictEqual(late.mapping, 'none');
+});
+
+test('range lower bound falls forward when that exact tag is missing', () => {
+  const raw = {
+    releases: [
+      rel('v2.9.16', '2023-05-01T00:00:00Z'),
+      rel('v2.9.18', '2023-06-02T00:00:00Z'),
+      rel('v3.0.0', '2023-07-01T00:00:00Z'),
+      rel('v6.2.0', '2025-02-25T00:00:00Z'),
+    ],
+    tags: [],
+    pulls: [],
+    advisories: [{
+      ghsa_id: 'GHSA-miss-ingx-xxxx', summary: 'missing lower bound', html_url: 'a-miss',
+      published_at: '2023-06-01T00:00:00Z',
+      vulnerabilities: [{ patched_versions: '>= 2.9.17, < 3.0.0' }],
+    }],
+    commits: [],
+  };
+  const hit = core.build(raw, { repo: 'o/r', now: NOW }).security_fixes[0];
+  assert.strictEqual(hit.mapping, 'advisory patched_versions');
+  assert.strictEqual(hit.release, 'v2.9.18');
+  assert.deepStrictEqual(hit.patched_versions, ['>=2.9.17 <3.0.0']);
+});
+
+test('scoped tag is used when no plain release tag satisfies the range', () => {
+  const raw = {
+    releases: [rel('create-vite@2.9.17', '2023-06-01T00:00:00Z'), rel('v6.2.0', '2025-02-25T00:00:00Z')],
+    tags: [], pulls: [], commits: [],
+    advisories: [{
+      ghsa_id: 'GHSA-scop-edxx-xxxx', summary: 'package tag', html_url: 'a-scope',
+      published_at: '2023-06-01T00:00:00Z',
+      vulnerabilities: [{ patched_versions: '>=2.9.17 <3.0.0' }],
+    }],
+  };
+  const hit = core.build(raw, { repo: 'o/r', now: NOW }).security_fixes[0];
+  assert.strictEqual(hit.release, 'create-vite@2.9.17');
+  assert.strictEqual(hit.mapping, 'advisory patched_versions');
+});
+
+test('annotated tag objects are peeled before SHA matching', async () => {
+  const tagObject = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+  const commit = 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb';
+  const api = new core.Api({
+    repo: 'o/r',
+    fetchImpl: async (url) => {
+      if (url.includes('/git/tags/')) {
+        return { ok: true, status: 200, headers: { get: () => '' }, json: async () => ({ object: { type: 'commit', sha: commit } }) };
+      }
+      const body = {
+        '/releases': [{ tag_name: 'v1.2.0', published_at: '2026-03-01T00:00:00Z', html_url: 'u' }],
+        '/tags': [{ name: 'v1.2.0', commit: { sha: tagObject, url: 'https://api.github.com/repos/o/r/git/tags/' + tagObject } }],
+        '/pulls': [],
+        '/security-advisories': [],
+        '/commits': [{ sha: commit, html_url: 'c1', author: { login: 'bob' }, commit: { message: 'fix security issue', committer: { date: '2026-02-01T00:00:00Z' } } }],
+      };
+      const key = Object.keys(body).find((k) => url.includes(k));
+      return { ok: true, status: 200, headers: { get: () => '' }, json: async () => (key ? body[key] : []) };
+    },
+  });
+  const raw = await core.collect(api);
+  assert.strictEqual(raw.tags[0].object.sha, commit);
+  const rec = core.build(raw, { repo: 'o/r', now: NOW, gaps: api.gaps });
+  const row = rec.security_fixes.find((f) => f.sha === commit);
+  assert.strictEqual(row.mapping, 'tag commit match');
+  assert.strictEqual(row.release, 'v1.2.0');
+  assert.strictEqual(rec.releases.find((r) => r.tag === 'v1.2.0').sha, commit);
 });
 
 const live = path.join(__dirname, 'live');

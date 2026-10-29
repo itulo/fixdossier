@@ -6,6 +6,8 @@ Report vulnerabilities to: security@example.com. See SECURITY-RECORD.md for the 
 
 | Release | Released | Security support until | Status |
 |---|---|---|---|
+| v5.12.7 | 2026-10-13 | 2028-10-13 | supported |
+| v5.12.6 | 2026-10-13 | 2028-10-13 | supported |
 | v5.12.5 | 2026-09-16 | 2028-09-16 | supported |
 | v5.12.4 | 2026-09-11 | 2028-09-11 | supported |
 | v5.12.2 | 2026-09-04 | 2028-09-04 | supported |
@@ -34,7 +36,5 @@ Report vulnerabilities to: security@example.com. See SECURITY-RECORD.md for the 
 | v5.5.0 | 2025-08-11 | 2027-08-11 | supported |
 | v5.4.0 | 2025-06-12 | 2027-06-12 | supported |
 | v5.3.3 | 2025-05-13 | 2027-05-13 | supported |
-| v4.29.1 | 2025-04-28 | 2027-04-28 | supported |
-| v5.3.2 | 2025-04-18 | 2027-04-18 | supported |
 
-_Generated 2026-10-12T13:36:58.908Z by fixdossier from inputs support_period_months=24, eol_date=2030-12-31. This is a statement of intent written by the maintainer, not legal advice._
+_Generated 2026-10-29T13:16:44.107Z by fixdossier from inputs support_period_months=24, eol_date=2030-12-31. This is a statement of intent written by the maintainer, not legal advice._

@@ -6,6 +6,12 @@ Report vulnerabilities to: security@example.com. See SECURITY-RECORD.md for the 
 
 | Release | Released | Security support until | Status |
 |---|---|---|---|
+| create-vite@9.3.3 | 2026-10-27 | 2028-10-27 | supported |
+| create-vite@9.3.2 | 2026-10-27 | 2028-10-27 | supported |
+| v8.3.5 | 2026-10-21 | 2028-10-21 | supported |
+| v6.4.5 | 2026-10-21 | 2028-10-21 | supported |
+| create-vite@9.3.1 | 2026-10-20 | 2028-10-20 | supported |
+| create-vite@9.3.0 | 2026-10-19 | 2028-10-19 | supported |
 | v8.3.4 | 2026-10-08 | 2028-10-08 | supported |
 | v6.4.4 | 2026-10-06 | 2028-10-06 | supported |
 | v7.3.7 | 2026-10-06 | 2028-10-06 | supported |
@@ -30,11 +36,5 @@ Report vulnerabilities to: security@example.com. See SECURITY-RECORD.md for the 
 | v8.1.3 | 2026-07-02 | 2028-07-02 | supported |
 | v8.1.2 | 2026-06-30 | 2028-06-30 | supported |
 | create-vite@9.1.1 | 2026-06-30 | 2028-06-30 | supported |
-| v8.1.1 | 2026-06-30 | 2028-06-30 | supported |
-| v7.3.6 | 2026-06-25 | 2028-06-25 | supported |
-| create-vite@9.1.0 | 2026-06-23 | 2028-06-23 | supported |
-| plugin-legacy@8.1.0 | 2026-06-23 | 2028-06-23 | supported |
-| v8.1.0 | 2026-06-23 | 2028-06-23 | supported |
-| v6.4.3 | 2026-06-01 | 2028-06-01 | supported |
 
-_Generated 2026-10-12T13:37:02.744Z by fixdossier from inputs support_period_months=24, eol_date=2030-12-31. This is a statement of intent written by the maintainer, not legal advice._
+_Generated 2026-10-29T13:16:44.131Z by fixdossier from inputs support_period_months=24, eol_date=2030-12-31. This is a statement of intent written by the maintainer, not legal advice._
