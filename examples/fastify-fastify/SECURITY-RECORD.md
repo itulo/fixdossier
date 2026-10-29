@@ -1,14 +1,14 @@
 # Security record — fastify/fastify
 
-_Generated 2026-10-12T13:36:58.908Z by fixdossier from GitHub data (releases, tags, security advisories, merged Dependabot/Renovate PRs, commit messages). Automatically compiled; review before relying on it. Not legal advice._
+_Generated 2026-10-29T13:16:44.107Z by fixdossier from GitHub data (releases, tags, security advisories, merged Dependabot/Renovate PRs, commit messages). Automatically compiled; review before relying on it. Not legal advice._
 
 ## Summary
 
 | Item | Count |
 |---|---|
-| Published GitHub security advisories | 15 |
+| Published GitHub security advisories | 16 |
 | Commits that look like security fixes | 0 |
-| Merged bot dependency updates (security-flagged) | 7 (1) |
+| Merged bot dependency updates (security-flagged) | 4 (1) |
 | Releases | 200 |
 | Fixes not yet in a release | 0 |
 
@@ -16,6 +16,7 @@ _Generated 2026-10-12T13:36:58.908Z by fixdossier from GitHub data (releases, ta
 
 | Date | Type | IDs | Fix | Shipped in | Release date | How mapped |
 |---|---|---|---|---|---|---|
+| 2026-10-13 | advisory (low) | GHSA-389g-gv7q-r4x8, CVE-2026-107832 | [fastify vulnerable to header validation bypass via case-sensitive propertyNames](https://github.com/fastify/fastify/security/advisories/GHSA-389g-gv7q-r4x8) | v5.12.6 | 2026-10-13 | advisory patched_versions |
 | 2026-09-16 | advisory (medium) | GHSA-4mh8-r7rc-xpvc, CVE-2026-92081 | [fastify vulnerable to Denial of Service via unhandled exception on HTTP/2 trailer responses](https://github.com/fastify/fastify/security/advisories/GHSA-4mh8-r7rc-xpvc) | v5.12.5 | 2026-09-16 | advisory patched_versions |
 | 2026-09-04 | advisory (high) | GHSA-667r-xxjv-c9mm, CVE-2026-84504 | [fastify vulnerable to request body replacement via an async validation result collision](https://github.com/fastify/fastify/security/advisories/GHSA-667r-xxjv-c9mm) | v5.12.2 | 2026-09-04 | advisory patched_versions |
 | 2026-09-04 | advisory (high) | GHSA-p68q-wchp-6fh7, CVE-2026-76169 | [fastify vulnerable to authentication bypass via malformed URLs reaching encapsulated not-found handlers](https://github.com/fastify/fastify/security/advisories/GHSA-p68q-wchp-6fh7) | v5.12.2 | 2026-09-04 | advisory patched_versions |
@@ -28,26 +29,26 @@ _Generated 2026-10-12T13:36:58.908Z by fixdossier from GitHub data (releases, ta
 | 2026-03-05 | advisory (medium) | GHSA-573f-x89g-hqp9, CVE-2026-3419 | [Missing End Anchor in "subtypeNameReg" Allows Malformed Content-Types to Pass Validation](https://github.com/fastify/fastify/security/advisories/GHSA-573f-x89g-hqp9) | v5.8.1 | 2026-03-05 | advisory patched_versions |
 | 2026-02-02 | advisory (low) | GHSA-mrq3-vjjr-p77c, CVE-2026-25224 | [DoS via Unbounded Memory Allocation in sendWebStream](https://github.com/fastify/fastify/security/advisories/GHSA-mrq3-vjjr-p77c) | v5.7.3 | 2026-02-02 | advisory patched_versions |
 | 2026-02-02 | advisory (high) | GHSA-jx2c-rxcm-jvmq, CVE-2026-25223 | [Content-Type header tab character allows body validation bypass](https://github.com/fastify/fastify/security/advisories/GHSA-jx2c-rxcm-jvmq) | v5.7.2 | 2026-01-26 | advisory patched_versions |
-| 2025-04-18 | advisory (high) | GHSA-mg2h-6x62-wpwc, CVE-2025-32442 | [Invalid content-type parsing could lead to validation bypass](https://github.com/fastify/fastify/security/advisories/GHSA-mg2h-6x62-wpwc) | v5.3.2 | 2025-04-18 | advisory patched_versions |
-| 2022-11-21 | advisory (medium) | GHSA-3fjj-p79j-c9hh, CVE-2022-41919 | [Incorrect Content-Type parsing can lead to CSRF attack ](https://github.com/fastify/fastify/security/advisories/GHSA-3fjj-p79j-c9hh) | v4.10.2 | 2022-11-21 | advisory patched_versions |
+| 2025-04-18 | advisory (high) | GHSA-mg2h-6x62-wpwc, CVE-2025-32442 | [Invalid content-type parsing could lead to validation bypass](https://github.com/fastify/fastify/security/advisories/GHSA-mg2h-6x62-wpwc) | v5.3.2, v4.29.1 | 2025-04-18, 2025-04-28 | advisory patched_versions |
+| 2022-11-21 | advisory (medium) | GHSA-3fjj-p79j-c9hh, CVE-2022-41919 | [Incorrect Content-Type parsing can lead to CSRF attack ](https://github.com/fastify/fastify/security/advisories/GHSA-3fjj-p79j-c9hh) | v4.10.2, v3.29.4 | 2022-11-21, 2022-11-21 | advisory patched_versions |
 | 2022-10-10 | advisory (high) | GHSA-455w-c45v-86rg, CVE-2022-39288 | [Deny of service via malicious Content-Type](https://github.com/fastify/fastify/security/advisories/GHSA-455w-c45v-86rg) | v4.8.1 | 2022-10-10 | advisory patched_versions |
 
 ## Dependency updates by bots (newest first)
 
-| Merged | Bot | Update | Security? | Shipped in |
-|---|---|---|---|---|
-| 2026-07-02 | dependabot[bot] | [chore: Bump @types/node from 25.9.4 to 26.0.1 in the dev-dependencies-typescript group](https://github.com/fastify/fastify/pull/6829) |  | v5.10.0 |
-| 2026-06-28 | dependabot[bot] | [chore: Bump actions/checkout from 6 to 7](https://github.com/fastify/fastify/pull/6812) |  | v5.9.0 |
-| 2026-06-23 | dependabot[bot] | [chore: Bump fastify-plugin from 5.1.0 to 6.0.0](https://github.com/fastify/fastify/pull/6801) |  | v5.9.0 |
-| 2026-06-14 | dependabot[bot] | [chore: Bump esbuild from 0.25.12 to 0.28.1 in /test/bundler/esbuild in the npm_and_yarn group across 1 directory](https://github.com/fastify/fastify/pull/6788) | yes | v5.9.0 |
-| 2026-05-01 | dependabot[bot] | [chore: Bump JustinBeckwith/linkinator-action from 2.4.0 to 2.4.2](https://github.com/fastify/fastify/pull/6706) |  | v5.9.0 |
-| 2026-05-01 | dependabot[bot] | [chore: Bump actions/github-script from 8 to 9](https://github.com/fastify/fastify/pull/6705) |  | v5.9.0 |
-| 2026-05-01 | dependabot[bot] | [chore: Bump pnpm/action-setup from 5.0.0 to 6.0.4](https://github.com/fastify/fastify/pull/6704) |  | v5.9.0 |
+| Merged | Bot | Update | Security? | Shipped in | How mapped |
+|---|---|---|---|---|---|
+| 2026-07-02 | dependabot[bot] | [chore: Bump @types/node from 25.9.4 to 26.0.1 in the dev-dependencies-typescript group](https://github.com/fastify/fastify/pull/6829) |  | v5.10.0 | date heuristic (first release on/after merge) |
+| 2026-06-28 | dependabot[bot] | [chore: Bump actions/checkout from 6 to 7](https://github.com/fastify/fastify/pull/6812) |  | v5.9.0 | date heuristic (first release on/after merge) |
+| 2026-06-23 | dependabot[bot] | [chore: Bump fastify-plugin from 5.1.0 to 6.0.0](https://github.com/fastify/fastify/pull/6801) |  | v5.9.0 | date heuristic (first release on/after merge) |
+| 2026-06-14 | dependabot[bot] | [chore: Bump esbuild from 0.25.12 to 0.28.1 in /test/bundler/esbuild in the npm_and_yarn group across 1 directory](https://github.com/fastify/fastify/pull/6788) | yes | v5.9.0 | date heuristic (first release on/after merge) |
 
 ## Releases
 
 | Release | Date | Pre-release |
 |---|---|---|
+| [v6.0.0-alpha.5](https://github.com/fastify/fastify/releases/tag/v6.0.0-alpha.5) | 2026-10-16 | yes |
+| [v5.12.7](https://github.com/fastify/fastify/releases/tag/v5.12.7) | 2026-10-13 |  |
+| [v5.12.6](https://github.com/fastify/fastify/releases/tag/v5.12.6) | 2026-10-13 |  |
 | [v6.0.0-alpha.4](https://github.com/fastify/fastify/releases/tag/v6.0.0-alpha.4) | 2026-09-17 | yes |
 | [v5.12.5](https://github.com/fastify/fastify/releases/tag/v5.12.5) | 2026-09-16 |  |
 | [v5.12.4](https://github.com/fastify/fastify/releases/tag/v5.12.4) | 2026-09-11 |  |
@@ -95,9 +96,6 @@ _Generated 2026-10-12T13:36:58.908Z by fixdossier from GitHub data (releases, ta
 | [v4.28.1](https://github.com/fastify/fastify/releases/tag/v4.28.1) | 2024-06-29 |  |
 | [v5.0.0-alpha.2](https://github.com/fastify/fastify/releases/tag/v5.0.0-alpha.2) | 2024-06-21 | yes |
 | [v4.28.0](https://github.com/fastify/fastify/releases/tag/v4.28.0) | 2024-06-14 |  |
-| [v5.0.0-alpha.1](https://github.com/fastify/fastify/releases/tag/v5.0.0-alpha.1) | 2024-05-07 | yes |
-| [v4.27.0](https://github.com/fastify/fastify/releases/tag/v4.27.0) | 2024-05-07 |  |
-| [v4.26.2](https://github.com/fastify/fastify/releases/tag/v4.26.2) | 2024-03-03 |  |
 
 ## Gaps in this record
 
@@ -107,4 +105,4 @@ _Generated 2026-10-12T13:36:58.908Z by fixdossier from GitHub data (releases, ta
 - commits: stopped after 2 pages (raise max_pages for full history)
 
 ---
-Mapping notes: "advisory patched_versions" matches the advisory's patched version to a release tag. "date heuristic" picks the first stable release published on or after the fix date, which can be wrong for backports or multi-branch repos. Commit detection uses message keywords (CVE-, GHSA-, security, vuln…) and will miss silent fixes and include some false positives.
+Mapping notes: `advisory patched_versions` means each advisory patched range was parsed and matched to the earliest fetched release tag that satisfies it; every matched release is listed. `tag commit match` means the commit SHA or bot PR merge SHA equals the commit a release tag points at (annotated tags use the peeled commit, not the tag object; a short SHA counts only when it is a unique prefix of one tag commit). `date heuristic (first release on/after publish)`, `date heuristic (first release on/after commit)`, and `date heuristic (first release on/after merge)` are the first stable release published on or after that date, used only when the methods above do not match. That heuristic can be wrong for backports and multi-branch repos. Commit detection uses message keywords (CVE-, GHSA-, security, vuln…) and will miss silent fixes and include some false positives.

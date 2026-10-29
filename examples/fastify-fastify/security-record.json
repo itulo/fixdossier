@@ -1,12 +1,12 @@
 {
   "schema": "fixdossier/v1",
   "repo": "fastify/fastify",
-  "generated_at": "2026-10-12T13:36:58.908Z",
+  "generated_at": "2026-10-29T13:16:44.107Z",
   "sources_checked": {
     "releases": 200,
     "tags": 200,
     "closed_pulls": 200,
-    "advisories": 15,
+    "advisories": 16,
     "commits": 200
   },
   "gaps": [
@@ -16,6 +16,30 @@
     "commits: stopped after 2 pages (raise max_pages for full history)"
   ],
   "releases": [
+    {
+      "tag": "v6.0.0-alpha.5",
+      "name": "v6.0.0-alpha.5",
+      "date": "2026-10-16T13:31:56Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v6.0.0-alpha.5",
+      "prerelease": true,
+      "sha": "bd25219baec49cec4b0cea6472eddbba14a1c4ad"
+    },
+    {
+      "tag": "v5.12.7",
+      "name": "v5.12.7",
+      "date": "2026-10-13T08:06:51Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.12.7",
+      "prerelease": false,
+      "sha": "9f400035ebaf572b95989db5040ebb09c01e4e77"
+    },
+    {
+      "tag": "v5.12.6",
+      "name": "v5.12.6",
+      "date": "2026-10-13T06:52:14Z",
+      "url": "https://github.com/fastify/fastify/releases/tag/v5.12.6",
+      "prerelease": false,
+      "sha": "16469b9ae1ff490417297c4882a397776fb2ffcc"
+    },
     {
       "tag": "v6.0.0-alpha.4",
       "name": "v6.0.0-alpha.4",
@@ -1591,34 +1615,33 @@
       "url": "https://github.com/fastify/fastify/releases/tag/v2.13.1",
       "prerelease": false,
       "sha": "13595c897029c7bb050effe8c4bdec02e7559acf"
-    },
-    {
-      "tag": "v2.13.0",
-      "name": "v2.13.0",
-      "date": "2020-03-20T08:51:59Z",
-      "url": "https://github.com/fastify/fastify/releases/tag/v2.13.0",
-      "prerelease": false,
-      "sha": "04b696b63b4b700af0c0709df678ca3b1fea7023"
-    },
-    {
-      "tag": "v2.12.1",
-      "name": "v2.12.1",
-      "date": "2020-02-28T18:23:32Z",
-      "url": "https://github.com/fastify/fastify/releases/tag/v2.12.1",
-      "prerelease": false,
-      "sha": "c4a83ae32c925bcf801fa82f542d9d0ce4a63a1d"
-    },
-    {
-      "tag": "v2.12.0",
-      "name": "v2.12.0",
-      "date": "2020-02-06T19:33:27Z",
-      "url": "https://github.com/fastify/fastify/releases/tag/v2.12.0",
-      "prerelease": false,
-      "sha": "7a37924ef954e113f94140a4653ddc52be1510a1"
     }
   ],
   "tags_without_release": [],
   "security_fixes": [
+    {
+      "date": "2026-10-13T06:51:29Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-389g-gv7q-r4x8",
+        "CVE-2026-107832"
+      ],
+      "title": "fastify vulnerable to header validation bypass via case-sensitive propertyNames",
+      "severity": "low",
+      "url": "https://github.com/fastify/fastify/security/advisories/GHSA-389g-gv7q-r4x8",
+      "patched_versions": [
+        "5.12.6"
+      ],
+      "release": "v5.12.6",
+      "release_date": "2026-10-13T06:52:14Z",
+      "matched_releases": [
+        {
+          "tag": "v5.12.6",
+          "date": "2026-10-13T06:52:14Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
     {
       "date": "2026-09-16T07:38:07Z",
       "type": "advisory",
@@ -1634,6 +1657,12 @@
       ],
       "release": "v5.12.5",
       "release_date": "2026-09-16T10:19:43Z",
+      "matched_releases": [
+        {
+          "tag": "v5.12.5",
+          "date": "2026-09-16T10:19:43Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1651,6 +1680,12 @@
       ],
       "release": "v5.12.2",
       "release_date": "2026-09-04T08:20:39Z",
+      "matched_releases": [
+        {
+          "tag": "v5.12.2",
+          "date": "2026-09-04T08:20:39Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1668,6 +1703,12 @@
       ],
       "release": "v5.12.2",
       "release_date": "2026-09-04T08:20:39Z",
+      "matched_releases": [
+        {
+          "tag": "v5.12.2",
+          "date": "2026-09-04T08:20:39Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1685,6 +1726,12 @@
       ],
       "release": "v5.12.2",
       "release_date": "2026-09-04T08:20:39Z",
+      "matched_releases": [
+        {
+          "tag": "v5.12.2",
+          "date": "2026-09-04T08:20:39Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1702,6 +1749,12 @@
       ],
       "release": "v5.12.2",
       "release_date": "2026-09-04T08:20:39Z",
+      "matched_releases": [
+        {
+          "tag": "v5.12.2",
+          "date": "2026-09-04T08:20:39Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1719,6 +1772,12 @@
       ],
       "release": "v5.12.1",
       "release_date": "2026-08-18T19:51:41Z",
+      "matched_releases": [
+        {
+          "tag": "v5.12.1",
+          "date": "2026-08-18T19:51:41Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1736,6 +1795,12 @@
       ],
       "release": "v5.12.1",
       "release_date": "2026-08-18T19:51:41Z",
+      "matched_releases": [
+        {
+          "tag": "v5.12.1",
+          "date": "2026-08-18T19:51:41Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1753,6 +1818,12 @@
       ],
       "release": "v5.8.5",
       "release_date": "2026-04-14T12:09:02Z",
+      "matched_releases": [
+        {
+          "tag": "v5.8.5",
+          "date": "2026-04-14T12:09:02Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1770,6 +1841,12 @@
       ],
       "release": "v5.8.3",
       "release_date": "2026-03-23T10:20:21Z",
+      "matched_releases": [
+        {
+          "tag": "v5.8.3",
+          "date": "2026-03-23T10:20:21Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1783,10 +1860,16 @@
       "severity": "medium",
       "url": "https://github.com/fastify/fastify/security/advisories/GHSA-573f-x89g-hqp9",
       "patched_versions": [
-        "5.8.1"
+        ">=5.8.1"
       ],
       "release": "v5.8.1",
       "release_date": "2026-03-05T10:10:57Z",
+      "matched_releases": [
+        {
+          "tag": "v5.8.1",
+          "date": "2026-03-05T10:10:57Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1800,10 +1883,16 @@
       "severity": "low",
       "url": "https://github.com/fastify/fastify/security/advisories/GHSA-mrq3-vjjr-p77c",
       "patched_versions": [
-        "5.7.3"
+        ">=5.7.3"
       ],
       "release": "v5.7.3",
       "release_date": "2026-02-02T17:57:52Z",
+      "matched_releases": [
+        {
+          "tag": "v5.7.3",
+          "date": "2026-02-02T17:57:52Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1817,10 +1906,16 @@
       "severity": "high",
       "url": "https://github.com/fastify/fastify/security/advisories/GHSA-jx2c-rxcm-jvmq",
       "patched_versions": [
-        "5.7.2"
+        ">=5.7.2"
       ],
       "release": "v5.7.2",
       "release_date": "2026-01-26T11:15:54Z",
+      "matched_releases": [
+        {
+          "tag": "v5.7.2",
+          "date": "2026-01-26T11:15:54Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1839,6 +1934,16 @@
       ],
       "release": "v5.3.2",
       "release_date": "2025-04-18T20:31:40Z",
+      "matched_releases": [
+        {
+          "tag": "v5.3.2",
+          "date": "2025-04-18T20:31:40Z"
+        },
+        {
+          "tag": "v4.29.1",
+          "date": "2025-04-28T17:30:59Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1852,11 +1957,21 @@
       "severity": "medium",
       "url": "https://github.com/fastify/fastify/security/advisories/GHSA-3fjj-p79j-c9hh",
       "patched_versions": [
-        "v4.10.2",
-        "v3.29.4"
+        "4.10.2",
+        "3.29.4"
       ],
       "release": "v4.10.2",
       "release_date": "2022-11-21T16:14:22Z",
+      "matched_releases": [
+        {
+          "tag": "v4.10.2",
+          "date": "2022-11-21T16:14:22Z"
+        },
+        {
+          "tag": "v3.29.4",
+          "date": "2022-11-21T16:14:50Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     },
     {
@@ -1874,6 +1989,12 @@
       ],
       "release": "v4.8.1",
       "release_date": "2022-10-10T07:27:31Z",
+      "matched_releases": [
+        {
+          "tag": "v4.8.1",
+          "date": "2022-10-10T07:27:31Z"
+        }
+      ],
       "mapping": "advisory patched_versions"
     }
   ],
@@ -1888,6 +2009,12 @@
       "url": "https://github.com/fastify/fastify/pull/6829",
       "release": "v5.10.0",
       "release_date": "2026-07-05T09:37:06Z",
+      "matched_releases": [
+        {
+          "tag": "v5.10.0",
+          "date": "2026-07-05T09:37:06Z"
+        }
+      ],
       "mapping": "date heuristic (first release on/after merge)"
     },
     {
@@ -1900,6 +2027,12 @@
       "url": "https://github.com/fastify/fastify/pull/6812",
       "release": "v5.9.0",
       "release_date": "2026-06-28T08:21:36Z",
+      "matched_releases": [
+        {
+          "tag": "v5.9.0",
+          "date": "2026-06-28T08:21:36Z"
+        }
+      ],
       "mapping": "date heuristic (first release on/after merge)"
     },
     {
@@ -1912,6 +2045,12 @@
       "url": "https://github.com/fastify/fastify/pull/6801",
       "release": "v5.9.0",
       "release_date": "2026-06-28T08:21:36Z",
+      "matched_releases": [
+        {
+          "tag": "v5.9.0",
+          "date": "2026-06-28T08:21:36Z"
+        }
+      ],
       "mapping": "date heuristic (first release on/after merge)"
     },
     {
@@ -1927,49 +2066,19 @@
       "url": "https://github.com/fastify/fastify/pull/6788",
       "release": "v5.9.0",
       "release_date": "2026-06-28T08:21:36Z",
-      "mapping": "date heuristic (first release on/after merge)"
-    },
-    {
-      "date": "2026-05-01T17:17:52Z",
-      "type": "dependency-update",
-      "bot": "dependabot[bot]",
-      "ids": [],
-      "title": "chore: Bump JustinBeckwith/linkinator-action from 2.4.0 to 2.4.2",
-      "security": false,
-      "url": "https://github.com/fastify/fastify/pull/6706",
-      "release": "v5.9.0",
-      "release_date": "2026-06-28T08:21:36Z",
-      "mapping": "date heuristic (first release on/after merge)"
-    },
-    {
-      "date": "2026-05-01T17:16:09Z",
-      "type": "dependency-update",
-      "bot": "dependabot[bot]",
-      "ids": [],
-      "title": "chore: Bump actions/github-script from 8 to 9",
-      "security": false,
-      "url": "https://github.com/fastify/fastify/pull/6705",
-      "release": "v5.9.0",
-      "release_date": "2026-06-28T08:21:36Z",
-      "mapping": "date heuristic (first release on/after merge)"
-    },
-    {
-      "date": "2026-05-01T17:14:31Z",
-      "type": "dependency-update",
-      "bot": "dependabot[bot]",
-      "ids": [],
-      "title": "chore: Bump pnpm/action-setup from 5.0.0 to 6.0.4",
-      "security": false,
-      "url": "https://github.com/fastify/fastify/pull/6704",
-      "release": "v5.9.0",
-      "release_date": "2026-06-28T08:21:36Z",
+      "matched_releases": [
+        {
+          "tag": "v5.9.0",
+          "date": "2026-06-28T08:21:36Z"
+        }
+      ],
       "mapping": "date heuristic (first release on/after merge)"
     }
   ],
   "summary": {
-    "advisories": 15,
+    "advisories": 16,
     "security_commits": 0,
-    "dependency_updates": 7,
+    "dependency_updates": 4,
     "security_dependency_updates": 1,
     "unreleased_fixes": 0
   }
