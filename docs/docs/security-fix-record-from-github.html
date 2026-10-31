@@ -146,7 +146,7 @@ jobs:
         <ul>
           <li>Any commit whose message contains a <code>CVE-YYYY-NNNN</code> or <code>GHSA-xxxx-xxxx-xxxx</code> ID.</li>
           <li>Otherwise, a commit whose <strong>first line</strong> contains one of: security, vulnerab…, vuln, exploit, xss, csrf, ssrf, rce, injection, prototype pollution, denial of service, redos.</li>
-          <li>First lines starting with <code>docs:</code>, <code>test:</code>, <code>ci:</code>, <code>build:</code> or <code>chore(docs):</code> are skipped unless they contain an ID.</li>
+          <li>A first line that is a <code>docs</code> conventional commit is skipped unless the message contains an ID. The scope may be anything, and the colon is optional: <code>docs(cra): ...</code>, <code>docs(security): ...</code>, <code>docs: update SECURITY.md</code>, and <code>docs(cra) #1474</code>. First lines starting with <code>test:</code>, <code>ci:</code>, <code>build:</code>, or <code>chore(docs):</code> are skipped the same way. <code>fix(security): ...</code> is still a fix.</li>
           <li>Commits authored by the bots above are skipped here; they appear as dependency updates instead.</li>
         </ul>
         <p>This is keyword matching. A fix committed as “handle edge case in parser” is not found, and some non-fixes are. The record says so in its footer.</p>

@@ -10,10 +10,18 @@ function ids(text) {
   return [...new Set(m.map((s) => s.toUpperCase().replace(/^GHSA/, 'GHSA').replace(/^(GHSA-)(.*)$/, (_, a, b) => a + b.toLowerCase())))];
 }
 
+// Conventional commit type "docs", any scope, colon optional.
+// "docs(cra) #1474 … Security" and "docs(security): …" are documentation.
+// "docsfoo:" is not a docs commit. "fix(security): …" is not this type.
+function isDocsSubject(subject) {
+  return /^docs(?:\([^)]*\))?!?(?=$|[\s:#])/i.test(subject);
+}
+
 function isSecurityCommit(msg) {
   const first = (msg || '').split('\n')[0];
-  if (ids(msg).length > 0) return true;
-  if (/^(docs|test|ci|chore\(docs\)|build)(\(.*?\))?!?:/i.test(first)) return false; // docs/CI noise
+  if (ids(msg).length > 0) return true; // explicit CVE/GHSA, even on a docs subject
+  if (isDocsSubject(first)) return false;
+  if (/^(?:test|ci|chore\(docs\)|build)(\(.*?\))?!?:/i.test(first)) return false; // CI/test noise
   return SEC_WORDS.test(first);
 }
 
@@ -194,12 +202,34 @@ function tildeUpper(ver) {
   return { major: ver.major, minor: ver.minor + 1, patch: 0, rev: null, pre: null };
 }
 
+// A field of only bare versions ("11.5.15 12.3.3", "11.5.15, 12.3.3",
+// "11.5.15 || 12.3.3", optional "(LTS)" notes). Each version is its own exact
+// range. Splitting first is required: deleting the whitespace used to glue
+// "11.5.15 12.3.3" into the single bogus version 11.5.1512.3.3.
+// Returns null when the text has comparators (^ ~ >= < …) so the range parser
+// below can keep ">=2.9.17 <3.0.0" as one range and ">= 1.2.3" as a lower bound.
+function bareVersionList(text) {
+  if (/[<>^=~]/.test(text)) return null;
+  const cleaned = text.replace(/\([^)]*\)/g, ' ');
+  const parts = cleaned.split(/\s*(?:\|\||,)\s*|\s+/).map((s) => s.trim()).filter(Boolean);
+  if (!parts.length) return [];
+  const ranges = [];
+  for (const part of parts) {
+    const ver = parseVer(part);
+    if (!ver) return null;
+    ranges.push([{ op: '=', ver }]);
+  }
+  return ranges;
+}
+
 // GitHub patched_versions strings mix semver AND (comma or space) with backport
 // alternatives in one field, for example ">=2.9.17 <3.0.0" and ">=5.4.12, <6.0.0".
 // A new lower bound starts another range. "||", "^", and "~" are accepted too.
 function parsePatchedRanges(input) {
   const text = String(input || '').trim();
   if (!text) return [];
+  const bare = bareVersionList(text);
+  if (bare) return bare;
   const re = new RegExp(`(>=|<=|==|>|<|=|\\^|~)\\s*(${VER_SRC})|(${VER_SRC})`, 'g');
   const ranges = [];
   for (const group of text.split('||')) {
@@ -421,7 +451,7 @@ function renderRecord(rec, { maxRows = 200 } = {}) {
   L.push('', '## Releases', '', '| Release | Date | Pre-release |', '|---|---|---|');
   rec.releases.slice(0, 50).forEach((r) => L.push(`| ${link(r.tag, r.url)} | ${d(r.date)} | ${r.prerelease ? 'yes' : ''} |`));
   if (rec.gaps.length) { L.push('', '## Gaps in this record', ''); rec.gaps.forEach((g) => L.push(`- ${g}`)); }
-  L.push('', '---', 'Mapping notes: `advisory patched_versions` means each advisory patched range was parsed and matched to the earliest fetched release tag that satisfies it; every matched release is listed. `tag commit match` means the commit SHA or bot PR merge SHA equals the commit a release tag points at (annotated tags use the peeled commit, not the tag object; a short SHA counts only when it is a unique prefix of one tag commit). `date heuristic (first release on/after publish)`, `date heuristic (first release on/after commit)`, and `date heuristic (first release on/after merge)` are the first stable release published on or after that date, used only when the methods above do not match. That heuristic can be wrong for backports and multi-branch repos. Commit detection uses message keywords (CVE-, GHSA-, security, vuln…) and will miss silent fixes and include some false positives.', '');
+  L.push('', '---', 'Mapping notes: `advisory patched_versions` means each advisory patched range was parsed and matched to the earliest fetched release tag that satisfies it; every matched release is listed. `tag commit match` means the commit SHA or bot PR merge SHA equals the commit a release tag points at (annotated tags use the peeled commit, not the tag object; a short SHA counts only when it is a unique prefix of one tag commit). `date heuristic (first release on/after publish)`, `date heuristic (first release on/after commit)`, and `date heuristic (first release on/after merge)` are the first stable release published on or after that date, used only when the methods above do not match. That heuristic can be wrong for backports and multi-branch repos. Commit detection uses message keywords (CVE-, GHSA-, security, vuln…) and will miss silent fixes and include some false positives. A docs conventional commit (any scope, with or without a colon) is not a fix candidate unless the message cites a CVE or GHSA.', '');
   return L.join('\n');
 }
 

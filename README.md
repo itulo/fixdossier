@@ -77,14 +77,14 @@ steps:
 ## How fixes are mapped to releases
 Each row records the method that was actually used. The same strings are written to `SECURITY-RECORD.md` and `security-record.json`:
 
-1. `advisory patched_versions` — each advisory `patched_versions` range is parsed (lower and upper bounds, comma or space between bounds, `||`, `^`, and `~`) and matched to the earliest fetched release tag that satisfies that range. A leading `v` and `name@version` tags are accepted. A plain version tag is used when both it and a `name@version` tag satisfy the range. Every matched release is listed. `release` and `release_date` stay the first match; `matched_releases` lists them all.
+1. `advisory patched_versions` — each advisory `patched_versions` range is parsed (lower and upper bounds, comma or space between bounds, `||`, `^`, and `~`) and matched to the earliest fetched release tag that satisfies that range. Several bare versions in one value (`11.5.15 12.3.3`, or the same list with commas or `||`) are separate exact versions, each mapped to its own release tag; they are not concatenated. A leading `v` and `name@version` tags are accepted. A plain version tag is used when both it and a `name@version` tag satisfy the range. Every matched release is listed. `release` and `release_date` stay the first match; `matched_releases` lists them all.
 2. `tag commit match` — the commit SHA, or a bot pull request's merge SHA, equals the commit a release tag points at. Annotated tags use the peeled commit, not the tag object. A short SHA counts only when it is a unique prefix of at least 7 hex characters of one tag commit.
 3. `date heuristic (first release on/after publish)`, `date heuristic (first release on/after commit)`, or `date heuristic (first release on/after merge)` — the first stable release published on or after that date. Used only when the methods above do not match.
 4. `unreleased` — a commit or bot pull request matched no release. An advisory that matches nothing and has no usable date is `none`.
 
 ## Known limits
 - `date heuristic (first release on/after publish|commit|merge)` can be wrong when the fixing release is outside the fetched pages, and for maintenance branches and monorepos with per-package tags.
-- Commit detection is keyword-based: silent fixes are missed, and some false positives get in. Review the record.
+- Commit detection is keyword-based: silent fixes are missed, and some false positives get in. A `docs` conventional commit (any scope, with or without a colon, such as `docs(cra) #1474` or `docs(security): …`) is skipped unless the message cites a CVE or GHSA. `fix(security): …` still counts. Review the record.
 - Only *published* repository advisories are read. Global advisories that affect your dependencies are not, and Dependabot alerts need a token with `security_events` access that GITHUB_TOKEN usually lacks.
 - "Security?" on bot PRs is strict: it needs a CVE/GHSA ID, a security label, or a security word in the title.
 - History depth is bounded by `max_pages`.
