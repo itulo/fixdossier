@@ -1,6 +1,6 @@
 # Landing page changelog
 
-## Unreleased (v0.1.2)
+## 2026-10-31 (v0.1.2)
 
 - Advisory `patched_versions` lists of several versions, separated by whitespace, commas, or `||` (for example `11.5.15 12.3.3`, or a bound such as `>= 1.2.3`), are parsed as separate versions. Each one maps to its own release tag. They are not concatenated into one bogus version such as `11.5.1512.3.3`.
 - Commits whose subject is a `docs` conventional commit (any scope, with or without a colon) are not counted as security fixes. That includes `docs(cra): ...`, `docs(security): ...`, `docs: update SECURITY.md`, and `docs(cra) #1474`. `fix(security): ...` still counts. A docs commit that cites a CVE or GHSA id still counts.
