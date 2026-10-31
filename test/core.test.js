@@ -38,6 +38,35 @@ test('commit classification', () => {
   assert.deepStrictEqual(core.ids('see cve-2024-1234 and GHSA-AAAA-BBBB-CCCC'), ['CVE-2024-1234', 'GHSA-aaaa-bbbb-cccc']);
 });
 
+test('docs conventional commits are not security fixes', () => {
+  const docs = [
+    'docs(cra): ...',
+    'docs(security): ...',
+    'docs: update SECURITY.md',
+    'docs(cra) #1474',
+    'docs(cra) #1474 ICS_5.10-1: Examination of System Telemetry Data for Security Anomalies (#1475)',
+    'docs(security) describe the threat model',
+    'docs(cra): update SECURITY.md and the security policy',
+    'docs(cra)!: security note',
+  ];
+  for (const m of docs) assert.ok(!core.isSecurityCommit(m), m);
+  assert.ok(core.isSecurityCommit('fix(security): ...'));
+  assert.ok(core.isSecurityCommit('fix(security): patch xss'));
+  assert.ok(!core.isSecurityCommit('test: security policy'));
+  assert.ok(!core.isSecurityCommit('chore(docs): security notes'));
+  const commits = docs.map((message, i) => ({
+    sha: `d${i}`, html_url: `d${i}`, author: { login: 'bob' },
+    commit: { message, committer: { date: '2026-02-01T00:00:00Z' } },
+  }));
+  commits.push({
+    sha: 'fix1', html_url: 'fix1', author: { login: 'bob' },
+    commit: { message: 'fix(security): ...', committer: { date: '2026-02-02T00:00:00Z' } },
+  });
+  const r = core.build({ releases: [], tags: [], pulls: [], advisories: [], commits }, { repo: 'ruuvi/ruuvi.gateway_esp.c', now: NOW });
+  assert.deepStrictEqual(r.security_fixes.map((f) => f.sha), ['fix1']);
+  assert.strictEqual(r.summary.security_commits, 1);
+});
+
 test('build maps fixes to releases', () => {
   const r = core.build(mini, { repo: 'o/r', now: NOW });
   assert.strictEqual(r.schema, 'fixdossier/v1');
@@ -269,6 +298,70 @@ test('patched version ranges match the earliest tag in each range, including bac
   const late = r.security_fixes.find((f) => f.url === 'a-late');
   assert.strictEqual(late.release, null);
   assert.strictEqual(late.mapping, 'none');
+});
+
+test('whitespace-separated patched versions stay separate and each maps to its release', () => {
+  const raw = {
+    releases: [
+      rel('v1.2.2', '2024-01-01T00:00:00Z'),
+      rel('v1.2.3', '2024-03-01T00:00:00Z'),
+      rel('v1.3.0', '2024-04-01T00:00:00Z'),
+      rel('v11.5.14', '2026-01-13T00:00:00Z'),
+      rel('v11.5.15', '2026-02-01T00:00:00Z'),
+      rel('v11.5.17', '2026-03-01T00:00:00Z'),
+      rel('v12.3.2', '2026-02-04T00:00:00Z'),
+      rel('v12.3.3', '2026-02-19T00:00:00Z'),
+      rel('v12.3.7', '2026-05-19T00:00:00Z'),
+    ],
+    tags: [], pulls: [], commits: [],
+    advisories: [
+      {
+        ghsa_id: 'GHSA-vxg3-v4p6-f3fp', summary: 'pimcore space-separated patched versions', html_url: 'a-space-exact',
+        published_at: '2026-02-20T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '11.5.15 12.3.3' }],
+      },
+      {
+        ghsa_id: 'GHSA-comma-list-xxxx', summary: 'comma-separated patched versions', html_url: 'a-comma-exact',
+        published_at: '2026-02-20T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '11.5.15, 12.3.3' }],
+      },
+      {
+        ghsa_id: 'GHSA-oror-oror-xxxx', summary: 'or-separated patched versions', html_url: 'a-or-exact',
+        published_at: '2026-02-20T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '11.5.15 || 12.3.3' }],
+      },
+      {
+        ghsa_id: 'GHSA-gteq-oper-xxxx', summary: 'operator lower bound', html_url: 'a-gte',
+        published_at: '2024-03-02T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '>= 1.2.3' }],
+      },
+      {
+        ghsa_id: 'GHSA-lts-paren-xxxx', summary: 'parenthetical note', html_url: 'a-lts',
+        published_at: '2026-05-20T00:00:00Z',
+        vulnerabilities: [{ patched_versions: '11.5.17 (LTS), 12.3.7' }],
+      },
+    ],
+  };
+  const r = core.build(raw, { repo: 'pimcore/pimcore', now: NOW });
+  const space = r.security_fixes.find((f) => f.url === 'a-space-exact');
+  assert.deepStrictEqual(space.patched_versions, ['11.5.15', '12.3.3']);
+  assert.ok(!JSON.stringify(space).includes('11.5.1512.3.3'));
+  assert.deepStrictEqual(space.matched_releases.map((x) => x.tag), ['v11.5.15', 'v12.3.3']);
+  assert.strictEqual(space.release, 'v11.5.15');
+  assert.strictEqual(space.mapping, 'advisory patched_versions');
+  assert.match(core.renderRecord(r), /v11\.5\.15, v12\.3\.3/);
+  for (const url of ['a-comma-exact', 'a-or-exact']) {
+    const row = r.security_fixes.find((f) => f.url === url);
+    assert.deepStrictEqual(row.patched_versions, ['11.5.15', '12.3.3']);
+    assert.deepStrictEqual(row.matched_releases.map((x) => x.tag), ['v11.5.15', 'v12.3.3']);
+  }
+  const gte = r.security_fixes.find((f) => f.url === 'a-gte');
+  assert.deepStrictEqual(gte.patched_versions, ['>=1.2.3']);
+  assert.strictEqual(gte.release, 'v1.2.3');
+  assert.ok(!gte.matched_releases.some((x) => x.tag === 'v1.2.2' || x.tag === 'v11.5.15'));
+  const lts = r.security_fixes.find((f) => f.url === 'a-lts');
+  assert.deepStrictEqual(lts.patched_versions, ['11.5.17', '12.3.7']);
+  assert.deepStrictEqual(lts.matched_releases.map((x) => x.tag), ['v11.5.17', 'v12.3.7']);
 });
 
 test('range lower bound falls forward when that exact tag is missing', () => {
