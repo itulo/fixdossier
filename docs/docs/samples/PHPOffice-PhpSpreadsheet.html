@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sample security record: PHPOffice/PhpSpreadsheet</title>
+  <meta name="description" content="A fixdossier security record for PHPOffice/PhpSpreadsheet, generated 2026-10-31 from public GitHub advisory, release and commit data. Not requested or endorsed by the project." />
+  <link rel="canonical" href="https://fixdossier.dev/docs/samples/PHPOffice-PhpSpreadsheet.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="fixdossier" />
+  <meta property="og:title" content="Sample security record: PHPOffice/PhpSpreadsheet" />
+  <meta property="og:description" content="A fixdossier security record for PHPOffice/PhpSpreadsheet, generated 2026-10-31 from public GitHub advisory, release and commit data. Not requested or endorsed by the project." />
+  <meta property="og:url" content="https://fixdossier.dev/docs/samples/PHPOffice-PhpSpreadsheet.html" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css?v=2" />
+  <style>
+    .doc h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1.2; letter-spacing: -0.03em; margin: 0.4rem 0 1rem; }
+    .doc h2 { margin-top: 2.4rem; }
+    .doc h3 { font-size: 1.05rem; margin: 1.6rem 0 0.5rem; }
+    .doc p, .doc li { color: var(--muted); }
+    .doc p strong, .doc li strong { color: var(--text); }
+    .doc :not(pre) > code { font-family: var(--mono); font-size: 0.85em; background: var(--bg-elev); padding: 0.1rem 0.35rem; border-radius: 4px; color: var(--text); }
+    .doc .pre-wrap, .doc .table-scroll { margin: 1rem 0 1.25rem; }
+    .doc table { min-width: 0; }
+    .doc ul, .doc ol { padding-left: 1.2rem; }
+    .doc li + li { margin-top: 0.35rem; }
+    .crumbs { font-size: 0.85rem; color: var(--faint); }
+    .doc-index { columns: 2; list-style: none; padding: 0 !important; }
+    @media (max-width: 560px) { .doc-index { columns: 1; } }
+    .sample { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); padding: 1.2rem 1.4rem; margin: 1.2rem 0; }
+    .sample h3 { margin: 0 0 0.3rem; font-size: 1.15rem; }
+    .sample .meta { font-size: 0.82rem; color: var(--faint); margin: 0 0 0.9rem; }
+    .sample .links { font-size: 0.9rem; margin: 0.8rem 0 0; }
+    .sample .links a + a::before { content: "·"; color: var(--faint); margin: 0 0.5rem; }
+    .stats { margin-bottom: 0.6rem; }
+    .stat { min-width: 6.5rem; }
+    .record h1 { font-size: 1.5rem; }
+    .record table { font-size: 0.82rem; }
+    .record td { vertical-align: top; }
+  </style>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('fixdossier_theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">fd</span> fixdossier</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="../../">Home</a>
+        <a href="../../docs/">Docs</a>
+        <a href="https://github.com/itulo/fixdossier">GitHub</a>
+        <button class="btn-icon" id="theme-btn" type="button" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section>
+      <article class="wrap doc">
+        <p class="crumbs"><a href="../../">fixdossier</a> / <a href="../">Docs</a> / <a href="./">Sample records</a> / PHPOffice/PhpSpreadsheet</p>
+        <h1>Sample security record: PHPOffice/PhpSpreadsheet</h1>
+        <div class="table-scroll" role="region" aria-label="Run details" tabindex="0"><table><tbody>
+<tr><th>Repository</th><td><a href="https://github.com/PHPOffice/PhpSpreadsheet">github.com/PHPOffice/PhpSpreadsheet</a></td></tr>
+<tr><th>Generated</th><td>2026-10-31T13:29:41.317Z</td></tr>
+<tr><th>fixdossier</th><td>v0.1.2 (commit <code>f5d6fc5</code>), run locally with <code>max_pages=10</code></td></tr>
+<tr><th>Files</th><td><a href="PHPOffice-PhpSpreadsheet/SECURITY-RECORD.md">SECURITY-RECORD.md</a> · <a href="PHPOffice-PhpSpreadsheet/security-record.json">security-record.json</a></td></tr>
+</tbody></table></div>
+        <p class="sample-note"><strong>PHPOffice/PhpSpreadsheet</strong> did not request, review or endorse this record, and no claim is made that the project uses fixdossier. It was generated from public GitHub data only (published security advisories, releases, tags, merged pull requests and commit messages).</p>
+        <p>Below is the generated <code>SECURITY-RECORD.md</code>, rendered as-is. Rows labelled <code>date heuristic</code> and all keyword commit rows are automatic guesses that the project’s maintainers would need to confirm. See <a href="../what-the-record-covers.html">what the record covers</a>.</p>
+        <div class="record">
+<h1>Security record — PHPOffice/PhpSpreadsheet</h1>
+<p><em>Generated 2026-10-31T13:29:41.317Z by fixdossier from GitHub data (releases, tags, security advisories, merged Dependabot/Renovate PRs, commit messages). Automatically compiled; review before relying on it. Not legal advice.</em></p>
+<h2>Summary</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Published GitHub security advisories</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Commits that look like security fixes</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Merged bot dependency updates (security-flagged)</td>
+<td>87 (9)</td>
+</tr>
+<tr>
+<td>Releases</td>
+<td>145</td>
+</tr>
+<tr>
+<td>Fixes not yet in a release</td>
+<td>1</td>
+</tr>
+</tbody></table></div>
+<h2>Security fixes (newest first)</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th>IDs</th>
+<th>Fix</th>
+<th>Shipped in</th>
+<th>Release date</th>
+<th>How mapped</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2026-10-12</td>
+<td>advisory (high)</td>
+<td>GHSA-j2w7-387v-m2rq, CVE-2026-108359</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-j2w7-387v-m2rq">ODS Reader: Unbounded number-rows-repeated → CPU &amp; Memory Exhaustion (DoS)</a></td>
+<td>5.10.0, 3.10.8, 2.4.8, 2.1.19, 1.30.7</td>
+<td>2026-09-17, 2026-09-17, 2026-09-17, 2026-09-17, 2026-09-17</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-10-12</td>
+<td>advisory (medium)</td>
+<td>GHSA-2phh-27fw-q4gc, CVE-2026-108360</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-2phh-27fw-q4gc">SSRF whitelist bypass via unre-validated HTTP redirect in Drawing::setPath external image loading</a></td>
+<td>5.10.0, 3.10.8, 2.4.8, 2.1.19, 1.30.7</td>
+<td>2026-09-17, 2026-09-17, 2026-09-17, 2026-09-17, 2026-09-17</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-10-12</td>
+<td>advisory (high)</td>
+<td>GHSA-rxj4-h86g-25gc, CVE-2026-108357</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-rxj4-h86g-25gc">XmlScanner Bypass via Double-Encoded unentity() TOCTOU Allows XXE and Denial of Service</a></td>
+<td>5.10.0, 3.10.8</td>
+<td>2026-09-17, 2026-09-17</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-10-12</td>
+<td>advisory (high)</td>
+<td>GHSA-3x94-m842-937c, CVE-2026-108358</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-3x94-m842-937c">XmlScanner Bypass via ISO-2022 Escape Sequences Allows XXE and Denial of Service</a></td>
+<td>5.10.0, 3.10.8, 2.4.8, 2.1.19, 1.30.7</td>
+<td>2026-09-17, 2026-09-17, 2026-09-17, 2026-09-17, 2026-09-17</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td>commit</td>
+<td>—</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/commit/b03f7f3371e1dd1adafa41e4d0e47335f2d782f9">Security Policy Updates</a></td>
+<td><em>unreleased</em></td>
+<td>—</td>
+<td>unreleased</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td>advisory (high)</td>
+<td>GHSA-6hq5-7373-42rg, CVE-2026-59931</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-6hq5-7373-42rg">SSRF bypass via HTTP redirect in WEBSERVICE() domain whitelist</a></td>
+<td>5.8.1, 3.10.7, 2.4.7, 2.1.18, 1.30.6</td>
+<td>2026-07-12, 2026-07-12, 2026-07-12, 2026-07-12, 2026-07-12</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td>advisory (high)</td>
+<td>GHSA-2mrg-gjxq-2gvr, CVE-2026-59932</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-2mrg-gjxq-2gvr">Gnumeric reader unbounded gzip expansion causes memory exhaustion</a></td>
+<td>5.8.1, 3.10.7, 2.4.7, 2.1.18, 1.30.6</td>
+<td>2026-07-12, 2026-07-12, 2026-07-12, 2026-07-12, 2026-07-12</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-07-19</td>
+<td>advisory (high)</td>
+<td>GHSA-xh5m-36r6-47m3, CVE-2026-59933</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-xh5m-36r6-47m3">XLS/OLE sector-chain self-loop causes memory exhaustion</a></td>
+<td>5.8.1, 3.10.7, 2.4.7, 2.1.18, 1.30.6</td>
+<td>2026-07-12, 2026-07-12, 2026-07-12, 2026-07-12, 2026-07-12</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-06-07</td>
+<td>advisory (high)</td>
+<td>GHSA-87m4-826x-3crx, CVE-2026-45034</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-87m4-826x-3crx">CVE-2026-34084 patch bypass</a></td>
+<td>1.30.5</td>
+<td>2026-05-31</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-04-28</td>
+<td>advisory (high)</td>
+<td>GHSA-84wq-86v6-x5j6, CVE-2026-40863</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-84wq-86v6-x5j6">CPU Denial of Service via Unbounded Row Index in SpreadsheetML XML Reader</a></td>
+<td>5.7.0, 3.10.5, 2.4.5, 2.1.16, 1.30.6</td>
+<td>2026-04-20, 2026-04-20, 2026-04-20, 2026-04-20, 2026-07-12</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-04-28</td>
+<td>advisory (high)</td>
+<td>GHSA-7c6m-4442-2x6m, CVE-2026-40902</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-7c6m-4442-2x6m">CPU Denial of Service via Unbounded Row Number in XLSX Row Dimensions</a></td>
+<td>5.7.0, 3.10.5, 2.4.5, 2.1.16, 1.30.4</td>
+<td>2026-04-20, 2026-04-20, 2026-04-20, 2026-04-20, 2026-04-20</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-04-28</td>
+<td>advisory (high)</td>
+<td>GHSA-q4q6-r8wh-5cgh, CVE-2026-34084</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-q4q6-r8wh-5cgh">SSRF/RCE in IOFactory::load when $filename is user controlled</a></td>
+<td>5.6.0, 3.10.4, 2.4.4, 2.1.15, 1.30.3</td>
+<td>2026-04-10, 2026-04-10, 2026-04-10, 2026-04-10, 2026-04-10</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-04-26</td>
+<td>advisory (medium)</td>
+<td>GHSA-hrmw-qprp-wgmc, CVE-2026-40296</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-hrmw-qprp-wgmc">XSS via number format code with @ text placeholder bypasses htmlspecialchars in HTML writer</a></td>
+<td>5.7.0, 3.10.5, 2.4.5, 2.1.16, 1.30.4</td>
+<td>2026-04-20, 2026-04-20, 2026-04-20, 2026-04-20, 2026-04-20</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2026-04-26</td>
+<td>advisory (medium)</td>
+<td>GHSA-6wpp-88cp-7q68, CVE-2026-35453</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-6wpp-88cp-7q68">XSS via NumberFormat @ Text Substitution in HTML Writer</a></td>
+<td>5.7.0, 3.10.5, 2.4.5, 2.1.16, 1.30.4</td>
+<td>2026-04-20, 2026-04-20, 2026-04-20, 2026-04-20, 2026-04-20</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2025-08-23</td>
+<td>advisory (high)</td>
+<td>GHSA-rx7m-68vc-ppxh, CVE-2025-54370</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-rx7m-68vc-ppxh">SSRF when reading and displaying a processed HTML document in the browser</a></td>
+<td>1.30.0, 2.1.12, 2.4.0, 3.10.0, 5.0.0</td>
+<td>2025-08-10, 2025-08-10, 2025-08-10, 2025-08-10, 2025-08-10</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2025-02-01</td>
+<td>advisory (medium)</td>
+<td>GHSA-r57h-547h-w24f, CVE-2025-23210</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-r57h-547h-w24f">Bypass XSS sanitizer using the javascript protocol and special characters</a></td>
+<td>3.9.0, 1.29.9, 2.3.7, 2.1.8</td>
+<td>2025-01-26, 2025-01-26, 2025-01-26, 2025-01-26</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2025-01-18</td>
+<td>advisory (medium)</td>
+<td>GHSA-79xx-vf93-p7cx, CVE-2025-22131</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-79xx-vf93-p7cx">Cross-Site Scripting (XSS) vulnerability in generateNavigation() function</a></td>
+<td>3.8.0, 1.29.8, 2.1.7, 2.3.6</td>
+<td>2025-01-12, 2025-01-12, 2025-01-12, 2025-01-12</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2025-01-03</td>
+<td>advisory (medium)</td>
+<td>GHSA-q9jv-mm3r-j47r, CVE-2024-56412</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-q9jv-mm3r-j47r">Bypass XSS sanitizer using the javascript protocol and special characters</a></td>
+<td>3.7.0, 1.29.7, 2.1.6, 2.3.5</td>
+<td>2024-12-27, 2024-12-27, 2024-12-27, 2024-12-27</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2025-01-03</td>
+<td>advisory (medium)</td>
+<td>GHSA-hwcp-2h35-p66w, CVE-2024-56411</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-hwcp-2h35-p66w">Cross-Site Scripting (XSS) vulnerability of the hyperlink base in the HTML page header</a></td>
+<td>3.7.0, 1.29.7, 2.1.6, 2.3.5</td>
+<td>2024-12-27, 2024-12-27, 2024-12-27, 2024-12-27</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2025-01-03</td>
+<td>advisory (medium)</td>
+<td>GHSA-wv23-996v-q229, CVE-2024-56410</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-wv23-996v-q229">Cross-Site Scripting (XSS) vulnerability in custom properties</a></td>
+<td>3.7.0, 1.29.7, 2.1.6, 2.3.5</td>
+<td>2024-12-27, 2024-12-27, 2024-12-27, 2024-12-27</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2025-01-03</td>
+<td>advisory (high)</td>
+<td>GHSA-j2xg-cjcx-4677, CVE-2024-56409</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-j2xg-cjcx-4677">Unauthorized Reflected XSS in Currency.php file</a></td>
+<td>3.7.0, 1.29.7, 2.1.6, 2.3.5</td>
+<td>2024-12-27, 2024-12-27, 2024-12-27, 2024-12-27</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2025-01-03</td>
+<td>advisory (high)</td>
+<td>GHSA-c6fv-7vh8-2rhr, CVE-2024-56366</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-c6fv-7vh8-2rhr">Unauthorized Reflected XSS in the Accounting.php file</a></td>
+<td>3.7.0, 1.29.7, 2.1.6, 2.3.5</td>
+<td>2024-12-27, 2024-12-27, 2024-12-27, 2024-12-27</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2025-01-03</td>
+<td>advisory (high)</td>
+<td>GHSA-jmpx-686v-c3wx, CVE-2024-56365</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-jmpx-686v-c3wx">Unauthorized Reflected XSS in the constructor of the Downloader class</a></td>
+<td>3.7.0, 1.29.7, 2.1.6, 2.3.5</td>
+<td>2024-12-27, 2024-12-27, 2024-12-27, 2024-12-27</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2025-01-03</td>
+<td>advisory (high)</td>
+<td>GHSA-x88g-h956-m5xg, CVE-2024-56408</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-x88g-h956-m5xg">Unauthorized Reflected XSS in <code>Convert-Online.php</code> file</a></td>
+<td>3.7.0, 1.29.7, 2.1.6, 2.3.5</td>
+<td>2024-12-27, 2024-12-27, 2024-12-27, 2024-12-27</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2024-11-16</td>
+<td>advisory (high)</td>
+<td>GHSA-7cc9-j4mv-vcjp, CVE-2024-48917</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-7cc9-j4mv-vcjp">XXE in PHPSpreadsheet&#39;s XLSX reader</a></td>
+<td>1.29.4, 2.1.3, 2.3.2, 3.4.0</td>
+<td>2024-11-10, 2024-11-10, 2024-11-10, 2024-11-10</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2024-11-16</td>
+<td>advisory (high)</td>
+<td>GHSA-jw4x-v69f-hh5w, CVE-2024-47873</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-jw4x-v69f-hh5w">XmlScanner bypass leads to XXE</a></td>
+<td>1.29.4, 2.1.3, 2.3.2, 3.4.0</td>
+<td>2024-11-10, 2024-11-10, 2024-11-10, 2024-11-10</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2024-10-07</td>
+<td>advisory (medium)</td>
+<td>GHSA-r8w8-74ww-j4wh, CVE-2024-45292</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-r8w8-74ww-j4wh">PhpSpreadsheet HTML writer is vulnerable to Cross-Site Scripting via JavaScript hyperlinks</a></td>
+<td>2.3.0, 1.29.2, 2.1.1</td>
+<td>2024-09-29, 2024-09-29, 2024-09-29</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2024-10-07</td>
+<td>advisory (medium)</td>
+<td>GHSA-w9xv-qf98-ccq4, CVE-2024-45291</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-w9xv-qf98-ccq4">Absolute path traversal and Server-Side Request Forgery in HTML writer when embedding images is enabled</a></td>
+<td>2.3.0, 1.29.2, 2.1.1</td>
+<td>2024-09-29, 2024-09-29, 2024-09-29</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2024-10-07</td>
+<td>advisory (high)</td>
+<td>GHSA-5gpr-w2p5-6m37, CVE-2024-45290</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-5gpr-w2p5-6m37">Absolute path traversal and Server-Side Request Forgery when opening XLSX file</a></td>
+<td>2.3.0, 1.29.2, 2.1.1</td>
+<td>2024-09-29, 2024-09-29, 2024-09-29</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2024-10-07</td>
+<td>advisory (high)</td>
+<td>GHSA-6hwr-6v2f-3m88, CVE-2024-45293</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-6hwr-6v2f-3m88">XXE in PHPSpreadsheet&#39;s XLSX reader</a></td>
+<td>2.3.0, 1.29.1, 2.1.1</td>
+<td>2024-09-29, 2024-09-04, 2024-09-29</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2024-10-06</td>
+<td>advisory (high)</td>
+<td>GHSA-v66g-p9x6-v98p, CVE-2024-45060</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-v66g-p9x6-v98p">Unauthenticated Cross-Site-Scripting (XSS) in sample file</a></td>
+<td>2.3.0, 1.29.2, 2.1.1</td>
+<td>2024-09-29, 2024-09-29, 2024-09-29</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2024-08-28</td>
+<td>advisory (high)</td>
+<td>GHSA-ghg6-32f9-2jp7, CVE-2024-45048</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-ghg6-32f9-2jp7">XXE in PHPSpreadsheet encoding is returned</a></td>
+<td>2.2.1, 1.29.1, 2.1.1</td>
+<td>2024-07-29, 2024-09-04, 2024-09-29</td>
+<td>advisory patched_versions</td>
+</tr>
+<tr>
+<td>2024-08-28</td>
+<td>advisory (medium)</td>
+<td>GHSA-wgmf-q9vr-vww6, CVE-2024-45046</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-wgmf-q9vr-vww6">PhpSpreadsheet HTML writer is vulnerable to Cross-Site Scripting via style information</a></td>
+<td>2.1.0, 1.29.1</td>
+<td>2024-05-11, 2024-09-04</td>
+<td>advisory patched_versions</td>
+</tr>
+</tbody></table></div>
+<h2>Dependency updates by bots (newest first)</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Merged</th>
+<th>Bot</th>
+<th>Update</th>
+<th>Security?</th>
+<th>Shipped in</th>
+<th>How mapped</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2026-09-02</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4979">Bump friendsofphp/php-cs-fixer from 3.95.17 to 3.95.23</a></td>
+<td></td>
+<td>1.30.7</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-08-08</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4955">Bump squizlabs/php_codesniffer from 3.13.5 to 3.13.6</a></td>
+<td>yes</td>
+<td>1.30.7</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-08-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4951">Bump friendsofphp/php-cs-fixer from 3.95.11 to 3.95.17</a></td>
+<td></td>
+<td>1.30.7</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-07-26</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4940">Bump dompdf/dompdf from 3.1.5 to 3.1.6</a></td>
+<td>yes</td>
+<td>1.30.7</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-07-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4932">Bump composer/pcre from 3.3.2 to 3.4.0</a></td>
+<td></td>
+<td>2.1.18</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-07-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4930">Bump friendsofphp/php-cs-fixer from 3.95.4 to 3.95.11</a></td>
+<td></td>
+<td>2.1.18</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-06-24</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4924">Bump actions/cache from 5 to 6</a></td>
+<td></td>
+<td>2.1.18</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-06-21</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4921">Bump actions/checkout from 6 to 7</a></td>
+<td></td>
+<td>2.1.18</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-06-07</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4903">Bump peaceiris/actions-gh-pages from 3 to 4</a></td>
+<td></td>
+<td>5.8.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-06-07</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4902">Bump actions/checkout from 4 to 6</a></td>
+<td></td>
+<td>5.8.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-06-07</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4900">Bump friendsofphp/php-cs-fixer from 3.95.3 to 3.95.4</a></td>
+<td></td>
+<td>5.8.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-05-19</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4879">Bump setasign/fpdi from 2.6.6 to 2.6.7</a></td>
+<td></td>
+<td>1.30.5</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-04-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4849">Bump tecnickcom/tcpdf from 6.11.0 to 6.11.2</a></td>
+<td></td>
+<td>2.1.15</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-04-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4848">Bump dompdf/dompdf from 3.1.4 to 3.1.5</a></td>
+<td></td>
+<td>2.1.15</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-04-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4846">Bump mpdf/mpdf from 8.2.7 to 8.3.1</a></td>
+<td></td>
+<td>2.1.15</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-03-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4818">Bump tecnickcom/tcpdf from 6.10.1 to 6.11.0</a></td>
+<td></td>
+<td>2.1.15</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4796">Bump phpstan/phpstan-phpunit from 2.0.11 to 2.0.12</a></td>
+<td></td>
+<td>5.5.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4795">Bump friendsofphp/php-cs-fixer from 3.92.3 to 3.93.1</a></td>
+<td></td>
+<td>5.5.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4794">Bump phpstan/phpstan from 2.1.33 to 2.1.38</a></td>
+<td></td>
+<td>5.5.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-01-28</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4792">Bump symfony/process from 6.4.26 to 6.4.33</a></td>
+<td>yes</td>
+<td>5.5.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2026-01-28</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4790">Bump phpunit/phpunit from 10.5.60 to 10.5.62</a></td>
+<td></td>
+<td>5.5.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-11-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4698">Bump friendsofphp/php-cs-fixer from 3.88.2 to 3.89.1</a></td>
+<td></td>
+<td>2.4.2</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-11-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4700">Bump dompdf/dompdf from 3.1.2 to 3.1.4</a></td>
+<td></td>
+<td>2.4.2</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-10-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4671">Bump friendsofphp/php-cs-fixer from 3.85.1 to 3.88.2</a></td>
+<td></td>
+<td>1.30.1</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-10-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4672">Bump dompdf/dompdf from 3.1.1 to 3.1.2</a></td>
+<td></td>
+<td>1.30.1</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-08-05</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4573">Bump setasign/fpdi from 2.6.3 to 2.6.4</a></td>
+<td>yes</td>
+<td>1.30.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-07-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4525">Bump friendsofphp/php-cs-fixer from 3.75.0 to 3.76.0</a></td>
+<td></td>
+<td>1.29.12</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-07-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4526">Bump squizlabs/php_codesniffer from 3.13.0 to 3.13.2</a></td>
+<td></td>
+<td>1.29.12</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-06-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4496">Bump tecnickcom/tcpdf from 6.9.3 to 6.10.0</a></td>
+<td></td>
+<td>1.29.11</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-06-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4494">Bump squizlabs/php_codesniffer from 3.12.2 to 3.13.0</a></td>
+<td></td>
+<td>1.29.11</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-05-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4457">Bump squizlabs/php_codesniffer from 3.12.0 to 3.12.2</a></td>
+<td></td>
+<td>4.3.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-05-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4458">Bump tecnickcom/tcpdf from 6.9.0 to 6.9.3</a></td>
+<td></td>
+<td>4.3.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-04-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4430">Bump friendsofphp/php-cs-fixer from 3.70.0 to 3.75.0</a></td>
+<td></td>
+<td>4.2.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-04-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4432">Bump squizlabs/php_codesniffer from 3.11.3 to 3.12.0</a></td>
+<td></td>
+<td>4.2.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-04-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4434">Bump tecnickcom/tcpdf from 6.8.2 to 6.9.0</a></td>
+<td></td>
+<td>4.2.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-03-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4387">Bump friendsofphp/php-cs-fixer from 3.68.5 to 3.70.0</a></td>
+<td></td>
+<td>4.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4338">Bump friendsofphp/php-cs-fixer from 3.66.0 to 3.68.5</a></td>
+<td></td>
+<td>1.29.10</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4337">Bump dompdf/dompdf from 3.0.2 to 3.1.0</a></td>
+<td></td>
+<td>1.29.10</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4336">Bump tecnickcom/tcpdf from 6.8.0 to 6.8.2</a></td>
+<td></td>
+<td>1.29.10</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4335">Bump squizlabs/php_codesniffer from 3.11.2 to 3.11.3</a></td>
+<td></td>
+<td>1.29.10</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-01-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4295">Bump squizlabs/php_codesniffer from 3.11.1 to 3.11.2</a></td>
+<td></td>
+<td>1.29.8</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2025-01-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4294">Bump dompdf/dompdf from 3.0.1 to 3.0.2</a></td>
+<td></td>
+<td>1.29.8</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-12-28</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4291">Bump tecnickcom/tcpdf from 6.7.7 to 6.8.0</a></td>
+<td></td>
+<td>1.29.8</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-12-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4253">Bump squizlabs/php_codesniffer from 3.10.3 to 3.11.1</a></td>
+<td></td>
+<td>2.1.5</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-12-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4254">Bump mitoteam/jpgraph from 10.4.1 to 10.4.3</a></td>
+<td></td>
+<td>2.1.5</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-12-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4255">Bump mpdf/mpdf from 8.2.4 to 8.2.5</a></td>
+<td></td>
+<td>2.1.5</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-11-06</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4216">Bump symfony/process from 6.4.8 to 6.4.14</a></td>
+<td>yes</td>
+<td>3.4.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-11-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4211">Bump maennchen/zipstream-php from 3.1.0 to 3.1.1</a></td>
+<td></td>
+<td>3.4.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-11-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4209">Bump tecnickcom/tcpdf from 6.7.5 to 6.7.7</a></td>
+<td>yes</td>
+<td>3.4.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-10-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4177">Bump squizlabs/php_codesniffer from 3.10.2 to 3.10.3</a></td>
+<td></td>
+<td>3.4.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-09-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4155">Bump friendsofphp/php-cs-fixer from 3.61.1 to 3.64.0</a></td>
+<td></td>
+<td>1.29.1</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-07-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4085">Bump phpstan/phpstan from 1.11.3 to 1.11.5</a></td>
+<td></td>
+<td>2.2.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-07-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4083">Bump friendsofphp/php-cs-fixer from 3.58.1 to 3.59.3</a></td>
+<td></td>
+<td>2.2.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-07-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4084">Bump mpdf/mpdf from 8.2.3 to 8.2.4</a></td>
+<td></td>
+<td>2.2.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-07-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4082">Bump phpunit/phpunit from 10.5.20 to 10.5.24</a></td>
+<td></td>
+<td>2.2.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-06-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4054">Bump dompdf/dompdf from 2.0.8 to 3.0.0</a></td>
+<td></td>
+<td>2.2.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-06-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4052">Bump squizlabs/php_codesniffer from 3.9.2 to 3.10.1</a></td>
+<td></td>
+<td>2.2.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-06-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4051">Bump friendsofphp/php-cs-fixer from 3.56.1 to 3.58.1</a></td>
+<td></td>
+<td>2.2.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-05-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4011">Bump phpstan/phpstan from 1.10.66 to 1.10.67</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-05-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4012">Bump tecnickcom/tcpdf from 6.7.4 to 6.7.5</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-05-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4010">Bump friendsofphp/php-cs-fixer from 3.53.0 to 3.54.0</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-05-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4009">Bump squizlabs/php_codesniffer from 3.9.1 to 3.9.2</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-05-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/4008">Bump dompdf/dompdf from 2.0.4 to 2.0.8</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-04-15</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3984">Bump friendsofphp/php-cs-fixer from 3.51.0 to 3.53.0</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-04-15</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3970">Bump squizlabs/php_codesniffer from 3.9.0 to 3.9.1</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-04-15</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3971">Bump mpdf/mpdf from 8.2.2 to 8.2.3</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-04-15</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3983">Bump phpunit/phpunit from 9.6.17 to 9.6.19</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-04-15</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3966">Bump phpstan/phpstan from 1.10.59 to 1.10.66</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-04-14</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3967">Bump tecnickcom/tcpdf from 6.6.5 to 6.7.4</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-03-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3929">Bump squizlabs/php_codesniffer from 3.8.1 to 3.9.0</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-03-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3928">Bump phpstan/phpstan-phpunit from 1.3.15 to 1.3.16</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-03-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3927">Bump phpstan/phpstan from 1.10.57 to 1.10.59</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-03-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3926">Bump phpunit/phpunit from 9.6.16 to 9.6.17</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-03-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3925">Bump friendsofphp/php-cs-fixer from 3.48.0 to 3.51.0</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-02-21</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3914">Bump phenx/php-svg-lib from 0.5.1 to 0.5.2</a></td>
+<td>yes</td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3885">Bump phpstan/phpstan from 1.10.50 to 1.10.57</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3884">Bump phpunit/phpunit from 9.6.15 to 9.6.16</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3886">Bump squizlabs/php_codesniffer from 3.8.0 to 3.8.1</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-02-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3882">Bump mitoteam/jpgraph from 10.3.2 to 10.4.1</a></td>
+<td></td>
+<td>2.1.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-01-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3851">Bump phpunit/phpunit from 9.6.14 to 9.6.15</a></td>
+<td></td>
+<td>2.0.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-01-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3849">Bump squizlabs/php_codesniffer from 3.7.2 to 3.8.0</a></td>
+<td></td>
+<td>2.0.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2024-01-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3848">Bump phpstan/phpstan from 1.10.46 to 1.10.50</a></td>
+<td></td>
+<td>2.0.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2023-12-14</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3826">Bump dompdf/dompdf from 2.0.3 to 2.0.4</a></td>
+<td>yes</td>
+<td>2.0.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2023-12-13</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3824">Bump phenx/php-svg-lib from 0.5.0 to 0.5.1</a></td>
+<td>yes</td>
+<td>2.0.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2023-12-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3806">Bump phpunit/phpunit from 9.6.13 to 9.6.14</a></td>
+<td></td>
+<td>2.0.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2023-09-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3704">Bump phpstan/phpstan from 1.10.26 to 1.10.32</a></td>
+<td></td>
+<td>2.0.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+<tr>
+<td>2023-01-01</td>
+<td>dependabot[bot]</td>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/pull/3272">Bump friendsofphp/php-cs-fixer from 3.13.0 to 3.13.1</a></td>
+<td></td>
+<td>1.27.0</td>
+<td>date heuristic (first release on/after merge)</td>
+</tr>
+</tbody></table></div>
+<h2>Releases</h2>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Release</th>
+<th>Date</th>
+<th>Pre-release</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.10.0">5.10.0</a></td>
+<td>2026-09-17</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.8">3.10.8</a></td>
+<td>2026-09-17</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.8">2.4.8</a></td>
+<td>2026-09-17</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.19">2.1.19</a></td>
+<td>2026-09-17</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.7">1.30.7</a></td>
+<td>2026-09-17</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.9.0">5.9.0</a></td>
+<td>2026-07-12</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.8.1">5.8.1</a></td>
+<td>2026-07-12</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.6">1.30.6</a></td>
+<td>2026-07-12</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.7">3.10.7</a></td>
+<td>2026-07-12</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.7">2.4.7</a></td>
+<td>2026-07-12</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.18">2.1.18</a></td>
+<td>2026-07-12</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.8.0">5.8.0</a></td>
+<td>2026-06-07</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.6">3.10.6</a></td>
+<td>2026-06-07</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.6">2.4.6</a></td>
+<td>2026-06-07</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.17">2.1.17</a></td>
+<td>2026-06-07</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.5">1.30.5</a></td>
+<td>2026-05-31</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.7.0">5.7.0</a></td>
+<td>2026-04-20</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.4">1.30.4</a></td>
+<td>2026-04-20</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.5">3.10.5</a></td>
+<td>2026-04-20</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.5">2.4.5</a></td>
+<td>2026-04-20</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.16">2.1.16</a></td>
+<td>2026-04-20</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.6.0">5.6.0</a></td>
+<td>2026-04-10</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.3">1.30.3</a></td>
+<td>2026-04-10</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.4">3.10.4</a></td>
+<td>2026-04-10</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.4">2.4.4</a></td>
+<td>2026-04-10</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.15">2.1.15</a></td>
+<td>2026-04-10</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.5.0">5.5.0</a></td>
+<td>2026-03-01</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.4.0">5.4.0</a></td>
+<td>2026-01-11</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.3">3.10.3</a></td>
+<td>2026-01-11</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.3">2.4.3</a></td>
+<td>2026-01-11</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.14">2.1.14</a></td>
+<td>2026-01-11</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.2">1.30.2</a></td>
+<td>2026-01-11</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.3.0">5.3.0</a></td>
+<td>2025-11-24</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.2">3.10.2</a></td>
+<td>2025-11-24</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.2">2.4.2</a></td>
+<td>2025-11-24</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.2.0">5.2.0</a></td>
+<td>2025-10-26</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.13">2.1.13</a></td>
+<td>2025-10-26</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.1">1.30.1</a></td>
+<td>2025-10-26</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.1.0">5.1.0</a></td>
+<td>2025-09-04</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.1">3.10.1</a></td>
+<td>2025-09-04</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.1">2.4.1</a></td>
+<td>2025-09-04</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.0.0">5.0.0</a></td>
+<td>2025-08-10</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.0">3.10.0</a></td>
+<td>2025-08-10</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.0">2.4.0</a></td>
+<td>2025-08-10</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.12">2.1.12</a></td>
+<td>2025-08-10</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.0">1.30.0</a></td>
+<td>2025-08-10</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/4.5.0">4.5.0</a></td>
+<td>2025-07-24</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.9.3">3.9.3</a></td>
+<td>2025-07-24</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.10">2.3.10</a></td>
+<td>2025-07-24</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.11">2.1.11</a></td>
+<td>2025-07-24</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h2>Gaps in this record</h2>
+<ul>
+<li>pull requests: stopped after 10 pages (raise max_pages for full history)</li>
+<li>commits: stopped after 10 pages (raise max_pages for full history)</li>
+</ul>
+<hr>
+<p>Mapping notes: <code>advisory patched_versions</code> means each advisory patched range was parsed and matched to the earliest fetched release tag that satisfies it; every matched release is listed. <code>tag commit match</code> means the commit SHA or bot PR merge SHA equals the commit a release tag points at (annotated tags use the peeled commit, not the tag object; a short SHA counts only when it is a unique prefix of one tag commit). <code>date heuristic (first release on/after publish)</code>, <code>date heuristic (first release on/after commit)</code>, and <code>date heuristic (first release on/after merge)</code> are the first stable release published on or after that date, used only when the methods above do not match. That heuristic can be wrong for backports and multi-branch repos. Commit detection uses message keywords (CVE-, GHSA-, security, vuln…) and will miss silent fixes and include some false positives. A docs conventional commit (any scope, with or without a colon) is not a fix candidate unless the message cites a CVE or GHSA.</p>
+
+        </div>
+        <p><a href="./">← All sample records</a></p>
+        <div class="disclaimer" role="note">
+  <p><strong>Not legal advice.</strong> fixdossier is an engineering tool for evidence collection and review support. It is not legal advice and not a compliance certificate. It does not make a product compliant with the PLD, the CRA or anything else, and its output can be incomplete or wrong. Review it, and ask a lawyer about your situation.</p>
+</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 fixdossier · MIT · <a href="https://github.com/itulo/fixdossier">github.com/itulo/fixdossier</a> · <a href="mailto:contact@fixdossier.dev">contact@fixdossier.dev</a></div>
+      <div class="footer-links">
+        <a href="../../docs/">Docs</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/action.yml">action.yml</a>
+        <a href="https://github.com/itulo/fixdossier/tree/main/examples">Examples</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var t = document.getElementById('theme-btn');
+      if (t) t.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', cur);
+        localStorage.setItem('fixdossier_theme', cur);
+      });
+      var toggle = document.getElementById('nav-toggle'), nav = document.getElementById('primary-nav');
+      if (toggle && nav) toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+    })();
+  </script>
+</body>
+</html>

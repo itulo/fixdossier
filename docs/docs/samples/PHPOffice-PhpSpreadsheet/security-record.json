@@ -1,0 +1,4007 @@
+{
+  "schema": "fixdossier/v1",
+  "repo": "PHPOffice/PhpSpreadsheet",
+  "generated_at": "2026-10-31T13:29:41.317Z",
+  "sources_checked": {
+    "releases": 145,
+    "tags": 147,
+    "closed_pulls": 1000,
+    "advisories": 32,
+    "commits": 1000
+  },
+  "gaps": [
+    "pull requests: stopped after 10 pages (raise max_pages for full history)",
+    "commits: stopped after 10 pages (raise max_pages for full history)"
+  ],
+  "releases": [
+    {
+      "tag": "5.10.0",
+      "name": "5.10.0",
+      "date": "2026-09-17T04:48:03Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.10.0",
+      "prerelease": false,
+      "sha": "eb18727acf6b1f4cc67145a52ab04f9fd4c28d53"
+    },
+    {
+      "tag": "3.10.8",
+      "name": "3.10.8",
+      "date": "2026-09-17T04:33:23Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.8",
+      "prerelease": false,
+      "sha": "fee9c1ca8d9f1f676f007ac1ab134ce43624bd52"
+    },
+    {
+      "tag": "2.4.8",
+      "name": "2.4.8",
+      "date": "2026-09-17T04:23:57Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.8",
+      "prerelease": false,
+      "sha": "badf4f22c54332046af37687c3384c6a0ed14ae1"
+    },
+    {
+      "tag": "2.1.19",
+      "name": "2.1.19",
+      "date": "2026-09-17T04:15:34Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.19",
+      "prerelease": false,
+      "sha": "eb2ad61ccffa21bdc77481c69403f2bed5b13e5b"
+    },
+    {
+      "tag": "1.30.7",
+      "name": "1.30.7",
+      "date": "2026-09-17T04:07:06Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.7",
+      "prerelease": false,
+      "sha": "f5dd9c1f084d336ea63cf53099533e061a9c157a"
+    },
+    {
+      "tag": "5.9.0",
+      "name": "5.9.0",
+      "date": "2026-07-12T20:17:44Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.9.0",
+      "prerelease": false,
+      "sha": "05e99ebf61238a70227b4d9cc02d0030d34f6339"
+    },
+    {
+      "tag": "5.8.1",
+      "name": "5.8.1",
+      "date": "2026-07-12T20:14:49Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.8.1",
+      "prerelease": false,
+      "sha": "d368eec97b371589068255c5b1e0edf0e4403bed"
+    },
+    {
+      "tag": "1.30.6",
+      "name": "1.30.6",
+      "date": "2026-07-12T20:05:14Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.6",
+      "prerelease": false,
+      "sha": "a416375ffc8bf5b661c1bb4e6c60d8f3fddbe5ce"
+    },
+    {
+      "tag": "3.10.7",
+      "name": "3.10.7",
+      "date": "2026-07-12T19:55:40Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.7",
+      "prerelease": false,
+      "sha": "450a28a2c050d8f983e663c0bc8918e0cdae5708"
+    },
+    {
+      "tag": "2.4.7",
+      "name": "2.4.7",
+      "date": "2026-07-12T19:43:51Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.7",
+      "prerelease": false,
+      "sha": "03e65f7c3399756d77f656118f75a61e0fca23c6"
+    },
+    {
+      "tag": "2.1.18",
+      "name": "2.1.18",
+      "date": "2026-07-12T19:34:29Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.18",
+      "prerelease": false,
+      "sha": "c53c3ef749101fabc7269d6602e20faba55c4782"
+    },
+    {
+      "tag": "5.8.0",
+      "name": "5.8.0",
+      "date": "2026-06-07T04:01:20Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.8.0",
+      "prerelease": false,
+      "sha": "01964d92536edf1a3a874b9580a52824bebf6fbb"
+    },
+    {
+      "tag": "3.10.6",
+      "name": "3.10.6",
+      "date": "2026-06-07T02:45:22Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.6",
+      "prerelease": false,
+      "sha": "8de8215d6ff984f8db77a4a49dc089a396209e1b"
+    },
+    {
+      "tag": "2.4.6",
+      "name": "2.4.6",
+      "date": "2026-06-07T02:36:50Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.6",
+      "prerelease": false,
+      "sha": "0bbef382b7d9c1dbda10c8113d564ff9159a7e79"
+    },
+    {
+      "tag": "2.1.17",
+      "name": "2.1.17",
+      "date": "2026-06-07T02:25:37Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.17",
+      "prerelease": false,
+      "sha": "68d4ebf154c0193d0e4e2df1b79dc4a2d945aa5f"
+    },
+    {
+      "tag": "1.30.5",
+      "name": "1.30.5",
+      "date": "2026-05-31T14:16:56Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.5",
+      "prerelease": false,
+      "sha": "97bcabd32a64924688487dcd64aceaf158affb5c"
+    },
+    {
+      "tag": "5.7.0",
+      "name": "5.7.0",
+      "date": "2026-04-20T03:08:25Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.7.0",
+      "prerelease": false,
+      "sha": "9f55d3b9b7bcb1084fda8340e4b7ce4ed10cd0c8"
+    },
+    {
+      "tag": "1.30.4",
+      "name": "1.30.4",
+      "date": "2026-04-20T03:03:08Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.4",
+      "prerelease": false,
+      "sha": "02970383cc12e7bf0bc0707ea6e2e8ed23a7aec9"
+    },
+    {
+      "tag": "3.10.5",
+      "name": "3.10.5",
+      "date": "2026-04-20T02:59:51Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.5",
+      "prerelease": false,
+      "sha": "13f709c73e417c3c8cadc87ac88f809fd8d1fa45"
+    },
+    {
+      "tag": "2.4.5",
+      "name": "2.4.5",
+      "date": "2026-04-20T02:57:17Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.5",
+      "prerelease": false,
+      "sha": "ec7815be350e03df90f3e2ace92653fa6cb4327c"
+    },
+    {
+      "tag": "2.1.16",
+      "name": "2.1.16",
+      "date": "2026-04-20T02:52:23Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.16",
+      "prerelease": false,
+      "sha": "c91ff54b743e3f70f880e7145a9821474cd82f16"
+    },
+    {
+      "tag": "5.6.0",
+      "name": "5.6.0",
+      "date": "2026-04-10T04:09:32Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.6.0",
+      "prerelease": false,
+      "sha": "9b90dee03deb0d28761479c4a3a06fba5f7e012e"
+    },
+    {
+      "tag": "1.30.3",
+      "name": "1.30.3",
+      "date": "2026-04-10T03:52:38Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.3",
+      "prerelease": false,
+      "sha": "d28d4827f934469e7ca4de940ab0abd0788d1e65"
+    },
+    {
+      "tag": "3.10.4",
+      "name": "3.10.4",
+      "date": "2026-04-10T03:41:18Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.4",
+      "prerelease": false,
+      "sha": "3dfa34f1af992c1db139872fab8186e5b4e021b9"
+    },
+    {
+      "tag": "2.4.4",
+      "name": "2.4.4",
+      "date": "2026-04-10T03:28:08Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.4",
+      "prerelease": false,
+      "sha": "78bf6f0b4945ab31f1935741324ef3f0bf59a6fe"
+    },
+    {
+      "tag": "2.1.15",
+      "name": "2.1.15",
+      "date": "2026-04-10T03:17:50Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.15",
+      "prerelease": false,
+      "sha": "1255154d4a2036a46124b2a87bfa3a92d14843c7"
+    },
+    {
+      "tag": "5.5.0",
+      "name": "5.5.0",
+      "date": "2026-03-01T01:16:21Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.5.0",
+      "prerelease": false,
+      "sha": "eecd31b885a1c8192f12738130f85bbc6e8906ba"
+    },
+    {
+      "tag": "5.4.0",
+      "name": "5.4.0",
+      "date": "2026-01-11T06:33:45Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.4.0",
+      "prerelease": false,
+      "sha": "48f2fe37d64c2dece0ef71fb2ac55497566782af"
+    },
+    {
+      "tag": "3.10.3",
+      "name": "3.10.3",
+      "date": "2026-01-11T06:28:19Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.3",
+      "prerelease": false,
+      "sha": "ceba166a6c21830922e145c59999adc855412fe6"
+    },
+    {
+      "tag": "2.4.3",
+      "name": "2.4.3",
+      "date": "2026-01-11T06:26:07Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.3",
+      "prerelease": false,
+      "sha": "3b204d00c19f9d809f8d2374f408b197f37ad0bd"
+    },
+    {
+      "tag": "2.1.14",
+      "name": "2.1.14",
+      "date": "2026-01-11T06:23:25Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.14",
+      "prerelease": false,
+      "sha": "202278b0d5f1deb29bfdb12ba727d1240e8ac118"
+    },
+    {
+      "tag": "1.30.2",
+      "name": "1.30.2",
+      "date": "2026-01-11T06:20:16Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.2",
+      "prerelease": false,
+      "sha": "09cdde5e2f078b9a3358dd217e2c8cb4dac84be2"
+    },
+    {
+      "tag": "5.3.0",
+      "name": "5.3.0",
+      "date": "2025-11-24T16:23:36Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.3.0",
+      "prerelease": false,
+      "sha": "4d597c1aacdde1805a33c525b9758113ea0d90df"
+    },
+    {
+      "tag": "3.10.2",
+      "name": "3.10.2",
+      "date": "2025-11-24T16:18:14Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.2",
+      "prerelease": false,
+      "sha": "cd1dd91d6ef2afc0629982e0ea5911b3746fe51e"
+    },
+    {
+      "tag": "2.4.2",
+      "name": "2.4.2",
+      "date": "2025-11-24T16:07:06Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.2",
+      "prerelease": false,
+      "sha": "931ad61fb2c229063fc4e7e665fb52b87249cc56"
+    },
+    {
+      "tag": "5.2.0",
+      "name": "5.2.0",
+      "date": "2025-10-26T16:27:19Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.2.0",
+      "prerelease": false,
+      "sha": "3b8994b3aac4b61018bc04fc8c441f4fd68c18eb"
+    },
+    {
+      "tag": "2.1.13",
+      "name": "2.1.13",
+      "date": "2025-10-26T16:22:06Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.13",
+      "prerelease": false,
+      "sha": "0949bee8b9c3e8924852cc56c18d2070b7a443d0"
+    },
+    {
+      "tag": "1.30.1",
+      "name": "1.30.1",
+      "date": "2025-10-26T16:17:16Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.1",
+      "prerelease": false,
+      "sha": "fa8257a579ec623473eabfe49731de5967306c4c"
+    },
+    {
+      "tag": "5.1.0",
+      "name": "5.1.0",
+      "date": "2025-09-04T05:50:43Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.1.0",
+      "prerelease": false,
+      "sha": "fd26e45a814e94ae2aad0df757d9d1739c4bf2e0"
+    },
+    {
+      "tag": "3.10.1",
+      "name": "3.10.1",
+      "date": "2025-09-04T05:47:27Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.1",
+      "prerelease": false,
+      "sha": "e013633c2907d13a6906d9e95dca09748eb1523c"
+    },
+    {
+      "tag": "2.4.1",
+      "name": "2.4.1",
+      "date": "2025-09-04T05:44:54Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.1",
+      "prerelease": false,
+      "sha": "096ae6faf94b49b2cf53e92a0073133c941e1f57"
+    },
+    {
+      "tag": "5.0.0",
+      "name": "5.0.0",
+      "date": "2025-08-10T07:02:44Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/5.0.0",
+      "prerelease": false,
+      "sha": "d88efcac2444cde18e17684178de02b25dff2050"
+    },
+    {
+      "tag": "3.10.0",
+      "name": "3.10.0",
+      "date": "2025-08-10T06:57:39Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.10.0",
+      "prerelease": false,
+      "sha": "38559935cb76df0fad71d1e3df1a4e7da6e51cf0"
+    },
+    {
+      "tag": "2.4.0",
+      "name": "2.4.0",
+      "date": "2025-08-10T06:50:18Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.4.0",
+      "prerelease": false,
+      "sha": "3a3cad86101a77019eb2fc693aab1a8c11b18b94"
+    },
+    {
+      "tag": "2.1.12",
+      "name": "2.1.12",
+      "date": "2025-08-10T06:42:32Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.12",
+      "prerelease": false,
+      "sha": "f539d52501fe4e882f5927678f1b1df08783fa28"
+    },
+    {
+      "tag": "1.30.0",
+      "name": "1.30.0",
+      "date": "2025-08-10T06:34:25Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.30.0",
+      "prerelease": false,
+      "sha": "2f39286e0136673778b7a142b3f0d141e43d1714"
+    },
+    {
+      "tag": "4.5.0",
+      "name": "4.5.0",
+      "date": "2025-07-24T05:45:28Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/4.5.0",
+      "prerelease": false,
+      "sha": "2ea9786632e6fac1aee601b6e426bcc723d8ce13"
+    },
+    {
+      "tag": "3.9.3",
+      "name": "3.9.3",
+      "date": "2025-07-24T05:41:01Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.9.3",
+      "prerelease": false,
+      "sha": "668d3b5fdebf7f74627620d6648f77662f74b015"
+    },
+    {
+      "tag": "2.3.10",
+      "name": "2.3.10",
+      "date": "2025-07-24T05:37:29Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.10",
+      "prerelease": false,
+      "sha": "22058ce75b774bf40ceefcadd090a424d558f1ca"
+    },
+    {
+      "tag": "2.1.11",
+      "name": "2.1.11",
+      "date": "2025-07-24T05:30:44Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.11",
+      "prerelease": false,
+      "sha": "cfcbeaf4e4096604f0ac3edbc900623d8395a896"
+    },
+    {
+      "tag": "1.29.12",
+      "name": "1.29.12",
+      "date": "2025-07-24T05:26:31Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.12",
+      "prerelease": false,
+      "sha": "7c06eed662cce7ecab88f6f9f7626b443f5285df"
+    },
+    {
+      "tag": "4.4.0",
+      "name": "4.4.0",
+      "date": "2025-06-23T02:06:23Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/4.4.0",
+      "prerelease": false,
+      "sha": "747ccd1b443e85e0cfc0d52acf50e4d15ef959eb"
+    },
+    {
+      "tag": "3.9.2",
+      "name": "3.9.2",
+      "date": "2025-06-23T01:59:16Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.9.2",
+      "prerelease": false,
+      "sha": "3b07468e1fcc2501d85e60501977f8f7f53cfb4a"
+    },
+    {
+      "tag": "2.3.9",
+      "name": "2.3.9",
+      "date": "2025-06-23T01:46:21Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.9",
+      "prerelease": false,
+      "sha": "12e0d9f5ef459bf4d3427ef1bbe256b0d85f1e3a"
+    },
+    {
+      "tag": "2.1.10",
+      "name": "2.1.10",
+      "date": "2025-06-23T01:42:35Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.10",
+      "prerelease": false,
+      "sha": "b21176284db3da8786a0d2348b793673c3b45aef"
+    },
+    {
+      "tag": "1.29.11",
+      "name": "1.29.11",
+      "date": "2025-06-23T01:37:51Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.11",
+      "prerelease": false,
+      "sha": "05b6c4378ddf3e81b460ea645c42b46432c0db25"
+    },
+    {
+      "tag": "4.3.1",
+      "name": "4.3.1",
+      "date": "2025-05-26T19:05:01Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/4.3.1",
+      "prerelease": false,
+      "sha": "d0ac70d610fb62ccad38c2696569ae1ad42acc70"
+    },
+    {
+      "tag": "4.3.0",
+      "name": "4.3.0",
+      "date": "2025-05-26T03:59:36Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/4.3.0",
+      "prerelease": false,
+      "sha": "13537148b14f6606f380a2b220b00fcd8b16887f"
+    },
+    {
+      "tag": "4.2.0",
+      "name": "4.2.0",
+      "date": "2025-04-17T02:58:47Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/4.2.0",
+      "prerelease": false,
+      "sha": "5f6d7410e5fd72cac1aa67d4f05f4fe664d01ba6"
+    },
+    {
+      "tag": "4.1.0",
+      "name": "4.1.0",
+      "date": "2025-03-02T07:03:26Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/4.1.0",
+      "prerelease": false,
+      "sha": "6ff18c3a8df3a945492f75ce455d77f7ad55dd5c"
+    },
+    {
+      "tag": "4.0.0",
+      "name": "4.0.0",
+      "date": "2025-02-08T03:29:32Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/4.0.0",
+      "prerelease": false,
+      "sha": "2d4b9f3582102aafb6b1378fff8a20eeeacfb31c"
+    },
+    {
+      "tag": "3.9.1",
+      "name": "3.9.1",
+      "date": "2025-02-08T03:24:21Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.9.1",
+      "prerelease": false,
+      "sha": "56f334ace62fc8301c98d425272cbf0a00eb848d"
+    },
+    {
+      "tag": "2.3.8",
+      "name": "2.3.8",
+      "date": "2025-02-08T03:22:12Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.8",
+      "prerelease": false,
+      "sha": "7a700683743bf1c4a21837c84b266916f1aa7d25"
+    },
+    {
+      "tag": "2.1.9",
+      "name": "2.1.9",
+      "date": "2025-02-08T03:19:38Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.9",
+      "prerelease": false,
+      "sha": "f705c56e3947665389b616d21b66e59af8ebda9d"
+    },
+    {
+      "tag": "1.29.10",
+      "name": "1.29.10",
+      "date": "2025-02-08T03:16:25Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.10",
+      "prerelease": false,
+      "sha": "c80041b1628c4f18030407134fe88303661d4e4e"
+    },
+    {
+      "tag": "3.9.0",
+      "name": "3.9.0",
+      "date": "2025-01-26T05:36:11Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.9.0",
+      "prerelease": false,
+      "sha": "414f8a2aa1d8b974b39f577c0677d5ebc96fab36"
+    },
+    {
+      "tag": "2.3.7",
+      "name": "2.3.7",
+      "date": "2025-01-26T05:31:31Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.7",
+      "prerelease": false,
+      "sha": "cf357183b1d17a3862e8e4b9b056a556654dcae6"
+    },
+    {
+      "tag": "2.1.8",
+      "name": "2.1.8",
+      "date": "2025-01-26T05:27:18Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.8",
+      "prerelease": false,
+      "sha": "8be52afdacac097057f8e165b1427cb8789dde92"
+    },
+    {
+      "tag": "1.29.9",
+      "name": "1.29.9",
+      "date": "2025-01-26T05:23:03Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.9",
+      "prerelease": false,
+      "sha": "ffb47b639649fc9c8a6fa67977a27b756592ed85"
+    },
+    {
+      "tag": "3.8.0",
+      "name": "3.8.0",
+      "date": "2025-01-12T04:06:41Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.8.0",
+      "prerelease": false,
+      "sha": "949c799c3538f3158bcf6c5f4d8a403027be0fbd"
+    },
+    {
+      "tag": "2.3.6",
+      "name": "2.3.6",
+      "date": "2025-01-12T03:47:53Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.6",
+      "prerelease": false,
+      "sha": "098b848ee6688cb9a252d9ce97889defc517ee88"
+    },
+    {
+      "tag": "2.1.7",
+      "name": "2.1.7",
+      "date": "2025-01-12T03:45:24Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.7",
+      "prerelease": false,
+      "sha": "6e5bbcd045708b867f24bea276fb5ccf38efb37f"
+    },
+    {
+      "tag": "1.29.8",
+      "name": "1.29.8",
+      "date": "2025-01-12T03:42:17Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.8",
+      "prerelease": false,
+      "sha": "089ffdfc04b5fcf25a3503d81a4e589f247e20e3"
+    },
+    {
+      "tag": "3.7.0",
+      "name": "3.7.0",
+      "date": "2024-12-27T06:08:34Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.7.0",
+      "prerelease": false,
+      "sha": "2fc12fdc58d39297c7b8c72d65b37a1a25d65ab5"
+    },
+    {
+      "tag": "2.3.5",
+      "name": "2.3.5",
+      "date": "2024-12-27T06:04:51Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.5",
+      "prerelease": false,
+      "sha": "d836f2d7308a192441ccd1546545890b378af913"
+    },
+    {
+      "tag": "1.29.7",
+      "name": "1.29.7",
+      "date": "2024-12-27T06:00:53Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.7",
+      "prerelease": false,
+      "sha": "02c8625411dcb96e1f63d58c47460284e15b2e80"
+    },
+    {
+      "tag": "2.1.6",
+      "name": "2.1.6",
+      "date": "2024-12-27T05:56:04Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.6",
+      "prerelease": false,
+      "sha": "04e8b6edc1bba1bbc8e1aef4111903d11e8323c1"
+    },
+    {
+      "tag": "3.6.0",
+      "name": "3.6.0",
+      "date": "2024-12-08T16:12:24Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.6.0",
+      "prerelease": false,
+      "sha": "bce5db99872f9613121c3ad033c43318a3789396"
+    },
+    {
+      "tag": "2.3.4",
+      "name": "2.3.4",
+      "date": "2024-12-08T16:07:02Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.4",
+      "prerelease": false,
+      "sha": "01c4122a12327378ab5d97a56a4cbab07e7fa70b"
+    },
+    {
+      "tag": "1.29.6",
+      "name": "1.29.6",
+      "date": "2024-12-08T16:01:35Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.6",
+      "prerelease": false,
+      "sha": "08597725b84570cd6f32bf0ea92e75a803ef28c2"
+    },
+    {
+      "tag": "2.1.5",
+      "name": "2.1.5",
+      "date": "2024-12-08T15:54:48Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.5",
+      "prerelease": false,
+      "sha": "7327aa0d45e6d8f5d019564a1c13be927c5b2627"
+    },
+    {
+      "tag": "3.5.0",
+      "name": "3.5.0",
+      "date": "2024-11-22T07:13:51Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.5.0",
+      "prerelease": false,
+      "sha": "fb74dcdfa5b538763ab980e977529bc783039aec"
+    },
+    {
+      "tag": "2.3.3",
+      "name": "2.3.3",
+      "date": "2024-11-22T07:07:07Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.3",
+      "prerelease": false,
+      "sha": "91a4b42e41976a0b2f839720c3e20a12a84f6852"
+    },
+    {
+      "tag": "2.1.4",
+      "name": "2.1.4",
+      "date": "2024-11-22T07:02:33Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.4",
+      "prerelease": false,
+      "sha": "52de298ece5a7f5b4a6ebbeb513ed2d714cc75e7"
+    },
+    {
+      "tag": "1.29.5",
+      "name": "1.29.5",
+      "date": "2024-11-22T06:50:43Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.5",
+      "prerelease": false,
+      "sha": "727cb704d5479fe4ddc291497ee471c4ec08f1b6"
+    },
+    {
+      "tag": "2.3.2",
+      "name": "2.3.2",
+      "date": "2024-11-10T16:44:02Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.2",
+      "prerelease": false,
+      "sha": "08d4e08cf0c7e6182750cef7958b860b8c7f10ad"
+    },
+    {
+      "tag": "2.1.3",
+      "name": "2.1.3",
+      "date": "2024-11-10T16:42:17Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.3",
+      "prerelease": false,
+      "sha": "fbd9a63e2f2ab6d6a0a3cad27ec14cc7650ee574"
+    },
+    {
+      "tag": "1.29.4",
+      "name": "1.29.4",
+      "date": "2024-11-10T16:32:39Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.4",
+      "prerelease": false,
+      "sha": "7ca7e325dca3adb6a598385aab81f527b8d6c75d"
+    },
+    {
+      "tag": "3.4.0",
+      "name": "3.4.0",
+      "date": "2024-11-10T10:29:47Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.4.0",
+      "prerelease": false,
+      "sha": "eec07c20b51cc785295a6feef81ada7feda755e7"
+    },
+    {
+      "tag": "3.3.0",
+      "name": "3.3.0",
+      "date": "2024-09-29T07:44:17Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/3.3.0",
+      "prerelease": false,
+      "sha": "87ddd21eb0b6b7ad20a11d314348ef307475f547"
+    },
+    {
+      "tag": "2.3.0",
+      "name": "2.3.0",
+      "date": "2024-09-29T07:42:21Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.3.0",
+      "prerelease": false,
+      "sha": "c972c146ddd5e8350ea839355b9bb0ce6a8fa33e"
+    },
+    {
+      "tag": "2.1.1",
+      "name": "2.1.1",
+      "date": "2024-09-29T07:37:55Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.1",
+      "prerelease": false,
+      "sha": "4e58d8ae1502d7f22af9e4cfeb2d645e243dec4e"
+    },
+    {
+      "tag": "1.29.2",
+      "name": "1.29.2",
+      "date": "2024-09-29T07:34:52Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.2",
+      "prerelease": false,
+      "sha": "3a5a818d7d3e4b5bd2e56fb9de44dbded6eae07f"
+    },
+    {
+      "tag": "1.29.1",
+      "name": "Security Patch",
+      "date": "2024-09-04T02:44:54Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.1",
+      "prerelease": false,
+      "sha": "59ee38f7480904cd6487e5cbdea4d80ff2758719"
+    },
+    {
+      "tag": "2.2.2",
+      "name": "2.2.2",
+      "date": "2024-08-08T02:45:26Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.2.2",
+      "prerelease": false,
+      "sha": "ffbcee68069b073bff07a71eb321dcd9f2763513"
+    },
+    {
+      "tag": "2.2.1",
+      "name": "2.2.1",
+      "date": "2024-07-29T07:57:03Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.2.1",
+      "prerelease": false,
+      "sha": "a3c5c9e7ce3a2a8577bfa9e69960fbccbd2d4a9e"
+    },
+    {
+      "tag": "2.2.0",
+      "name": "2.2.0",
+      "date": "2024-07-24T13:28:53Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.2.0",
+      "prerelease": false,
+      "sha": "b0993b7e4d9c860133365d115b176bc6e0f57022"
+    },
+    {
+      "tag": "2.1.0",
+      "name": "2.1.0",
+      "date": "2024-05-11T04:18:56Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.1.0",
+      "prerelease": false,
+      "sha": "dbed77bd3a0f68f96c0dd68ad4499d5674fecc3e"
+    },
+    {
+      "tag": "2.0.0",
+      "name": "2.0.0",
+      "date": "2024-01-24T10:42:42Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/2.0.0",
+      "prerelease": false,
+      "sha": "4a77798f835119754961a97714f135826a323caa"
+    },
+    {
+      "tag": "1.29.0",
+      "name": "1.29.0",
+      "date": "2023-06-14T22:49:36Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.29.0",
+      "prerelease": false,
+      "sha": "fde2ccf55eaef7e86021ff1acce26479160a0fa0"
+    },
+    {
+      "tag": "1.28.0",
+      "name": "1.28.0",
+      "date": "2023-02-25T12:25:55Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.28.0",
+      "prerelease": false,
+      "sha": "6e81cf39bbd93ebc3a4e8150444c41e8aa9b769a"
+    },
+    {
+      "tag": "1.27.1",
+      "name": "1.27.1",
+      "date": "2023-02-08T07:04:28Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.27.1",
+      "prerelease": false,
+      "sha": "ef4e6ef74990239946d3983451a9bbed5ef1be5d"
+    },
+    {
+      "tag": "1.27.0",
+      "name": "1.27.0",
+      "date": "2023-01-24T20:08:44Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.27.0",
+      "prerelease": false,
+      "sha": "eeb8582f9cabf5a7f4ef78015691163233a1834f"
+    },
+    {
+      "tag": "1.26.0",
+      "name": "1.26.0",
+      "date": "2022-12-21T12:25:02Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.26.0",
+      "prerelease": false,
+      "sha": "5b6ceea9705b068f993e268e4debc566c2637063"
+    },
+    {
+      "tag": "1.25.2",
+      "name": "1.25.2 - 2022-09-25",
+      "date": "2022-09-25T17:21:48Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.25.2",
+      "prerelease": false,
+      "sha": "a317a09e7def49852400a4b3eca4a4b0790ceeb5"
+    },
+    {
+      "tag": "1.25.1",
+      "name": "Change Log",
+      "date": "2022-09-25T17:15:46Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.25.1",
+      "prerelease": false,
+      "sha": "bfd6e640fac2160a316353e3cafaeb605112b9b5"
+    },
+    {
+      "tag": "1.25.0",
+      "name": "1.25.0 - 2022-09-25",
+      "date": "2022-09-25T11:07:44Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.25.0",
+      "prerelease": false,
+      "sha": "86f3730ded48d0223fda78f3fb630e1e9ca59917"
+    },
+    {
+      "tag": "1.24.1",
+      "name": "1.24.1 - 2022-07-18",
+      "date": "2022-07-18T19:52:22Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.24.1",
+      "prerelease": false,
+      "sha": "69991111e05fca3ff7398e1e7fca9ebed33efec6"
+    },
+    {
+      "tag": "1.24.0",
+      "name": "1.24.0 - 2022-07-09",
+      "date": "2022-07-09T13:58:15Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.24.0",
+      "prerelease": false,
+      "sha": "ebe8745c92a7cac4514d040758393b5399633b83"
+    },
+    {
+      "tag": "1.23.0",
+      "name": "1.23.0 - 2022-04-24",
+      "date": "2022-04-24T13:55:17Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.23.0",
+      "prerelease": false,
+      "sha": "21e4cf62699eebf007db28775f7d1554e612ed9e"
+    },
+    {
+      "tag": "1.22.0",
+      "name": "1.22.0",
+      "date": "2022-02-18T12:58:42Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.22.0",
+      "prerelease": false,
+      "sha": "3a9e29b4f386a08a151a33578e80ef1747037a48"
+    },
+    {
+      "tag": "1.21.0",
+      "name": "1.21.0",
+      "date": "2022-01-06T11:11:16Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.21.0",
+      "prerelease": false,
+      "sha": "1a359d2ccbb89c05f5dffb32711a95f4afc67964"
+    },
+    {
+      "tag": "1.20.0",
+      "name": "1.20.0",
+      "date": "2021-11-23T15:25:14Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.20.0",
+      "prerelease": false,
+      "sha": "44436f270bb134b4a94670f3d020a85dfa0a3c02"
+    },
+    {
+      "tag": "1.19.0",
+      "name": "1.19.0",
+      "date": "2021-10-31T15:11:25Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.19.0",
+      "prerelease": false,
+      "sha": "a9ab55bfae02eecffb3df669a2e19ba0e2f04bbf"
+    },
+    {
+      "tag": "1.18.0",
+      "name": "1.18.0",
+      "date": "2021-05-31T18:34:45Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.18.0",
+      "prerelease": false,
+      "sha": "418cd304e8e6b417ea79c3b29126a25dc4b1170c"
+    },
+    {
+      "tag": "1.17.1",
+      "name": "1.17.1",
+      "date": "2021-03-02T17:56:23Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.17.1",
+      "prerelease": false,
+      "sha": "c55269cb06911575a126dc225a05c0e4626e5fb4"
+    },
+    {
+      "tag": "1.17.0",
+      "name": "1.17.0",
+      "date": "2021-03-02T17:40:13Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.17.0",
+      "prerelease": false,
+      "sha": "42e8680fc032f8c6f17085c238b2885205688767"
+    },
+    {
+      "tag": "1.16.0",
+      "name": "1.16.0",
+      "date": "2020-12-31T18:14:32Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.16.0",
+      "prerelease": false,
+      "sha": "76d4323b85129d0c368149c831a07a3e258b2b50"
+    },
+    {
+      "tag": "1.15.0",
+      "name": "1.15.0",
+      "date": "2020-10-11T13:25:28Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.15.0",
+      "prerelease": false,
+      "sha": "a8e8068b31b8119e1daa5b1eb5715a3a8ea8305f"
+    },
+    {
+      "tag": "1.14.1",
+      "name": "1.14.1",
+      "date": "2020-07-19T09:52:52Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.14.1",
+      "prerelease": false,
+      "sha": "2383aad5689778470491581442aab38cec41bf1d"
+    },
+    {
+      "tag": "1.14.0",
+      "name": "1.14.0",
+      "date": "2020-06-29T01:53:49Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.14.0",
+      "prerelease": false,
+      "sha": "73fe58fdc9f3977619bec6b26e867eb2ac059dcd"
+    },
+    {
+      "tag": "1.13.0",
+      "name": "1.13.0",
+      "date": "2020-05-31T23:53:46Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.13.0",
+      "prerelease": false,
+      "sha": "21bfb5b3243b8ceb9eda499a4d699fc42c11a9d1"
+    },
+    {
+      "tag": "1.12.0",
+      "name": "1.12.0",
+      "date": "2020-04-27T08:14:31Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.12.0",
+      "prerelease": false,
+      "sha": "f79611d6dc1f6b7e8e30b738fc371b392001dbfd"
+    },
+    {
+      "tag": "1.11.0",
+      "name": "1.11.0",
+      "date": "2020-03-02T13:10:45Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.11.0",
+      "prerelease": false,
+      "sha": "c2a205e82f9cf1cc9fab86b79e808d86dd680470"
+    },
+    {
+      "tag": "1.10.1",
+      "name": "1.10.1",
+      "date": "2019-12-01T23:15:28Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.10.1",
+      "prerelease": false,
+      "sha": "1648dc9ebef6ebe0c5a172e16cf66732918416e0"
+    },
+    {
+      "tag": "1.10.0",
+      "name": "1.10.0",
+      "date": "2019-11-18T11:34:53Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.10.0",
+      "prerelease": false,
+      "sha": "f734783d826bd84c3d54fcf7b71c37ab9bac4b04"
+    },
+    {
+      "tag": "1.9.0",
+      "name": "1.9.0",
+      "date": "2019-08-17T22:26:03Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.9.0",
+      "prerelease": false,
+      "sha": "8dea03eaf60a349b6097e4bcad11f894668280df"
+    },
+    {
+      "tag": "1.8.2",
+      "name": "1.8.2",
+      "date": "2019-07-27T04:31:53Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.8.2",
+      "prerelease": false,
+      "sha": "0c1346a1956347590b7db09533966307d20cb7cc"
+    },
+    {
+      "tag": "1.8.1",
+      "name": "1.8.1",
+      "date": "2019-07-27T04:31:21Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.8.1",
+      "prerelease": false,
+      "sha": "352c7002fefe4e4037d02654d853a1b09520946f"
+    },
+    {
+      "tag": "1.8.0",
+      "name": "1.8.0",
+      "date": "2019-07-27T04:30:42Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.8.0",
+      "prerelease": false,
+      "sha": "0e6238c69e863b58aeece61e48ea032696c6dccd"
+    },
+    {
+      "tag": "1.7.0",
+      "name": "1.7.0",
+      "date": "2019-05-26T02:52:24Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.7.0",
+      "prerelease": false,
+      "sha": "84e09df79855ed3da84e2eab6850eb7741d8cbda"
+    },
+    {
+      "tag": "1.6.0",
+      "name": "1.6.0",
+      "date": "2019-01-02T04:46:40Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.6.0",
+      "prerelease": false,
+      "sha": "bf00f0cc5f55c354018f9a9ef15e6e3e1a229051"
+    },
+    {
+      "tag": "1.5.2",
+      "name": "1.5.2",
+      "date": "2019-01-02T04:46:32Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.5.2",
+      "prerelease": false,
+      "sha": "cd60531c44f580fbdfbd55dfb935af791f09be5d"
+    },
+    {
+      "tag": "1.5.1",
+      "name": "1.5.1",
+      "date": "2018-11-21T09:49:07Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.5.1",
+      "prerelease": false,
+      "sha": "7f46932b2fabbaaf5a70e67cacc472a50b95cbb9"
+    },
+    {
+      "tag": "1.5.0",
+      "name": "1.5.0",
+      "date": "2018-10-21T10:06:48Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.5.0",
+      "prerelease": false,
+      "sha": "2dfd06c59825914a1a325f2a2ed13634b9d8c411"
+    },
+    {
+      "tag": "1.4.0",
+      "name": "1.4.0",
+      "date": "2018-09-30T04:15:46Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.4.0",
+      "prerelease": false,
+      "sha": "125f462a718956f37d81305ca0df4f17cef0f3b9"
+    },
+    {
+      "tag": "1.4.1",
+      "name": "1.4.1",
+      "date": "2018-09-30T04:15:24Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.4.1",
+      "prerelease": false,
+      "sha": "57404f43742a8164b5eac3ab03b962d8740885c1"
+    },
+    {
+      "tag": "1.3.1",
+      "name": "1.3.1",
+      "date": "2018-06-12T13:42:55Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.3.1",
+      "prerelease": false,
+      "sha": "aa5b0d0236c907fd8dba0883f3ceb97cc52e46ec"
+    },
+    {
+      "tag": "1.3.0",
+      "name": "1.3.0",
+      "date": "2018-06-10T06:46:48Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.3.0",
+      "prerelease": false,
+      "sha": "2eb342c13da50211fdfea73b513647e22a87e78f"
+    },
+    {
+      "tag": "1.2.1",
+      "name": "1.2.1",
+      "date": "2018-04-10T04:01:55Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.2.1",
+      "prerelease": false,
+      "sha": "36acc372875c4d894dc093825ce4f62209db5a76"
+    },
+    {
+      "tag": "1.2.0",
+      "name": "1.2.0",
+      "date": "2018-03-04T20:46:24Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.2.0",
+      "prerelease": false,
+      "sha": "8380fb3ad28242093c18d0baa9b7e67fb429ea84"
+    },
+    {
+      "tag": "1.0.0-beta",
+      "name": "1.0.0-beta",
+      "date": "2018-01-28T12:41:46Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.0.0-beta",
+      "prerelease": false,
+      "sha": "7d4dc74fc6219739f1b6e0a7a2f87fdbf33c6ca5"
+    },
+    {
+      "tag": "1.0.0-beta2",
+      "name": "1.0.0-beta2",
+      "date": "2018-01-28T12:41:05Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.0.0-beta2",
+      "prerelease": false,
+      "sha": "59326f1064d61a6ff77822b64124a8046e06a46d"
+    },
+    {
+      "tag": "1.0.0",
+      "name": "1.0.0",
+      "date": "2018-01-28T12:40:41Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.0.0",
+      "prerelease": false,
+      "sha": "691b68de9b87cf6e398df46482741a4f667a9391"
+    },
+    {
+      "tag": "1.1.0",
+      "name": "1.1.0",
+      "date": "2018-01-28T12:39:35Z",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/releases/tag/1.1.0",
+      "prerelease": false,
+      "sha": "a2771e562e3a17c0d512d2009e38fd628beece90"
+    }
+  ],
+  "tags_without_release": [
+    "phpexcel-last-release-1.8.1",
+    "phpexcel-last-cherry-picked-commit"
+  ],
+  "security_fixes": [
+    {
+      "date": "2026-10-12T21:00:57Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-j2w7-387v-m2rq",
+        "CVE-2026-108359"
+      ],
+      "title": "ODS Reader: Unbounded number-rows-repeated → CPU & Memory Exhaustion (DoS)",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-j2w7-387v-m2rq",
+      "patched_versions": [
+        "5.10.0",
+        "3.10.8",
+        "2.4.8",
+        "2.1.19",
+        "1.30.7"
+      ],
+      "release": "5.10.0",
+      "release_date": "2026-09-17T04:48:03Z",
+      "matched_releases": [
+        {
+          "tag": "5.10.0",
+          "date": "2026-09-17T04:48:03Z"
+        },
+        {
+          "tag": "3.10.8",
+          "date": "2026-09-17T04:33:23Z"
+        },
+        {
+          "tag": "2.4.8",
+          "date": "2026-09-17T04:23:57Z"
+        },
+        {
+          "tag": "2.1.19",
+          "date": "2026-09-17T04:15:34Z"
+        },
+        {
+          "tag": "1.30.7",
+          "date": "2026-09-17T04:07:06Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-10-12T20:56:43Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-2phh-27fw-q4gc",
+        "CVE-2026-108360"
+      ],
+      "title": "SSRF whitelist bypass via unre-validated HTTP redirect in Drawing::setPath external image loading",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-2phh-27fw-q4gc",
+      "patched_versions": [
+        "5.10.0",
+        "3.10.8",
+        "2.4.8",
+        "2.1.19",
+        "1.30.7"
+      ],
+      "release": "5.10.0",
+      "release_date": "2026-09-17T04:48:03Z",
+      "matched_releases": [
+        {
+          "tag": "5.10.0",
+          "date": "2026-09-17T04:48:03Z"
+        },
+        {
+          "tag": "3.10.8",
+          "date": "2026-09-17T04:33:23Z"
+        },
+        {
+          "tag": "2.4.8",
+          "date": "2026-09-17T04:23:57Z"
+        },
+        {
+          "tag": "2.1.19",
+          "date": "2026-09-17T04:15:34Z"
+        },
+        {
+          "tag": "1.30.7",
+          "date": "2026-09-17T04:07:06Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-10-12T20:54:40Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-rxj4-h86g-25gc",
+        "CVE-2026-108357"
+      ],
+      "title": "XmlScanner Bypass via Double-Encoded unentity() TOCTOU Allows XXE and Denial of Service",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-rxj4-h86g-25gc",
+      "patched_versions": [
+        "5.10.0",
+        "3.10.8"
+      ],
+      "release": "5.10.0",
+      "release_date": "2026-09-17T04:48:03Z",
+      "matched_releases": [
+        {
+          "tag": "5.10.0",
+          "date": "2026-09-17T04:48:03Z"
+        },
+        {
+          "tag": "3.10.8",
+          "date": "2026-09-17T04:33:23Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-10-12T20:49:30Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-3x94-m842-937c",
+        "CVE-2026-108358"
+      ],
+      "title": "XmlScanner Bypass via ISO-2022 Escape Sequences Allows XXE and Denial of Service",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-3x94-m842-937c",
+      "patched_versions": [
+        "5.10.0",
+        "3.10.8",
+        "2.4.8",
+        "2.1.19",
+        "1.30.7"
+      ],
+      "release": "5.10.0",
+      "release_date": "2026-09-17T04:48:03Z",
+      "matched_releases": [
+        {
+          "tag": "5.10.0",
+          "date": "2026-09-17T04:48:03Z"
+        },
+        {
+          "tag": "3.10.8",
+          "date": "2026-09-17T04:33:23Z"
+        },
+        {
+          "tag": "2.4.8",
+          "date": "2026-09-17T04:23:57Z"
+        },
+        {
+          "tag": "2.1.19",
+          "date": "2026-09-17T04:15:34Z"
+        },
+        {
+          "tag": "1.30.7",
+          "date": "2026-09-17T04:07:06Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-09-23T00:54:17Z",
+      "type": "commit",
+      "ids": [],
+      "title": "Security Policy Updates",
+      "sha": "b03f7f3371e1dd1adafa41e4d0e47335f2d782f9",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/commit/b03f7f3371e1dd1adafa41e4d0e47335f2d782f9",
+      "release": null,
+      "release_date": null,
+      "matched_releases": [],
+      "mapping": "unreleased"
+    },
+    {
+      "date": "2026-07-19T04:30:57Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-6hq5-7373-42rg",
+        "CVE-2026-59931"
+      ],
+      "title": "SSRF bypass via HTTP redirect in WEBSERVICE() domain whitelist",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-6hq5-7373-42rg",
+      "patched_versions": [
+        "5.8.1",
+        "3.10.7",
+        "2.4.7",
+        "2.1.18",
+        "1.30.6"
+      ],
+      "release": "5.8.1",
+      "release_date": "2026-07-12T20:14:49Z",
+      "matched_releases": [
+        {
+          "tag": "5.8.1",
+          "date": "2026-07-12T20:14:49Z"
+        },
+        {
+          "tag": "3.10.7",
+          "date": "2026-07-12T19:55:40Z"
+        },
+        {
+          "tag": "2.4.7",
+          "date": "2026-07-12T19:43:51Z"
+        },
+        {
+          "tag": "2.1.18",
+          "date": "2026-07-12T19:34:29Z"
+        },
+        {
+          "tag": "1.30.6",
+          "date": "2026-07-12T20:05:14Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-19T04:29:26Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-2mrg-gjxq-2gvr",
+        "CVE-2026-59932"
+      ],
+      "title": "Gnumeric reader unbounded gzip expansion causes memory exhaustion",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-2mrg-gjxq-2gvr",
+      "patched_versions": [
+        "5.8.1",
+        "3.10.7",
+        "2.4.7",
+        "2.1.18",
+        "1.30.6"
+      ],
+      "release": "5.8.1",
+      "release_date": "2026-07-12T20:14:49Z",
+      "matched_releases": [
+        {
+          "tag": "5.8.1",
+          "date": "2026-07-12T20:14:49Z"
+        },
+        {
+          "tag": "3.10.7",
+          "date": "2026-07-12T19:55:40Z"
+        },
+        {
+          "tag": "2.4.7",
+          "date": "2026-07-12T19:43:51Z"
+        },
+        {
+          "tag": "2.1.18",
+          "date": "2026-07-12T19:34:29Z"
+        },
+        {
+          "tag": "1.30.6",
+          "date": "2026-07-12T20:05:14Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-07-19T04:28:17Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-xh5m-36r6-47m3",
+        "CVE-2026-59933"
+      ],
+      "title": "XLS/OLE sector-chain self-loop causes memory exhaustion",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-xh5m-36r6-47m3",
+      "patched_versions": [
+        "5.8.1",
+        "3.10.7",
+        "2.4.7",
+        "2.1.18",
+        "1.30.6"
+      ],
+      "release": "5.8.1",
+      "release_date": "2026-07-12T20:14:49Z",
+      "matched_releases": [
+        {
+          "tag": "5.8.1",
+          "date": "2026-07-12T20:14:49Z"
+        },
+        {
+          "tag": "3.10.7",
+          "date": "2026-07-12T19:55:40Z"
+        },
+        {
+          "tag": "2.4.7",
+          "date": "2026-07-12T19:43:51Z"
+        },
+        {
+          "tag": "2.1.18",
+          "date": "2026-07-12T19:34:29Z"
+        },
+        {
+          "tag": "1.30.6",
+          "date": "2026-07-12T20:05:14Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-06-07T04:04:34Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-87m4-826x-3crx",
+        "CVE-2026-45034"
+      ],
+      "title": "CVE-2026-34084 patch bypass",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-87m4-826x-3crx",
+      "patched_versions": [
+        "1.30.5"
+      ],
+      "release": "1.30.5",
+      "release_date": "2026-05-31T14:16:56Z",
+      "matched_releases": [
+        {
+          "tag": "1.30.5",
+          "date": "2026-05-31T14:16:56Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-28T23:50:56Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-84wq-86v6-x5j6",
+        "CVE-2026-40863"
+      ],
+      "title": "CPU Denial of Service via Unbounded Row Index in SpreadsheetML XML Reader",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-84wq-86v6-x5j6",
+      "patched_versions": [
+        "5.7.0",
+        "3.10.5",
+        "2.4.5",
+        "2.1.16",
+        "1.30.6"
+      ],
+      "release": "5.7.0",
+      "release_date": "2026-04-20T03:08:25Z",
+      "matched_releases": [
+        {
+          "tag": "5.7.0",
+          "date": "2026-04-20T03:08:25Z"
+        },
+        {
+          "tag": "3.10.5",
+          "date": "2026-04-20T02:59:51Z"
+        },
+        {
+          "tag": "2.4.5",
+          "date": "2026-04-20T02:57:17Z"
+        },
+        {
+          "tag": "2.1.16",
+          "date": "2026-04-20T02:52:23Z"
+        },
+        {
+          "tag": "1.30.6",
+          "date": "2026-07-12T20:05:14Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-28T23:49:04Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-7c6m-4442-2x6m",
+        "CVE-2026-40902"
+      ],
+      "title": "CPU Denial of Service via Unbounded Row Number in XLSX Row Dimensions",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-7c6m-4442-2x6m",
+      "patched_versions": [
+        "5.7.0",
+        "3.10.5",
+        "2.4.5",
+        "2.1.16",
+        "1.30.4"
+      ],
+      "release": "5.7.0",
+      "release_date": "2026-04-20T03:08:25Z",
+      "matched_releases": [
+        {
+          "tag": "5.7.0",
+          "date": "2026-04-20T03:08:25Z"
+        },
+        {
+          "tag": "3.10.5",
+          "date": "2026-04-20T02:59:51Z"
+        },
+        {
+          "tag": "2.4.5",
+          "date": "2026-04-20T02:57:17Z"
+        },
+        {
+          "tag": "2.1.16",
+          "date": "2026-04-20T02:52:23Z"
+        },
+        {
+          "tag": "1.30.4",
+          "date": "2026-04-20T03:03:08Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-28T23:47:52Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-q4q6-r8wh-5cgh",
+        "CVE-2026-34084"
+      ],
+      "title": "SSRF/RCE in IOFactory::load when $filename is user controlled",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-q4q6-r8wh-5cgh",
+      "patched_versions": [
+        "5.6.0",
+        "3.10.4",
+        "2.4.4",
+        "2.1.15",
+        "1.30.3"
+      ],
+      "release": "5.6.0",
+      "release_date": "2026-04-10T04:09:32Z",
+      "matched_releases": [
+        {
+          "tag": "5.6.0",
+          "date": "2026-04-10T04:09:32Z"
+        },
+        {
+          "tag": "3.10.4",
+          "date": "2026-04-10T03:41:18Z"
+        },
+        {
+          "tag": "2.4.4",
+          "date": "2026-04-10T03:28:08Z"
+        },
+        {
+          "tag": "2.1.15",
+          "date": "2026-04-10T03:17:50Z"
+        },
+        {
+          "tag": "1.30.3",
+          "date": "2026-04-10T03:52:38Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-26T21:21:41Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-hrmw-qprp-wgmc",
+        "CVE-2026-40296"
+      ],
+      "title": "XSS via number format code with @ text placeholder bypasses htmlspecialchars in HTML writer",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-hrmw-qprp-wgmc",
+      "patched_versions": [
+        "5.7.0",
+        "3.10.5",
+        "2.4.5",
+        "2.1.16",
+        "1.30.4"
+      ],
+      "release": "5.7.0",
+      "release_date": "2026-04-20T03:08:25Z",
+      "matched_releases": [
+        {
+          "tag": "5.7.0",
+          "date": "2026-04-20T03:08:25Z"
+        },
+        {
+          "tag": "3.10.5",
+          "date": "2026-04-20T02:59:51Z"
+        },
+        {
+          "tag": "2.4.5",
+          "date": "2026-04-20T02:57:17Z"
+        },
+        {
+          "tag": "2.1.16",
+          "date": "2026-04-20T02:52:23Z"
+        },
+        {
+          "tag": "1.30.4",
+          "date": "2026-04-20T03:03:08Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2026-04-26T21:20:11Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-6wpp-88cp-7q68",
+        "CVE-2026-35453"
+      ],
+      "title": "XSS via NumberFormat @ Text Substitution in HTML Writer",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-6wpp-88cp-7q68",
+      "patched_versions": [
+        "5.7.0",
+        "3.10.5",
+        "2.4.5",
+        "2.1.16",
+        "1.30.4"
+      ],
+      "release": "5.7.0",
+      "release_date": "2026-04-20T03:08:25Z",
+      "matched_releases": [
+        {
+          "tag": "5.7.0",
+          "date": "2026-04-20T03:08:25Z"
+        },
+        {
+          "tag": "3.10.5",
+          "date": "2026-04-20T02:59:51Z"
+        },
+        {
+          "tag": "2.4.5",
+          "date": "2026-04-20T02:57:17Z"
+        },
+        {
+          "tag": "2.1.16",
+          "date": "2026-04-20T02:52:23Z"
+        },
+        {
+          "tag": "1.30.4",
+          "date": "2026-04-20T03:03:08Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-08-23T03:09:34Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-rx7m-68vc-ppxh",
+        "CVE-2025-54370"
+      ],
+      "title": "SSRF when reading and displaying a processed HTML document in the browser",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-rx7m-68vc-ppxh",
+      "patched_versions": [
+        "1.30.0",
+        "2.1.12",
+        "2.4.0",
+        "3.10.0",
+        "5.0.0"
+      ],
+      "release": "1.30.0",
+      "release_date": "2025-08-10T06:34:25Z",
+      "matched_releases": [
+        {
+          "tag": "1.30.0",
+          "date": "2025-08-10T06:34:25Z"
+        },
+        {
+          "tag": "2.1.12",
+          "date": "2025-08-10T06:42:32Z"
+        },
+        {
+          "tag": "2.4.0",
+          "date": "2025-08-10T06:50:18Z"
+        },
+        {
+          "tag": "3.10.0",
+          "date": "2025-08-10T06:57:39Z"
+        },
+        {
+          "tag": "5.0.0",
+          "date": "2025-08-10T07:02:44Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-02-01T08:29:10Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-r57h-547h-w24f",
+        "CVE-2025-23210"
+      ],
+      "title": "Bypass XSS sanitizer using the javascript protocol and special characters",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-r57h-547h-w24f",
+      "patched_versions": [
+        "3.9.0",
+        "1.29.9",
+        "2.3.7",
+        "2.1.8"
+      ],
+      "release": "3.9.0",
+      "release_date": "2025-01-26T05:36:11Z",
+      "matched_releases": [
+        {
+          "tag": "3.9.0",
+          "date": "2025-01-26T05:36:11Z"
+        },
+        {
+          "tag": "1.29.9",
+          "date": "2025-01-26T05:23:03Z"
+        },
+        {
+          "tag": "2.3.7",
+          "date": "2025-01-26T05:31:31Z"
+        },
+        {
+          "tag": "2.1.8",
+          "date": "2025-01-26T05:27:18Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-01-18T04:32:48Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-79xx-vf93-p7cx",
+        "CVE-2025-22131"
+      ],
+      "title": "Cross-Site Scripting (XSS) vulnerability in generateNavigation() function",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-79xx-vf93-p7cx",
+      "patched_versions": [
+        "3.8.0",
+        "1.29.8",
+        "2.1.7",
+        "2.3.6"
+      ],
+      "release": "3.8.0",
+      "release_date": "2025-01-12T04:06:41Z",
+      "matched_releases": [
+        {
+          "tag": "3.8.0",
+          "date": "2025-01-12T04:06:41Z"
+        },
+        {
+          "tag": "1.29.8",
+          "date": "2025-01-12T03:42:17Z"
+        },
+        {
+          "tag": "2.1.7",
+          "date": "2025-01-12T03:45:24Z"
+        },
+        {
+          "tag": "2.3.6",
+          "date": "2025-01-12T03:47:53Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-01-03T17:16:06Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-q9jv-mm3r-j47r",
+        "CVE-2024-56412"
+      ],
+      "title": "Bypass XSS sanitizer using the javascript protocol and special characters",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-q9jv-mm3r-j47r",
+      "patched_versions": [
+        "3.7.0",
+        "1.29.7",
+        "2.1.6",
+        "2.3.5"
+      ],
+      "release": "3.7.0",
+      "release_date": "2024-12-27T06:08:34Z",
+      "matched_releases": [
+        {
+          "tag": "3.7.0",
+          "date": "2024-12-27T06:08:34Z"
+        },
+        {
+          "tag": "1.29.7",
+          "date": "2024-12-27T06:00:53Z"
+        },
+        {
+          "tag": "2.1.6",
+          "date": "2024-12-27T05:56:04Z"
+        },
+        {
+          "tag": "2.3.5",
+          "date": "2024-12-27T06:04:51Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-01-03T17:15:21Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-hwcp-2h35-p66w",
+        "CVE-2024-56411"
+      ],
+      "title": "Cross-Site Scripting (XSS) vulnerability of the hyperlink base in the HTML page header",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-hwcp-2h35-p66w",
+      "patched_versions": [
+        "3.7.0",
+        "1.29.7",
+        "2.1.6",
+        "2.3.5"
+      ],
+      "release": "3.7.0",
+      "release_date": "2024-12-27T06:08:34Z",
+      "matched_releases": [
+        {
+          "tag": "3.7.0",
+          "date": "2024-12-27T06:08:34Z"
+        },
+        {
+          "tag": "1.29.7",
+          "date": "2024-12-27T06:00:53Z"
+        },
+        {
+          "tag": "2.1.6",
+          "date": "2024-12-27T05:56:04Z"
+        },
+        {
+          "tag": "2.3.5",
+          "date": "2024-12-27T06:04:51Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-01-03T17:13:52Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-wv23-996v-q229",
+        "CVE-2024-56410"
+      ],
+      "title": "Cross-Site Scripting (XSS) vulnerability in custom properties",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-wv23-996v-q229",
+      "patched_versions": [
+        "3.7.0",
+        "1.29.7",
+        "2.1.6",
+        "2.3.5"
+      ],
+      "release": "3.7.0",
+      "release_date": "2024-12-27T06:08:34Z",
+      "matched_releases": [
+        {
+          "tag": "3.7.0",
+          "date": "2024-12-27T06:08:34Z"
+        },
+        {
+          "tag": "1.29.7",
+          "date": "2024-12-27T06:00:53Z"
+        },
+        {
+          "tag": "2.1.6",
+          "date": "2024-12-27T05:56:04Z"
+        },
+        {
+          "tag": "2.3.5",
+          "date": "2024-12-27T06:04:51Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-01-03T16:52:48Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-j2xg-cjcx-4677",
+        "CVE-2024-56409"
+      ],
+      "title": "Unauthorized Reflected XSS in Currency.php file",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-j2xg-cjcx-4677",
+      "patched_versions": [
+        "3.7.0",
+        "1.29.7",
+        "2.1.6",
+        "2.3.5"
+      ],
+      "release": "3.7.0",
+      "release_date": "2024-12-27T06:08:34Z",
+      "matched_releases": [
+        {
+          "tag": "3.7.0",
+          "date": "2024-12-27T06:08:34Z"
+        },
+        {
+          "tag": "1.29.7",
+          "date": "2024-12-27T06:00:53Z"
+        },
+        {
+          "tag": "2.1.6",
+          "date": "2024-12-27T05:56:04Z"
+        },
+        {
+          "tag": "2.3.5",
+          "date": "2024-12-27T06:04:51Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-01-03T16:52:02Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-c6fv-7vh8-2rhr",
+        "CVE-2024-56366"
+      ],
+      "title": "Unauthorized Reflected XSS in the Accounting.php file",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-c6fv-7vh8-2rhr",
+      "patched_versions": [
+        "3.7.0",
+        "1.29.7",
+        "2.1.6",
+        "2.3.5"
+      ],
+      "release": "3.7.0",
+      "release_date": "2024-12-27T06:08:34Z",
+      "matched_releases": [
+        {
+          "tag": "3.7.0",
+          "date": "2024-12-27T06:08:34Z"
+        },
+        {
+          "tag": "1.29.7",
+          "date": "2024-12-27T06:00:53Z"
+        },
+        {
+          "tag": "2.1.6",
+          "date": "2024-12-27T05:56:04Z"
+        },
+        {
+          "tag": "2.3.5",
+          "date": "2024-12-27T06:04:51Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-01-03T16:51:13Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-jmpx-686v-c3wx",
+        "CVE-2024-56365"
+      ],
+      "title": "Unauthorized Reflected XSS in the constructor of the Downloader class",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-jmpx-686v-c3wx",
+      "patched_versions": [
+        "3.7.0",
+        "1.29.7",
+        "2.1.6",
+        "2.3.5"
+      ],
+      "release": "3.7.0",
+      "release_date": "2024-12-27T06:08:34Z",
+      "matched_releases": [
+        {
+          "tag": "3.7.0",
+          "date": "2024-12-27T06:08:34Z"
+        },
+        {
+          "tag": "1.29.7",
+          "date": "2024-12-27T06:00:53Z"
+        },
+        {
+          "tag": "2.1.6",
+          "date": "2024-12-27T05:56:04Z"
+        },
+        {
+          "tag": "2.3.5",
+          "date": "2024-12-27T06:04:51Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2025-01-03T01:11:47Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-x88g-h956-m5xg",
+        "CVE-2024-56408"
+      ],
+      "title": "Unauthorized Reflected XSS in `Convert-Online.php` file",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-x88g-h956-m5xg",
+      "patched_versions": [
+        "3.7.0",
+        "1.29.7",
+        "2.1.6",
+        "2.3.5"
+      ],
+      "release": "3.7.0",
+      "release_date": "2024-12-27T06:08:34Z",
+      "matched_releases": [
+        {
+          "tag": "3.7.0",
+          "date": "2024-12-27T06:08:34Z"
+        },
+        {
+          "tag": "1.29.7",
+          "date": "2024-12-27T06:00:53Z"
+        },
+        {
+          "tag": "2.1.6",
+          "date": "2024-12-27T05:56:04Z"
+        },
+        {
+          "tag": "2.3.5",
+          "date": "2024-12-27T06:04:51Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2024-11-16T00:08:05Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-7cc9-j4mv-vcjp",
+        "CVE-2024-48917"
+      ],
+      "title": "XXE in PHPSpreadsheet's XLSX reader",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-7cc9-j4mv-vcjp",
+      "patched_versions": [
+        "1.29.4",
+        "2.1.3",
+        "2.3.2",
+        "3.4.0"
+      ],
+      "release": "1.29.4",
+      "release_date": "2024-11-10T16:32:39Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.4",
+          "date": "2024-11-10T16:32:39Z"
+        },
+        {
+          "tag": "2.1.3",
+          "date": "2024-11-10T16:42:17Z"
+        },
+        {
+          "tag": "2.3.2",
+          "date": "2024-11-10T16:44:02Z"
+        },
+        {
+          "tag": "3.4.0",
+          "date": "2024-11-10T10:29:47Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2024-11-16T00:07:05Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-jw4x-v69f-hh5w",
+        "CVE-2024-47873"
+      ],
+      "title": "XmlScanner bypass leads to XXE",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-jw4x-v69f-hh5w",
+      "patched_versions": [
+        "1.29.4",
+        "2.1.3",
+        "2.3.2",
+        "3.4.0"
+      ],
+      "release": "1.29.4",
+      "release_date": "2024-11-10T16:32:39Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.4",
+          "date": "2024-11-10T16:32:39Z"
+        },
+        {
+          "tag": "2.1.3",
+          "date": "2024-11-10T16:42:17Z"
+        },
+        {
+          "tag": "2.3.2",
+          "date": "2024-11-10T16:44:02Z"
+        },
+        {
+          "tag": "3.4.0",
+          "date": "2024-11-10T10:29:47Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2024-10-07T15:06:47Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-r8w8-74ww-j4wh",
+        "CVE-2024-45292"
+      ],
+      "title": "PhpSpreadsheet HTML writer is vulnerable to Cross-Site Scripting via JavaScript hyperlinks",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-r8w8-74ww-j4wh",
+      "patched_versions": [
+        "2.3.0",
+        "1.29.2",
+        "2.1.1"
+      ],
+      "release": "2.3.0",
+      "release_date": "2024-09-29T07:42:21Z",
+      "matched_releases": [
+        {
+          "tag": "2.3.0",
+          "date": "2024-09-29T07:42:21Z"
+        },
+        {
+          "tag": "1.29.2",
+          "date": "2024-09-29T07:34:52Z"
+        },
+        {
+          "tag": "2.1.1",
+          "date": "2024-09-29T07:37:55Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2024-10-07T15:05:15Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-w9xv-qf98-ccq4",
+        "CVE-2024-45291"
+      ],
+      "title": "Absolute path traversal and Server-Side Request Forgery in HTML writer when embedding images is enabled",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-w9xv-qf98-ccq4",
+      "patched_versions": [
+        "2.3.0",
+        "1.29.2",
+        "2.1.1"
+      ],
+      "release": "2.3.0",
+      "release_date": "2024-09-29T07:42:21Z",
+      "matched_releases": [
+        {
+          "tag": "2.3.0",
+          "date": "2024-09-29T07:42:21Z"
+        },
+        {
+          "tag": "1.29.2",
+          "date": "2024-09-29T07:34:52Z"
+        },
+        {
+          "tag": "2.1.1",
+          "date": "2024-09-29T07:37:55Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2024-10-07T15:04:21Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-5gpr-w2p5-6m37",
+        "CVE-2024-45290"
+      ],
+      "title": "Absolute path traversal and Server-Side Request Forgery when opening XLSX file",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-5gpr-w2p5-6m37",
+      "patched_versions": [
+        "2.3.0",
+        "1.29.2",
+        "2.1.1"
+      ],
+      "release": "2.3.0",
+      "release_date": "2024-09-29T07:42:21Z",
+      "matched_releases": [
+        {
+          "tag": "2.3.0",
+          "date": "2024-09-29T07:42:21Z"
+        },
+        {
+          "tag": "1.29.2",
+          "date": "2024-09-29T07:34:52Z"
+        },
+        {
+          "tag": "2.1.1",
+          "date": "2024-09-29T07:37:55Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2024-10-07T15:03:27Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-6hwr-6v2f-3m88",
+        "CVE-2024-45293"
+      ],
+      "title": "XXE in PHPSpreadsheet's XLSX reader",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-6hwr-6v2f-3m88",
+      "patched_versions": [
+        "2.3.0",
+        "1.29.1",
+        "2.1.1"
+      ],
+      "release": "2.3.0",
+      "release_date": "2024-09-29T07:42:21Z",
+      "matched_releases": [
+        {
+          "tag": "2.3.0",
+          "date": "2024-09-29T07:42:21Z"
+        },
+        {
+          "tag": "1.29.1",
+          "date": "2024-09-04T02:44:54Z"
+        },
+        {
+          "tag": "2.1.1",
+          "date": "2024-09-29T07:37:55Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2024-10-06T03:59:23Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-v66g-p9x6-v98p",
+        "CVE-2024-45060"
+      ],
+      "title": "Unauthenticated Cross-Site-Scripting (XSS) in sample file",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-v66g-p9x6-v98p",
+      "patched_versions": [
+        "2.3.0",
+        "1.29.2",
+        "2.1.1"
+      ],
+      "release": "2.3.0",
+      "release_date": "2024-09-29T07:42:21Z",
+      "matched_releases": [
+        {
+          "tag": "2.3.0",
+          "date": "2024-09-29T07:42:21Z"
+        },
+        {
+          "tag": "1.29.2",
+          "date": "2024-09-29T07:34:52Z"
+        },
+        {
+          "tag": "2.1.1",
+          "date": "2024-09-29T07:37:55Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2024-08-28T14:48:12Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-ghg6-32f9-2jp7",
+        "CVE-2024-45048"
+      ],
+      "title": "XXE in PHPSpreadsheet encoding is returned",
+      "severity": "high",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-ghg6-32f9-2jp7",
+      "patched_versions": [
+        "2.2.1",
+        "1.29.1",
+        "2.1.1"
+      ],
+      "release": "2.2.1",
+      "release_date": "2024-07-29T07:57:03Z",
+      "matched_releases": [
+        {
+          "tag": "2.2.1",
+          "date": "2024-07-29T07:57:03Z"
+        },
+        {
+          "tag": "1.29.1",
+          "date": "2024-09-04T02:44:54Z"
+        },
+        {
+          "tag": "2.1.1",
+          "date": "2024-09-29T07:37:55Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    },
+    {
+      "date": "2024-08-28T14:47:12Z",
+      "type": "advisory",
+      "ids": [
+        "GHSA-wgmf-q9vr-vww6",
+        "CVE-2024-45046"
+      ],
+      "title": "PhpSpreadsheet HTML writer is vulnerable to Cross-Site Scripting via style information",
+      "severity": "medium",
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-wgmf-q9vr-vww6",
+      "patched_versions": [
+        "2.1.0",
+        "1.29.1"
+      ],
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        },
+        {
+          "tag": "1.29.1",
+          "date": "2024-09-04T02:44:54Z"
+        }
+      ],
+      "mapping": "advisory patched_versions"
+    }
+  ],
+  "dependency_updates": [
+    {
+      "date": "2026-09-02T05:27:30Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.95.17 to 3.95.23",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4979",
+      "release": "1.30.7",
+      "release_date": "2026-09-17T04:07:06Z",
+      "matched_releases": [
+        {
+          "tag": "1.30.7",
+          "date": "2026-09-17T04:07:06Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-08T14:56:16Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "GHSA-hmqg-cxww-wqhq",
+        "CVE-2026-67434"
+      ],
+      "title": "Bump squizlabs/php_codesniffer from 3.13.5 to 3.13.6",
+      "security": true,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4955",
+      "release": "1.30.7",
+      "release_date": "2026-09-17T04:07:06Z",
+      "matched_releases": [
+        {
+          "tag": "1.30.7",
+          "date": "2026-09-17T04:07:06Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-08-01T14:50:33Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.95.11 to 3.95.17",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4951",
+      "release": "1.30.7",
+      "release_date": "2026-09-17T04:07:06Z",
+      "matched_releases": [
+        {
+          "tag": "1.30.7",
+          "date": "2026-09-17T04:07:06Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-26T17:29:40Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "GHSA-wvh6-f5jh-8gw4",
+        "GHSA-7x2p-4jvh-6384",
+        "GHSA-cx96-42px-69fm",
+        "GHSA-j8qw-6jw8-r297",
+        "GHSA-f5gf-2cj8-52g2",
+        "GHSA-8hg6-c449-896m"
+      ],
+      "title": "Bump dompdf/dompdf from 3.1.5 to 3.1.6",
+      "security": true,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4940",
+      "release": "1.30.7",
+      "release_date": "2026-09-17T04:07:06Z",
+      "matched_releases": [
+        {
+          "tag": "1.30.7",
+          "date": "2026-09-17T04:07:06Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-01T14:59:53Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump composer/pcre from 3.3.2 to 3.4.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4932",
+      "release": "2.1.18",
+      "release_date": "2026-07-12T19:34:29Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.18",
+          "date": "2026-07-12T19:34:29Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-07-01T14:53:50Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.95.4 to 3.95.11",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4930",
+      "release": "2.1.18",
+      "release_date": "2026-07-12T19:34:29Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.18",
+          "date": "2026-07-12T19:34:29Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-06-24T15:35:06Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump actions/cache from 5 to 6",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4924",
+      "release": "2.1.18",
+      "release_date": "2026-07-12T19:34:29Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.18",
+          "date": "2026-07-12T19:34:29Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-06-21T03:29:52Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump actions/checkout from 6 to 7",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4921",
+      "release": "2.1.18",
+      "release_date": "2026-07-12T19:34:29Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.18",
+          "date": "2026-07-12T19:34:29Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-06-07T03:36:15Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump peaceiris/actions-gh-pages from 3 to 4",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4903",
+      "release": "5.8.0",
+      "release_date": "2026-06-07T04:01:20Z",
+      "matched_releases": [
+        {
+          "tag": "5.8.0",
+          "date": "2026-06-07T04:01:20Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-06-07T03:35:59Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump actions/checkout from 4 to 6",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4902",
+      "release": "5.8.0",
+      "release_date": "2026-06-07T04:01:20Z",
+      "matched_releases": [
+        {
+          "tag": "5.8.0",
+          "date": "2026-06-07T04:01:20Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-06-07T03:27:30Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.95.3 to 3.95.4",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4900",
+      "release": "5.8.0",
+      "release_date": "2026-06-07T04:01:20Z",
+      "matched_releases": [
+        {
+          "tag": "5.8.0",
+          "date": "2026-06-07T04:01:20Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-05-19T23:09:46Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump setasign/fpdi from 2.6.6 to 2.6.7",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4879",
+      "release": "1.30.5",
+      "release_date": "2026-05-31T14:16:56Z",
+      "matched_releases": [
+        {
+          "tag": "1.30.5",
+          "date": "2026-05-31T14:16:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-04-01T13:47:57Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump tecnickcom/tcpdf from 6.11.0 to 6.11.2",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4849",
+      "release": "2.1.15",
+      "release_date": "2026-04-10T03:17:50Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.15",
+          "date": "2026-04-10T03:17:50Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-04-01T13:46:28Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump dompdf/dompdf from 3.1.4 to 3.1.5",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4848",
+      "release": "2.1.15",
+      "release_date": "2026-04-10T03:17:50Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.15",
+          "date": "2026-04-10T03:17:50Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-04-01T13:39:08Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump mpdf/mpdf from 8.2.7 to 8.3.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4846",
+      "release": "2.1.15",
+      "release_date": "2026-04-10T03:17:50Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.15",
+          "date": "2026-04-10T03:17:50Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-03-01T15:10:47Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump tecnickcom/tcpdf from 6.10.1 to 6.11.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4818",
+      "release": "2.1.15",
+      "release_date": "2026-04-10T03:17:50Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.15",
+          "date": "2026-04-10T03:17:50Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-02-01T16:32:43Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpstan/phpstan-phpunit from 2.0.11 to 2.0.12",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4796",
+      "release": "5.5.0",
+      "release_date": "2026-03-01T01:16:21Z",
+      "matched_releases": [
+        {
+          "tag": "5.5.0",
+          "date": "2026-03-01T01:16:21Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-02-01T16:24:49Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.92.3 to 3.93.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4795",
+      "release": "5.5.0",
+      "release_date": "2026-03-01T01:16:21Z",
+      "matched_releases": [
+        {
+          "tag": "5.5.0",
+          "date": "2026-03-01T01:16:21Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-02-01T15:57:27Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpstan/phpstan from 2.1.33 to 2.1.38",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4794",
+      "release": "5.5.0",
+      "release_date": "2026-03-01T01:16:21Z",
+      "matched_releases": [
+        {
+          "tag": "5.5.0",
+          "date": "2026-03-01T01:16:21Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-01-28T22:57:36Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "CVE-2026-24739"
+      ],
+      "title": "Bump symfony/process from 6.4.26 to 6.4.33",
+      "security": true,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4792",
+      "release": "5.5.0",
+      "release_date": "2026-03-01T01:16:21Z",
+      "matched_releases": [
+        {
+          "tag": "5.5.0",
+          "date": "2026-03-01T01:16:21Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2026-01-28T02:14:43Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpunit/phpunit from 10.5.60 to 10.5.62",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4790",
+      "release": "5.5.0",
+      "release_date": "2026-03-01T01:16:21Z",
+      "matched_releases": [
+        {
+          "tag": "5.5.0",
+          "date": "2026-03-01T01:16:21Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-11-01T11:41:36Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.88.2 to 3.89.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4698",
+      "release": "2.4.2",
+      "release_date": "2025-11-24T16:07:06Z",
+      "matched_releases": [
+        {
+          "tag": "2.4.2",
+          "date": "2025-11-24T16:07:06Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-11-01T11:38:44Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump dompdf/dompdf from 3.1.2 to 3.1.4",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4700",
+      "release": "2.4.2",
+      "release_date": "2025-11-24T16:07:06Z",
+      "matched_releases": [
+        {
+          "tag": "2.4.2",
+          "date": "2025-11-24T16:07:06Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-10-01T14:54:58Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.85.1 to 3.88.2",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4671",
+      "release": "1.30.1",
+      "release_date": "2025-10-26T16:17:16Z",
+      "matched_releases": [
+        {
+          "tag": "1.30.1",
+          "date": "2025-10-26T16:17:16Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-10-01T14:52:16Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump dompdf/dompdf from 3.1.1 to 3.1.2",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4672",
+      "release": "1.30.1",
+      "release_date": "2025-10-26T16:17:16Z",
+      "matched_releases": [
+        {
+          "tag": "1.30.1",
+          "date": "2025-10-26T16:17:16Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-08-05T23:47:47Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "CVE-2025-54869"
+      ],
+      "title": "Bump setasign/fpdi from 2.6.3 to 2.6.4",
+      "security": true,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4573",
+      "release": "1.30.0",
+      "release_date": "2025-08-10T06:34:25Z",
+      "matched_releases": [
+        {
+          "tag": "1.30.0",
+          "date": "2025-08-10T06:34:25Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-07-01T18:58:55Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.75.0 to 3.76.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4525",
+      "release": "1.29.12",
+      "release_date": "2025-07-24T05:26:31Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.12",
+          "date": "2025-07-24T05:26:31Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-07-01T18:56:13Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.13.0 to 3.13.2",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4526",
+      "release": "1.29.12",
+      "release_date": "2025-07-24T05:26:31Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.12",
+          "date": "2025-07-24T05:26:31Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-06-01T13:42:14Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump tecnickcom/tcpdf from 6.9.3 to 6.10.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4496",
+      "release": "1.29.11",
+      "release_date": "2025-06-23T01:37:51Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.11",
+          "date": "2025-06-23T01:37:51Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-06-01T13:39:51Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.12.2 to 3.13.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4494",
+      "release": "1.29.11",
+      "release_date": "2025-06-23T01:37:51Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.11",
+          "date": "2025-06-23T01:37:51Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-05-01T15:09:36Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.12.0 to 3.12.2",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4457",
+      "release": "4.3.0",
+      "release_date": "2025-05-26T03:59:36Z",
+      "matched_releases": [
+        {
+          "tag": "4.3.0",
+          "date": "2025-05-26T03:59:36Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-05-01T15:07:11Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump tecnickcom/tcpdf from 6.9.0 to 6.9.3",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4458",
+      "release": "4.3.0",
+      "release_date": "2025-05-26T03:59:36Z",
+      "matched_releases": [
+        {
+          "tag": "4.3.0",
+          "date": "2025-05-26T03:59:36Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-04-01T13:58:06Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.70.0 to 3.75.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4430",
+      "release": "4.2.0",
+      "release_date": "2025-04-17T02:58:47Z",
+      "matched_releases": [
+        {
+          "tag": "4.2.0",
+          "date": "2025-04-17T02:58:47Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-04-01T13:55:41Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.11.3 to 3.12.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4432",
+      "release": "4.2.0",
+      "release_date": "2025-04-17T02:58:47Z",
+      "matched_releases": [
+        {
+          "tag": "4.2.0",
+          "date": "2025-04-17T02:58:47Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-04-01T13:51:52Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump tecnickcom/tcpdf from 6.8.2 to 6.9.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4434",
+      "release": "4.2.0",
+      "release_date": "2025-04-17T02:58:47Z",
+      "matched_releases": [
+        {
+          "tag": "4.2.0",
+          "date": "2025-04-17T02:58:47Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-03-01T15:26:54Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.68.5 to 3.70.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4387",
+      "release": "4.1.0",
+      "release_date": "2025-03-02T07:03:26Z",
+      "matched_releases": [
+        {
+          "tag": "4.1.0",
+          "date": "2025-03-02T07:03:26Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-02-01T15:53:00Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.66.0 to 3.68.5",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4338",
+      "release": "1.29.10",
+      "release_date": "2025-02-08T03:16:25Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.10",
+          "date": "2025-02-08T03:16:25Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-02-01T15:49:31Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump dompdf/dompdf from 3.0.2 to 3.1.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4337",
+      "release": "1.29.10",
+      "release_date": "2025-02-08T03:16:25Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.10",
+          "date": "2025-02-08T03:16:25Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-02-01T15:46:51Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump tecnickcom/tcpdf from 6.8.0 to 6.8.2",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4336",
+      "release": "1.29.10",
+      "release_date": "2025-02-08T03:16:25Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.10",
+          "date": "2025-02-08T03:16:25Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-02-01T15:44:40Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.11.2 to 3.11.3",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4335",
+      "release": "1.29.10",
+      "release_date": "2025-02-08T03:16:25Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.10",
+          "date": "2025-02-08T03:16:25Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-01-01T16:20:31Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.11.1 to 3.11.2",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4295",
+      "release": "1.29.8",
+      "release_date": "2025-01-12T03:42:17Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.8",
+          "date": "2025-01-12T03:42:17Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2025-01-01T16:18:04Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump dompdf/dompdf from 3.0.1 to 3.0.2",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4294",
+      "release": "1.29.8",
+      "release_date": "2025-01-12T03:42:17Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.8",
+          "date": "2025-01-12T03:42:17Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-12-28T00:18:05Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump tecnickcom/tcpdf from 6.7.7 to 6.8.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4291",
+      "release": "1.29.8",
+      "release_date": "2025-01-12T03:42:17Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.8",
+          "date": "2025-01-12T03:42:17Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-12-01T12:43:45Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.10.3 to 3.11.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4253",
+      "release": "2.1.5",
+      "release_date": "2024-12-08T15:54:48Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.5",
+          "date": "2024-12-08T15:54:48Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-12-01T12:41:25Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump mitoteam/jpgraph from 10.4.1 to 10.4.3",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4254",
+      "release": "2.1.5",
+      "release_date": "2024-12-08T15:54:48Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.5",
+          "date": "2024-12-08T15:54:48Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-12-01T12:39:22Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump mpdf/mpdf from 8.2.4 to 8.2.5",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4255",
+      "release": "2.1.5",
+      "release_date": "2024-12-08T15:54:48Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.5",
+          "date": "2024-12-08T15:54:48Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-11-06T21:46:49Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "CVE-2024-51736"
+      ],
+      "title": "Bump symfony/process from 6.4.8 to 6.4.14",
+      "security": true,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4216",
+      "release": "3.4.0",
+      "release_date": "2024-11-10T10:29:47Z",
+      "matched_releases": [
+        {
+          "tag": "3.4.0",
+          "date": "2024-11-10T10:29:47Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-11-01T13:59:25Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump maennchen/zipstream-php from 3.1.0 to 3.1.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4211",
+      "release": "3.4.0",
+      "release_date": "2024-11-10T10:29:47Z",
+      "matched_releases": [
+        {
+          "tag": "3.4.0",
+          "date": "2024-11-10T10:29:47Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-11-01T13:57:14Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "CVE-2024-22641"
+      ],
+      "title": "Bump tecnickcom/tcpdf from 6.7.5 to 6.7.7",
+      "security": true,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4209",
+      "release": "3.4.0",
+      "release_date": "2024-11-10T10:29:47Z",
+      "matched_releases": [
+        {
+          "tag": "3.4.0",
+          "date": "2024-11-10T10:29:47Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-10-01T13:34:32Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.10.2 to 3.10.3",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4177",
+      "release": "3.4.0",
+      "release_date": "2024-11-10T10:29:47Z",
+      "matched_releases": [
+        {
+          "tag": "3.4.0",
+          "date": "2024-11-10T10:29:47Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-09-01T13:07:47Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.61.1 to 3.64.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4155",
+      "release": "1.29.1",
+      "release_date": "2024-09-04T02:44:54Z",
+      "matched_releases": [
+        {
+          "tag": "1.29.1",
+          "date": "2024-09-04T02:44:54Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-07-01T13:51:27Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpstan/phpstan from 1.11.3 to 1.11.5",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4085",
+      "release": "2.2.0",
+      "release_date": "2024-07-24T13:28:53Z",
+      "matched_releases": [
+        {
+          "tag": "2.2.0",
+          "date": "2024-07-24T13:28:53Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-07-01T13:18:23Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.58.1 to 3.59.3",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4083",
+      "release": "2.2.0",
+      "release_date": "2024-07-24T13:28:53Z",
+      "matched_releases": [
+        {
+          "tag": "2.2.0",
+          "date": "2024-07-24T13:28:53Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-07-01T13:16:37Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump mpdf/mpdf from 8.2.3 to 8.2.4",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4084",
+      "release": "2.2.0",
+      "release_date": "2024-07-24T13:28:53Z",
+      "matched_releases": [
+        {
+          "tag": "2.2.0",
+          "date": "2024-07-24T13:28:53Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-07-01T13:14:43Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpunit/phpunit from 10.5.20 to 10.5.24",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4082",
+      "release": "2.2.0",
+      "release_date": "2024-07-24T13:28:53Z",
+      "matched_releases": [
+        {
+          "tag": "2.2.0",
+          "date": "2024-07-24T13:28:53Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-06-01T13:36:09Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump dompdf/dompdf from 2.0.8 to 3.0.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4054",
+      "release": "2.2.0",
+      "release_date": "2024-07-24T13:28:53Z",
+      "matched_releases": [
+        {
+          "tag": "2.2.0",
+          "date": "2024-07-24T13:28:53Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-06-01T13:33:47Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.9.2 to 3.10.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4052",
+      "release": "2.2.0",
+      "release_date": "2024-07-24T13:28:53Z",
+      "matched_releases": [
+        {
+          "tag": "2.2.0",
+          "date": "2024-07-24T13:28:53Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-06-01T13:32:05Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.56.1 to 3.58.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4051",
+      "release": "2.2.0",
+      "release_date": "2024-07-24T13:28:53Z",
+      "matched_releases": [
+        {
+          "tag": "2.2.0",
+          "date": "2024-07-24T13:28:53Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-05-01T18:19:33Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpstan/phpstan from 1.10.66 to 1.10.67",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4011",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-05-01T17:54:56Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump tecnickcom/tcpdf from 6.7.4 to 6.7.5",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4012",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-05-01T17:53:08Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.53.0 to 3.54.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4010",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-05-01T17:50:51Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.9.1 to 3.9.2",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4009",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-05-01T17:48:45Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump dompdf/dompdf from 2.0.4 to 2.0.8",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/4008",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-04-15T00:39:49Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.51.0 to 3.53.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3984",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-04-15T00:27:19Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.9.0 to 3.9.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3970",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-04-15T00:17:12Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump mpdf/mpdf from 8.2.2 to 8.2.3",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3971",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-04-15T00:13:40Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpunit/phpunit from 9.6.17 to 9.6.19",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3983",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-04-15T00:11:53Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpstan/phpstan from 1.10.59 to 1.10.66",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3966",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-04-14T23:43:59Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump tecnickcom/tcpdf from 6.6.5 to 6.7.4",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3967",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-03-01T17:19:57Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.8.1 to 3.9.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3929",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-03-01T17:16:23Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpstan/phpstan-phpunit from 1.3.15 to 1.3.16",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3928",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-03-01T17:13:35Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpstan/phpstan from 1.10.57 to 1.10.59",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3927",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-03-01T17:11:29Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpunit/phpunit from 9.6.16 to 9.6.17",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3926",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-03-01T17:09:54Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.48.0 to 3.51.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3925",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-02-21T22:40:49Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "GHSA-f3qr-qr4x-j273"
+      ],
+      "title": "Bump phenx/php-svg-lib from 0.5.1 to 0.5.2",
+      "security": true,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3914",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-02-01T17:35:16Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpstan/phpstan from 1.10.50 to 1.10.57",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3885",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-02-01T17:17:03Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpunit/phpunit from 9.6.15 to 9.6.16",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3884",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-02-01T17:14:56Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.8.0 to 3.8.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3886",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-02-01T17:12:47Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump mitoteam/jpgraph from 10.3.2 to 10.4.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3882",
+      "release": "2.1.0",
+      "release_date": "2024-05-11T04:18:56Z",
+      "matched_releases": [
+        {
+          "tag": "2.1.0",
+          "date": "2024-05-11T04:18:56Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-01-01T20:08:28Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpunit/phpunit from 9.6.14 to 9.6.15",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3851",
+      "release": "2.0.0",
+      "release_date": "2024-01-24T10:42:42Z",
+      "matched_releases": [
+        {
+          "tag": "2.0.0",
+          "date": "2024-01-24T10:42:42Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-01-01T20:06:15Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump squizlabs/php_codesniffer from 3.7.2 to 3.8.0",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3849",
+      "release": "2.0.0",
+      "release_date": "2024-01-24T10:42:42Z",
+      "matched_releases": [
+        {
+          "tag": "2.0.0",
+          "date": "2024-01-24T10:42:42Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2024-01-01T19:52:09Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpstan/phpstan from 1.10.46 to 1.10.50",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3848",
+      "release": "2.0.0",
+      "release_date": "2024-01-24T10:42:42Z",
+      "matched_releases": [
+        {
+          "tag": "2.0.0",
+          "date": "2024-01-24T10:42:42Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2023-12-14T00:10:54Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "GHSA-3qx2-6f78-w2j2"
+      ],
+      "title": "Bump dompdf/dompdf from 2.0.3 to 2.0.4",
+      "security": true,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3826",
+      "release": "2.0.0",
+      "release_date": "2024-01-24T10:42:42Z",
+      "matched_releases": [
+        {
+          "tag": "2.0.0",
+          "date": "2024-01-24T10:42:42Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2023-12-13T15:48:02Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [
+        "GHSA-ff5x-7qg5-vwf2",
+        "GHSA-jq98-9543-m4cr"
+      ],
+      "title": "Bump phenx/php-svg-lib from 0.5.0 to 0.5.1",
+      "security": true,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3824",
+      "release": "2.0.0",
+      "release_date": "2024-01-24T10:42:42Z",
+      "matched_releases": [
+        {
+          "tag": "2.0.0",
+          "date": "2024-01-24T10:42:42Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2023-12-01T15:26:36Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpunit/phpunit from 9.6.13 to 9.6.14",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3806",
+      "release": "2.0.0",
+      "release_date": "2024-01-24T10:42:42Z",
+      "matched_releases": [
+        {
+          "tag": "2.0.0",
+          "date": "2024-01-24T10:42:42Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2023-09-01T11:56:29Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump phpstan/phpstan from 1.10.26 to 1.10.32",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3704",
+      "release": "2.0.0",
+      "release_date": "2024-01-24T10:42:42Z",
+      "matched_releases": [
+        {
+          "tag": "2.0.0",
+          "date": "2024-01-24T10:42:42Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    },
+    {
+      "date": "2023-01-01T21:34:09Z",
+      "type": "dependency-update",
+      "bot": "dependabot[bot]",
+      "ids": [],
+      "title": "Bump friendsofphp/php-cs-fixer from 3.13.0 to 3.13.1",
+      "security": false,
+      "url": "https://github.com/PHPOffice/PhpSpreadsheet/pull/3272",
+      "release": "1.27.0",
+      "release_date": "2023-01-24T20:08:44Z",
+      "matched_releases": [
+        {
+          "tag": "1.27.0",
+          "date": "2023-01-24T20:08:44Z"
+        }
+      ],
+      "mapping": "date heuristic (first release on/after merge)"
+    }
+  ],
+  "summary": {
+    "advisories": 32,
+    "security_commits": 1,
+    "dependency_updates": 87,
+    "security_dependency_updates": 9,
+    "unreleased_fixes": 1
+  }
+}

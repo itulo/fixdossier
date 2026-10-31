@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sample security records | fixdossier</title>
+  <meta name="description" content="Sample fixdossier security records for public GitHub repositories: which release shipped each published security fix, with how each row was mapped." />
+  <link rel="canonical" href="https://fixdossier.dev/docs/samples/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="fixdossier" />
+  <meta property="og:title" content="Sample security records | fixdossier" />
+  <meta property="og:description" content="Sample fixdossier security records for public GitHub repositories: which release shipped each published security fix, with how each row was mapped." />
+  <meta property="og:url" content="https://fixdossier.dev/docs/samples/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css?v=2" />
+  <style>
+    .doc h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1.2; letter-spacing: -0.03em; margin: 0.4rem 0 1rem; }
+    .doc h2 { margin-top: 2.4rem; }
+    .doc h3 { font-size: 1.05rem; margin: 1.6rem 0 0.5rem; }
+    .doc p, .doc li { color: var(--muted); }
+    .doc p strong, .doc li strong { color: var(--text); }
+    .doc :not(pre) > code { font-family: var(--mono); font-size: 0.85em; background: var(--bg-elev); padding: 0.1rem 0.35rem; border-radius: 4px; color: var(--text); }
+    .doc .pre-wrap, .doc .table-scroll { margin: 1rem 0 1.25rem; }
+    .doc table { min-width: 0; }
+    .doc ul, .doc ol { padding-left: 1.2rem; }
+    .doc li + li { margin-top: 0.35rem; }
+    .crumbs { font-size: 0.85rem; color: var(--faint); }
+    .doc-index { columns: 2; list-style: none; padding: 0 !important; }
+    @media (max-width: 560px) { .doc-index { columns: 1; } }
+    .sample { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); padding: 1.2rem 1.4rem; margin: 1.2rem 0; }
+    .sample h3 { margin: 0 0 0.3rem; font-size: 1.15rem; }
+    .sample .meta { font-size: 0.82rem; color: var(--faint); margin: 0 0 0.9rem; }
+    .sample .links { font-size: 0.9rem; margin: 0.8rem 0 0; }
+    .sample .links a + a::before { content: "·"; color: var(--faint); margin: 0 0.5rem; }
+    .stats { margin-bottom: 0.6rem; }
+    .stat { min-width: 6.5rem; }
+    .record h1 { font-size: 1.5rem; }
+    .record table { font-size: 0.82rem; }
+    .record td { vertical-align: top; }
+  </style>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('fixdossier_theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">fd</span> fixdossier</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="../../">Home</a>
+        <a href="../../docs/">Docs</a>
+        <a href="https://github.com/itulo/fixdossier">GitHub</a>
+        <button class="btn-icon" id="theme-btn" type="button" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section>
+      <article class="wrap doc">
+        <p class="crumbs"><a href="../../">fixdossier</a> / <a href="../">Docs</a> / Sample records</p>
+        <h1>Sample security records</h1>
+        <p>This is an unedited <code>SECURITY-RECORD.md</code> and <code>security-record.json</code> that fixdossier produced for a public repository. It lists the published security advisories and security-looking commits it found, the release that shipped each fix, and how that link was made. It shows what the output looks like on a real project, including the parts that need a human check.</p>
+        <div class="disclaimer" role="note">
+  <p><strong>Not requested or endorsed by the project.</strong> The project below did not ask for, review or endorse this record, and it is not claimed to use fixdossier. The record is generated from public GitHub data (published repository security advisories, releases, tags, merged pull requests and commit messages) using read-only API calls. If you maintain this project and want the record removed or corrected, write to <a href="mailto:contact@fixdossier.dev">contact@fixdossier.dev</a>.</p>
+</div>
+
+        <h2>How it was generated</h2>
+        <ul>
+          <li>fixdossier v0.1.2 (commit <code>f5d6fc5</code>), run locally with <code>node src/index.js --repo=owner/name --max_pages=10</code> on 2026-10-31. <code>max_pages=10</code> is also the Action’s default.</li>
+          <li>Only <strong>published</strong> repository advisories are read. Draft or private advisories, and global advisories for a project’s dependencies, are not included.</li>
+          <li>The record is a snapshot of the day it was generated. Newer advisories and releases are not in it.</li>
+        </ul>
+
+        <h2>Records</h2>
+        <div class="sample" id="PHPOffice-PhpSpreadsheet">
+          <h3><a href="PHPOffice-PhpSpreadsheet.html">PHPOffice/PhpSpreadsheet</a></h3>
+          <p class="meta">Generated 2026-10-31 · fixdossier v0.1.2 · 145 releases read</p>
+          <div class="stats"><div class="stat"><div class="n">32</div><div class="l">advisories</div></div><div class="stat"><div class="n">32</div><div class="l">mapped via advisory</div></div><div class="stat"><div class="n">0</div><div class="l">mapped by date</div></div><div class="stat"><div class="n">0</div><div class="l">unmatched</div></div><div class="stat"><div class="n">48</div><div class="l">releases with a fix</div></div><div class="stat"><div class="n">1</div><div class="l">keyword commit rows</div></div><div class="stat"><div class="n">87 (9)</div><div class="l">bot updates (security)</div></div><div class="stat"><div class="n">2</div><div class="l">gaps</div></div></div>
+          <p>All 32 published advisories carry <code>patched_versions</code>, and every one matched a release tag. Most fixes were shipped on several maintenance lines at once (for example 5.10.0, 3.10.8, 2.4.8, 2.1.19 and 1.30.7 on the same day), so a single advisory row can list up to five releases. The one keyword commit row is titled “Security Policy Updates” and is listed as not yet in a release; keyword rows like this need a human look to decide whether they are fixes at all.</p>
+          <p class="links"><a href="PHPOffice-PhpSpreadsheet.html">Full record</a><a href="PHPOffice-PhpSpreadsheet/security-record.json">JSON</a><a href="PHPOffice-PhpSpreadsheet/SECURITY-RECORD.md">Markdown</a><a href="https://github.com/PHPOffice/PhpSpreadsheet">github.com/PHPOffice/PhpSpreadsheet</a></p>
+          <p class="sample-note"><strong>PHPOffice/PhpSpreadsheet</strong> did not request, review or endorse this record, and no claim is made that the project uses fixdossier. It was generated from public GitHub data only (published security advisories, releases, tags, merged pull requests and commit messages).</p>
+        </div>
+
+        <h2>Counts</h2>
+        <div class="table-scroll" role="region" aria-label="Counts per record" tabindex="0"><table><thead><tr><th>Repo</th><th>Advisories</th><th>Via advisory</th><th>By date</th><th>Unmatched</th><th>Keyword commit rows</th><th>Bot updates (security)</th><th>Releases</th><th>Gaps</th></tr></thead><tbody>
+<tr><td><a href="PHPOffice-PhpSpreadsheet.html">PHPOffice/PhpSpreadsheet</a></td><td>32</td><td>32</td><td>0</td><td>0</td><td>1 (0 tag, 0 date, 1 unreleased)</td><td>87 (9)</td><td>145</td><td>2 paging, 0 permission</td></tr>
+</tbody></table></div>
+        <p>“Via advisory”: the advisory’s <code>patched_versions</code> matched a release tag. “By date”: placed on the first stable release on or after the advisory was published. “Paging” gaps mean pull request or commit history was cut at 10 pages; the record has no permission gap. See <a href="../map-github-advisory-to-release.html">how an advisory is mapped to a release</a>.</p>
+
+        <h2>Run it on your repo</h2>
+        <p>Save as <code>.github/workflows/security-record.yml</code>. Artifact mode is the default and needs only read permissions.</p>
+        <div class="pre-wrap"><span class="lang">yaml</span><pre>name: security-record
+on:
+  release:
+    types: [published]
+  schedule:
+    - cron: &#x27;0 6 * * 1&#x27;   # weekly
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: itulo/fixdossier@v0</pre></div>
+        <p>The Action is free and MIT-licensed. See <a href="../security-fix-record-from-github.html">Build a dated record of security fixes</a> for inputs and commit mode. If you want a hosted review queue and signed exports, there is an optional paid service, <a href="https://app.fixdossier.dev">fixdossier Pro</a>: a €69 one-time Founding Licence (VAT included, 14-day refund), active for as long as the service runs.</p>
+
+        <h2>Docs pages</h2>
+        <ul class="doc-index">
+          <li><a href="../">Docs home</a></li>
+          <li><a href="../security-fix-record-from-github.html">Build the record</a></li>
+          <li><a href="../map-github-advisory-to-release.html">Advisory → release mapping</a></li>
+          <li><a href="../what-the-record-covers.html">Coverage and limits</a></li>
+          <li><a href="../cra-support-period-support-md.html">SUPPORT.md and support periods</a></li>
+          <li><a href="../pld-evidence-checklist-for-engineers.html">PLD evidence checklist</a></li>
+          <li><a href="./" aria-current="page">Sample records</a></li>
+        </ul>
+        <div class="disclaimer" role="note">
+  <p><strong>Not legal advice.</strong> fixdossier is an engineering tool for evidence collection and review support. It is not legal advice and not a compliance certificate. It does not make a product compliant with the PLD, the CRA or anything else, and its output can be incomplete or wrong. Review it, and ask a lawyer about your situation.</p>
+</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 fixdossier · MIT · <a href="https://github.com/itulo/fixdossier">github.com/itulo/fixdossier</a> · <a href="mailto:contact@fixdossier.dev">contact@fixdossier.dev</a></div>
+      <div class="footer-links">
+        <a href="../../docs/">Docs</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/action.yml">action.yml</a>
+        <a href="https://github.com/itulo/fixdossier/tree/main/examples">Examples</a>
+        <a href="https://github.com/itulo/fixdossier/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var t = document.getElementById('theme-btn');
+      if (t) t.addEventListener('click', function () {
+        var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', cur);
+        localStorage.setItem('fixdossier_theme', cur);
+      });
+      var toggle = document.getElementById('nav-toggle'), nav = document.getElementById('primary-nav');
+      if (toggle && nav) toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+    })();
+  </script>
+</body>
+</html>
